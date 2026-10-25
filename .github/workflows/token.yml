@@ -1,0 +1,23 @@
+# Renova o token do Instagram (vale 60 dias) todo dia 1º e 15 e grava no segredo IG_TOKEN.
+name: Renovar token do Instagram
+
+on:
+  schedule:
+    - cron: "37 11 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  renovar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Renovar e salvar
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          RESP=$(curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_TOKEN")
+          NOVO=$(echo "$RESP" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$NOVO" ]; then echo "::error::Falha ao renovar: $RESP"; exit 1; fi
+          echo "::add-mask::$NOVO"
+          gh secret set IG_TOKEN --repo "$GITHUB_REPOSITORY" --body "$NOVO"
+          echo "Token renovado."
