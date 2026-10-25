@@ -170,7 +170,7 @@ jobs:
           python scripts/musica.py --tempos tempos.json --modo ${{ needs.preparar.outputs.modo }} --saida trilha.wav
           # voz na frente; a trilha abaixa sozinha quando você fala (ducking) e sobe nas pausas
           ffmpeg -y -loglevel error -i narracao.wav -i trilha.wav -filter_complex \
-            "[0:a]aresample=48000,asplit=2[v][sc];[1:a]volume=0.32[m];[m][sc]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=450[md];[v][md]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.93,loudnorm=I=-14:TP=-1.5" \
+            "[0:a]aresample=48000,asplit=2[v][sc];[1:a]volume=0.48[m];[m][sc]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=450[md];[v][md]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.93,loudnorm=I=-14:TP=-1.5" \
             -ar 48000 audio_final.wav
           # confere se a trilha entrou: nas pausas da fala não pode haver silêncio absoluto
           python - <<'PY'
