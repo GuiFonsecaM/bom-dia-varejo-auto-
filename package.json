@@ -1,0 +1,10 @@
+{
+  "name": "bom-dia-varejo-auto",
+  "private": true,
+  "description": "Gera e publica os vídeos 3D do Bom dia, Varejo",
+  "scripts": { "render": "node scripts/render.js" },
+  "dependencies": {
+    "playwright": "1.47.2",
+    "three": "0.128.0"
+  }
+}

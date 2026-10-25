@@ -1,0 +1,8 @@
+node_modules/
+*.mp4
+*.wav
+!minha_voz.wav
+seg_*/
+quadros/
+roteiro.json
+tempos.json
