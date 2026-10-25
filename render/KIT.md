@@ -145,6 +145,7 @@ Os que têm movimento retornam um objeto com `.atualizar(t)`; chame dentro de `a
 
 ## Dados
 - `K.barras([{rotulo,valor,texto,cor}],{altura,espaco,unidade})` → `.atualizar(t)`
+- Barras e pizza não escrevem o valor em 3D (o número fica no hud). Só aparece um texto se você passar `texto` — use para nomes curtos, nunca para repetir o número do hud.
 - `K.linhaGrafico([{rotulo,valor,texto}],{largura,altura})` → `.atualizar(t)`
 - `K.pizza([{rotulo,valor,texto,cor}],{raio})` → `.atualizar(t)`
 - `K.linhaDoTempo([{ano,texto}],{espaco})` → `.destacar(i)`, `.marcos[i].z`
