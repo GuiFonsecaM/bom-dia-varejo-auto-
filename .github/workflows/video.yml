@@ -1,4 +1,4 @@
-# Bom dia, Varejo — do roteiro no Notion ao Reel publicado, sem intervenção.
+# Bom dia varejo — do roteiro no Notion ao Reel publicado, sem intervenção.
 # 1) preparar: pega o JSON do dia no Notion e gera a narração com a sua voz
 # 2) render:   10 máquinas renderizam o 3D em paralelo, cada uma 1/10 do vídeo
 # 3) publicar: junta as partes com o áudio, hospeda no GitHub Pages e publica no Instagram
@@ -132,7 +132,7 @@ jobs:
           npx playwright install --with-deps chromium
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Renderizar parte ${{ matrix.parte }}
-        run: node scripts/render.js --roteiro roteiro.json --tempos tempos.json --parte ${{ matrix.parte }} --partes $PARTES --out seg_${{ matrix.parte }}.mp4
+        run: node scripts/render.js --roteiro roteiro.json --tempos tempos.json --parte ${{ matrix.parte }} --partes $PARTES --largura 1080 --out seg_${{ matrix.parte }}.mp4
       - uses: actions/upload-artifact@v4
         with:
           name: seg-${{ matrix.parte }}
@@ -157,17 +157,35 @@ jobs:
           pattern: "*"
           merge-multiple: true
 
-      - name: Juntar partes e áudio
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Juntar partes, voz e trilha
         run: |
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
           : > lista.txt
           for i in $(seq 0 $((PARTES-1))); do echo "file 'seg_$i.mp4'" >> lista.txt; done
-          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i narracao.wav \
+          pip install -q numpy soundfile
+          python scripts/musica.py --tempos tempos.json --modo ${{ needs.preparar.outputs.modo }} --saida trilha.wav
+          # voz na frente; a trilha abaixa sozinha quando você fala (ducking) e sobe nas pausas
+          ffmpeg -y -loglevel error -i narracao.wav -i trilha.wav -filter_complex \
+            "[0:a]aresample=48000,asplit=2[v][sc];[1:a]volume=0.32[m];[m][sc]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=450[md];[v][md]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.93,loudnorm=I=-14:TP=-1.5" \
+            -ar 48000 audio_final.wav
+          # confere se a trilha entrou: nas pausas da fala não pode haver silêncio absoluto
+          python - <<'PY'
+          import soundfile as sf, numpy as np, sys
+          x, sr = sf.read('audio_final.wav'); x = x.mean(axis=1) if x.ndim > 1 else x
+          w = int(sr * .1); r = np.array([np.sqrt(np.mean(x[i:i+w]**2)) for i in range(0, len(x) - w, w)])
+          mudo = float((r < 1e-4).mean()); print(f'trechos mudos: {mudo:.1%}')
+          if mudo > .03: sys.exit('a trilha não entrou no áudio final')
+          PY
+          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i audio_final.wav \
             -c:v copy -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart video.mp4
           ffprobe -v error -show_entries format=duration -of csv=p=0 video.mp4
           NOME="$(TZ=America/Sao_Paulo date +%Y%m%d)-${{ needs.preparar.outputs.modo }}-${{ github.run_id }}.mp4"
           mkdir -p site/v && cp video.mp4 "site/v/$NOME" && echo "NOME=$NOME" >> "$GITHUB_ENV"
-          echo '<!doctype html><meta charset="utf-8"><title>Bom dia, Varejo</title>' > site/index.html
+          echo '<!doctype html><meta charset="utf-8"><title>Bom dia varejo</title>' > site/index.html
 
       - uses: actions/upload-artifact@v4
         with:
