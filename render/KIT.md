@@ -32,6 +32,12 @@ return {
 - Prédios e lojas que ficarem entre a câmera e o foco somem sozinhos naquele quadro; paredes e teto dos ambientes internos são "em corte" (somem vistos de fora), então a câmera pode olhar o interior de qualquer ângulo.
 - Nada de marcas ou logos reais, nada de pessoas reais reconhecíveis, nada de sangue, feridos ou mortos. Conflitos podem ter aviões, mísseis, drones, navios e explosões genéricas.
 - Seja econômico: até ~150 pessoas e ~600 peças por cena.
+- **Nada surge do nada nem some do nada.** Objetos entram na cena trazidos por alguém (`K.colocar`, `.segurar`, `.carregar`), por uma máquina ou esteira, ou já estão lá desde o início. Nunca ligue `visible` de produto dentro de carrinho, sacola ou cesta.
+- **Gestos com sentido.** Quem coloca compras no carrinho, passa produtos no caixa ou entrega algo usa `K.colocar(pessoa, obj, de, para, t, t0, dur)`; a pessoa vira para o objeto, estica o braço, leva o objeto por cima e o deixa no destino. Pessoa parada não mexe as pernas; quem anda segue em frente (os figurantes entram e saem de cena, sem ir e voltar).
+- **Lojas têm porta.** `K.loja` e `K.atacarejo` têm entrada aberta; `K.portaDe(loja)` dá a posição da porta e `K.fitaInauguracao({porta: loja})` coloca a fita na entrada (nunca no meio da calçada). Na `rua_comercial`, `a.lojas` e `a.portas` trazem as 12 lojas.
+- **Figurantes combinam com a frase.** Desligue o que não faz sentido: `K.ambiente(nome, {figurantes: false})` tira todos; no `bairro`, `{criancas: false}` tira as crianças com bola.
+- **Caixas de supermercado:** o cliente vem de dentro da loja (no `supermercado`, z < 14) e sai pela frente (z > 14); a esteira leva as compras nesse sentido e o operador ensaca do lado da saída.
+- **A câmera nunca fica tapada:** o motor esconde sozinho, quadro a quadro, o que estiver entre a câmera e o `foco`. Mesmo assim, mire num ponto em que o assunto apareça inteiro.
 - **Física coerente, sempre** (vale para qualquer coisa, não só para os exemplos): nada flutua, nada atravessa nada, quem segura algo segura com a mão. Veja a seção *Física* abaixo; a prévia acusa as falhas e a cena só está pronta com zero avisos.
 
 ---
@@ -68,6 +74,7 @@ return {
 | `fazenda` | lavoura, colheitadeira e trator andando, celeiro, silos, cerca, vacas | (4, 10); `op.cultura` = cor da plantação |
 | `aeroporto` | pista, terminal, aviões parados e um decolando, vans de serviço | (0, 0) |
 | `estudio_tv` | bancada de telejornal com apresentador falando, telão com a logo, câmeras e holofotes | bancada (0, −1) |
+| `estudio_graficos` | **estúdio de gráficos da marca**: fundo preto, telão com o meio-sol laranja, "BOM DIA VAREJO", palco redondo com aro laranja e bancada com apresentador à esquerda; traz a câmera pronta em `a.camera` | palco do gráfico (1.2, 1) |
 
 Para lojas e supermercados com gôndola específica (vazia, pela metade, de um produto), use `K.gondolaRapida({x,z,comprimento,produtos})`, que é leve mesmo com muitas.
 
@@ -145,6 +152,14 @@ Os que têm movimento retornam um objeto com `.atualizar(t)`; chame dentro de `a
 
 ## Dados
 - `K.barras([{rotulo,valor,texto,cor}],{altura,espaco,unidade})` → `.atualizar(t)`
+- **Todo gráfico (barras, linha, pizza) é apresentado no `estudio_graficos`**, no centro do palco, com a câmera do ambiente:
+```js
+const a = K.ambiente('estudio_graficos');
+const g = K.barras([{rotulo:'SET', valor:70, cor:'#d9d9dc'}, {rotulo:'OUT', valor:32, cor:K.LARANJA}], {altura:3, espaco:2, largura:1.2});
+g.position.set(a.palco.x, .2, a.palco.z);
+return { foco:a.foco, raio:a.raio, az:0, camera:a.camera, atualizar(t){ a.atualizar(t); g.atualizar(t); } };
+```
+  Tamanhos que cabem no palco: barras `{altura:3, espaco:2, largura:1.2}` (até 4 barras), linha `{largura:4.2, altura:2.6}` (até 6 pontos), pizza `{raio:1.9}` (até 4 fatias). Destaque em laranja (`K.LARANJA`), o resto em branco `#d9d9dc` ou cinza `#55565c`. Rótulos curtos (SET, OUT, JAN, PIX).
 - Barras e pizza não escrevem o valor em 3D (o número fica no hud). Só aparece um texto se você passar `texto` — use para nomes curtos, nunca para repetir o número do hud.
 - `K.linhaGrafico([{rotulo,valor,texto}],{largura,altura})` → `.atualizar(t)`
 - `K.pizza([{rotulo,valor,texto,cor}],{raio})` → `.atualizar(t)`
@@ -178,32 +193,47 @@ Sem `camera`, o motor usa o preset de `cena3d.camera` em volta do `foco` e do `r
 const a = K.ambiente('fabrica');
 const maq = K.grupo({x: -2, z: 12});
 K.dentro(maq, () => { K.caixa(3, 2.2, 2.4, '#5c6670'); K.caixa(3.2, .3, 2.6, K.LARANJA, {y: 2.2}); });
-K.caixa(5, .9, 1, '#2b2f36', {x: 2, z: 12});
+K.caixa(5, .9, 1, '#2b2f36', {x: 2, z: 12});                    // esteira
+K.mesa({x: 5.3, z: 12}); K.caixa(.9, .12, .7, '#3b4048', {x: 5.3, z: 12, apoiar: true});  // bandeja pousa sozinha na mesa
 const op = K.pessoa({uniforme: 'operario', x: -2, z: 14.2, rotY: Math.PI});
 const cartoes = []; for (let i = 0; i < 36; i++) cartoes.push(K.produto('cartao', {escala: .7}));
-return {foco: [1, 1.4, 12], raio: 4.2, az: .35, atualizar(t) {
-  a.atualizar(t); op.digitar(t);
-  cartoes.forEach((c, i) => { const f = t * 1.4 + i / 36 * 2;            // já começa em movimento
-    if (f < 2) c.position.set(-.6 + (f % 1) * 4.4, .95, 12);
-    else c.position.set(4.6, .9 + (i % 18) * .05, i > 17 ? 12.5 : 11.6); });
+return {foco: [1.5, 1.2, 12], raio: 4.6, az: .35, atualizar(t) { a.atualizar(t); op.digitar(t);
+  // os cartões saem da máquina, correm na esteira e empilham na bandeja (o motor apoia cada um no que está embaixo)
+  cartoes.forEach((c, i) => { const f = t * 1.2 - i * .18; c.visible = f >= 0; c.position.set(f < 1 ? -.5 + f * 5 : 5.3, 0, 12); });
 }};
 ```
 
-**Varejo — cliente paga com Pix (no caixa 4 do supermercado)**
+
+**Varejo — cliente paga com Pix (no caixa 1 do supermercado)**
+Nos ambientes, o cliente fica do lado de dentro da loja e a esteira leva as compras para a saída. No `supermercado` o caixa 1 está em (−15, 14): o operador fica em (−16,1, 15) e o cliente paga do outro lado do balcão, em (−14,1, 15).
 ```js
-const a = K.ambiente('supermercado');
-const cli = K.pessoa({x: -1.2, z: 15.2, rotY: Math.PI / 2, camisa: '#3f6fb5'});
+const a = K.ambiente('supermercado', {livre: {x: -14, z: 13, raio: 2}});
+const cli = K.pessoa({x: -14.1, z: 15, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
 cli.segurar(K.celular(), 1);
-K.qrcodePix({largura: .5, altura: .5, x: -.3, y: 1.5, z: 15.6, rotY: -Math.PI / 2});
+K.qrcodePix({largura: .5, altura: .5, x: -15.3, y: 1.5, z: 15, rotY: Math.PI / 2});
 const tela = K.tela((x, W, H, ok) => { x.fillStyle = ok ? '#3fae6a' : '#14171c'; x.fillRect(0, 0, W, H);
   x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = '800 ' + H * .32 + 'px Open Sans'; x.fillText(ok ? 'PAGO ✓' : 'PIX', W / 2, H * .64); },
-  {largura: 1, altura: .5, y: 2.4, z: 15.3, rotY: -Math.PI / 2});
+  {largura: 1, altura: .5, x: -15.2, y: 2.4, z: 15, rotY: Math.PI / 2});
 let pago = false;
-return {foco: [-.6, 1.5, 14.6], raio: 2.8, az: -1.0, atualizar(t) {
+return {foco: [-14.7, 1.4, 15], raio: 2.6, az: .7, atualizar(t) {
   a.atualizar(t); cli.userData.arms[1].rotation.x = -1.2 - Math.min(.4, t * .4);
   const deve = t > 1.2; if (deve !== pago) { pago = deve; tela.redesenhar(pago); }
 }};
 ```
+
+**Varejo — cliente coloca frutas no carrinho (mãos fazendo o gesto certo)**
+```js
+const a = K.ambiente('supermercado', {livre: {x: -20.5, z: 5, raio: 2}});
+const cli = K.pessoa({x: -21.4, z: 5.2, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
+const car = K.carrinho({x: -20.2, z: 5.6, rotY: Math.PI});
+const frutas = [0, 1, 2].map(i => K.produto(i % 2 ? 'verdura' : 'fruta', {escala: .3}));
+return {foco: [-21.6, 1.1, 5.2], raio: 2.6, az: 1.3, atualizar(t) {
+  a.atualizar(t);
+  // cada fruta sai da banca, vai na mão e é colocada no carrinho, uma depois da outra
+  frutas.forEach((o, i) => K.colocar(cli, o, [-22.5, 1.2, 4.6 + i * .35], [-20.2 + (i - 1) * .15, .75, 5.4], t, .2 + i * 1.9, 1.8));
+}};
+```
+
 
 **Mundo — manifestação em Paris com polícia**
 ```js

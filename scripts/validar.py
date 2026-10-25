@@ -41,6 +41,8 @@ def main():
         if cenas[-1].get("fala", "").strip() != FECHAMENTO.get(modo, ""):
             P.append("fechamento diferente da fala exata do modo")
     texto_total = json.dumps(rot, ensure_ascii=False).lower()
+    if re.search(r"bom dia,\s*varejo", texto_total):
+        P.append("escreva 'Bom dia varejo' sem vírgula (nome do perfil)")
     for fixa in list(ABERTURA.values()) + list(FECHAMENTO.values()):
         texto_total = texto_total.replace(fixa.lower(), "")
     for w in PROIBIDAS:
