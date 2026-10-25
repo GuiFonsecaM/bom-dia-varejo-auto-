@@ -1,5 +1,5 @@
 """
-narrar.py — Bom dia, Varejo
+narrar.py — Bom dia varejo
 Gera a narração do vídeo com a SUA voz, a partir do roteiro.json (prompt v4).
 
 Usa o Chatterbox Multilingual (Resemble AI, licença MIT, roda grátis em CPU ou GPU).
