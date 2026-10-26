@@ -616,14 +616,52 @@ SCN.linha_do_tempo=(g,c)=>{ground(g,'#23262c');box(g,6,.2,80,'#2f3339',0,0,-20,t
   const hero=person({shirt:ORANGE});g.add(hero);
   return{focus:new V(0,1.5,-8),r:6,az:.5,hero,heroDir:-1,noShow:true,update:lt=>{hero.position.set(1.2,.2,12-lt*2.4);hero.rotation.y=Math.PI;animWalk(hero,lt,1.2);}};};
 
-SCN.urna_votacao=(g,c)=>{ground(g,'#cbbfa6');box(g,22,6,.3,'#efe6d0',0,0,-6,true);box(g,.3,6,14,'#e9dfc6',-11,0,1,true);for(let x=-9;x<10;x+=6)box(g,3,2,.1,GLASS(),x,2.5,-5.8,true);
-  box(g,2.4,2.4,.08,'#5b7f5a',0,1.8,-5.8,true);
-  box(g,3,1.9,2,'#c9c3b7',3,0,-3);box(g,3.04,.4,2.04,'#3f7fbf',3,1.9,-3);const u=makeObj('urna');u.scale.setScalar(1.1);u.position.set(3,.9,-3.2);g.add(u);
-  box(g,3,.9,1.2,'#a0805a',-4,0,0);const m=person({shirt:'#ffffff'});m.position.set(-4,0,-1.2);sit(m);m.position.y=-.25;g.add(m);const m2=person({shirt:'#f2c14e'});m2.position.set(-2.8,0,-1.2);sit(m2);m2.position.y=-.25;g.add(m2);
-  const s=sign(c.placa||'SEÇÃO ELEITORAL',6,1,'#1f5aa6','#ffffff');s.position.set(-4,4.3,-5.8);g.add(s);
-  const W=walkerSys();for(let i=0;i<4;i++)W.add(g,[R(-8,8),0,R(2,6)],[R(-8,8),0,R(2,7)],R(.6,.9));
-  const voter=person({shirt:ORANGE});voter.position.set(3,0,-1.8);voter.rotation.y=Math.PI;g.add(voter);
-  return{focus:new V(0,1.6,-2),r:7,az:.35,show:new V(-1,0,3),update:lt=>{W.update(lt);voter.userData.arms[1].rotation.x=-1.2+Math.sin(lt*3)*.25;idle(m,lt);idle(m2,lt);}};};
+/* seção eleitoral numa sala de aula: mesa receptora com mesários, cabine com biombo virado para a sala (o eleitor fica de frente para a fila e a urna fica escondida), fila na frente da mesa; o próximo eleitor entra pela porta */
+SCN.urna_votacao=(g,c)=>{ground(g,'#d6d0c2');
+  for(let x=-7.5;x<8;x+=1)for(let z=-5.5;z<6;z+=1)if((Math.round(x+z)&1))box(g,1,.004,1,'#cdc6b6',x,0,z,true);
+  /* paredes: fundo com quadro, esquerda com janelas, porta no fundo à direita */
+  box(g,13.6,4.2,.3,'#ece6d6',-1.2,0,-6);box(g,.6,4.2,.3,'#ece6d6',7.7,0,-6);box(g,1.6,1.8,.3,'#ece6d6',6.6,2.4,-6);
+  box(g,13.62,1.1,.32,'#7fa38a',-1.2,0,-6,true);box(g,.62,1.1,.32,'#7fa38a',7.7,0,-6,true);
+  box(g,.3,4.2,12,'#e6dfcd',-8,0,0);box(g,.32,1.1,12,'#7fa38a',-8,0,0,true);
+  for(let z=-4;z<5;z+=3){box(g,.06,1.5,2.2,GLASS(),-7.83,1.6,z,true);box(g,.08,.08,2.3,'#f4f4f2',-7.82,3.1,z,true);box(g,.08,.08,2.3,'#f4f4f2',-7.82,1.55,z,true);}
+  box(g,5.2,1.7,.06,'#2f4a3a',-3.4,1.45,-5.82,true);box(g,5.4,.08,.14,'#a0805a',-3.4,1.4,-5.78,true);
+  box(g,1.6,2.4,.05,'#2a2622',6.6,0,-6.4,true);box(g,1.7,.1,.34,'#8b6b4a',6.6,2.4,-6,true);[5.78,7.42].forEach(x=>box(g,.08,2.4,.34,'#8b6b4a',x,0,-6,true));
+  const pl=sign(c.placa||'SEÇÃO ELEITORAL',2.2,.42,'#ffffff','#1f2a36');pl.position.set(6.6,3.3,-5.82);g.add(pl);
+  const aviso=sign('ZONA 001 · SEÇÃO 0123',2.2,.32,'#1f5aa6','#ffffff');aviso.position.set(6.6,2.82,-5.82);g.add(aviso);
+  /* carteiras escolares empilhadas no canto */
+  const carteira=(x,z,y=0)=>{box(g,.62,.04,.46,'#c9a46a',x,y+.72,z);[[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([a,b])=>box(g,.035,.72,.035,'#3d4248',x+a*.27,y,z+b*.19,true));};
+  [[-6.6,-4.6],[-5.7,-4.6],[-6.6,-3.7]].forEach(([x,z])=>{carteira(x,z);carteira(x,z,.76);});
+  /* mesa receptora */
+  const MX=-1.4,MZ=-1.4;box(g,2.6,.05,.95,'#f4f4f2',MX,.74,MZ);box(g,2.62,.6,.02,'#f4f4f2',MX,.16,MZ+.47,true);
+  [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([a,b])=>box(g,.06,.74,.06,'#55595f',MX+a*1.2,0,MZ+b*.4,true));
+  const cart=sign('MESA RECEPTORA',1.5,.26,'#ffffff','#1f5aa6');cart.position.set(MX,.6,MZ+.49);g.add(cart);
+  box(g,.5,.02,.36,'#f9f7f0',MX-.15,.79,MZ+.1,true);box(g,.5,.02,.36,'#f9f7f0',MX+.37,.79,MZ+.1,true);box(g,.02,.025,.36,'#9aa0a8',MX+.11,.79,MZ+.1,true);
+  box(g,.26,.06,.34,'#2b2f36',MX+1,.79,MZ-.05);box(g,.2,.005,.14,MBasic('#9fd3ff'),MX+1,.851,MZ-.12,true);
+  for(let i=0;i<3;i++)for(let j=0;j<3;j++)box(g,.045,.012,.035,'#d9d9dc',MX+.94+i*.06,.85,MZ+.04+j*.05,true);
+  const mes=[];[[MX-.7,'#ffffff'],[MX+.6,'#3f6fb5']].forEach(([x,sh])=>{const ch=box(g,.48,.06,.48,'#2b2f36',x,.45,MZ-.85);box(g,.48,.5,.06,'#2b2f36',x,.48,MZ-1.06);[[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([a,b])=>box(g,.04,.45,.04,'#333',x+a*.2,0,MZ-.85+b*.2,true));
+    const p=person({shirt:sh});p.position.set(x,0,MZ-.85);sit(p);p.userData.arms.forEach(a=>a.rotation.x=-1.25);g.add(p);mes.push(p);});
+  /* cabine: mesinha, biombo de papelão aberto para o eleitor, urna eletrônica */
+  const UX=1.4,UZ=-4.2;box(g,1,.04,.7,'#c9a46a',UX,.74,UZ);[[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([a,b])=>box(g,.035,.74,.035,'#3d4248',UX+a*.45,0,UZ+b*.3,true));
+  box(g,1,.75,.02,'#d9d5cc',UX,.78,UZ+.34);[-.49,.49].forEach(dx=>box(g,.02,.75,.66,'#d9d5cc',UX+dx,.78,UZ));
+  const fx=sign('VOTAR',.6,.16,'#1f5aa6','#ffffff');fx.position.set(UX,1.38,UZ+.36);g.add(fx);
+  const urna=new THREE.Group();urna.position.set(UX,.78,UZ+.05);urna.rotation.y=Math.PI;g.add(urna);
+  box(urna,.5,.08,.38,'#ece7da',0,0,0);const top=box(urna,.5,.05,.36,'#ece7da',0,.08,-.02);top.rotation.x=.18;
+  box(urna,.2,.005,.15,MBasic('#cfe4f2'),-.12,.12,-.04,true).rotation.x=.18;
+  for(let i=0;i<3;i++)for(let j=0;j<4;j++)box(urna,.035,.012,.028,'#1d1f22',.08+i*.045,.115-j*.006,-.1+j*.04,true);
+  [['#ffffff',.07],['#ff7a00',.125],['#3fae6a',.185]].forEach(([cl,dx])=>box(urna,.05,.014,.03,cl,dx,.09,.14,true));
+  const eleitor=person({shirt:ORANGE});eleitor.position.set(UX,0,UZ-.72);eleitor.rotation.y=0;g.add(eleitor);
+  /* fila na frente da mesa e eleitor entregando o documento */
+  const fila=[];[[MX,MZ+1.05,'#7d5ba6'],[MX+.05,MZ+2.15,'#2e8b57'],[MX-.05,MZ+3,'#e8e4dc'],[MX,MZ+3.85,'#c98b5e']].forEach(([x,z,sh])=>{const p=person({shirt:sh});p.position.set(x,0,z);p.rotation.y=Math.PI;g.add(p);fila.push(p);});
+  const doc=new THREE.Mesh(new THREE.BoxGeometry(.09,.13,.01),M('#2f6b3a'));doc.position.set(0,-.7,.06);fila[0].userData.arms[1].add(doc);
+  /* próximo eleitor entra pela porta e vai para o fim da fila */
+  const novo=person({shirt:'#e5534b'});g.add(novo);const rota=[[6.6,-6.6],[6.6,-4.6],[2.8,.8],[MX,MZ+4.7]];
+  const seg=[];let L=0;for(let i=1;i<rota.length;i++){const d=Math.hypot(rota[i][0]-rota[i-1][0],rota[i][1]-rota[i-1][1]);seg.push([L,d]);L+=d;}
+  const anda=lt=>{const s=Math.min(L,lt*.95);let k=0;while(k<seg.length-1&&s>seg[k][0]+seg[k][1])k++;const [a,d]=seg[k],f=Math.min(1,(s-a)/d),A=rota[k],B=rota[k+1];
+    novo.position.set(A[0]+(B[0]-A[0])*f,0,A[1]+(B[1]-A[1])*f);if(s<L){novo.rotation.y=Math.atan2(B[0]-A[0],B[1]-A[1]);animWalk(novo,lt);}else{novo.rotation.y=Math.PI;novo.userData.legs.forEach(l=>l.rotation.x=0);idle(novo,lt);}};
+  return{focus:new V(0,1.2,-2.2),r:5.4,az:.45,show:new V(-1,0,3),update:lt=>{anda(lt);
+    eleitor.userData.arms[1].rotation.x=-1.05+Math.max(0,Math.sin(lt*2.4))*.12;eleitor.userData.arms[0].rotation.x=-.15;
+    fila[0].userData.arms[1].rotation.x=-1.15;fila.slice(1).forEach(p=>idle(p,lt));
+    mes[0].userData.arms[1].rotation.x=-1.25+Math.sin(lt*3)*.08;mes[1].userData.arms[0].rotation.x=-1.25+Math.sin(lt*2.2+1)*.1;}};};
 
 /* ===================== GEO REAL (Natural Earth + IBGE simplificados) ===================== */
 const GEO=(()=>{try{return JSON.parse(document.getElementById('geo-data').textContent);}catch(e){return{paises:[],uf:[]};}})();
