@@ -38,7 +38,7 @@ return {
 - **Compras no lugar certo.** Carrinhos e cestas têm fundo e grade: o que cai neles fica dentro. `K.colocar` encaixa sozinho o ponto de origem na prateleira, banca ou mesa mais próxima (até 0,7 m) — `K.naSuperficie([x,y,z])` faz isso para qualquer ponto.
 - **Figurantes não surgem nem somem na frente da câmera.** O motor calcula a câmera da cena inteira e só deixa cada figurante começar e terminar o trajeto fora do quadro ou escondido atrás de algo (porta, gôndola, prédio); quem entra na loja atravessa a porta.
 - **O que passa na frente da câmera fica transparente aos poucos** (nada some de uma vez); no último segundo da cena pode cruzar a frente, como transição. O assunto (perto do `foco`) nunca é afetado.
-- **Lojas têm porta.** `K.loja` e `K.atacarejo` têm entrada aberta; `K.portaDe(loja)` dá a posição da porta e `K.fitaInauguracao({porta: loja})` coloca a fita na entrada (nunca no meio da calçada). Na `rua_comercial`, `a.lojas` e `a.portas` trazem as 12 lojas.
+- **Lojas têm porta.** `K.loja` e `K.atacarejo` têm uma entrada aberta e funda, que escurece para dentro: quem entra vai sumindo na sombra e quem sai aparece do escuro; `K.portaDe(loja)` dá a posição da porta e `K.fitaInauguracao({porta: loja})` coloca a fita na entrada (nunca no meio da calçada). Na `rua_comercial`, `a.lojas` e `a.portas` trazem as 12 lojas.
 - **Figurantes combinam com a frase.** Desligue o que não faz sentido: `K.ambiente(nome, {figurantes: false})` tira todos; no `bairro`, `{criancas: false}` tira as crianças com bola.
 - **Caixas de supermercado:** o cliente vem de dentro da loja (no `supermercado`, z < 14) e sai pela frente (z > 14); a esteira leva as compras nesse sentido e o operador ensaca do lado da saída.
 - **A câmera nunca fica tapada:** o motor esconde sozinho, quadro a quadro, o que estiver entre a câmera e o `foco`. Mesmo assim, mire num ponto em que o assunto apareça inteiro.
@@ -209,17 +209,17 @@ return {foco: [1.5, 1.2, 12], raio: 4.6, az: .35, atualizar(t) { a.atualizar(t);
 
 
 **Varejo — cliente paga com Pix (no caixa 1 do supermercado)**
-Nos ambientes, o cliente fica do lado de dentro da loja e a esteira leva as compras para a saída. No `supermercado` o caixa 1 está em (−15, 14): o operador fica em (−16,1, 15) e o cliente paga do outro lado do balcão, em (−14,1, 15).
+Nos ambientes, o cliente fica do lado de dentro da loja e a esteira leva as compras para a saída. No `supermercado` o caixa 1 está em (−15, 14): o operador fica em (−16,05, 14,45), ao lado do leitor, e o cliente paga do outro lado do balcão, em (−14,15, 14,45). A área de ensacar (sacolas abertas) fica no fim do balcão, do lado da saída.
 ```js
 const a = K.ambiente('supermercado', {livre: {x: -14, z: 13, raio: 2}});
-const cli = K.pessoa({x: -14.1, z: 15, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
+const cli = K.pessoa({x: -14.15, z: 14.45, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
 cli.segurar(K.celular(), 1);
-K.qrcodePix({largura: .5, altura: .5, x: -15.3, y: 1.5, z: 15, rotY: Math.PI / 2});
+K.qrcodePix({largura: .5, altura: .5, x: -15.3, y: 1.5, z: 14.45, rotY: Math.PI / 2});
 const tela = K.tela((x, W, H, ok) => { x.fillStyle = ok ? '#3fae6a' : '#14171c'; x.fillRect(0, 0, W, H);
   x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = '800 ' + H * .32 + 'px Open Sans'; x.fillText(ok ? 'PAGO ✓' : 'PIX', W / 2, H * .64); },
-  {largura: 1, altura: .5, x: -15.2, y: 2.4, z: 15, rotY: Math.PI / 2});
+  {largura: 1, altura: .5, x: -15.2, y: 2.4, z: 14.45, rotY: Math.PI / 2});
 let pago = false;
-return {foco: [-14.7, 1.4, 15], raio: 2.6, az: .7, atualizar(t) {
+return {foco: [-14.7, 1.4, 14.45], raio: 2.6, az: .7, atualizar(t) {
   a.atualizar(t); cli.userData.arms[1].rotation.x = -1.2 - Math.min(.4, t * .4);
   const deve = t > 1.2; if (deve !== pago) { pago = deve; tela.redesenhar(pago); }
 }};
