@@ -42,6 +42,13 @@ return {
 - **Figurantes combinam com a frase.** Desligue o que não faz sentido: `K.ambiente(nome, {figurantes: false})` tira todos; no `bairro`, `{criancas: false}` tira as crianças com bola.
 - **Caixas de supermercado:** o cliente vem de dentro da loja (no `supermercado`, z < 14) e sai pela frente (z > 14); a esteira leva as compras nesse sentido e o operador ensaca do lado da saída.
 - **A câmera nunca fica tapada:** o motor esconde sozinho, quadro a quadro, o que estiver entre a câmera e o `foco`. Mesmo assim, mire num ponto em que o assunto apareça inteiro.
+- **Mãos não atravessam nada.** A ponta do braço não entra em tela, monitor, celular, balcão, mesa ou prateleira: quem está atrás de uma bancada fica com folga (~0,5 m) e gesticula na altura do peito; quem está sentado à mesa apoia os braços por cima do tampo (braço ≈ −1,5). A prévia acusa "mão atravessando objeto".
+- **Celular na mão fica com a tela virada para quem segura** (como na vida real): para mostrar a tela, use câmera por cima do ombro. Celular de verdade tem ~15 cm: `K.celular({escala: .24})`.
+- **Monitor é de mesa** (`K.monitor` padrão 62 × 38 cm); `K.monitor`, `K.notebook` e `K.maquininha` sem `y` sobem sozinhos para a mesa/balcão que estiver embaixo. Tela grande é `K.telao`. Dois monitores lado a lado: centros a ≥ 0,7 m.
+- **Veículos andam de frente** (frente = +z local; no trajeto para −z use `rotY: Math.PI`). Mão dupla com tráfego pela direita. Empilhadeira pode dar ré. Veículo nunca passa por cima de pessoa nem atravessa outro veículo: rotas de empilhadeiras longe das rotas de pessoas e longe dos caminhões. A prévia acusa "veículo andando de ré", "veículo passando por cima de pessoa" e "veículos se atravessando".
+- **Nada pisca.** Duas peças com a face no mesmo plano (placa rente à parede, prateleira rente ao móvel, tela rente à moldura) piscam no vídeo; o motor desloca a peça menor 1,2 cm para fora e tira de dentro da caixa a tela/placa que ficou enterrada nela. Mesmo assim, encoste com folga: placa a 2 cm da parede, prateleira 2 cm mais rasa que o móvel.
+- **Mapa e globo: um pino por lugar.** `K.globo({pinos, paises})`: `paises` só pinta o país; o pino vem de `pinos` (não repita o mesmo lugar).
+- **Pizza:** os nomes das fatias ficam na frente do disco, dentro do quadro (nunca atrás nem fora da tela); use nomes curtos (até ~10 letras).
 - **Física coerente, sempre** (vale para qualquer coisa, não só para os exemplos): nada flutua, nada atravessa nada, quem segura algo segura com a mão. Veja a seção *Física* abaixo; a prévia acusa as falhas e a cena só está pronta com zero avisos.
 
 ---
