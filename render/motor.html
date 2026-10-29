@@ -182,7 +182,7 @@ function entreMaos(dono,obj,maos,larguraMao){if(obj.parent)obj.parent.remove(obj
   if(lx>1e-3&&Math.abs(lx-vao)>.02)obj.scale.multiplyScalar(vao/lx);obj.updateMatrixWorld(true);b=new THREE.Box3().setFromObject(obj);const c=b.getCenter(new V());
   const prof=(b.max.z-b.min.z)/2;obj.position.set(m.x-c.x,m.y-c.y,m.z-c.z+Math.min(.12,prof*.3));dono.add(obj);obj.userData.preso=true;return obj;}
 /* objeto na palma de uma mão: preso ao braço, acompanha o movimento */
-function naMao(braco,obj,yMao){if(obj.parent)obj.parent.remove(obj);obj.position.set(0,0,0);obj.rotation.set(0,0,0);obj.updateMatrixWorld(true);
+function naMao(braco,obj,yMao){if(obj.parent)obj.parent.remove(obj);obj.position.set(0,0,0);obj.rotation.set(0,0,0);/* celular na mão tem tamanho de celular */if((obj.userData||{}).tipo==='celular'&&obj.scale.x>.3)obj.scale.setScalar(.2);obj.updateMatrixWorld(true);
   /* celular e tablet na mão: tela virada para quem segura */obj.rotation.set(-braco.rotation.x,/^(celular|tablet)$/.test(obj.userData.tipo||'')?Math.PI:0,0);obj.updateMatrixWorld(true);const b2=new THREE.Box3().setFromObject(obj),c2=b2.getCenter(new V());
   /* a mão (caixa de 13 × 15 × 15 cm na ponta do braço) nunca fica dentro do objeto: sacolas e cestas penduram abaixo da mão (alça na palma);
      celular, cartão, documento etc. ficam encostados na frente da palma */
@@ -270,7 +270,7 @@ function entradaLoja(g,o){const x=o.x||0,z0=o.z0,z1=o.z1,w=o.w,h=o.h,d=z1-z0,N=8
   for(let i=0;i<7;i++){const zv=z0+.35+i*(d-.7)/6;const v=new THREE.Mesh(new THREE.PlaneGeometry(w-.16,h-.1),new THREE.MeshBasicMaterial({color:esc,transparent:true,opacity:.2,depthWrite:false}));
     v.position.set(x,h/2,zv);v.userData.sombra=true;if(zv<z0+d*.5)v.userData.ocultaAtras=true;g.add(v);}
   if(w>=4)[-1,1].forEach(sd=>{const vd=box(g,1.6,h-.2,.06,GLASS(),x+sd*(w/2-.9),0,z1-.4,true);vd.material=vd.material.clone();vd.material.transparent=true;vd.material.opacity=.45;});}
-function obstaculos(raiz,ignorar,vis){raiz.updateMatrixWorld(true);const obs=[];raiz.traverse(m=>{if(!m.isMesh||ignorar.has(m))return;if(m.userData.sombra&&!(vis&&m.userData.ocultaAtras))return;(m.isInstancedMesh?caixasInst(m):[new THREE.Box3().setFromObject(m)]).forEach(b=>{if(b.isEmpty()||b.max.y<.25||b.min.y>1.7)return;obs.push(b);});});return obs;}
+function obstaculos(raiz,ignorar,vis){raiz.updateMatrixWorld(true);const obs=[];raiz.traverse(m=>{if(!m.isMesh||ignorar.has(m))return;if(vis){const mt=m.material;if(mt&&!Array.isArray(mt)&&mt.transparent&&mt.opacity<.6)return;/* vidro não esconde ninguém */let a=m;while(a&&a!==raiz){if(!a.visible)return;a=a.parent;}}if(m.userData.sombra&&!(vis&&m.userData.ocultaAtras))return;(m.isInstancedMesh?caixasInst(m):[new THREE.Box3().setFromObject(m)]).forEach(b=>{if(b.isEmpty()||b.max.y<.25||b.min.y>1.7)return;obs.push(b);});});return obs;}
 function trechoLivre(obs,ez,f,ini,fim,mg){const lo=Math.min(ini,fim),hi=Math.max(ini,fim);const bl=[];
   obs.forEach(b=>{const c0=ez?b.min.x:b.min.z,c1=ez?b.max.x:b.max.z;if(c1<f-.45||c0>f+.45)return;bl.push([(ez?b.min.z:b.min.x)-mg,(ez?b.max.z:b.max.x)+mg]);});
   bl.sort((a,b)=>a[0]-b[0]);let c=lo;const lv=[];bl.forEach(([a,b])=>{if(a>c)lv.push([c,Math.min(a,hi)]);c=Math.max(c,b);});if(c<hi)lv.push([c,hi]);
@@ -279,15 +279,16 @@ function walkerSys(){const list=[];let pronto=false;return{list,
   add(g,a,b,speed,o={}){if(SEM_FIG)return person(o);const p=person(o);p.userData.figurante=!o.ping;if(o.cart){const c=cart();c.position.set(0,0,.72);p.add(c);}g.add(p);
     const ez=Math.abs(b[2]-a[2])>=Math.abs(b[0]-a[0]);let lane=ez?(a[0]+b[0])/2:(a[2]+b[2])/2;const usadas=list.filter(w=>w.ez===ez).map(w=>w.lane);let k=0;while(usadas.some(u=>Math.abs(u-lane)<.95)&&k<40){lane+=(k%2?-1:1)*(k+1)*.5;k++;}
     let A=ez?[lane,0,a[2]]:[a[0],0,lane],B=ez?[lane,0,b[2]]:[b[0],0,lane];if(list.length%2&&o.sentido===undefined)[A,B]=[B,A];list.push({p,a:new V(...A),b:new V(...B),speed,off:o.off??R(0,8),cart:!!o.cart,ping:o.ping===true,ez,lane});return p;},
-  preparar(){pronto=true;if(!list.length)return;let raiz=list[0].p.parent;while(raiz.parent&&raiz.parent.type!=='Scene')raiz=raiz.parent;
-    const ign=new Set();list.forEach(w=>w.p.traverse(m=>ign.add(m)));const obs=obstaculos(raiz,ign);const obsVis=obstaculos(raiz,ign,true);
+  preparar(){if(!list.length){pronto=true;return;}let raiz=list[0].p.parent;while(raiz.parent&&raiz.parent.type!=='Scene')raiz=raiz.parent;
+    /* só monta os trajetos com a visão da câmera DESTA cena (antes disso, quem recomeça poderia aparecer do nada) */if(VISAO.raiz!==raiz)return;pronto=true;
+    const ign=new Set();list.forEach(w=>w.p.traverse(m=>ign.add(m)));const obs=obstaculos(raiz,ign);/* para esconder quem recomeça, só vale o que fica parado: carro e gente se mexem */const ignV=new Set(ign);raiz.traverse(o=>{const u=o.userData||{};if(u.veiculo||u.pessoa)o.traverse(m=>ignV.add(m));});const obsVis=obstaculos(raiz,ignV,true);
     list.forEach(w=>{const ini=w.ez?w.a.z:w.a.x,fim=w.ez?w.b.z:w.b.x;const tl=trechoLivre(obs,w.ez,w.lane,ini,fim,w.cart?1.7:.6);if(!tl){w.p.visible=false;w.morto=true;return;}
-      if(!w.ping){const po=pontasOcultas(w.ez,w.lane,tl[0],tl[1],obsVis);if(!po){w.p.visible=false;w.morto=true;return;}tl[0]=po[0];tl[1]=po[1];}
+      if(!w.ping){const po=pontasOcultas(w.ez,w.lane,tl[0],tl[1],obsVis);/* sem esconderijo: anda uma vez só e para no fim, nunca some */if(!po){w.unico=true;w.q0=R(0,.45);}else{tl[0]=po[0];tl[1]=po[1];}}
       if(w.ez){w.a.z=tl[0];w.b.z=tl[1];}else{w.a.x=tl[0];w.b.x=tl[1];}
       obs.push(w.ez?new THREE.Box3(new V(w.lane-.45,0,Math.min(tl[0],tl[1])-.5),new V(w.lane+.45,1.8,Math.max(tl[0],tl[1])+.5)):new THREE.Box3(new V(Math.min(tl[0],tl[1])-.5,0,w.lane-.45),new V(Math.max(tl[0],tl[1])+.5,1.8,w.lane+.45)));});},
   update(t){if(!pronto)this.preparar();for(const w of list){if(w.morto)continue;const len=w.a.distanceTo(w.b)||1;let q=t*w.speed/len+w.off,dir=1;
-    if(w.ping){q=q%2;if(q>1){q=2-q;dir=-1;}}else q=((q%1)+1)%1;
-    w.p.position.lerpVectors(w.a,w.b,q);w.p.rotation.y=Math.atan2((w.b.x-w.a.x)*dir,(w.b.z-w.a.z)*dir);animWalk(w.p,t,w.speed/1.3,w.cart);}}};}
+    if(w.unico)q=Math.min(1,w.q0+t*w.speed/len);else if(w.ping){q=q%2;if(q>1){q=2-q;dir=-1;}}else q=((q%1)+1)%1;
+    w.p.position.lerpVectors(w.a,w.b,q);w.p.rotation.y=Math.atan2((w.b.x-w.a.x)*dir,(w.b.z-w.a.z)*dir);if(!(w.unico&&q>=1))animWalk(w.p,t,w.speed/1.3,w.cart);}}};}
 /* entra e sai de cena encolhendo nas pontas do trajeto (nada de ir e voltar) */
 function esmaecer(p,q,len){if(p.userData.esc0===undefined)p.userData.esc0=p.scale.x;const k=Math.max(.001,Math.min(1,q*len/.7,(1-q)*len/.7));p.scale.setScalar(p.userData.esc0*k);}
 function shelfProducts(g,x0,x1,y,z,depth,face){for(let x=x0;x<x1;x+=R(.35,.6)){const h=R(.35,.75),c=pick(GOODS);box(g,R(.28,.5),h,depth,c,x,y,z,true);}}
@@ -531,7 +532,7 @@ SCN.bolsa_mercado=(g,c)=>{ground(g,'#22252b');box(g,40,9,.3,'#1a1d22',0,0,-8,tru
     x.strokeStyle=ORANGE;x.lineWidth=5;x.beginPath();let y=H*.6;for(let i=0;i<20;i++){y+=(r()-.45)*30;x.lineTo(470+i*16,Math.max(40,Math.min(H-20,y)));}x.stroke();});
   for(let i=0;i<3;i++){const p=new THREE.Mesh(new THREE.PlaneGeometry(10,5),new THREE.MeshBasicMaterial({map:mk(i+3)}));p.position.set(-11+i*11,5.2,-7.8);g.add(p);}
   const ticker=new THREE.Mesh(new THREE.PlaneGeometry(36,1),new THREE.MeshBasicMaterial({map:texCanvas(2048,64,(x,W,H)=>{x.fillStyle='#000';x.fillRect(0,0,W,H);x.font='700 40px "Open Sans",sans-serif';x.fillStyle=ORANGE;x.fillText((c.placa||'MERCADO')+'  ▲ IBOV  ▼ DÓLAR  ▲ PETR  ▼ VALE  ▲ OURO  ▼ BRENT  ▲ '+(c.placa||'MERCADO'),20,46);})}));ticker.position.set(0,1.6,-7.8);g.add(ticker);
-  const ps=[];for(let r=0;r<2;r++)for(let k=0;k<5;k++){const x=-10+k*5,z=-1+r*5;box(g,3.6,.9,1.4,'#2b2f36',x,0,z);box(g,1.2,.8,.05,MBasic('#9fd3ff'),x-.7,1.2,z-.4,true);box(g,1.2,.8,.05,MBasic('#3fdc7a'),x+.7,1.2,z-.4,true);
+  const ps=[];for(let r=0;r<2;r++)for(let k=0;k<5;k++){const x=-10+k*5,z=-1+r*5;box(g,3.6,.9,1.4,'#2b2f36',x,0,z);box(g,1.2,.8,.05,MBasic('#9fd3ff'),x-.7,1.2,z-.4,true);box(g,1.2,.8,.05,MBasic('#3fdc7a'),x+.7,1.2,z-.4,true);[-.7,.7].forEach(d=>box(g,.06,.3,.06,'#2b2f36',x+d,.9,z-.42,true));/* teclado e mouse na frente de quem opera */box(g,.5,.025,.16,'#1d1f22',x,.9,z+.32,true);box(g,.07,.03,.11,'#1d1f22',x+.42,.9,z+.32,true);
     const p=person({shirt:pick(['#ffffff','#1f2a36','#3f6fb5'])});p.position.set(x,0,z+1.1);p.rotation.y=Math.PI;sit(p);p.position.y=-.25;g.add(p);ps.push(p);}
   return{focus:new V(0,3,-3),r:13,az:.15,show:new V(0,0,6),update:lt=>{ticker.material.map.offset.x=(lt*.05)%1;ticker.material.map.wrapS=THREE.RepeatWrapping;/* mãos por cima da mesa (no teclado), nunca atravessando o tampo */ps.forEach((p,i)=>{p.userData.arms[1].rotation.x=-1.5+Math.sin(lt*2+i)*.06;p.userData.arms[0].rotation.x=-1.5;});}};};
 
@@ -1080,7 +1081,9 @@ function makeKit(root,ctx){
     box(g,1.1,.04,1.5,'#c9ced6',0,.84,-1.55,true);box(g,.06,.18,1.5,'#9aa0a8',-.52,.84,-1.55,true);
     const sacs=[-1.15,-1.85].map(z=>{const sg=G();box(sg,.36,.02,.24,'#f2efe6',0,0,0,true);box(sg,.36,.42,.02,'#f2efe6',0,0,-.12,true);box(sg,.36,.42,.02,'#f2efe6',0,0,.12,true);box(sg,.02,.42,.24,'#f2efe6',-.18,0,0,true);box(sg,.02,.42,.24,'#f2efe6',.18,0,0,true);sg.position.set(-.05,.88,z);g.add(sg);return sg;});
     /* tela do PDV ao lado do operador, fora do caminho do braço que passa as compras no leitor */const tela=box(g,.04,.32,.42,'#14171c',.62,1.25,.72,true);box(g,.06,.35,.06,'#555',.62,.9,.72,true);box(g,.36,.12,.3,'#2b2f36',.6,.9,.35,true);
-    const tl=sign(op.numero?'CAIXA '+op.numero:'CAIXA',1.6,.5,ORANGE,'#fff');tl.position.set(0,3.2,0);g.add(tl);box(g,1.64,.54,.04,'#2b2f36',0,2.93,-.03,true);/* placa com frente dos dois lados: nunca aparece o verso preto */const tl2=sign(op.numero?'CAIXA '+op.numero:'CAIXA',1.6,.5,ORANGE,'#fff');tl2.position.set(0,3.2,-.06);tl2.rotation.y=Math.PI;g.add(tl2);box(g,.08,2.03,.08,'#555',0,.9,-.03,true);
+    /* placa do caixa num poste na lateral (lado do operador, na ponta da esteira), saindo para fora do balcão como bandeira; frente dos dois lados */
+    const PX=.72,PZ=2.05,SX=PX+.84;box(g,.08,3.45,.08,'#555',PX,0,PZ,true);box(g,.9,.06,.06,'#555',PX+.45,3.42,PZ,true);
+    const tl=sign(op.numero?'CAIXA '+op.numero:'CAIXA',1.6,.5,ORANGE,'#fff');tl.position.set(SX,3.18,PZ+.03);g.add(tl);box(g,1.64,.54,.04,'#2b2f36',SX,2.91,PZ,true);const tl2=sign(op.numero?'CAIXA '+op.numero:'CAIXA',1.6,.5,ORANGE,'#fff');tl2.position.set(SX,3.18,PZ-.03);tl2.rotation.y=Math.PI;g.add(tl2);
     const itens=[];for(let i=0;i<5;i++){const h=R(.16,.3);const it=box(g,R(.16,.26),h,R(.16,.24),pick(GOODS),0,0,0,true);it.geometry.translate(0,h/2,0);it.userData.mercadoria=true;itens.push({it,o:i/5,h});}
     let opr=null;if(op.operador!==false){opr=K.pessoa({uniforme:'caixa',pai:g,x:1.05,z:-.45,rotY:-Math.PI/2});}
     /* cliente no começo da esteira, tirando as compras do próprio carrinho (nada surge do nada): sem cliente, a esteira fica parada e vazia */
@@ -1138,11 +1141,14 @@ function makeKit(root,ctx){
     /* box() posiciona pela base: a tela física vai de y .42 a .62, centro .52, .3x.2 — o desenho cobre exatamente esse retângulo */o.add(tl);let atual=op.tela||'cartao';tl.redesenhar(atual);o.mostrar=m=>{if(m!==atual){atual=m;tl.redesenhar(m);}return o;};o.userData.telaMaq=tl;
     return P(o,op);};
   K.qrcodePix=(op={})=>{const t=K.tela((x,W,H)=>{x.fillStyle='#ffffff';x.fillRect(0,0,W,H);const n=21,s=W/(n+4);const r=mulberry32(5);for(let i=0;i<n;i++)for(let j=0;j<n;j++){const f=(i<7&&j<7)||(i<7&&j>13)||(i>13&&j<7);const on=f?((i%6===0||j%6===0||(i%6>1&&i%6<5&&j%6>1&&j%6<5))):r()<.5;if(on){x.fillStyle='#111';x.fillRect((j+2)*s,(i+2)*s,s,s);}}},Object.assign({largura:1,altura:1,px:256},op));return t;};
-  K.celular=(op={})=>{const g=G();box(g,.42,.85,.06,'#1d1f22',0,0,0);const t=K.tela(op.tela||((x,W,H)=>{x.fillStyle=ORANGE;x.fillRect(0,0,W,H);}),{largura:.37,altura:.74,pai:g,y:.43,z:.035,px:256});g.tela=t;g.userData.tipo='celular';return P(g,op);};
+  K.celular=(op={})=>{const g=G();box(g,.42,.85,.06,'#1d1f22',0,0,0);const t=K.tela(op.tela||((x,W,H)=>{x.fillStyle=ORANGE;x.fillRect(0,0,W,H);}),{largura:.37,altura:.74,pai:g,y:.43,z:.035,px:256});g.tela=t;g.userData.tipo='celular';/* tamanho de celular de verdade (~17 cm); escala maior só com grande:true (peça ilustrativa, nunca na mão) */op=Object.assign({},op,{escala:op.grande?(op.escala||1):Math.min(op.escala||.2,.3)});return P(g,op);};
   K.notebook=(op={})=>{const g=G();box(g,1.4,.05,1,'#9aa0a8',0,0,0);const tampa=G();tampa.position.set(0,.05,-.5);tampa.rotation.x=-.25;g.add(tampa);box(tampa,1.4,.9,.04,'#9aa0a8',0,0,0);const t=K.tela(op.tela||((x,W,H)=>{x.fillStyle='#14171c';x.fillRect(0,0,W,H);}),{largura:1.3,altura:.8,pai:tampa,y:.45,z:.03});g.tela=t;return P(g,op);};
   K.monitor=(op={})=>{const g=G();const w=op.largura||.62,h=op.altura||.38,pe=op.pe??.16;/* padrão: monitor de mesa (62 × 38 cm); para tela grande use K.telao */
     box(g,Math.min(.3,w*.4),.02,.18,'#2b2f36',0,0,0);box(g,.05,pe,.05,'#2b2f36',0,.02,-.02);box(g,w,h+.04,.04,'#1d1f22',0,.02+pe,-.02);
-    const t=K.tela(op.tela||((x,W,H)=>{x.fillStyle='#14171c';x.fillRect(0,0,W,H);}),{largura:w-.04,altura:h-.02,pai:g,y:.02+pe+.02+h/2,z:.005});g.tela=t;return P(g,op);};
+    const t=K.tela(op.tela||((x,W,H)=>{x.fillStyle='#14171c';x.fillRect(0,0,W,H);}),{largura:w-.04,altura:h-.02,pai:g,y:.02+pe+.02+h/2,z:.005});g.tela=t;
+    /* monitor de mesa sempre com teclado e mouse na frente (teclado:false para não pôr; teclado:{dx} desloca para o lugar de quem usa) */
+    if(op.teclado!==false){const dx=(op.teclado&&op.teclado.dx)||0,dz=(op.teclado&&op.teclado.dz)||.32;box(g,.44,.025,.15,'#2b2f36',dx,0,dz);for(let r=0;r<3;r++)box(g,.4,.006,.03,'#4a5058',dx,.025,dz-.05+r*.04,true);box(g,.06,.03,.1,'#2b2f36',dx+.33,0,dz);g.userData.teclado=true;}
+    return P(g,op);};
   K.telao=(desenhar,op={})=>{const g=G();box(g,(op.largura||10)+.4,(op.altura||5.6)+.4,.3,'#1d1f22',0,op.y||3,0);const t=K.tela(desenhar,{largura:op.largura||10,altura:op.altura||5.6,pai:g,y:(op.y||3)+((op.altura||5.6)+.4)/2,z:.16,px:1024});g.tela=t;delete op.y;return P(g,op);};
   /* leitor de biometria facial de balcão: pé curto, tablet com câmera e anel de LED virado para o cliente (frente = +z).
      .estado(t, t0, dur): antes de t0 pede para olhar a câmera; de t0 a t0+dur escaneia (linha correndo sobre o rosto); depois aprova (verde). */
@@ -1295,19 +1301,19 @@ function makeKit(root,ctx){
       if(op.sacola&&rng()<op.sacola){const s=makeObj('sacola');s.scale.setScalar(.6);p.segurar(s,0);}
       p.userData.figurante=true;/* recomeça escondido (pontasOcultas) */ctx.andando.add(p);L.push({p,fixo:ok[i],inv:i%2===1,vel:R(.8,1.3)*(op.vel||1),off:R(0,30)});}
     let pronto=false;
-    const preparar=()=>{pronto=true;raizA.updateMatrixWorld(true);const ign=new Set();raizA.traverse(o=>{if(o.userData&&o.userData.pessoa&&ctx.andando.has(o))o.traverse(m=>ign.add(m));});
+    const preparar=()=>{let rz=raizA;while(rz.parent&&rz.parent.type!=='Scene')rz=rz.parent;if(VISAO.raiz!==rz)return;pronto=true;raizA.updateMatrixWorld(true);const ign=new Set();raizA.traverse(o=>{if(o.userData&&o.userData.pessoa&&ctx.andando.has(o))o.traverse(m=>ign.add(m));});
       const movel=new Set();(ctx.moveis||[]).forEach(v=>v.traverse(m=>movel.add(m)));const obs=[];raizA.traverse(m=>{if(!m.isMesh||ign.has(m)||movel.has(m)||m.userData.sombra)return;(m.isInstancedMesh?caixasInst(m):[new THREE.Box3().setFromObject(m)]).forEach(b=>{if(b.isEmpty()||b.max.y<.25||b.min.y>1.7)return;obs.push(b);});});const obsVisExtra=[];raizA.traverse(m=>{if(m.isMesh&&m.userData.ocultaAtras)obsVisExtra.push(new THREE.Box3().setFromObject(m));});
-      const obsVis=obs.concat(obsVisExtra);(ctx.trilhas||[]).forEach(t=>{if(t.ez===null||t.ez!==ezA)obs.push(t.b);});
+      /* esconderijo só do que fica parado (sem gente nem veículo) */const ignV=new Set();raizA.traverse(o=>{const u=o.userData||{};if(u.veiculo||u.pessoa)o.traverse(m=>ignV.add(m));});movel.forEach(m=>ignV.add(m));const obsVis=obstaculos(raizA,ignV,true).concat(obsVisExtra);(ctx.trilhas||[]).forEach(t=>{if(t.ez===null||t.ez!==ezA)obs.push(t.b);});
       const ini=ezA?az0:ax0,fim=ezA?az1:ax1;
       L.forEach(o=>{const f=o.fixo,mg=o.p.comCarrinho?1.7:.6;const bl=[];
         obs.forEach(b=>{const c0=ezA?b.min.x:b.min.z,c1=ezA?b.max.x:b.max.z;if(c1<f-.45||c0>f+.45)return;bl.push([(ezA?b.min.z:b.min.x)-mg,(ezA?b.max.z:b.max.x)+mg]);});
         bl.sort((a,b)=>a[0]-b[0]);let c=ini;const lv=[];bl.forEach(([a,b])=>{if(a>c)lv.push([c,Math.min(a,fim)]);c=Math.max(c,b);});if(c<fim)lv.push([c,fim]);
         let best=null;lv.forEach(v=>{if(v[1]-v[0]>(best?best[1]-best[0]:0))best=v;});
         if(!best||best[1]-best[0]<2.5){o.p.visible=false;o.morto=true;return;}
-        let a=best[0]+.1,b=best[1]-.1;const po=pontasOcultas(ezA,f,a,b,obsVis);if(!po){o.p.visible=false;o.morto=true;return;}[a,b]=po;if(o.inv)[a,b]=[b,a];o.pts=ezA?[[f,a],[f,b]]:[[a,f],[b,f]];
+        let a=best[0]+.1,b=best[1]-.1;const po=pontasOcultas(ezA,f,a,b,obsVis);/* sem esconderijo nas pontas: anda uma vez só, sem recomeçar (e para no fim), em vez de sumir */if(!po){o.unico=true;o.q0=R(0,.45);}else[a,b]=po;if(o.inv)[a,b]=[b,a];o.pts=ezA?[[f,a],[f,b]]:[[a,f],[b,f]];
         (ctx.trilhas=ctx.trilhas||[]).push({ez:ezA,b:ezA?new THREE.Box3(new V(f-.45,0,a-.5),new V(f+.45,1.8,b+.5)):new THREE.Box3(new V(a-.5,0,f-.45),new V(b+.5,1.8,f+.45))});});};
-    return t=>{if(!pronto)preparar();L.forEach(o=>{if(o.morto)return;if(Math.abs(o.pts[0][0]-o.pts[1][0])+Math.abs(o.pts[0][1]-o.pts[1][1])<1){o.p.position.set(o.pts[0][0],0,o.pts[0][1]);o.p.parado(t);return;}
-      const len=Math.hypot(o.pts[1][0]-o.pts[0][0],o.pts[1][1]-o.pts[0][1]);const q=((((t+o.off)*o.vel)/len)%1+1)%1;o.p.position.set(o.pts[0][0]+(o.pts[1][0]-o.pts[0][0])*q,0,o.pts[0][1]+(o.pts[1][1]-o.pts[0][1])*q);
+    return t=>{if(!pronto)preparar();if(!pronto)return;L.forEach(o=>{if(o.morto)return;if(Math.abs(o.pts[0][0]-o.pts[1][0])+Math.abs(o.pts[0][1]-o.pts[1][1])<1){o.p.position.set(o.pts[0][0],0,o.pts[0][1]);o.p.parado(t);return;}
+      const len=Math.hypot(o.pts[1][0]-o.pts[0][0],o.pts[1][1]-o.pts[0][1]);const q=o.unico?Math.min(1,o.q0+t*o.vel/len):((((t+o.off)*o.vel)/len)%1+1)%1;if(o.unico&&q>=1){o.p.position.set(o.pts[1][0],0,o.pts[1][1]);o.p.parado(t);return;}o.p.position.set(o.pts[0][0]+(o.pts[1][0]-o.pts[0][0])*q,0,o.pts[0][1]+(o.pts[1][1]-o.pts[0][1])*q);
       o.p.rotation.y=Math.atan2(o.pts[1][0]-o.pts[0][0],o.pts[1][1]-o.pts[0][1]);animWalk(o.p,t,o.vel/1.3,o.p.comCarrinho);});};};
   /* veículos da mesma faixa andam na mesma velocidade e espaçados por igual: ninguém atravessa o da frente */
   const veiculos=(lista)=>{const fx=new Map();lista.forEach(o=>{const k=[o.x0,o.z0,o.x1,o.z1].map(v=>Math.round(v*10)).join(',');if(!fx.has(k))fx.set(k,[]);fx.get(k).push(o);});
@@ -1357,7 +1363,7 @@ function makeKit(root,ctx){
     return{palco:{x:0,z:12},foco:[0,2,0],raio:9,atualizar(t){linhas.forEach(l=>l.it.forEach((b,i)=>{const q=((t*.08+i/18)%1);b.position.x=-19+38*q;}));bracos.forEach((b,i)=>{b.rotation.y=Math.sin(t*1.2+i)*.9;b.ombro.rotation.x=Math.sin(t*2+i)*.3;});
       ops.forEach((p,i)=>{p.userData.arms[1].rotation.x=-1.3+Math.sin(t*3+i)*.4;p.userData.arms[0].rotation.x=-1+Math.sin(t*2.6+i)*.3;});fk.position.x=-20+Math.sin(t*.4)*12;fk.rotation.y=Math.cos(t*.4)>0?Math.PI/2:-Math.PI/2;fk.atualizar(t);}};};
 
-  AMB.cidade=(op)=>{K.chao('#6d7076');ctx.amb={azRange:.2};K.caixa(12,.04,200,'#4f5257',{z:-40});K.caixa(200,.04,10,'#4f5257',{z:0});
+  AMB.cidade=(op)=>{K.chao('#6d7076');ctx.amb={azRange:.2};K.rua(-7,7,-140,60);K.rua(-100,100,-6.2,6.2);K.caixa(12,.04,200,'#4f5257',{z:-40});K.caixa(200,.04,10,'#4f5257',{z:0});
     for(let z=-100;z<60;z+=6)K.caixa(.2,.02,2.6,'#f2f2f2',{z,y:.04});for(let x=-90;x<90;x+=6)if(Math.abs(x)>7)K.caixa(2.6,.02,.2,'#f2f2f2',{x,y:.04});
     for(let i=-5;i<=5;i++)K.caixa(1,.02,6,'#f2f2f2',{x:i*1.6,y:.05,z:7.5});for(let i=-5;i<=5;i++)K.caixa(6,.02,1,'#f2f2f2',{x:-8.5,y:.05,z:i*1.4});
     [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([sx,sz])=>{K.caixa(60,.2,60,'#b9b2a6',{x:sx*37,z:sz*35});for(let k=0;k<6;k++)for(let j=0;j<3;j++){if(rng()<.15)continue;K.predio({x:sx*(16+j*10),z:sz*(12+k*9),largura:8,profundidade:7,altura:R(10,42),rotY:sx>0?-Math.PI/2:Math.PI/2,cor:K.escolher(['#9aa5b1','#c9ced6','#7d8a99','#d9cbb5','#b8c2cc','#a65e46','#c98b5e'])});}
@@ -1368,17 +1374,18 @@ function makeKit(root,ctx){
     const mv=veiculos(vs);const pe=andantes(14,[7.5,10,-40,40],{sacola:.3});const pe2=andantes(14,[-10,-7.5,-40,40],{sacola:.3});const pe3=andantes(8,[-40,40,7.5,10],{eixo:'x'});
     return{palco:{x:9,z:10},foco:[6,2,6],raio:9,atualizar(t){mv(t);pe(t);pe2(t);pe3(t);}};};
 
-  AMB.rua_comercial=(op)=>{K.chao('#7c7f84');ctx.amb={azRange:.2};K.caixa(9,.04,200,'#55595f',{z:-40});for(let z=-120;z<60;z+=6)K.caixa(.18,.02,2.6,'#f2f2f2',{z,y:.05});[-1,1].forEach(s=>K.caixa(4,.18,200,'#c9c3b7',{x:s*6.5,z:-40}));
+  AMB.rua_comercial=(op)=>{K.chao('#7c7f84');ctx.amb={azRange:.2};K.rua(-8.5,8.5,-140,60);K.caixa(9,.04,200,'#55595f',{z:-40});for(let z=-120;z<60;z+=6)K.caixa(.18,.02,2.6,'#f2f2f2',{z,y:.05});[-1,1].forEach(s=>K.caixa(4,.18,200,'#c9c3b7',{x:s*6.5,z:-40}));
     const nomes=op.lojas||['PADARIA','FARMÁCIA','MERCADO','ROUPAS','ELETRÔNICOS','LANCHONETE','ÓTICA','CALÇADOS','PET SHOP','BANCO','PAPELARIA','AÇAÍ'];const cores=[ORANGE,'#2e8b57','#c0392b','#1f5aa6','#7a4fa0','#e5534b','#2c3e50','#b5651d','#3fae6a','#1b3a6b','#d4a017','#6c3483'];
     const lojas=[];for(let i=0;i<12;i++){const s=i%2?1:-1,z=12-Math.floor(i/2)*13;const lj=K.loja({x:s*14.5,z,rotY:s>0?-Math.PI/2:Math.PI/2,placa:nomes[i%nomes.length],largura:12,corFaixa:cores[i%cores.length]});lj.nome=nomes[i%nomes.length];lojas.push(lj);K.predio({x:s*15,z:z,altura:R(6,10),largura:12,profundidade:9,rotY:s>0?-Math.PI/2:Math.PI/2}).position.y=6;}
     for(let z=14;z>-70;z-=9){K.arvore({x:4.9,z,tamanho:.85});K.arvore({x:-4.9,z:z-4,tamanho:.85});}
-    for(let i=0;i<5;i++)K.carro({x:i%2?3.4:-3.4,z:-6-i*11,rotY:i%2?Math.PI:0});
-    const vs=[0,1,2].map(i=>({v:i===1?K.moto({}):K.carro({}),x0:i%2?1.6:-1.6,x1:i%2?1.6:-1.6,z0:i%2?40:-100,z1:i%2?-100:40,len:140,vel:R(5,8),off:R(0,1)}));const mv=veiculos(vs);
+    /* estacionados rentes ao meio-fio; faixas de quem anda a 1,3 m do centro: sobra meio metro entre os dois (nada raspa) */
+    for(let i=0;i<5;i++)K.carro({x:i%2?3.55:-3.55,z:-6-i*11,rotY:i%2?Math.PI:0});
+    const vs=[0,1,2].map(i=>({v:i===1?K.moto({}):K.carro({}),x0:i%2?1.3:-1.3,x1:i%2?1.3:-1.3,z0:i%2?40:-100,z1:i%2?-100:40,len:140,vel:R(5,8),off:R(0,1)}));const mv=veiculos(vs);
     const pe=andantes(12,[5.4,7.6,-60,14],{sacola:.5});const pe2=andantes(12,[-7.6,-5.4,-60,14],{sacola:.5});
     const repintar=(lj,o={})=>{const i=lojas.indexOf(lj);const pos=lj.position.clone(),ry=lj.rotation.y;lj.parent.remove(lj);const nv=K.loja({x:pos.x,z:pos.z,rotY:ry,placa:o.placa||lj.nome,largura:12,cores:o.cores,corFaixa:o.corFaixa});nv.nome=o.placa||lj.nome;if(i>=0)lojas[i]=nv;return nv;};
     return{palco:{x:6.5,z:6},foco:[5,2,2],raio:7,lojas,portas:lojas.map(l=>K.portaDe(l)),repintar,atualizar(t){mv(t);pe(t);pe2(t);}};};
 
-  AMB.bairro=(op)=>{K.chao('#8aa862');ctx.amb={azRange:.3};K.caixa(8,.04,160,'#55595f',{z:-30});[-1,1].forEach(s=>K.caixa(2.4,.15,160,'#c9c3b7',{x:s*5.2,z:-30}));
+  AMB.bairro=(op)=>{K.chao('#8aa862');ctx.amb={azRange:.3};K.rua(-6.4,6.4,-110,50);K.caixa(8,.04,160,'#55595f',{z:-30});[-1,1].forEach(s=>K.caixa(2.4,.15,160,'#c9c3b7',{x:s*5.2,z:-30}));
     for(let i=0;i<10;i++){const s=i%2?1:-1,z=10-Math.floor(i/2)*12;K.casa({x:s*12,z,rotY:s>0?-Math.PI/2:Math.PI/2});K.cerca(10,{x:s*7.6,z,rotY:Math.PI/2});K.arvore({x:s*16,z:z-5});}
     K.carro({x:-2,z:-8});const pe=andantes(6,[5,6.2,-40,12]);const comKids=op.criancas!==false&&!ctx.semFig;const kids=comKids?[0,1].map(i=>K.pessoa({uniforme:'crianca',x:-1+i*2.4,z:6})):[];const bola=comKids?K.produto('bola',{escala:.6,z:6,voa:true}):null;
     return{palco:{x:0,z:6},foco:[0,1.4,4],raio:7,atualizar(t){pe(t);if(!bola)return;const q=Math.sin(t*1.6);bola.position.set(.2+q,.05+Math.abs(Math.cos(t*3.2))*.6,6);kids.forEach((k,i)=>{k.rotation.y=i?-Math.PI/2:Math.PI/2;k.correr(t+i);k.position.x=(i?1.4:-1)+(i?-1:1)*Math.max(0,q*(i?-1:1))*.4;});}};};
@@ -1386,7 +1393,7 @@ function makeKit(root,ctx){
   AMB.escritorio=(op)=>{K.chao('#b9a68f');paredeInt(40,5,'#e6e2d8',0,-16);paredeInt(32,5,'#dcd6ca',-20,0,Math.PI/2);paredeInt(32,5,'#dcd6ca',20,0,-Math.PI/2);teto(40,32,5);ctx.amb={azRange:.35};
     for(let x=-18;x<19;x+=4)K.caixa(3,3,.1,'#3a4450',{x,y:1,z:-15.85});
     const tela=(x,W,H)=>{x.fillStyle='#14171c';x.fillRect(0,0,W,H);const r=mulberry32(Math.floor(W));for(let i=0;i<6;i++){x.fillStyle=i===5?ORANGE:'#6b7480';const h=(.3+r()*.6)*H*.7;x.fillRect(W*.1+i*W*.13,H*.9-h,W*.09,h);}};
-    const ps=[];for(let r=0;r<3;r++)for(let c=0;c<4;c++){const x=-9+c*6,z=-10+r*5;K.mesa({x,z,largura:3,profundidade:1.4});K.monitor({x:x-.6,y:.79,z:z-.3,largura:1,altura:.6,tela});K.monitor({x:x+.6,y:.79,z:z-.3,largura:1,altura:.6,tela});
+    const ps=[];for(let r=0;r<3;r++)for(let c=0;c<4;c++){const x=-9+c*6,z=-10+r*5;K.mesa({x,z,largura:3,profundidade:1.4});K.monitor({x:x-.6,y:.83,z:z-.3,largura:1,altura:.6,tela,teclado:{dx:.6,dz:.6}});K.monitor({x:x+.6,y:.83,z:z-.3,largura:1,altura:.6,tela,teclado:false});
       K.cadeira({x,z:z+1,rotY:Math.PI});const p=K.pessoa({x,z:z+.9,rotY:Math.PI,camisa:K.escolher(['#ffffff','#1f2a36','#3f6fb5','#e8e4dc'])});p.sentar();p.rotation.y=Math.PI;ps.push(p);}
     const sala=K.grupo({x:14,z:-10});K.dentro(sala,()=>{K.caixa(8,3,.08,'#bfe3ff',{z:4,opacidade:.3});K.caixa(.08,3,8,'#bfe3ff',{x:-4,opacidade:.3});K.mesa({largura:4,profundidade:2});});
     [-18,18].forEach(x=>K.cilindro(.4,.3,.8,'#6b4423',{x,z:6}));
@@ -1454,6 +1461,20 @@ function makeKit(root,ctx){
   ['caixa','cilindro','esfera','cone','grupo','add','produto','mesa','cadeira','monitor','leitorFacial','palete','caixaPapelao','sacola','cesta','carrinho','notebook','celular','maquininha','pessoa','gondola','gondolaRapida','portaPalete','paleteira','empilhadeira','bicicleta','moto','carro','caminhao','van','onibus','trator','checkout','selfCheckout','balcaoRefrigerado','bancaHortifruti','padariaVitrine','etiquetaPreco','placaOferta'].forEach(n=>{const f=K[n];if(!f)return;
     K[n]=(...a)=>{const r=f(...a);const op=a.find(x=>x&&typeof x==='object'&&!x.isObject3D&&!Array.isArray(x))||{};
       if(r&&r.isObject3D&&!r.userData.kit)r.userData.kit=n;if(r&&r.isObject3D&&ctx.montandoAmb&&n==='pessoa')r.userData.doAmbiente=true;if(r&&r.isObject3D&&!ctx.montandoAmb){if(op.voa||op.apoiar===false)r.userData.voa=true;else{r.userData.verif=true;if(APOIA.has(n)||op.apoiar)r.userData.apoiar=true;/* monitor, notebook e maquininha sem y: vão para cima da mesa/balcão que estiver embaixo, não para o chão */if(op.y===undefined){if(/^(monitor|notebook|maquininha|leitorFacial|celular)$/.test(n))r.userData.sobreMesa=true;else if(/^(caixa|cilindro|esfera|cone)$/.test(n)&&op.apoiar){const sz=new THREE.Box3().setFromObject(r).getSize(new V());if(Math.max(sz.x,sz.y,sz.z)<.7)r.userData.sobreMesa=true;}}}}return r;};});
+  /* NADA DE PRÉDIO NO MEIO DA RUA: cada ambiente com rua registra as faixas de rua/calçada (ctx.ruas). Prédio, loja, casa, galpão ou igreja
+     posto pela cena em cima delas é empurrado para o lote mais perto, e o que era do ambiente e ficou embaixo dele sai (nada sobreposto). */
+  const ESTRUT=new Set(['predio','casa','loja','galpao','igreja']),MIUDO=new Set(['arvore','poste','semaforo']);
+  function foraDaRua(r){if(!ctx.ruas||!ctx.ruas.length)return;r.updateMatrixWorld(true);
+    for(let it=0;it<6;it++){const b=new THREE.Box3().setFromObject(r);let mexeu=false;
+      for(const q of ctx.ruas){if(b.max.x<=q.x0||b.min.x>=q.x1||b.max.z<=q.z0||b.min.z>=q.z1)continue;
+        const op=[[q.x1-b.min.x+.3,'x'],[-(b.max.x-q.x0+.3),'x'],[q.z1-b.min.z+.3,'z'],[-(b.max.z-q.z0+.3),'z']].sort((a,c)=>Math.abs(a[0])-Math.abs(c[0]))[0];
+        r.position[op[1]]+=op[0];r.updateMatrixWorld(true);mexeu=true;break;}
+      if(!mexeu)break;}
+    const b=new THREE.Box3().setFromObject(r).expandByScalar(.3);let raiz=r.parent;while(raiz&&raiz.parent&&raiz.parent.type!=='Scene')raiz=raiz.parent;
+    if(raiz)raiz.traverse(o=>{const u=o.userData||{};if(o===r||!u.doAmbiente||!(ESTRUT.has(u.kit)||MIUDO.has(u.kit)))return;const ob=new THREE.Box3().setFromObject(o);if(ob.intersectsBox(b))o.visible=false;});}
+  ['predio','casa','loja','galpao','igreja','arvore','poste','semaforo'].forEach(n=>{const f=K[n];if(!f)return;K[n]=(...a)=>{const r=f(...a);if(!r||!r.isObject3D)return r;r.userData.kit=r.userData.kit||n;
+    if(ctx.montandoAmb)r.userData.doAmbiente=true;else if(ESTRUT.has(n))foraDaRua(r);return r;};});
+  K.rua=(x0,x1,z0,z1)=>{(ctx.ruas=ctx.ruas||[]).push({x0:Math.min(x0,x1),x1:Math.max(x0,x1),z0:Math.min(z0,z1),z1:Math.max(z0,z1)});};
   K.soltar=(obj)=>{obj.userData.apoiar=false;obj.userData.voa=true;return obj;};
   K.apoiar=(obj)=>{obj.userData.apoiar=true;obj.userData.voa=false;return obj;};
   return K;
@@ -1506,7 +1527,7 @@ function camAt(kind,s,lt,dur,shake=true){
   let look=f.clone();
   if(s.globe){const a=kind==='afastamento'?p:1-p;cam.position.set(f.x+Math.sin(lt*.15)*.6,f.y+.6,f.z+14.5+a*12);cam.lookAt(f.x,f.y-.3,f.z);return;}
   /* mapa: sempre visto de cima, norte para cima; só aproxima ou afasta devagar */
-  if(s.map){const z0=kind==='afastamento'?1.0:1.18,z1=kind==='afastamento'?1.18:1.0;const h=D*(z0+(z1-z0)*p);cam.position.set(f.x,f.y+h,f.z+h*.002);cam.up.set(0,0,-1);cam.lookAt(f);cam.up.set(0,1,0);return;}
+  if(s.map){const z0=kind==='afastamento'?1.0:1.18,z1=kind==='afastamento'?1.18:1.0;const h=D*(z0+(z1-z0)*p);/* mapa quase de cima, com uma leve perspectiva (~10°): o norte fica para cima e o relevo aparece um pouco */const inc=.18;cam.position.set(f.x,f.y+h,f.z+h*inc);cam.up.set(0,0,-1);cam.lookAt(f);cam.up.set(0,1,0);return;}
   switch(kind){
     case 'aproximacao':place(az0,D*(1.35-.4*p),D*(.42-.2*p));break;
     case 'afastamento':place(az0+.15*p,D*(.85+.55*p),D*(.22+.3*p));break;
@@ -1539,6 +1560,25 @@ const eyebrow=$('eyebrow'),big=$('big'),sub=$('sub'),cap=$('cap'),src=$('src'),d
 let ERROS=[];window.__ERROS=ERROS;let SC=[],TOTAL=1,ROT=null,cur=-1,t=0,playing=true,last=performance.now();
 
 function estimate(c){const w=String(c.fala||c.narracao||'').split(/\s+/).filter(Boolean).length;return Math.max(2.2,w/2.35+(+c.pausa_depois_ms||300)/1000);}
+function semAcento(w){return String(w).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');}
+function silabas(w){const m=String(w).toLowerCase().match(/[aeiouáéíóúâêôãõàü]+/g);return Math.max(1,m?m.length:1);}
+/* palavras faladas com início e fim (absolutos) */
+function falaLinha(s){if(s.falaPal)return s.falaPal.map(p=>({w:p.texto||p.w||'',a:p.inicio??p.ini,b:p.fim}));
+  if(!s.speech)return null;const out=[];s.speech.forEach(f=>{const ws=String(f.texto||'').split(/\s+/).filter(Boolean);if(!ws.length)return;const pe=ws.map(w=>silabas(w)+(/[,;:]$/.test(w)?.8:0));const tot=pe.reduce((x,y)=>x+y,0);let acc=0;
+    ws.forEach((w,k)=>{const a=f.inicio+(f.fim-f.inicio)*acc/tot;acc+=pe[k];out.push({w,a,b:f.inicio+(f.fim-f.inicio)*acc/tot});});});return out;}
+/* quanto uma palavra da legenda demora para ser dita (número por extenso é longo) */
+function pesoFalado(w){const d=(w.match(/\d/g)||[]).length;if(d)return d*1.6+(/%/.test(w)?2:0)+(/[,]\d/.test(w)?1.5:0);if(/^R\$$/.test(w))return 1.5;if(/^[A-Z]{2,5}$/.test(w.replace(/[^A-Za-z]/g,'')))return w.replace(/[^A-Za-z]/g,'').length*.9;return silabas(w)*.55+.2;}
+function tempoLegenda(cap,fala,s){const pause=(+s.c.pausa_depois_ms||300)/1000;
+  if(!fala||!fala.length){const a=s.start+.25,b=Math.max(s.start+.6,s.end-pause);const pe=cap.map(pesoFalado),tot=pe.reduce((x,y)=>x+y,0)||1;let acc=0;return cap.map((w,k)=>{const t=a+(b-a)*acc/tot;acc+=pe[k];return t;});}
+  const A=cap.map(semAcento),B=fala.map(f=>semAcento(f.w));const n=A.length,m=B.length;
+  const L=Array.from({length:n+1},()=>new Int16Array(m+1));for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)L[i][j]=A[i]&&A[i]===B[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+  const par=new Array(n).fill(-1);{let i=0,j=0;while(i<n&&j<m){if(A[i]&&A[i]===B[j]){par[i]=j;i++;j++;}else if(L[i+1][j]>=L[i][j+1])i++;else j++;}}
+  const T=new Array(n);let i=0;while(i<n){if(par[i]>=0){T[i]=fala[par[i]].a;i++;continue;}
+    let k=i;while(k<n&&par[k]<0)k++;/* trecho sem par: entre o fim da palavra falada anterior e o começo da próxima âncora */
+    const ja=i>0?par[i-1]:-1,jb=k<n?par[k]:m;const ta=ja>=0?(ja+1<m?fala[ja+1].a:fala[ja].b):fala[0].a,tb=jb<m?fala[jb].a:fala[m-1].b;
+    const pe=[];for(let q=i;q<k;q++)pe.push(pesoFalado(cap[q]));const tot=pe.reduce((x,y)=>x+y,0)||1;let acc=0;for(let q=i;q<k;q++){T[q]=ta+Math.max(0,tb-ta)*acc/tot;acc+=pe[q-i];}i=k;}
+  for(let q=1;q<n;q++)if(T[q]<T[q-1])T[q]=T[q-1];return T;}
+window.__tempoLegenda=tempoLegenda;
 function sentences(s){return String(s||'').replace(/\*\*/g,'').split(/(?<=[.!?…])\s+/).filter(x=>x.trim());}
 
 function build(rot,tempos){
@@ -1584,7 +1624,7 @@ function build(rot,tempos){
     s.c=c;s.c3=c3;s.fx=fx;s.objUpd=objUpd;s.env=Object.assign({},LUZ[c3.luz]||LUZ.dia,ctx.sky?{sky:ctx.sky}:{});s.night=NIGHT;
     // tempos
     const tc=tempos&&tempos.cenas&&tempos.cenas[i];
-    if(tc){s.start=i===0?0:tc.inicio;s.end=tc.fim;s.speech=tc.frases&&tc.frases.length?tc.frases:null;}
+    if(tc){s.start=i===0?0:tc.inicio;s.end=tc.fim;s.speech=tc.frases&&tc.frases.length?tc.frases:null;s.falaPal=tc.palavras&&tc.palavras.length?tc.palavras:null;}
     else{s.start=acc;s.end=acc+estimate(c);s.speech=null;}
     acc=s.end;SC.push(s);
   });
@@ -1605,13 +1645,11 @@ function setCaption(s){
   md.split(/(\*\*[^*]+\*\*)/).filter(Boolean).forEach(part=>{const hl=part.startsWith('**');const txt=hl?part.slice(2,-2):part;
     txt.split(/(\s+)/).forEach(w=>{if(!w)return;if(/^\s+$/.test(w)){cap.appendChild(document.createTextNode(' '));return;}const sp=document.createElement('span');sp.className='w'+(hl?' hl':'');sp.textContent=w;cap.appendChild(sp);});});
   words=[...cap.querySelectorAll('.w')];
-  // tempo de cada palavra: por frase, se a quantidade de frases bate com a fala; senão, pela cena inteira
-  const capS=sentences(md),pause=(+s.c.pausa_depois_ms||300)/1000;
-  let spans;if(s.speech&&s.speech.length===capS.length)spans=s.speech.map(f=>[f.inicio,f.fim]);
-  else if(s.speech)spans=[[s.speech[0].inicio,s.speech[s.speech.length-1].fim]];
-  else spans=[[s.start+.25,Math.max(s.start+.6,s.end-pause)]];
-  const groups=spans.length===capS.length?capS.map(x=>x.split(/\s+/).filter(Boolean).length):[words.length];
-  wordTimes=[];let wi=0;groups.forEach((n,gi)=>{const [a,b]=spans[gi];const ws=words.slice(wi,wi+n);const lens=ws.map(w=>w.textContent.length+1);const tot=lens.reduce((x,y)=>x+y,0)||1;let acc=0;ws.forEach((w,k)=>{wordTimes.push(a+(b-a)*acc/tot);acc+=lens[k];});wi+=n;});
+  /* LEGENDA EM SINCRONIA COM A VOZ: a legenda (narracao, com algarismos) e a fala (por extenso) têm palavras diferentes.
+     1) linha do tempo das palavras FALADAS: vem do narrar.py (tempos.json → palavras, alinhadas no áudio); sem isso, reparte cada frase pelas sílabas;
+     2) casa as palavras iguais das duas (maior subsequência comum) e cada palavra da legenda aparece quando é dita;
+     3) números, siglas e trechos sem par ficam entre as âncoras, com peso de quanto demoram para ser falados. */
+  wordTimes=tempoLegenda(words.map(w=>w.textContent),falaLinha(s),s);
   while(wordTimes.length<words.length)wordTimes.push(s.end);
 }
 function enter(i){
@@ -1688,16 +1726,23 @@ function checarFisica(){const s=SC[cur];if(!s)return[];prepFis(s);s.g.updateMatr
       if(x.m.isInstancedMesh)return true;const G=x.m.geometry;if(!G.boundingBox)G.computeBoundingBox();const L=x.m.worldToLocal(q.clone()),B=G.boundingBox.clone().expandByScalar(-.05);return B.containsPoint(L);});
     if(hit)A.push('pessoa atravessando objeto em x '+f(w.x)+', z '+f(w.z));});
   /* pessoa que pula de lugar entre dois instantes (some e reaparece: trajeto que recomeça, posição trocada de repente) */
-  {s.ppos=s.ppos||new Map();(s.pess||[]).forEach(p=>{if(!vivo(p,s.g)||p.userData.figurante)return;const w=p.getWorldPosition(new V());const ant=s.ppos.get(p.id);s.ppos.set(p.id,w.clone());if(ant&&s.ultT!==undefined&&Math.hypot(w.x-ant.x,w.z-ant.z)>Math.max(1.2,3*(s.dtChk||.25))&&saltoVisivel(s,ant,w))A.push('pessoa pulou de lugar (some e reaparece) em x '+f(w.x)+', z '+f(w.z)+' — use trajeto aberto que termina parado ou fora do quadro');});s.ultT=1;}
+  {s.ppos=s.ppos||new Map();/* figurante também não pode sumir na frente da câmera: o salto dele (volta ao começo do trajeto) tem de acontecer fora do quadro de verdade */
+  if(s.camChk){const fr=new THREE.Frustum().setFromProjectionMatrix(new THREE.Matrix4().multiplyMatrices(cam.projectionMatrix,cam.matrixWorldInverse));if(!s.obsFig){const ign=new Set();(s.pess||[]).forEach(p=>p.traverse(m=>ign.add(m)));s.obsFig=obstaculos(s.g,ign,true);}
+    const visto=(w,esc)=>pessoaVista(w.x,w.z,cam.position,fr,s.obsFig,esc*.92);
+    (s.pess||[]).forEach(p=>{if(!p.userData.figurante)return;const w=p.getWorldPosition(new V());const k='f'+p.id;const ant=s.ppos.get(k);const vis=p.visible&&vivo(p,s.g);s.ppos.set(k,{w:w.clone(),vis,esc:p.scale.x});
+      if(ant&&s.ultT!==undefined){const pulo=Math.hypot(w.x-ant.w.x,w.z-ant.w.z)>Math.max(1.2,3*(s.dtChk||.25));const sumiu=ant.vis!==vis;
+        if((pulo&&((ant.vis&&visto(ant.w,ant.esc||1))||(vis&&visto(w,p.scale.x))))||(sumiu&&(ant.vis?visto(ant.w,ant.esc||1):visto(w,p.scale.x))))A.push('figurante some ou aparece na frente da câmera em x '+f(w.x)+', z '+f(w.z)+' — o trajeto dele tem de começar e terminar fora do quadro');}});}
+  (s.pess||[]).forEach(p=>{if(!vivo(p,s.g)||p.userData.figurante)return;const w=p.getWorldPosition(new V());const ant=s.ppos.get(p.id);s.ppos.set(p.id,w.clone());if(ant&&s.ultT!==undefined&&Math.hypot(w.x-ant.x,w.z-ant.z)>Math.max(1.2,3*(s.dtChk||.25))&&saltoVisivel(s,ant,w))A.push('pessoa pulou de lugar (some e reaparece) em x '+f(w.x)+', z '+f(w.z)+' — use trajeto aberto que termina parado ou fora do quadro');});s.ultT=1;}
   /* veículos (frente = +z local): de ré, por cima de pessoa ou atravessando outro veículo */
   {const VE=[];s.g.traverse(o=>{if(o.userData&&o.userData.veiculo&&vivo(o,s.g))VE.push(o);});
    if(VE.length){s.vpos=s.vpos||new Map();const q=new THREE.Quaternion();
-    VE.forEach(v=>{const w=v.getWorldPosition(new V());const fw=new V(0,0,1).applyQuaternion(v.getWorldQuaternion(q));fw.y=0;fw.normalize();const ant=s.vpos.get(v.id);s.vpos.set(v.id,w.clone());
+    VE.forEach(v=>{const w=v.getWorldPosition(new V());const fw=new V(0,0,1).applyQuaternion(v.getWorldQuaternion(q));fw.y=0;fw.normalize();const ant=s.vpos.get(v.id);s.vpos.set(v.id,w.clone());if(ant&&Math.hypot(w.x-ant.x,w.z-ant.z)>.02)v.userData.anda=true;
       if(ant){const d=w.clone().sub(ant);d.y=0;const L=d.length();/* salto grande = volta ao começo do trajeto (fora do quadro), não é ré */if(L>.15&&L<8&&!v.userData.veiculo.re&&fw.dot(d)<-.5*L)A.push('veículo andando de ré em x '+f(w.x)+', z '+f(w.z)+' — vire o veículo (rotY + π) ou inverta o trajeto');}});
     const dentro=(v,pt,m)=>{const L=v.worldToLocal(pt.clone());const u=v.userData.veiculo;return Math.abs(L.x)<u.larg/2+m&&Math.abs(L.z-(u.cz||0))<u.comp/2+m;};
     const cantos=v=>{const u=v.userData.veiculo,c=u.cz||0;return[[0,c],[u.larg/2,c+u.comp/2],[-u.larg/2,c+u.comp/2],[u.larg/2,c-u.comp/2],[-u.larg/2,c-u.comp/2],[0,c+u.comp/2],[0,c-u.comp/2]].map(([x,z])=>v.localToWorld(new V(x,.5,z)));};
     (s.pess||[]).forEach(p=>{if(!vivo(p,s.g))return;const w=p.getWorldPosition(new V());w.y=.5;VE.forEach(v=>{let a=p.parent;while(a){if(a===v)return;a=a.parent;}if(dentro(v,w,.1))A.push('veículo passando por cima de pessoa em x '+f(w.x)+', z '+f(w.z)+' — afaste a rota do veículo da rota das pessoas');});});
-    for(let i=0;i<VE.length;i++)for(let j=i+1;j<VE.length;j++){const a=VE[i],b=VE[j];if(cantos(a).some(c=>dentro(b,c,-.05))||cantos(b).some(c=>dentro(a,c,-.05))){const w=a.getWorldPosition(new V());A.push('veículos se atravessando em x '+f(w.x)+', z '+f(w.z)+' — separe as rotas');}}}}
+    /* com pelo menos um andando, exige folga de 25 cm (raspar no carro parado também é batida) */const anda=v=>v.userData.anda;
+    for(let i=0;i<VE.length;i++)for(let j=i+1;j<VE.length;j++){const a=VE[i],b=VE[j];const mg=anda(a)||anda(b)?.25:-.05;if(cantos(a).some(c=>dentro(b,c,mg))||cantos(b).some(c=>dentro(a,c,mg))){const w=a.getWorldPosition(new V());A.push('veículos se atravessando em x '+f(w.x)+', z '+f(w.z)+' — separe as rotas');}}}}
   /* mãos: a ponta do braço não pode entrar em objeto sólido (tela, monitor, celular, balcão, prateleira) */
   {const extra=[];(s.apo||[]).forEach(o=>{if(!vivo(o,s.g))return;o.traverse(m=>{if(m.isMesh&&!m.isInstancedMesh)extra.push({m,b:new THREE.Box3().setFromObject(m),sol:true});});});
    const cand=s.supB.filter(x=>x.sol&&!x.oc).concat(extra);
@@ -1759,17 +1804,22 @@ function posAjuste(f,P,c){const v=P.clone().sub(f);if(c.a)v.applyAxisAngle(new V
 function aplicarAjuste(s){const a=s.aj;if(!a)return;const f=s.focus,P=cam.position.clone();const fw=new V(0,0,-1).applyQuaternion(cam.quaternion);const d=P.distanceTo(f);const T=P.clone().addScaledVector(fw,d);
   const Q=posAjuste(f,P,a);if(a.a)T.sub(f).applyAxisAngle(new V(0,1,0),a.a).add(f);cam.position.copy(Q);cam.lookAt(T.lerp(f,.5));cam.updateMatrixWorld(true);}
 function camBase(s,lt,dur){try{if(s.camFn)s.camFn(lt,dur);else camAt(s.c3.camera,s,lt,dur,false);}catch(e){camAt(s.c3.camera,s,lt,dur,false);}}
-function calcVisao(s,dur){const out=[],p0=cam.position.clone(),q0=cam.quaternion.clone(),N=14;
+function calcVisao(s,dur){const out=[],p0=cam.position.clone(),q0=cam.quaternion.clone(),N=32;
   for(let k=0;k<=N;k++){const lt=dur*k/N;camBase(s,lt,dur);aplicarAjuste(s);
     cam.updateMatrixWorld(true);const fr=new THREE.Frustum().setFromProjectionMatrix(new THREE.Matrix4().multiplyMatrices(cam.projectionMatrix,cam.matrixWorldInverse));out.push({fr,pos:cam.position.clone()});}
   cam.position.copy(p0);cam.quaternion.copy(q0);cam.updateMatrixWorld(true);return out;}
 /* ponto de chão (x,z) visível em algum instante da cena? (considera o que está na frente: gôndolas, prédios, paredes) */
-function pontoVisivel(x,z,obs){if(!VISAO.length)return false;const bx=new THREE.Box3(new V(x-.4,0,z-.4),new V(x+.4,1.9,z+.4));const hp=new V();
-  for(const v of VISAO){if(!v.fr.intersectsBox(bx))continue;let tapado=true;for(const y of [.4,1.6]){const alvo=new V(x,y,z);const d=v.pos.distanceTo(alvo);const ray=new THREE.Ray(v.pos,alvo.clone().sub(v.pos).normalize());
-      const bloq=obs.some(b=>!b.containsPoint(alvo)&&ray.intersectBox(b,hp)&&v.pos.distanceTo(hp)<d-.6);if(!bloq){tapado=false;break;}}if(!tapado)return true;}return false;}
+/* uma pessoa em (x,z) aparece para a câmera em pos/fr? 9 raios (pés, meio, cabeça × esquerda, centro, direita); só conta como escondida se TODOS baterem
+   em algo de verdade (caixas pequenas não escondem ninguém) ou se estiver além da neblina */
+function pessoaVista(x,z,pos,fr,obs,esc=1){const bx=new THREE.Box3(new V(x-.35*esc,0,z-.35*esc),new V(x+.35*esc,1.85*esc,z+.35*esc));if(!fr.intersectsBox(bx))return false;
+  const fogFar=scene.fog?scene.fog.far:1e9;if(pos.distanceTo(new V(x,1,z))>fogFar*.92)return false;const hp=new V();
+  for(const y of [.25,.9,1.65])for(const dx of [-.28,0,.28]){const alvo=new V(x+dx*esc,y*esc,z);const d=pos.distanceTo(alvo);const ray=new THREE.Ray(pos,alvo.clone().sub(pos).normalize());
+    if(!obs.some(b=>{if(b.containsPoint(alvo))return false;const sz=b.__sz||(b.__sz=b.getSize(new V()));if(Math.max(sz.x,sz.y,sz.z)<.35||sz.y<.3)return false;return ray.intersectBox(b,hp)&&pos.distanceTo(hp)<d-.3;}))return true;}
+  return false;}
+function pontoVisivel(x,z,obs){if(!VISAO.length)return false;for(const v of VISAO)if(pessoaVista(x,z,v.pos,v.fr,obs))return true;return false;}
 /* dentro do trecho livre [a,b] de uma faixa, acha começo e fim fora da vista (atrás de algo ou fora do quadro); null se não houver */
 function pontasOcultas(ez,f,a,b,obs){const lo=Math.min(a,b),hi=Math.max(a,b),st=.5;const inv=[];for(let u=lo;u<=hi+1e-6;u+=st){const x=ez?f:u,z=ez?u:f;inv.push([u,!pontoVisivel(x,z,obs)]);}
-  const ocultos=inv.filter(v=>v[1]).map(v=>v[0]);if(ocultos.length<2)return null;const s0=ocultos[0],s1=ocultos[ocultos.length-1];if(s1-s0<3)return null;
+  /* ponta só vale se 1 m em volta também está escondido (quem recomeça ali não aparece pela metade) */const ocultos=inv.filter((v,k)=>v[1]&&(k<2||inv[k-1][1]&&inv[k-2][1])&&(k>inv.length-3||inv[k+1][1]&&inv[k+2][1])).map(v=>v[0]);if(ocultos.length<2)return null;const s0=ocultos[0],s1=ocultos[ocultos.length-1];if(s1-s0<3)return null;
   /* precisa passar por um trecho visível, senão não aparece; se for tudo oculto, tudo bem (fica de fundo) */
   return a<=b?[s0,s1]:[s1,s0];}
 /* faces coincidentes piscam (z-fighting). Ao montar a cena, procura pares de peças com uma face no mesmo plano, virada para o mesmo lado e sobreposta
@@ -1813,7 +1863,7 @@ function renderFrame(){
   const i=sceneAt(t);if(i!==cur)enter(i);
   const s=SC[i],lt=t-s.start,dur=s.end-s.start;
   if(s.aj===undefined){try{s.aj=s.map||s.globe?null:calcAjuste(s,dur);}catch(err){s.aj=null;}}
-  if(!s.visao){try{s.visao=calcVisao(s,dur);}catch(err){s.visao=[];}}VISAO=s.visao;
+  if(!s.visao){try{s.visao=calcVisao(s,dur);}catch(err){s.visao=[];}}VISAO=s.visao;VISAO.raiz=s.g;
   const e=s.env,Dc=s.r/Math.tan(15*Math.PI/180);scene.fog.near=Math.max(e.fog[0],Dc*.9);scene.fog.far=Math.max(e.fog[1],Dc*2.6);
   if(s.pess)s.pess.forEach(p=>{const o=p.userData.sepOff;if(o){p.position.sub(o);o.set(0,0,0);}});
   if(s.apo)s.apo.forEach(o=>{const d=o.userData.apoOff;if(d){o.position.sub(d);d.set(0,0,0);}});
@@ -1838,10 +1888,10 @@ function renderFrame(){
 }
 /* percorre a cena inteira (sem desenhar) e junta os avisos de física com o segundo em que aparecem */
 window.checarCena=(i,passo=.25)=>{const s=SC[i];if(!s)return[];const t0=t;const M=new Map();s.ppos=new Map();s.vpos=new Map();s.ultT=undefined;
-  for(let lt=0;lt<=s.end-s.start-.05;lt+=passo){t=s.start+lt;if(cur!==i)enter(i);if(s.aj===undefined){try{s.aj=s.map||s.globe?null:calcAjuste(s,s.end-s.start);}catch(err){s.aj=null;}}if(!s.visao){try{s.visao=calcVisao(s,s.end-s.start);}catch(err){s.visao=[];}}VISAO=s.visao;
+  for(let lt=0;lt<=s.end-s.start-.05;lt+=passo){t=s.start+lt;if(cur!==i)enter(i);if(s.aj===undefined){try{s.aj=s.map||s.globe?null:calcAjuste(s,s.end-s.start);}catch(err){s.aj=null;}}if(!s.visao){try{s.visao=calcVisao(s,s.end-s.start);}catch(err){s.visao=[];}}VISAO=s.visao;VISAO.raiz=s.g;
     if(s.pess)s.pess.forEach(p=>{const o=p.userData.sepOff;if(o){p.position.sub(o);o.set(0,0,0);}});
     if(s.apo)s.apo.forEach(o=>{const d=o.userData.apoOff;if(d){o.position.sub(d);d.set(0,0,0);}});
-    s.dtChk=passo;try{s.update(lt);}catch(err){}try{apoiarObjs(s);}catch(err){}try{separar(s);}catch(err){}s.objUpd.forEach(f=>f(lt));
+    s.dtChk=passo;try{camBase(s,lt,s.end-s.start);aplicarAjuste(s);cam.updateMatrixWorld(true);s.camChk=true;}catch(err){s.camChk=false;}try{s.update(lt);}catch(err){}try{apoiarObjs(s);}catch(err){}try{separar(s);}catch(err){}s.objUpd.forEach(f=>f(lt));
     checarFisica().forEach(m=>{const tipo=m.replace(/ em x .*/,'');const L=M.get(tipo)||[];if(L.length<3)L.push(m+' (aos '+lt.toFixed(1).replace('.',',')+' s)');M.set(tipo,L);});}
   t=t0;return [].concat(...M.values());};
 function frame(now){const dt=Math.min(.05,(now-last)/1000);last=now;if(playing&&SC.length){t+=dt;if(t>=TOTAL){t=0;cur=-1;}}renderFrame();requestAnimationFrame(frame);}

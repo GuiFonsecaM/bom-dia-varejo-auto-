@@ -43,8 +43,8 @@ return {
 - **Caixas de supermercado:** o cliente vem de dentro da loja (no `supermercado`, z < 14) e sai pela frente (z > 14); a esteira leva as compras nesse sentido e o operador ensaca do lado da saída.
 - **A câmera nunca fica tapada:** o motor esconde sozinho, quadro a quadro, o que estiver entre a câmera e o `foco`. Mesmo assim, mire num ponto em que o assunto apareça inteiro.
 - **Mãos não atravessam nada.** A ponta do braço não entra em tela, monitor, celular, balcão, mesa ou prateleira: quem está atrás de uma bancada fica com folga (~0,5 m) e gesticula na altura do peito; quem está sentado à mesa apoia os braços por cima do tampo (braço ≈ −1,5). A prévia acusa "mão atravessando objeto".
-- **Celular na mão fica com a tela virada para quem segura** (como na vida real): para mostrar a tela, use câmera por cima do ombro. Celular de verdade tem ~15 cm: `K.celular({escala: .24})`.
-- **Monitor é de mesa** (`K.monitor` padrão 62 × 38 cm); `K.monitor`, `K.notebook` e `K.maquininha` sem `y` sobem sozinhos para a mesa/balcão que estiver embaixo. Tela grande é `K.telao`. Dois monitores lado a lado: centros a ≥ 0,7 m.
+- **Celular na mão fica com a tela virada para quem segura** (como na vida real): para mostrar a tela, use câmera por cima do ombro. Celular de verdade tem ~17 cm: `K.celular()` já sai nesse tamanho (escala máxima .3; peça gigante ilustrativa só com `grande:true`, nunca na mão).
+- **Monitor é de mesa** (`K.monitor` padrão 62 × 38 cm); `K.monitor`, `K.notebook` e `K.maquininha` sem `y` sobem sozinhos para a mesa/balcão que estiver embaixo. Tela grande é `K.telao`. Dois monitores lado a lado: centros a ≥ 0,7 m. **Todo monitor de mesa vem com teclado e mouse na frente**; com dois monitores, o primeiro leva `teclado:{dx}` (centralizado em quem usa) e o segundo `teclado:false`.
 - **Veículos andam de frente** (frente = +z local; no trajeto para −z use `rotY: Math.PI`). Mão dupla com tráfego pela direita. Empilhadeira pode dar ré. Veículo nunca passa por cima de pessoa nem atravessa outro veículo: rotas de empilhadeiras longe das rotas de pessoas e longe dos caminhões. A prévia acusa "veículo andando de ré", "veículo passando por cima de pessoa" e "veículos se atravessando".
 - **Nada pisca.** Duas peças com a face no mesmo plano (placa rente à parede, prateleira rente ao móvel, tela rente à moldura) piscam no vídeo; o motor desloca a peça menor 1,2 cm para fora e tira de dentro da caixa a tela/placa que ficou enterrada nela. Mesmo assim, encoste com folga: placa a 2 cm da parede, prateleira 2 cm mais rasa que o móvel.
 - **Objetos de mesa sobem para a mesa.** `K.monitor`, `K.notebook`, `K.maquininha`, `K.celular`, `K.leitorFacial` e peças pequenas com `{apoiar:true}` (teclado, mouse, xícara feita com `K.caixa`/`K.cilindro`) sem `y` vão para cima da mesa/balcão que estiver embaixo, nunca para o chão.
@@ -53,7 +53,13 @@ return {
 - **Biometria facial no caixa:** `K.leitorFacial({x, z, rotY})` (pé no balcão, câmera, anel de LED, tela com o rosto) com `.estado(t, inicio, duracao)`: pede para olhar → escaneia → aprova em verde. Vire a frente (+z) para o cliente.
 - **Ninguém some no meio da cena.** `K.caminhar` com trajeto aberto anda até o fim e para (só repete se o trajeto fecha no ponto de partida). Coisas em esteira entram e saem por um túnel/máquina. A prévia acusa "pessoa pulou de lugar".
 - **Véus de sombra da porta** ficam só dentro da entrada: não encoste placa/ripa dentro do vão da porta.
-- **Mapas sempre vistos de cima** (norte para cima, sem perspectiva); só o globo gira em 3D. No mapa de Minas, o resto do Brasil aparece em volta com o contorno real. A câmera do mapa é automática: não passe `camera` em cena de mapa.
+- **Nada de prédio no meio da rua.** `cidade`, `rua_comercial` e `bairro` registram as faixas de rua e calçada; `K.predio`, `K.loja`, `K.casa`, `K.galpao` e `K.igreja` postos em cima delas são empurrados para o lote mais perto, e o que era do ambiente embaixo deles sai. Mesmo assim, ponha construções nos quarteirões (na `cidade`: |x| > 7 e |z| > 6).
+- **Placa do caixa fica num poste na lateral do caixa**, saindo para fora como bandeira (nunca no meio do balcão). Já vem assim em `K.checkout`.
+- **Carro andando nunca raspa em carro parado**: faixa de quem anda a ≥ 0,5 m do carro estacionado. A prévia acusa "veículos se atravessando" com folga menor que 25 cm.
+- **Figurantes não somem na frente da câmera.** Quem anda em loop recomeça só onde nenhuma câmera da cena o vê (atrás de parede/gôndola/prédio ou fora do quadro); carro e gente não servem de esconderijo. A prévia acusa "figurante some ou aparece na frente da câmera".
+- **Siglas na fala**: o narrador soletra sozinho as que não se leem como palavra (BH → "bê agá", DMA → "dê eme á") e lê como palavra as pronunciáveis (Abras, Cade, Pix). Para uma leitura diferente, ponha no roteiro `"pronuncia": {"NIQ": "ene ai quiú"}`. Números na fala vão por extenso.
+- **Legenda acompanha a voz palavra a palavra**: a narração grava o tempo de cada palavra dita e a legenda casa as palavras iguais; números e siglas da legenda aparecem quando são falados por extenso. A legenda pode ter algarismos (171.006) e a fala por extenso, sem problema.
+- **Mapas vistos quase de cima, com uma leve perspectiva (~10°)** (norte para cima); só o globo gira em 3D. No mapa de Minas, o resto do Brasil aparece em volta com o contorno real. A câmera do mapa é automática: não passe `camera` em cena de mapa.
 - **Telejornal:** `K.ambiente('estudio_tv')` tem a identidade da marca (igual ao estúdio de gráficos) com a bancada no centro, de frente, e já traz a câmera certa.
 - **Caixas com cliente:** todo `K.checkout` vem com um cliente tirando as compras do próprio carrinho (as compras saem do carrinho para a esteira); sem cliente (`{cliente:false}`) a esteira fica parada e vazia. Fila no caixa sempre com carrinho. As placas "CAIXA n" têm frente dos dois lados.
 - **Mapa e globo: um pino por lugar.** `K.globo({pinos, paises})`: `paises` só pinta o país; o pino vem de `pinos` (não repita o mesmo lugar).
@@ -231,7 +237,7 @@ Pix no caixa é pago **na maquininha do suporte do caixa**: todo `K.checkout` (e
 const a = K.ambiente('supermercado');
 const maq = K.maquininhaDoCaixa({x: -15, z: 14, tela: 'pix'});
 const cli = K.pessoa({x: -14.12, z: 14.54, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
-cli.segurar(K.celular({escala: .24}), 1);
+cli.segurar(K.celular(), 1);
 return {foco: [-14.7, 1.2, 14.9], raio: 2.2, az: 1,
   camera(t, d) { K.cameraDe(t, d, [-12.9, 1.85, 16.9], [-13.15, 1.75, 16.5], [-14.8, 1.2, 14.9], [-14.85, 1.15, 14.9]); },
   atualizar(t) { a.atualizar(t); cli.userData.arms[1].rotation.x = -1.05 - Math.min(.1, t * .1);
