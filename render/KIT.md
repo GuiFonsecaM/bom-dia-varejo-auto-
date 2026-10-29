@@ -37,7 +37,7 @@ return {
 - **Cores do assunto.** Placas, faixas, balões e fachadas de uma empresa citada usam as cores da marca dela: `cores:{fundo, texto, faixa}` em `K.cenario('fachada_atacarejo', {placa, cores})`, `K.atacarejo`, `K.loja`; na `rua_comercial`, `a.repintar(a.lojas[i], {placa:'NOME', cores})` troca a fachada de uma loja. `K.baloes(n, {largura, altura, cores:[...]})` monta um arco de balões (sem um encostar no outro) — ponha na porta. `K.fitaInauguracao({porta, cor})`. Só nome e cores; nunca desenhe logo.
 - **Compras no lugar certo.** Carrinhos e cestas têm fundo e grade: o que cai neles fica dentro. `K.colocar` encaixa sozinho o ponto de origem na prateleira, banca ou mesa mais próxima (até 0,7 m) — `K.naSuperficie([x,y,z])` faz isso para qualquer ponto.
 - **Figurantes não surgem nem somem na frente da câmera.** O motor calcula a câmera da cena inteira e só deixa cada figurante começar e terminar o trajeto fora do quadro ou escondido atrás de algo (porta, gôndola, prédio); quem entra na loja atravessa a porta.
-- **O que passa na frente da câmera fica transparente aos poucos** (nada some de uma vez); no último segundo da cena pode cruzar a frente, como transição. O assunto (perto do `foco`) nunca é afetado.
+- **Nada fica transparente nem some na frente da câmera.** O motor confere a câmera da cena inteira e, se um prédio, gôndola ou parede ficar entre ela e o `foco`, gira a câmera em volta do assunto, chega mais perto ou sobe um pouco, o mínimo para o assunto ficar à vista o tempo todo. Mesmo assim, mire de um lado em que nada tape o assunto.
 - **Lojas têm porta.** `K.loja` e `K.atacarejo` têm uma entrada aberta e funda, que escurece para dentro: quem entra vai sumindo na sombra e quem sai aparece do escuro; `K.portaDe(loja)` dá a posição da porta e `K.fitaInauguracao({porta: loja})` coloca a fita na entrada (nunca no meio da calçada). Na `rua_comercial`, `a.lojas` e `a.portas` trazem as 12 lojas.
 - **Figurantes combinam com a frase.** Desligue o que não faz sentido: `K.ambiente(nome, {figurantes: false})` tira todos; no `bairro`, `{criancas: false}` tira as crianças com bola.
 - **Caixas de supermercado:** o cliente vem de dentro da loja (no `supermercado`, z < 14) e sai pela frente (z > 14); a esteira leva as compras nesse sentido e o operador ensaca do lado da saída.
@@ -53,6 +53,9 @@ return {
 - **Biometria facial no caixa:** `K.leitorFacial({x, z, rotY})` (pé no balcão, câmera, anel de LED, tela com o rosto) com `.estado(t, inicio, duracao)`: pede para olhar → escaneia → aprova em verde. Vire a frente (+z) para o cliente.
 - **Ninguém some no meio da cena.** `K.caminhar` com trajeto aberto anda até o fim e para (só repete se o trajeto fecha no ponto de partida). Coisas em esteira entram e saem por um túnel/máquina. A prévia acusa "pessoa pulou de lugar".
 - **Véus de sombra da porta** ficam só dentro da entrada: não encoste placa/ripa dentro do vão da porta.
+- **Mapas sempre vistos de cima** (norte para cima, sem perspectiva); só o globo gira em 3D. No mapa de Minas, o resto do Brasil aparece em volta com o contorno real. A câmera do mapa é automática: não passe `camera` em cena de mapa.
+- **Telejornal:** `K.ambiente('estudio_tv')` tem a identidade da marca (igual ao estúdio de gráficos) com a bancada no centro, de frente, e já traz a câmera certa.
+- **Caixas com cliente:** todo `K.checkout` vem com um cliente tirando as compras do próprio carrinho (as compras saem do carrinho para a esteira); sem cliente (`{cliente:false}`) a esteira fica parada e vazia. Fila no caixa sempre com carrinho. As placas "CAIXA n" têm frente dos dois lados.
 - **Mapa e globo: um pino por lugar.** `K.globo({pinos, paises})`: `paises` só pinta o país; o pino vem de `pinos` (não repita o mesmo lugar).
 - **Pizza:** os nomes das fatias ficam na frente do disco, dentro do quadro (nunca atrás nem fora da tela); use nomes curtos (até ~10 letras).
 - **Física coerente, sempre** (vale para qualquer coisa, não só para os exemplos): nada flutua, nada atravessa nada, quem segura algo segura com a mão. Veja a seção *Física* abaixo; a prévia acusa as falhas e a cena só está pronta com zero avisos.
@@ -120,10 +123,11 @@ Opções de material: `{brilho:true, metal:true, emissivo:true, opacidade:.5}`.
 ## Texto, placas e telas
 - `K.placa(texto,{largura,altura,fundo,cor})` placa retangular (fundo `null` = só o texto)
 - `K.faixa(texto,{largura})` faixa de protesto com dois paus
-- `K.placaOferta(texto)`, `K.placaAluga({texto})`, `K.etiquetaPreco(texto,{eletronica})` → `.trocar(novoTexto)`
+- `K.placaOferta(texto)`, `K.placaAluga({texto})`, `K.etiquetaPreco(texto,{x,y,z,oferta})` → `.trocar(novoTexto)`
+  - **Etiqueta de preço é cartaz de prateleira**: perto de uma gôndola ela se prende sozinha na beirada da prateleira mais próxima, virada para o corredor, no máximo .45 m de largura (amarela com `oferta:true`). Nunca a solte no ar, na parede do fundo ou em cima do produto. As gôndolas já têm o trilho de etiquetas pequenas; use `etiquetaPreco` só para o preço de que a frase fala, com uma pessoa ou a câmera olhando para ela.
 - `K.tela((ctx,W,H,...args)=>{desenho 2D}, {largura,altura})` tela qualquer → `.redesenhar(...args)` (app, painel, placar, gráfico 2D)
 - `K.telao(desenho,{largura,altura,y})`, `K.monitor({tela})`, `K.notebook({tela})`, `K.celular({tela})` (as três têm `.tela.redesenhar()`)
-- `K.qrcodePix({largura})`, `K.rotulo(texto,{cor,largura,altura,x,y,z})` → `.mudar(texto)` (texto flutuante: use pouco)
+- `K.maquininhaDoCaixa({x,z,tela})` (a do suporte do caixa mais perto), `K.suporteMaquininha({x,z,y,rotY})` (poste com berço para outro balcão), `K.maquininha({tela})` → `.mostrar('cartao'|'pix'|'pago')` (tela da maquininha: aproxime o cartão, QR do Pix ou PAGO ✓; **todo pagamento no caixa, cartão ou Pix, passa por ela**), `K.qrcodePix({largura})` (só para QR impresso em cartaz/adesivo), — conteúdo de tela (`K.tela` presa a um aparelho) tem de cobrir exatamente a tela física dele; `box()` posiciona pela base, então o centro da tela é y + altura/2. A prévia avisa "tela desenhada fora da moldura". `K.rotulo(texto,{cor,largura,altura,x,y,z})` → `.mudar(texto)` (texto flutuante: use pouco)
 - (números soltos em 3D foram desativados: `K.numero` e `K.contador` não desenham nada)
 
 ## Pessoas
@@ -221,21 +225,17 @@ return {foco: [1.5, 1.2, 12], raio: 4.6, az: .35, atualizar(t) { a.atualizar(t);
 ```
 
 
-**Varejo — cliente paga com Pix (no caixa 1 do supermercado)**
-Nos ambientes, o cliente fica do lado de dentro da loja e a esteira leva as compras para a saída. No `supermercado` o caixa 1 está em (−15, 14): o operador fica em (−16,05, 14,45), ao lado do leitor, e o cliente paga do outro lado do balcão, em (−14,15, 14,45). A área de ensacar (sacolas abertas) fica no fim do balcão, do lado da saída.
+**Varejo — cliente paga com Pix (na maquininha do caixa 1 do supermercado)**
+Pix no caixa é pago **na maquininha do suporte do caixa**: todo `K.checkout` (e todos os caixas dos ambientes) já tem um poste com berço em cima do balcão, com a maquininha inclinada e a tela virada para o cliente. Pegue essa com `K.maquininhaDoCaixa({x, z, tela})`; nunca crie outra maquininha solta no balcão (a prévia avisa "maquininha solta no balcão do caixa"). O QR aparece na tela dela e o cliente aproxima o celular. No `supermercado` o caixa 1 está em (−15, 14): o operador fica em (−16,05, 14,45) e o cliente paga do outro lado do balcão. Pôr a sua pessoa nesse caixa já tira o cliente automático dele.
 ```js
-const a = K.ambiente('supermercado', {livre: {x: -14, z: 13, raio: 2}});
-const cli = K.pessoa({x: -14.15, z: 14.45, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
-cli.segurar(K.celular(), 1);
-K.qrcodePix({largura: .5, altura: .5, x: -15.3, y: 1.5, z: 14.45, rotY: Math.PI / 2});
-const tela = K.tela((x, W, H, ok) => { x.fillStyle = ok ? '#3fae6a' : '#14171c'; x.fillRect(0, 0, W, H);
-  x.fillStyle = '#fff'; x.textAlign = 'center'; x.font = '800 ' + H * .32 + 'px Open Sans'; x.fillText(ok ? 'PAGO ✓' : 'PIX', W / 2, H * .64); },
-  {largura: 1, altura: .5, x: -15.2, y: 2.4, z: 14.45, rotY: Math.PI / 2});
-let pago = false;
-return {foco: [-14.7, 1.4, 14.45], raio: 2.6, az: .7, atualizar(t) {
-  a.atualizar(t); cli.userData.arms[1].rotation.x = -1.2 - Math.min(.4, t * .4);
-  const deve = t > 1.2; if (deve !== pago) { pago = deve; tela.redesenhar(pago); }
-}};
+const a = K.ambiente('supermercado');
+const maq = K.maquininhaDoCaixa({x: -15, z: 14, tela: 'pix'});
+const cli = K.pessoa({x: -14.12, z: 14.54, rotY: -Math.PI / 2, camisa: '#3f6fb5'});
+cli.segurar(K.celular({escala: .24}), 1);
+return {foco: [-14.7, 1.2, 14.9], raio: 2.2, az: 1,
+  camera(t, d) { K.cameraDe(t, d, [-12.9, 1.85, 16.9], [-13.15, 1.75, 16.5], [-14.8, 1.2, 14.9], [-14.85, 1.15, 14.9]); },
+  atualizar(t) { a.atualizar(t); cli.userData.arms[1].rotation.x = -1.05 - Math.min(.1, t * .1);
+    maq.mostrar(t > 1.6 ? 'pago' : 'pix'); }};
 ```
 
 **Varejo — cliente coloca frutas no carrinho (mãos fazendo o gesto certo)**
