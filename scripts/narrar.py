@@ -30,6 +30,99 @@ TONS = {
     "serio":   {"exaggeration": 0.35, "cfg_weight": 0.45, "temperature": 0.70},
 }
 PAUSA_ENTRE_FRASES_MS = 140   # respiro natural entre frases da mesma cena
+
+# ---------- pronúncia: siglas e números ----------
+# A voz lê "BH" como palavra ("bhh"). Toda sigla que não se lê como palavra vira letras faladas: BH -> "bê agá".
+LETRAS = {"A": "á", "B": "bê", "C": "cê", "D": "dê", "E": "é", "F": "éfe", "G": "gê", "H": "agá", "I": "í", "J": "jota",
+          "K": "cá", "L": "éle", "M": "ême", "N": "ene", "O": "ó", "P": "pê", "Q": "quê", "R": "érre", "S": "ésse",
+          "T": "tê", "U": "ú", "V": "vê", "W": "dáblio", "X": "xis", "Y": "ípsilon", "Z": "zê"}
+# siglas que se falam como palavra (o resto é soletrado)
+SIGLAS_PALAVRA = {"PIX": "Pix", "FED": "Fed", "ONU": "ONU", "CADE": "Cade", "ABRAS": "Abras", "NASA": "Nasa", "OPEP": "Opep",
+                  "FIESP": "Fiesp", "SEBRAE": "Sebrae", "SENAI": "Senai", "SENAC": "Senac", "PROCON": "Procon", "ANVISA": "Anvisa",
+                  "IBOVESPA": "Ibovespa", "PETROBRAS": "Petrobras", "UNESCO": "Unesco", "OTAN": "Otan", "MERCOSUL": "Mercosul",
+                  "COPOM": "Copom", "SELIC": "Selic", "IPCA": "IPCA", "DETRAN": "Detran", "ENEM": "Enem", "FIFA": "Fifa"}
+# leituras consagradas que não seguem a regra
+SIGLAS_FIXAS = {"IPCA": "i pê cê á", "NIQ": "ene ai quiú", "CEO": "cê é ó", "PIB": "pib", "IPI": "i pê í", "ICMS": "i cê ême ésse",
+                "EUA": "é u á", "USP": "usp", "UFMG": "u éfe ême gê", "ONU": "ônu", "TV": "tê vê"}
+GRUPOS_OK = ("BR", "CR", "DR", "FR", "GR", "PR", "TR", "VR", "BL", "CL", "FL", "GL", "PL", "CH", "LH", "NH", "QU", "GU")
+
+
+def _soletra(sig: str) -> str:
+    return " ".join(LETRAS.get(c, c) for c in sig)
+
+
+def _le_como_palavra(sig: str) -> bool:
+    """Sigla pronunciável (ABRAS, CADE, NASA): tem 4+ letras, vogais e nenhum encontro de consoantes impossível."""
+    if len(sig) < 4 or not re.search(r"[AEIOU]", sig):
+        return False
+    cons = re.findall(r"[^AEIOU]{2,}", sig)
+    return all(c in GRUPOS_OK or (len(c) == 2 and c[1] == "S" and sig.endswith(c)) for c in cons)
+
+
+def pronunciar(texto: str, extra: dict | None = None) -> str:
+    """Prepara a fala para a voz: siglas soletradas ou lidas como palavra, números que sobraram por extenso."""
+    fixas = {**SIGLAS_FIXAS, **{k.upper(): v for k, v in (extra or {}).items()}}
+
+    def troca(m):
+        sig = m.group(0)
+        if sig in fixas:
+            return fixas[sig]
+        if sig in SIGLAS_PALAVRA:
+            return SIGLAS_PALAVRA[sig]
+        return sig.capitalize() if _le_como_palavra(sig) else _soletra(sig)
+
+    texto = re.sub(r"(?<![\wÀ-ÿ])[A-Z]{2,8}(?![\wÀ-ÿ])", troca, texto)
+    if re.search(r"\d", texto):
+        try:
+            from num2words import num2words
+            texto = re.sub(r"(\d+),(\d+)\s*%", lambda m: f"{num2words(int(m.group(1)), lang='pt_BR')} vírgula {num2words(int(m.group(2)), lang='pt_BR')} por cento", texto)
+            texto = re.sub(r"(\d+)\s*%", lambda m: num2words(int(m.group(1)), lang="pt_BR") + " por cento", texto)
+            texto = re.sub(r"\d{1,3}(?:\.\d{3})+|\d+", lambda m: num2words(int(m.group(0).replace(".", "")), lang="pt_BR"), texto)
+        except Exception as e:  # sem num2words: a voz lê os algarismos
+            print(f"  aviso: número na fala sem conversão ({e})", flush=True)
+    return texto
+
+
+# ---------- tempo de cada palavra (para a legenda acompanhar a voz) ----------
+def _silabas(w: str) -> int:
+    return max(1, len(re.findall(r"[aeiouáéíóúâêôãõàü]+", w.lower())))
+
+
+def palavras_estimadas(frase: str, ini: float, fim: float) -> list[dict]:
+    ws = frase.split()
+    pesos = [_silabas(w) + (0.8 if re.search(r"[,;:]$", w) else 0) for w in ws]
+    tot, acc, out = sum(pesos) or 1, 0.0, []
+    for w, p in zip(ws, pesos):
+        a = ini + (fim - ini) * acc / tot
+        acc += p
+        out.append({"texto": w, "inicio": round(a, 3), "fim": round(ini + (fim - ini) * acc / tot, 3)})
+    return out
+
+
+_WHISPER = None
+
+
+def palavras_alinhadas(wav: np.ndarray, sr: int, frase: str, ini: float) -> list[dict] | None:
+    """Tempo real de cada palavra no áudio (faster-whisper, word_timestamps). None se não houver o pacote/modelo."""
+    global _WHISPER
+    try:
+        if _WHISPER is None:
+            from faster_whisper import WhisperModel
+            _WHISPER = WhisperModel("base", device="cpu", compute_type="int8")
+        audio = wav.astype(np.float32)
+        if sr != 16000:
+            idx = np.linspace(0, len(audio) - 1, int(len(audio) * 16000 / sr))
+            audio = np.interp(idx, np.arange(len(audio)), audio).astype(np.float32)
+        segs, _ = _WHISPER.transcribe(audio, language="pt", word_timestamps=True, initial_prompt=frase, beam_size=1, vad_filter=False)
+        ws = [w for sg in segs for w in (sg.words or [])]
+        if len(ws) < max(1, len(frase.split()) // 3):
+            return None
+        return [{"texto": w.word.strip(), "inicio": round(ini + w.start, 3), "fim": round(ini + w.end, 3)} for w in ws]
+    except Exception as e:
+        if _WHISPER is None:
+            print(f"  aviso: alinhamento por palavra indisponível ({e}); usando estimativa por sílabas", flush=True)
+            _WHISPER = False
+        return None
 FADE_MS = 12                  # evita estalos nas emendas
 
 
@@ -106,7 +199,7 @@ def narrar_cenas(roteiro, indices, voz, seed, pasta: Path):
     pasta.mkdir(parents=True, exist_ok=True)
     for i in indices:
         cena = roteiro["cenas"][i]
-        fala = cena.get("fala") or re.sub(r"\*\*", "", cena["narracao"])
+        fala = pronunciar(cena.get("fala") or re.sub(r"\*\*", "", cena["narracao"]), roteiro.get("pronuncia"))
         params = TONS.get(cena.get("tom", "neutro"), TONS["neutro"])
         pedacos, info, t = [], [], 0.0
         for j, frase in enumerate(frases(fala)):
@@ -115,7 +208,8 @@ def narrar_cenas(roteiro, indices, voz, seed, pasta: Path):
             wav = wav.squeeze().detach().cpu().numpy().astype(np.float32)
             wav = fade(apara_silencio(wav, sr), sr)
             dur = len(wav) / sr
-            info.append({"texto": frase, "inicio": round(t, 3), "fim": round(t + dur, 3)})
+            pal = (palavras_alinhadas(wav, sr, frase, t) if _WHISPER is not False else None) or palavras_estimadas(frase, t, t + dur)
+            info.append({"texto": frase, "inicio": round(t, 3), "fim": round(t + dur, 3), "palavras": pal})
             pedacos.append(wav); t += dur
             pedacos.append(silencio(PAUSA_ENTRE_FRASES_MS, sr)); t += PAUSA_ENTRE_FRASES_MS / 1000
             print(f"  cena {i + 1:02d} · frase {j + 1}: {dur:4.1f}s  {frase[:60]}", flush=True)
@@ -137,10 +231,12 @@ def juntar(roteiro, pasta: Path, saida: str, tempos_arq: str):
             pedacos.append(silencio(250, sr)); t += 0.25
         ini = t
         frases_info = [{"texto": f["texto"], "inicio": round(ini + f["inicio"], 3), "fim": round(ini + f["fim"], 3)} for f in meta["frases"]]
+        palavras = [{"texto": p["texto"], "inicio": round(ini + p["inicio"], 3), "fim": round(ini + p["fim"], 3)}
+                    for f in meta["frases"] for p in (f.get("palavras") or palavras_estimadas(f["texto"], f["inicio"], f["fim"]))]
         pedacos.append(wav); t += len(wav) / sr
         pausa = int(cena.get("pausa_depois_ms", 300))
         pedacos.append(silencio(pausa, sr)); t += pausa / 1000
-        tempos.append({"cena": i, "tipo": cena["tipo"], "inicio": round(ini, 3), "fim": round(t, 3), "frases": frases_info})
+        tempos.append({"cena": i, "tipo": cena["tipo"], "inicio": round(ini, 3), "fim": round(t, 3), "frases": frases_info, "palavras": palavras})
     pedacos.append(silencio(600, sr)); t += 0.6
     bruto = Path(saida).with_suffix(".bruto.wav")
     sf.write(bruto, np.concatenate(pedacos), sr)
