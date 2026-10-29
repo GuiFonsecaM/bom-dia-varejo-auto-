@@ -247,7 +247,7 @@ jobs:
         with:
           name: video-final
           path: video.mp4
-          retention-days: 7
+          retention-days: 30
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -261,7 +261,13 @@ jobs:
           URL="${{ steps.deploy.outputs.page_url }}v/$NOME"
           echo "VIDEO_URL=$URL" >> "$GITHUB_ENV"
           for i in $(seq 1 40); do
-            code=$(curl -s -o /dev/null -w '%{http_code}' -I "$URL"); [ "$code" = "200" ] && echo "No ar: $URL" && exit 0; sleep 15
+            code=$(curl -s -o /dev/null -w '%{http_code}' -I "$URL"); if [ "$code" = "200" ]; then
+              echo "No ar: $URL"
+              # link direto do vídeo no resumo da execução (não expira como o .zip do artefato)
+              { echo "## 🎬 Vídeo pronto"; echo ""; echo "[▶️ Abrir / baixar o vídeo]($URL)"; echo ""; echo "\`$URL\`"; } >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 15
           done
           echo "::error::O vídeo não ficou acessível em $URL"; exit 1
 
