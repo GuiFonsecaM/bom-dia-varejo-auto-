@@ -106,11 +106,12 @@ jobs:
           path: |
             ~/.cache/huggingface
             ~/.cache/pip
-          key: voz-chatterbox-v1
+          key: voz-chatterbox-v2
       - name: Instalar narração
         run: |
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
-          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts soundfile numpy
+          pip install -q --extra-index-url https://download.pytorch.org/whl/cpu chatterbox-tts soundfile numpy num2words
+          pip install -q faster-whisper || echo "sem faster-whisper: legenda usa estimativa por sílabas"
       - name: Narrar bloco ${{ matrix.parte }}
         env:
           VOZ_OPUS_B64: ${{ secrets.VOZ_OPUS_B64 }}
@@ -146,7 +147,7 @@ jobs:
       - name: Montar narração e tempos
         run: |
           which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
-          pip install -q soundfile numpy
+          pip install -q soundfile numpy num2words
           python scripts/narrar.py roteiro.json --juntar --pasta cenas_voz --saida narracao.wav --tempos tempos.json
       - uses: actions/upload-artifact@v4
         with:
