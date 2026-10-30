@@ -59,6 +59,20 @@ return {
 - **Figurantes não somem na frente da câmera.** Quem anda em loop recomeça só onde nenhuma câmera da cena o vê (atrás de parede/gôndola/prédio ou fora do quadro); carro e gente não servem de esconderijo. A prévia acusa "figurante some ou aparece na frente da câmera".
 - **Siglas na fala**: o narrador soletra sozinho as que não se leem como palavra (BH → "bê agá", DMA → "dê eme á") e lê como palavra as pronunciáveis (Abras, Cade, Pix). Para uma leitura diferente, ponha no roteiro `"pronuncia": {"NIQ": "ene ai quiú"}`. Números na fala vão por extenso.
 - **Legenda acompanha a voz palavra a palavra**: a narração grava o tempo de cada palavra dita e a legenda casa as palavras iguais; números e siglas da legenda aparecem quando são falados por extenso. A legenda pode ter algarismos (171.006) e a fala por extenso, sem problema.
+- **Veículo parado fica no asfalto.** Em `cidade`, `rua_comercial` e `bairro`, carro, viatura, ambulância, van, caminhão, ônibus e moto postos fora da pista vão sozinhos para o meio-fio da pista mais perto, no sentido certo (mão direita) e sem encostar em outro veículo. Use `{naPista:false}` só para pátio/estacionamento de verdade.
+- **Ninguém fica dentro de parede.** Pessoa ou veículo da cena em cima de prédio, casa, árvore ou poste do ambiente tira essa peça do ambiente.
+- **Cabelo nunca atravessa o que está na cabeça.** Com capacete o topo do cabelo some e a nuca fica abaixo da aba; boné, touca e chapéu apertam o cabelo.
+- **Navios têm casco de navio** (proa afilada, fundo vermelho, casario com janelas e chaminé). `K.navio({tipo})`: `carga` (contêineres), `petroleiro` (convés com tubulação, sem contêiner), `guerra`, `cruzeiro`, `pesca`. Notícia de petroleiro/óleo usa `petroleiro` (se vier `carga`, o motor troca).
+- **Mancha de óleo boia e segue as ondas.** `K.plano(..., {deitado:true})` em cima de `K.mar` acompanha a superfície; cor escura vira mancha de borda irregular (`K.manchaAgua(larg, prof, cor)`). Várias manchas empilham sem piscar.
+- **Papel na mão fica em pé**, preso pela borda de baixo, com a frente para fora (documento, carta, cartão, jornal, livro). Nunca deitado na frente da mão.
+- **Calendário sempre com a data escrita**: `K.produto('calendario',{data:'2027-02-07'})` (aceita '7/02/27' e '7 de fevereiro'); sem `data`, usa o destaque/narração da cena.
+- **Ninguém senta no ar.** Pessoa sentada sem assento embaixo ganha uma cadeira com encosto, virada para onde ela olha. Mesmo assim, prefira pôr `K.cadeira` na cena.
+- **Objeto de mesa vai para cima da mesa.** `K.produto` pequeno (calendário, notas, caderno) sem `y` sobe para a mesa/balcão embaixo dele; nunca fica sob o tampo.
+- **Enfeite não fica no meio da rua.** Abóbora (`K.esfera`), caixa, cone, produto e grupo de gente parada (`K.multidao`) postos em cima da pista vão para a calçada mais perto. Para pôr na pista de propósito: `{naPista:true}`.
+- **Gôndola tem pelo menos 6 m** (`K.gondolaRapida`); se pedir menos, ela cresce para trás e a ponta da frente fica onde você pôs. Ponta de gôndola curta: `{ponta:true}`.
+- **No `porto` o mar começa depois do cais** (z < −12): pátio, contêineres e caminhões ficam em terra.
+- **Escada rolante liga dois pisos** (`K.escadaRolante({x0,x1,y1,z,largura})`); no `shopping` ela chega ao mezanino, com abertura no guarda-corpo.
+- **Calendário sem dia na cena**: se a narração cita um mês, ele mostra o mês e, no lugar do dia, o destaque (ex.: SETEMBRO · 2024·25).
 - **Mapas vistos quase de cima, com uma leve perspectiva (~10°)** (norte para cima); só o globo gira em 3D. No mapa de Minas, o resto do Brasil aparece em volta com o contorno real. A câmera do mapa é automática: não passe `camera` em cena de mapa.
 - **Telejornal:** `K.ambiente('estudio_tv')` tem a identidade da marca (igual ao estúdio de gráficos) com a bancada no centro, de frente, e já traz a câmera certa.
 - **Caixas com cliente:** todo `K.checkout` vem com um cliente tirando as compras do próprio carrinho (as compras saem do carrinho para a esteira); sem cliente (`{cliente:false}`) a esteira fica parada e vazia. Fila no caixa sempre com carrinho. As placas "CAIXA n" têm frente dos dois lados.
