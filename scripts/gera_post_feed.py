@@ -443,9 +443,9 @@ def story(post):
         ImageDraw.Draw(m).rounded_rectangle((0, 0, f.size[0] - 1, f.size[1] - 1), radius=26, fill=255)
         img.paste(f, (mx, y), m)
 
-    # chamada para a notícia completa no site + fonte
+    # chamada: a notícia que também foi para o feed aponta para o post; as outras, para o site
     f_cta = fonte(700, 38)
-    cta = f"Leia completa em {SITE_DOMINIO}"
+    cta = "Matéria completa no post do feed" if post.get("feed") is True else f"Leia completa em {SITE_DOMINIO}"
     wc = larg(f_cta, cta) + 160
     xc = (W - wc) / 2
     d.rounded_rectangle((xc, y_cta, xc + wc, y_cta + 92), radius=46, fill=LARANJA)
