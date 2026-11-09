@@ -513,11 +513,27 @@ def gera(post, pasta_saida, idx):
     return pasta
 
 
+def devolve_para_fila(posts, caminho):
+    """Notícia que não foi publicada sai do histórico, para ser tentada de novo na próxima rodada."""
+    if not os.path.exists(caminho):
+        return
+    from rodada_do_site import chave
+    chaves = {chave(p) for p in posts}
+    with open(caminho, encoding="utf-8") as fh:
+        estado = json.load(fh)
+    estado["postados"] = [x for x in estado.get("postados", []) if x.get("chave") not in chaves]
+    estado["vistos"] = [k for k in estado.get("vistos", []) if k not in chaves]
+    with open(caminho, "w", encoding="utf-8") as fh:
+        json.dump(estado, fh, ensure_ascii=False, indent=1)
+    print(f"  ↺ {len(chaves)} notícia(s) voltaram para a fila da próxima rodada")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("json")
     ap.add_argument("--saida", default="saida")
     ap.add_argument("--publicar", action="store_true", help="publica carrossel + story no Instagram")
+    ap.add_argument("--estado", default="estado_instagram.json", help="histórico da rodada (o que falhar volta para a fila)")
     a = ap.parse_args()
     with open(a.json, encoding="utf-8") as fh:
         dados = json.load(fh)
@@ -525,14 +541,15 @@ def main():
     pastas = [gera(p, a.saida, i) for i, p in enumerate(posts, 1)]
     if a.publicar:
         from publica_instagram import publica_pasta
-        falhas = 0
-        for p in pastas:
+        falhas = []
+        for p, post in zip(pastas, posts):
             try:
                 publica_pasta(p)
             except Exception as e:  # uma notícia com problema não derruba as outras
-                falhas += 1
+                falhas.append(post)
                 print(f"  ✗ falhou ao publicar {os.path.basename(p)}: {e}", file=sys.stderr)
         if falhas:
+            devolve_para_fila(falhas, a.estado)
             sys.exit(1)
 
 
