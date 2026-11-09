@@ -14,7 +14,8 @@ Uso:
     python rodada_do_site.py --dia data/dias/2026-11-09.json   # arquivo local (teste)
 Saída: rodadas/ultima.json (entrada do gera_post_feed.py) e estado_instagram.json (o que já foi visto/postado).
 """
-import argparse, datetime, json, os, re, unicodedata, urllib.request
+import argparse, datetime, io, json, os, re, unicodedata, urllib.request
+from urllib.parse import urljoin
 
 SITE_RAW = os.getenv("SITE_RAW", "https://raw.githubusercontent.com/GuiFonsecaM/bom-dia-varejo-site/main/")
 CATEGORIAS = ["Varejo", "Economia", "Política", "Mundo"]
@@ -119,21 +120,79 @@ def imagem_absoluta(img):
     return img if re.match(r"^https?://", img) else SITE_RAW + img.lstrip("/")
 
 
-def og_image(link):
-    """Se o site ainda não tem a foto, busca a og:image da página original."""
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36",
+      "Accept-Language": "pt-BR,pt;q=0.9", "Accept": "text/html,application/xhtml+xml,image/avif,image/webp,image/*,*/*;q=0.8"}
+
+
+def _baixa(url, limite, timeout=25):
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read(limite), r.geturl()
+
+
+def imagens_da_pagina(link):
+    """Todas as imagens de prévia da matéria original (og:image, twitter:image, image_src), em ordem."""
     try:
-        req = urllib.request.Request(link, headers={"User-Agent": "Mozilla/5.0 (BomDiaVarejo bot)"})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            html = r.read(400_000).decode("utf-8", "ignore")
-        for pad in (r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)',
-                    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image',
-                    r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)'):
-            m = re.search(pad, html, re.I)
-            if m:
-                return m.group(1).replace("&amp;", "&")
+        dados, final = _baixa(link, 1_500_000)
+        html = dados.decode("utf-8", "ignore")
     except Exception as e:
-        print(f"  ! sem og:image em {link}: {e}")
-    return ""
+        print(f"  ! não abri a matéria {link}: {e}")
+        return []
+    achadas = []
+    for tag in re.findall(r"<(?:meta|link)\b[^>]*>", html, re.I):
+        chave = re.search(r'(?:property|name|itemprop|rel)\s*=\s*["\']([^"\']+)', tag, re.I)
+        valor = re.search(r'(?:content|href)\s*=\s*["\']([^"\']+)', tag, re.I)
+        if chave and valor and chave.group(1).lower() in (
+                "og:image:secure_url", "og:image", "og:image:url", "twitter:image", "twitter:image:src", "image", "image_src"):
+            url = urljoin(final, valor.group(1).replace("&amp;", "&").strip())
+            if url.startswith("http") and url not in achadas:
+                achadas.append(url)
+    return achadas
+
+
+def versoes_maiores(url):
+    """Tenta chegar no arquivo original por trás de URLs redimensionadas por CDN."""
+    out = []
+    # Thumbor / Globo (g1, valor, ge): .../AbC=/1200x0/smart/filters:.../i.s3.glbimg.com/v1/.../foto.jpg
+    m = re.search(r"/((?:i\.s3\.glbimg\.com|s\d?\.glbimg\.com)/v1/.+)$", url)
+    if m:
+        out.append("https://" + m.group(1))
+    m = re.search(r"/filters:[^/]*/(.+\.(?:jpe?g|png|webp))", url, re.I)
+    if m and "." in m.group(1).split("/")[0]:
+        out.append("https://" + m.group(1))
+    # WordPress: foto-1200x675.jpg → foto.jpg ; foto-scaled.jpg → foto.jpg
+    sem_tam = re.sub(r"-(?:\d{2,4}x\d{2,4}|scaled)(?=\.(?:jpe?g|png|webp)(?:\?|$))", "", url, flags=re.I)
+    if sem_tam != url:
+        out.append(sem_tam)
+    # parâmetros de redimensionamento (?w=600&h=..., ?resize=, ?width=)
+    if re.search(r"[?&](?:w|h|width|height|resize|fit|quality|q|crop)=", url, re.I):
+        out.append(url.split("?")[0])
+    return out
+
+
+def melhor_imagem(n):
+    """Usa a foto original da matéria na resolução máxima; a cópia do site (600 px, WebP leve) é só reserva."""
+    candidatas = []
+    for u in imagens_da_pagina(n.get("link", "")):
+        candidatas += versoes_maiores(u) + [u]
+    melhor, area_melhor = "", 0
+    from PIL import Image
+    for u in dict.fromkeys(candidatas):
+        try:
+            dados, _ = _baixa(u, 25_000_000)
+            im = Image.open(io.BytesIO(dados))
+            w, h = im.size
+        except Exception:
+            continue
+        if w >= 400 and w * h > area_melhor:
+            melhor, area_melhor = u, w * h
+            print(f"    foto {w}x{h}: {u[:110]}")
+    if melhor:
+        return melhor
+    reserva = imagem_absoluta(n.get("imagem"))
+    if reserva:
+        print("    ! usando a cópia reduzida do site (a matéria não deu acesso à foto original)")
+    return reserva
 
 
 def monta_post(n, cat, data_iso):
@@ -151,7 +210,7 @@ def monta_post(n, cat, data_iso):
         grupos.append(atual)
     nomes = ["O que aconteceu", "Mais detalhes", "Contexto", "O que vem agora"]
     slides = [{"titulo": nomes[i], "topicos": [negrita_numeros(t) for t in g]} for i, g in enumerate(grupos[:4])]
-    img = imagem_absoluta(n.get("imagem")) or og_image(n.get("link", ""))
+    img = melhor_imagem(n)
     d = datetime.date.fromisoformat(data_iso).strftime("%d/%m/%Y") if data_iso else ""
     return {
         "tipo": TIPO[cat],

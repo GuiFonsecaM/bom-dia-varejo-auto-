@@ -23,7 +23,7 @@ Campos de cada post:
 Saída: saida/<data>_<tipo>_<nn>_<slug>/  com  feed_01_capa.jpg … feed_0N.jpg, story.jpg (JPEG: único formato aceito pela API), legenda.txt, post.json
 """
 import argparse, io, json, os, re, sys, unicodedata, datetime
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = next((p for p in (os.path.join(BASE, "assets"), os.path.join(BASE, "..", "assets")) if os.path.isdir(p)), os.path.join(BASE, "assets"))
@@ -186,9 +186,11 @@ def carrega_imagem(ref):
     try:
         if re.match(r"^https?://", ref):
             import urllib.request
-            req = urllib.request.Request(ref, headers={"User-Agent": "Mozilla/5.0 (BomDiaVarejo bot)"})
-            with urllib.request.urlopen(req, timeout=30) as r:
-                return Image.open(io.BytesIO(r.read())).convert("RGB")
+            req = urllib.request.Request(ref, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36", "Accept": "image/avif,image/webp,image/*,*/*;q=0.8"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                img = Image.open(io.BytesIO(r.read()))
+                img = ImageOps.exif_transpose(img)
+                return img.convert("RGB")
         p = ref if os.path.isabs(ref) else os.path.join(os.getcwd(), ref)
         return Image.open(p).convert("RGB")
     except Exception as e:
