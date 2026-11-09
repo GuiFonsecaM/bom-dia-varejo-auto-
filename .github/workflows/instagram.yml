@@ -1,0 +1,71 @@
+# Bom dia varejo — posts do Instagram a partir do site bomdiavarejo.com.br
+# Depois de cada coleta do site (08:07, 13:07 e 18:07), pega 1 notícia principal por categoria
+# (Varejo, Economia, Política, Mundo) entre as que entraram desde a rodada anterior e publica:
+#   carrossel no feed (capa com foto + tópicos, legenda com o link da fonte) → story da mesma notícia.
+name: Instagram — notícias do site
+
+on:
+  schedule:
+    - cron: "47 11,16,21 * * *"   # 08:47, 13:47 e 18:47 (Brasília) — 40 min depois das coletas do site
+  workflow_dispatch:
+    inputs:
+      publicar:
+        description: "Publicar no Instagram? (nao = só gera as imagens para conferir)"
+        required: false
+        default: sim
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-posts
+  cancel-in-progress: false
+
+env:
+  TZ: America/Sao_Paulo
+
+jobs:
+  posts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -q pillow
+
+      - name: Escolher 1 notícia nova por categoria
+        run: python scripts/rodada_do_site.py --saida rodadas/ultima.json
+
+      - name: Gerar carrossel + story
+        if: github.event.inputs.publicar == 'nao'
+        run: python scripts/gera_post_feed.py rodadas/ultima.json
+
+      - name: Gerar e publicar no Instagram
+        if: github.event.inputs.publicar != 'nao'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/gera_post_feed.py rodadas/ultima.json --publicar
+
+      - name: Guardar o que já foi visto/postado
+        if: always() && github.event.inputs.publicar != 'nao'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add estado_instagram.json rodadas/ultima.json
+          git commit -qm "Instagram: rodada $(date '+%d/%m %H:%M')" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 5; done
+          exit 1
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: posts-instagram
+          path: saida/
+          if-no-files-found: ignore
+          retention-days: 7

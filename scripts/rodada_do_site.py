@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""
+Monta a rodada do Instagram a partir do site bomdiavarejo.com.br (repo bom-dia-varejo-site):
+1 notícia principal por categoria (Varejo, Economia, Política, Mundo), só entre as notícias
+que entraram no site desde a rodada anterior.
+
+Lê data/dias/AAAA-MM-DD.json do site: {"data": ..., "noticias": [{titulo, topicos, fonte, link,
+categoria, imagem, ...}]}. O site grava as notícias de cada coleta em ordem de relevância
+(varejo alimentar pesa mais), então a "principal" de cada categoria é a primeira notícia nova
+dela — preferindo a que tem foto.
+
+Uso:
+    python rodada_do_site.py                       # lê o JSON de hoje direto do repositório do site
+    python rodada_do_site.py --dia data/dias/2026-11-09.json   # arquivo local (teste)
+Saída: rodadas/ultima.json (entrada do gera_post_feed.py) e estado_instagram.json (o que já foi visto/postado).
+"""
+import argparse, datetime, json, os, re, unicodedata, urllib.request
+
+SITE_RAW = os.getenv("SITE_RAW", "https://raw.githubusercontent.com/GuiFonsecaM/bom-dia-varejo-site/main/")
+CATEGORIAS = ["Varejo", "Economia", "Política", "Mundo"]
+TIPO = {"Varejo": "noticia", "Economia": "noticia", "Política": "noticia", "Mundo": "mundo"}
+HASHTAGS = {
+    "Varejo": ["#BomDiaVarejo", "#varejo", "#supermercado", "#atacarejo", "#varejoalimentar"],
+    "Economia": ["#BomDiaVarejo", "#economia", "#varejo", "#mercado", "#negocios"],
+    "Política": ["#BomDiaVarejo", "#politica", "#economia", "#brasil", "#noticias"],
+    "Mundo": ["#BomDiaVarejo", "#mundo", "#economiaglobal", "#noticias", "#internacional"],
+}
+ESTADO = "estado_instagram.json"
+
+
+def baixa_json(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (BomDiaVarejo bot)", "Cache-Control": "no-cache"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def norm(t):
+    t = unicodedata.normalize("NFKD", str(t or "")).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", " ", t).strip()
+
+
+def chave(n):
+    """Mesma ideia do site: domínio + caminho do link original."""
+    u = re.sub(r"^https?://(www\.)?", "", str(n.get("link") or "")).split("?")[0].split("#")[0].rstrip("/").lower()
+    return u or norm(n.get("titulo"))
+
+
+def categoria(c):
+    c = norm(c)
+    if c.startswith(("varejo", "atacarejo")):
+        return "Varejo"
+    for cat in CATEGORIAS:
+        if c.startswith(norm(cat)[:5]):
+            return cat
+    return None  # Indicadores e outras ficam de fora
+
+
+# ------------------------------------------------------------ texto
+_ESC = r"(?:milhões|milhão|mil|bilhões|bilhão|trilhões|trilhão)"
+RE_NUM = re.compile(
+    rf"(R\$\s?[\d.,]+(?:\s?{_ESC})?|US\$\s?[\d.,]+(?:\s?{_ESC})?|€\s?[\d.,]+(?:\s?{_ESC})?"
+    r"|[\d.,]+\s?%|[\d.,]+\s?(?:p\.p\.|pontos? percentua(?:l|is))"
+    rf"|\d[\d.,]*\s(?:{_ESC}|lojas|unidades|anos|meses|empregos|toneladas))", re.I)
+
+
+def negrita_numeros(t):
+    return RE_NUM.sub(lambda m: f"**{m.group(0).strip()}**", t)
+
+
+def destaque_manchete(t):
+    """Trecho laranja da capa: do 1º valor até o fim (se curto); senão depois da última vírgula; senão as 3 últimas palavras."""
+    m = RE_NUM.search(t)
+    if m:
+        if len(t[m.start():].split()) <= 6:
+            return t[:m.start()] + "**" + t[m.start():].strip() + "**"
+        return t.replace(m.group(0).strip(), f"**{m.group(0).strip()}**", 1)
+    if ":" in t:
+        a, b = t.split(":", 1)
+        if 2 <= len(b.split()) <= 6:
+            return f"{a}: **{b.strip()}**"
+    if "," in t:
+        a, b = t.rsplit(",", 1)
+        if 1 <= len(b.split()) <= 7:
+            return f"{a}, **{b.strip()}**"
+    w = t.split()
+    return " ".join(w[:-3]) + " **" + " ".join(w[-3:]) + "**" if len(w) > 4 else t
+
+
+def corta(t, n):
+    t = t.strip()
+    if len(t) <= n:
+        return t
+    pedaco = t[:n]
+    for sep in (". ", "; ", " — ", ", "):
+        i = pedaco.rfind(sep)
+        if i > n * 0.55:
+            return pedaco[:i].rstrip(" ,;—") + ("." if sep == ". " else "…")
+    return pedaco.rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def subtitulo(topico):
+    """Linha fina da capa: 1ª frase do 1º tópico, se couber; senão até a última vírgula/travessão antes de 120 caracteres."""
+    if not topico:
+        return ""
+    frase = re.split(r"(?<=[.!?])\s", topico.strip())[0].rstrip(".")
+    if len(frase) <= 120:
+        return frase
+    pedaco = frase[:120]
+    for sep in (" — ", "; ", ", "):
+        i = pedaco.rfind(sep)
+        if i > 50:
+            return pedaco[:i]
+    return ""
+
+
+def imagem_absoluta(img):
+    if not img:
+        return ""
+    return img if re.match(r"^https?://", img) else SITE_RAW + img.lstrip("/")
+
+
+def og_image(link):
+    """Se o site ainda não tem a foto, busca a og:image da página original."""
+    try:
+        req = urllib.request.Request(link, headers={"User-Agent": "Mozilla/5.0 (BomDiaVarejo bot)"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            html = r.read(400_000).decode("utf-8", "ignore")
+        for pad in (r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)',
+                    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image',
+                    r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)'):
+            m = re.search(pad, html, re.I)
+            if m:
+                return m.group(1).replace("&amp;", "&")
+    except Exception as e:
+        print(f"  ! sem og:image em {link}: {e}")
+    return ""
+
+
+def monta_post(n, cat, data_iso):
+    titulo = re.sub(r"\s+", " ", n["titulo"]).strip()
+    tops = [re.sub(r"\s+", " ", str(t)).strip(" •-") for t in (n.get("topicos") or []) if str(t).strip()]
+    tops = [corta(t, 330) for t in tops]
+    # até 3 tópicos por imagem e ~560 caracteres, no máx. 4 imagens internas (carrossel com até 5)
+    grupos, atual = [], []
+    for t in tops:
+        if atual and (len(atual) == 3 or sum(map(len, atual)) + len(t) > 560):
+            grupos.append(atual)
+            atual = []
+        atual.append(t)
+    if atual:
+        grupos.append(atual)
+    nomes = ["O que aconteceu", "Mais detalhes", "Contexto", "O que vem agora"]
+    slides = [{"titulo": nomes[i], "topicos": [negrita_numeros(t) for t in g]} for i, g in enumerate(grupos[:4])]
+    img = imagem_absoluta(n.get("imagem")) or og_image(n.get("link", ""))
+    d = datetime.date.fromisoformat(data_iso).strftime("%d/%m/%Y") if data_iso else ""
+    return {
+        "tipo": TIPO[cat],
+        "categoria": cat,
+        "manchete": destaque_manchete(titulo),
+        "subtitulo": subtitulo(tops[0] if tops else ""),
+        "imagem": img,
+        "fonte": n.get("fonte") or re.sub(r"^https?://(www\.)?", "", n.get("link", "")).split("/")[0],
+        "data": d,
+        "link": n.get("link", ""),
+        "materia": "",
+        "slides": slides,
+        "hashtags": HASHTAGS[cat],
+    }
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dia", help="arquivo local do dia (padrão: baixa o de hoje do site)")
+    ap.add_argument("--saida", default="rodadas/ultima.json")
+    ap.add_argument("--estado", default=ESTADO)
+    a = ap.parse_args()
+
+    hoje = datetime.date.today().isoformat()  # o workflow roda com TZ=America/Sao_Paulo
+    if a.dia:
+        with open(a.dia, encoding="utf-8") as fh:
+            dia = json.load(fh)
+    else:
+        try:
+            dia = baixa_json(f"{SITE_RAW}data/dias/{hoje}.json")
+        except Exception as e:
+            print(f"Sem edição de hoje no site ({e}).")
+            dia = {"data": hoje, "noticias": []}
+
+    estado = {"vistos": [], "postados": []}
+    if os.path.exists(a.estado):
+        with open(a.estado, encoding="utf-8") as fh:
+            estado.update(json.load(fh))
+    vistos = set(estado["vistos"])
+    ja_postados = {p["chave"] for p in estado["postados"]}
+
+    novas = {c: [] for c in CATEGORIAS}
+    for n in dia.get("noticias", []):
+        cat = categoria(n.get("categoria"))
+        k = chave(n)
+        if cat and n.get("titulo") and k not in vistos and k not in ja_postados:
+            novas[cat].append(n)
+
+    posts = []
+    agora = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    for cat in CATEGORIAS:
+        if not novas[cat]:
+            print(f"– {cat}: nenhuma notícia nova desde a última rodada")
+            continue
+        com_foto = [n for n in novas[cat] if n.get("imagem")]
+        n = (com_foto or novas[cat])[0]  # ordem do site = relevância
+        posts.append(monta_post(n, cat, dia.get("data") or hoje))
+        estado["postados"].append({"chave": chave(n), "categoria": cat, "titulo": n["titulo"], "em": agora})
+        print(f"✓ {cat}: {n['titulo']}")
+
+    # tudo o que já está no site conta como visto: a próxima rodada só olha o que entrar depois
+    estado["vistos"] = (estado["vistos"] + [chave(n) for n in dia.get("noticias", []) if chave(n) not in vistos])[-3000:]
+    estado["postados"] = estado["postados"][-1000:]
+
+    os.makedirs(os.path.dirname(a.saida) or ".", exist_ok=True)
+    with open(a.saida, "w", encoding="utf-8") as fh:
+        json.dump({"posts": posts}, fh, ensure_ascii=False, indent=2)
+    with open(a.estado, "w", encoding="utf-8") as fh:
+        json.dump(estado, fh, ensure_ascii=False, indent=1)
+    print(f"{len(posts)} post(s) nesta rodada.")
+
+
+if __name__ == "__main__":
+    main()
