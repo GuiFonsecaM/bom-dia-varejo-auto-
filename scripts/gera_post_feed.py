@@ -466,9 +466,14 @@ def legenda(post):
     fonte_ln = f"🔗 Fonte: {post.get('fonte', '')}" + (f", {post['data']}" if post.get("data") else "")
     if post.get("link"):
         fonte_ln += f"\n{post['link']}"
-    partes.append(fonte_ln)
-    partes.append(" ".join(post.get("hashtags") or HASHTAGS_PADRAO))
-    return "\n\n".join(partes)[:2200]
+    rodape = [fonte_ln, " ".join(post.get("hashtags") or HASHTAGS_PADRAO)]
+    # limite do Instagram: 2.200 caracteres. Corta tópicos do fim, nunca a fonte, o link ou as hashtags.
+    while len("\n\n".join(partes + rodape)) > 2200 and len(partes) > 1:
+        linhas = partes[-1].split("\n")
+        partes[-1] = "\n".join(linhas[:-1])
+        if len(linhas) <= 2:
+            partes.pop()
+    return "\n\n".join(partes + rodape)[:2200]
 
 
 # ---------------------------------------------------------------- orquestração
