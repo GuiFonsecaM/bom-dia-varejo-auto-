@@ -12,6 +12,14 @@ on:
         description: "Republicar os stories da última rodada? (sim/nao)"
         required: false
         default: nao
+      refazer:
+        description: "Refazer o post desta categoria da última rodada (ex.: Política; vazio = nenhum)"
+        required: false
+        default: ""
+      publicar_refeito:
+        description: "Publicar o post refeito? (nao = só gera a prévia no branch previa)"
+        required: false
+        default: nao
 
 permissions:
   contents: write
@@ -45,3 +53,24 @@ jobs:
       - name: Republicar stories da última rodada
         if: github.event.inputs.republicar_stories == 'sim'
         run: python scripts/gera_post_feed.py rodadas/ultima.json --so-stories --publicar
+
+      - name: Refazer post (nova busca de foto)
+        if: github.event.inputs.refazer != ''
+        run: |
+          python scripts/refaz_post.py "${{ github.event.inputs.refazer }}" --saida rodadas/refazer.json
+          if [ "${{ github.event.inputs.publicar_refeito }}" = "sim" ]; then
+            python scripts/gera_post_feed.py rodadas/refazer.json --publicar --estado /dev/null/nao-usar
+          else
+            python scripts/gera_post_feed.py rodadas/refazer.json
+          fi
+
+      - name: Prévia no branch "previa"
+        if: github.event.inputs.refazer != '' && github.event.inputs.publicar_refeito != 'sim'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q --orphan previa
+          git rm -rq --cached .
+          git add -f saida
+          git commit -qm "Prévia refeita $(date '+%d/%m %H:%M')"
+          git push -qf origin previa

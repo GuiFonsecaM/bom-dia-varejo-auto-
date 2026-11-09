@@ -238,7 +238,7 @@ def feed_capa(post):
     foto = carrega_imagem(post.get("imagem"))
     base = cobre(foto, W, H) if foto else fundo_sem_foto(W, H)
     preto = Image.new("RGB", (W, H), PRETO)
-    base = Image.composite(preto, base, gradiente_vertical(W, H, [(0, 120), (0.16, 0), (0.38, 0), (0.62, 225), (0.78, 245), (1, 250)]))
+    base = Image.composite(preto, base, gradiente_vertical(W, H, [(0, 120), (0.16, 0), (0.34, 0), (0.56, 232), (0.68, 250), (1, 255)]))
     d = ImageDraw.Draw(base)
 
     # marca no topo, centralizada

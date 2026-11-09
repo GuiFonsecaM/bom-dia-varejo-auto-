@@ -131,23 +131,42 @@ def _baixa(url, limite, timeout=25):
 
 
 def imagens_da_pagina(link):
-    """Todas as imagens de prévia da matéria original (og:image, twitter:image, image_src), em ordem."""
+    """(prévias, fotos do corpo) da matéria original: og:image/twitter:image e as <img> grandes do texto."""
     try:
-        dados, final = _baixa(link, 1_500_000)
+        dados, final = _baixa(link, 2_500_000)
         html = dados.decode("utf-8", "ignore")
     except Exception as e:
         print(f"  ! não abri a matéria {link}: {e}")
-        return []
-    achadas = []
+        return [], []
+    previas = []
     for tag in re.findall(r"<(?:meta|link)\b[^>]*>", html, re.I):
         chave = re.search(r'(?:property|name|itemprop|rel)\s*=\s*["\']([^"\']+)', tag, re.I)
         valor = re.search(r'(?:content|href)\s*=\s*["\']([^"\']+)', tag, re.I)
         if chave and valor and chave.group(1).lower() in (
                 "og:image:secure_url", "og:image", "og:image:url", "twitter:image", "twitter:image:src", "image", "image_src"):
             url = urljoin(final, valor.group(1).replace("&amp;", "&").strip())
-            if url.startswith("http") and url not in achadas:
-                achadas.append(url)
-    return achadas
+            if url.startswith("http") and url not in previas:
+                previas.append(url)
+    corpo = []
+    for tag in re.findall(r"<(?:img|source)\b[^>]*>", html, re.I):
+        for attr in ("data-src", "data-original", "data-lazy-src", "src", "srcset", "data-srcset"):
+            m = re.search(attr + r'\s*=\s*["\']([^"\']+)', tag, re.I)
+            if not m:
+                continue
+            # srcset: pega a última (maior) opção
+            url = m.group(1).split(",")[-1].strip().split(" ")[0].replace("&amp;", "&")
+            url = urljoin(final, url)
+            if (url.startswith("http") and re.search(r"\.(?:jpe?g|png|webp)(?:$|[?/])", url, re.I)
+                    and not re.search(r"logo|icon|avatar|sprite|placeholder|banner|selo|badge|emoji|1x1", url, re.I)
+                    and url not in corpo and url not in previas):
+                corpo.append(url)
+            break
+    return previas, corpo[:15]
+
+
+def eh_frame_de_video(url):
+    """Capa de vídeo (frame de telejornal, com tarja e logo de TV): fica fora do tema do post."""
+    return bool(re.search(r"thumbor\.globoi\.com|video\.glbimg|/videos?/|ytimg\.com|img\.youtube|vimeocdn|jwplatform|brightcove", url, re.I))
 
 
 def versoes_maiores(url):
@@ -171,24 +190,33 @@ def versoes_maiores(url):
 
 
 def melhor_imagem(n):
-    """Usa a foto original da matéria na resolução máxima; a cópia do site (600 px, WebP leve) é só reserva."""
-    candidatas = []
-    for u in imagens_da_pagina(n.get("link", "")):
-        candidatas += versoes_maiores(u) + [u]
-    melhor, area_melhor = "", 0
+    """Foto original da matéria, na maior resolução: primeiro a prévia (og:image), senão uma foto do corpo do texto.
+    Frames de vídeo (telejornal) são descartados; sem foto adequada, a capa sai com o fundo escuro da marca."""
     from PIL import Image
-    for u in dict.fromkeys(candidatas):
-        try:
-            dados, _ = _baixa(u, 25_000_000)
-            im = Image.open(io.BytesIO(dados))
-            w, h = im.size
-        except Exception:
-            continue
-        if w >= 400 and w * h > area_melhor:
-            melhor, area_melhor = u, w * h
-            print(f"    foto {w}x{h}: {u[:110]}")
-    if melhor:
+    previas, corpo = imagens_da_pagina(n.get("link", ""))
+    so_video = bool(previas) and all(eh_frame_de_video(u) for u in previas)
+
+    def maior(urls, minimo):
+        melhor, area = "", 0
+        for u in dict.fromkeys(c for x in urls for c in versoes_maiores(x) + [x]):
+            if eh_frame_de_video(u):
+                continue
+            try:
+                dados, _ = _baixa(u, 25_000_000)
+                w, h = Image.open(io.BytesIO(dados)).size
+            except Exception:
+                continue
+            if w >= minimo and 0.45 <= w / h <= 2.6 and w * h > area:
+                melhor, area = u, w * h
+                print(f"    foto {w}x{h}: {u[:110]}")
         return melhor
+
+    escolhida = maior([u for u in previas if not eh_frame_de_video(u)], 400) or maior(corpo, 700)
+    if escolhida:
+        return escolhida
+    if so_video:
+        print("    ! a matéria só tem capa de vídeo: capa sem foto (fundo da marca)")
+        return ""
     reserva = imagem_absoluta(n.get("imagem"))
     if reserva:
         print("    ! usando a cópia reduzida do site (a matéria não deu acesso à foto original)")
