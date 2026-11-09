@@ -44,6 +44,17 @@ jobs:
         if: github.event.inputs.publicar == 'nao'
         run: python scripts/gera_post_feed.py rodadas/ultima.json
 
+      - name: Guardar a prévia no branch "previa" (para conferir sem baixar artefato)
+        if: github.event.inputs.publicar == 'nao'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q --orphan previa
+          git rm -rq --cached .
+          git add -f saida
+          git commit -qm "Prévia $(date '+%d/%m %H:%M')"
+          git push -qf origin previa
+
       - name: Gerar e publicar no Instagram
         if: github.event.inputs.publicar != 'nao'
         env:
