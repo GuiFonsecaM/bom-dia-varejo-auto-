@@ -190,8 +190,8 @@ def versoes_maiores(url):
 
 
 def melhor_imagem(n):
-    """Foto original da matéria, na maior resolução: primeiro a prévia (og:image), senão uma foto do corpo do texto.
-    Frames de vídeo (telejornal) são descartados; sem foto adequada, a capa sai com o fundo escuro da marca."""
+    """Foto original da matéria (og:image), na maior resolução.
+    Frames de vídeo (telejornal) são descartados; sem foto adequada, a capa sai com o fundo da marca."""
     from PIL import Image
     previas, corpo = imagens_da_pagina(n.get("link", ""))
     so_video = bool(previas) and all(eh_frame_de_video(u) for u in previas)
@@ -211,7 +211,8 @@ def melhor_imagem(n):
                 print(f"    foto {w}x{h}: {u[:110]}")
         return melhor
 
-    escolhida = maior([u for u in previas if not eh_frame_de_video(u)], 400) or maior(corpo, 700)
+    # fotos do corpo do texto ficam de fora: costumam ser foto de colunista ou miniatura de outra matéria
+    escolhida = maior([u for u in previas if not eh_frame_de_video(u)], 400)
     if escolhida:
         return escolhida
     if so_video:

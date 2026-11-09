@@ -209,12 +209,27 @@ def cobre(img, w, h, foco_y=0.45):
     return img.crop((x, y, x + w, y + h))
 
 
-def fundo_sem_foto(w, h):
-    im = Image.new("RGB", (w, h), (18, 18, 18))
-    d = ImageDraw.Draw(im)
-    for y in range(h):
-        t = y / h
-        d.line([(0, y), (w, y)], fill=(int(40 - 30 * t), int(30 - 22 * t), int(20 - 16 * t)))
+def fundo_sem_foto(w, h, categoria=""):
+    """Capa sem foto: fundo escuro com brilho laranja, logo grande em marca-d'água e a editoria."""
+    im = Image.new("RGB", (w, h), (12, 12, 12))
+    brilho = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(brilho).ellipse((int(w * 0.25), int(-h * 0.25), int(w * 1.45), int(h * 0.55)), fill=95)
+    brilho = brilho.filter(ImageFilter.GaussianBlur(w // 5))
+    im = Image.composite(Image.new("RGB", (w, h), (120, 52, 0)), im, brilho)
+    # marca-d'água: só os traços do carrinho e o meio sol (sem o círculo preto do logo)
+    lg = logo(int(w * 0.66)).convert("RGBA")
+    claro = lg.convert("L").point(lambda v: 255 if v > 70 else 0)
+    alfa = Image.composite(claro, Image.new("L", lg.size, 0), lg.getchannel("A")).point(lambda v: int(v * 0.14))
+    lg.putalpha(alfa)
+    im.paste(lg, (int(w * 0.17), int(h * 0.20)), lg)
+    if categoria:
+        d = ImageDraw.Draw(im)
+        f = fonte(800, 40)
+        t = categoria.upper()
+        tw = larg(f, t)
+        y = int(h * 0.165)
+        d.text(((w - tw) / 2, y), t, font=f, fill=(255, 255, 255))
+        d.rectangle((w / 2 - 36, y + 62, w / 2 + 36, y + 67), fill=LARANJA)
     return im
 
 
@@ -236,7 +251,7 @@ def gradiente_vertical(w, h, paradas):
 def feed_capa(post):
     W, H = FEED_W, FEED_H
     foto = carrega_imagem(post.get("imagem"))
-    base = cobre(foto, W, H) if foto else fundo_sem_foto(W, H)
+    base = cobre(foto, W, H) if foto else fundo_sem_foto(W, H, post.get("categoria", ""))
     preto = Image.new("RGB", (W, H), PRETO)
     base = Image.composite(preto, base, gradiente_vertical(W, H, [(0, 120), (0.16, 0), (0.34, 0), (0.56, 232), (0.68, 250), (1, 255)]))
     d = ImageDraw.Draw(base)
