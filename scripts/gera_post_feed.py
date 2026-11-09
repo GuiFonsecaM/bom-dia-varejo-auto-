@@ -374,17 +374,10 @@ def story(post):
     img = Image.new("RGB", (W, H), (10, 10, 10))
     d = ImageDraw.Draw(img)
 
-    # barra branca abaixo dos indicadores do stories
-    y_bar, h_bar = 128, 132
-    d.rectangle((0, y_bar, W, y_bar + h_bar), fill=BRANCO)
-    lg = 88
-    li = logo(lg)
-    img.paste(li, (64, y_bar + (h_bar - lg) // 2), li)
-    d.text((64 + lg + 22, y_bar + h_bar / 2), "Bom dia varejo", font=fonte(700, 44), fill=(20, 20, 20), anchor="lm")
-
+    # sem barra/logo no topo: a foto de perfil já aparece ali; o conteúdo começa abaixo do cabeçalho do stories
     mx = 72
     largura = W - 2 * mx
-    y = y_bar + h_bar + 70
+    y = 290
     rotulo = (post.get("categoria") or {"noticia": "NOTÍCIA", "curiosidade": "CURIOSIDADE", "mundo": "MUNDO"}.get(post.get("tipo", "noticia"), "NOTÍCIA")).upper()
     f_rot = fonte(700, 30)
     d.rounded_rectangle((mx, y, mx + larg(f_rot, rotulo) + 40, y + 52), radius=8, fill=LARANJA)
@@ -534,10 +527,26 @@ def main():
     ap.add_argument("--saida", default="saida")
     ap.add_argument("--publicar", action="store_true", help="publica carrossel + story no Instagram")
     ap.add_argument("--estado", default="estado_instagram.json", help="histórico da rodada (o que falhar volta para a fila)")
+    ap.add_argument("--so-stories", action="store_true", help="gera e publica só os stories (republicação)")
     a = ap.parse_args()
     with open(a.json, encoding="utf-8") as fh:
         dados = json.load(fh)
     posts = dados.get("posts", [dados]) if isinstance(dados, dict) else dados
+    if a.so_stories:
+        os.makedirs(a.saida, exist_ok=True)
+        falhas = 0
+        for i, post in enumerate(posts, 1):
+            arq = os.path.join(a.saida, f"story_{i:02d}_{post.get('tipo', 'noticia')}_{slug(post['manchete'])}.jpg")
+            salva(story(post), arq)
+            print(f"✓ {arq}")
+            if a.publicar:
+                from publica_instagram import publica_story, url_publica
+                try:
+                    print(f"  ✓ story publicado (id {publica_story(url_publica(arq))})")
+                except Exception as e:
+                    falhas += 1
+                    print(f"  ✗ story não publicado: {e}", file=sys.stderr)
+        sys.exit(1 if falhas else 0)
     pastas = [gera(p, a.saida, i) for i, p in enumerate(posts, 1)]
     if a.publicar:
         from publica_instagram import publica_pasta

@@ -1,0 +1,47 @@
+# Manutenção do Instagram: apagar publicações pelo id e/ou republicar só os stories da última rodada.
+name: Instagram — manutenção
+
+on:
+  workflow_dispatch:
+    inputs:
+      apagar:
+        description: "Ids para apagar, separados por vírgula (vazio = não apaga nada)"
+        required: false
+        default: ""
+      republicar_stories:
+        description: "Republicar os stories da última rodada? (sim/nao)"
+        required: false
+        default: nao
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-posts
+  cancel-in-progress: false
+
+env:
+  TZ: America/Sao_Paulo
+
+jobs:
+  manutencao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pillow
+
+      - name: Apagar
+        if: github.event.inputs.apagar != ''
+        run: python scripts/apaga_instagram.py "${{ github.event.inputs.apagar }}"
+
+      - name: Republicar stories da última rodada
+        if: github.event.inputs.republicar_stories == 'sim'
+        run: python scripts/gera_post_feed.py rodadas/ultima.json --so-stories --publicar
