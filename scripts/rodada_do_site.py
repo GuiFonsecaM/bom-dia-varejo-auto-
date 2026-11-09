@@ -290,15 +290,31 @@ def main():
 
     posts = []
     agora = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    ordem = {chave(n): i for i, n in enumerate(dia.get("noticias", []))}
+    escolhidas = []
     for cat in CATEGORIAS:
         if not novas[cat]:
             print(f"– {cat}: nenhuma notícia nova desde a última rodada")
             continue
         com_foto = [n for n in novas[cat] if n.get("imagem")]
         n = (com_foto or novas[cat])[0]  # ordem do site = relevância
-        posts.append(monta_post(n, cat, dia.get("data") or hoje))
-        estado["postados"].append({"chave": chave(n), "categoria": cat, "titulo": n["titulo"], "em": agora})
+        post = monta_post(n, cat, dia.get("data") or hoje)
+        post["feed"] = False
+        escolhidas.append((ordem.get(chave(n), 9999), post, n))
         print(f"✓ {cat}: {n['titulo']}")
+
+    # 1 carrossel por rodada: Varejo, se houver notícia nova; senão a mais relevante segundo o site
+    # (o site grava cada coleta em ordem de relevância), de preferência com foto. As 4 vão para os stories.
+    if escolhidas:
+        ordenadas = sorted(escolhidas, key=lambda x: (x[1]["categoria"] != "Varejo", x[0]))  # Varejo tem prioridade
+        principal = next((x for x in ordenadas if x[1]["imagem"]), ordenadas[0])
+        principal[1]["feed"] = True
+        print(f"★ Feed: [{principal[1]['categoria']}] {principal[2]['titulo']}")
+        # carrossel primeiro, depois os stories das outras
+        for _, post, n in [principal] + [x for x in ordenadas if x is not principal]:
+            posts.append(post)
+            estado["postados"].append({"chave": chave(n), "categoria": post["categoria"], "titulo": n["titulo"],
+                                       "em": agora, "feed": post["feed"]})
 
     # tudo o que já está no site conta como visto: a próxima rodada só olha o que entrar depois
     estado["vistos"] = (estado["vistos"] + [chave(n) for n in dia.get("noticias", []) if chave(n) not in vistos])[-3000:]
@@ -309,7 +325,7 @@ def main():
         json.dump({"posts": posts}, fh, ensure_ascii=False, indent=2)
     with open(a.estado, "w", encoding="utf-8") as fh:
         json.dump(estado, fh, ensure_ascii=False, indent=1)
-    print(f"{len(posts)} post(s) nesta rodada.")
+    print(f"{sum(p['feed'] for p in posts)} carrossel + {len(posts)} stories nesta rodada.")
 
 
 if __name__ == "__main__":

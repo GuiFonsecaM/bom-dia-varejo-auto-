@@ -123,9 +123,11 @@ def publica_story(url):
 def publica_pasta(pasta):
     with open(os.path.join(pasta, "post.json"), encoding="utf-8") as fh:
         meta = json.load(fh)
-    urls = [url_publica(os.path.join(pasta, a)) for a in meta["feed"]]
-    pid = publica_carrossel(urls, meta["legenda"])
-    print(f"  ✓ carrossel publicado (id {pid})")
+    pid = None
+    if meta.get("feed"):  # só a notícia principal da rodada vai para o feed
+        urls = [url_publica(os.path.join(pasta, a)) for a in meta["feed"]]
+        pid = publica_carrossel(urls, meta["legenda"])
+        print(f"  ✓ carrossel publicado (id {pid})")
     sid = publica_story(url_publica(os.path.join(pasta, meta["story"])))
     print(f"  ✓ story publicado (id {sid})")
     meta["publicado"] = {"feed_id": pid, "story_id": sid, "em": time.strftime("%Y-%m-%d %H:%M:%S")}

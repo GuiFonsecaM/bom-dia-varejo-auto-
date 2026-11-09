@@ -38,6 +38,7 @@ PRETO = (0, 0, 0)
 
 FEED_W, FEED_H = 1080, 1350
 STORY_W, STORY_H = 1080, 1920
+SITE_DOMINIO = os.getenv("SITE_DOMINIO", "bomdiavarejo.com.br")
 HASHTAGS_PADRAO = ["#BomDiaVarejo", "#varejo", "#supermercado", "#atacarejo", "#noticias", "#economia"]
 
 # ---------------------------------------------------------------- fontes
@@ -442,9 +443,9 @@ def story(post):
         ImageDraw.Draw(m).rounded_rectangle((0, 0, f.size[0] - 1, f.size[1] - 1), radius=26, fill=255)
         img.paste(f, (mx, y), m)
 
-    # chamada para o post + fonte
+    # chamada para a notícia completa no site + fonte
     f_cta = fonte(700, 38)
-    cta = "Matéria completa no post do feed"
+    cta = f"Leia completa em {SITE_DOMINIO}"
     wc = larg(f_cta, cta) + 160
     xc = (W - wc) / 2
     d.rounded_rectangle((xc, y_cta, xc + wc, y_cta + 92), radius=46, fill=LARANJA)
@@ -500,10 +501,12 @@ def gera(post, pasta_saida, idx):
     pasta = os.path.join(pasta_saida, f"{data}_{tipo}_{idx:02d}_{slug(post['manchete'])}")
     os.makedirs(pasta, exist_ok=True)
     arquivos = []
-    p = os.path.join(pasta, f"feed_{tipo}_01_capa.jpg")
-    salva(feed_capa(post), p)
-    arquivos.append(p)
-    slides = post.get("slides", [])[:4]
+    no_feed = post.get("feed", True)
+    slides = post.get("slides", [])[:4] if no_feed else []
+    if no_feed:
+        p = os.path.join(pasta, f"feed_{tipo}_01_capa.jpg")
+        salva(feed_capa(post), p)
+        arquivos.append(p)
     tam = min((tam_que_cabe(s) for s in slides), default=None)
     for i, s in enumerate(slides, start=2):
         p = os.path.join(pasta, f"feed_{tipo}_{i:02d}.jpg")
@@ -517,7 +520,7 @@ def gera(post, pasta_saida, idx):
     meta = {"feed": [os.path.basename(a) for a in arquivos], "story": os.path.basename(p_story), "legenda": texto, "link": post.get("link")}
     with open(os.path.join(pasta, "post.json"), "w", encoding="utf-8") as fh:
         json.dump(meta, fh, ensure_ascii=False, indent=2)
-    print(f"✓ {pasta}  ({len(arquivos)} imagens no carrossel + story)")
+    print(f"✓ {pasta}  ({f'{len(arquivos)} imagens no carrossel + story' if arquivos else 'só story'})")
     return pasta
 
 
