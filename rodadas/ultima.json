@@ -3,34 +3,39 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Busca por praticidade na cozinha leva consumidor a pagar **R$ 26 por 30 minutos economizados**",
-      "subtitulo": "O consumidor brasileiro está disposto a pagar cerca de R$ 26 para economizar 30 minutos no preparo das refeições",
-      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/mulher-cozinha-envato.webp",
+      "manchete": "Fim das bets e Bolsa Família: varejo alimentar tem melhor resultado do **ano em outubro**",
+      "subtitulo": "O varejo alimentar brasileiro alcançou em outubro de 2026 o melhor desempenho mensal do ano",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/homem-supermercado-envato.webp",
       "fonte": "Mercado & Consumo",
       "data": "09/11/2026",
-      "link": "https://mercadoeconsumo.com.br/09/11/2026/noticias-varejo/busca-por-praticidade-na-cozinha-leva-consumidor-a-pagar-r-26-por-30-minutos-economizados/",
+      "link": "https://mercadoeconsumo.com.br/09/11/2026/noticias-varejo/fim-das-bets-e-bolsa-familia-varejo-alimentar-tem-melhor-resultado-do-ano-em-outubro/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O consumidor brasileiro está disposto a pagar cerca de **R$ 26** para economizar 30 minutos no preparo das refeições, conforme pesquisa realizada pela Scanntech.",
-            "No primeiro trimestre de 2026, os alimentos de preparo rápido tiveram alta de **3%** em volume em relação a igual período de 2022, enquanto os demorados caíram **2,5%**.",
-            "O grupo de itens rápidos abrange lasanhas, empanados, batatas e hambúrgueres congelados, pratos prontos, vegetais, frutas, petiscos, snacks e lanches prontos."
+            "O varejo alimentar brasileiro alcançou em outubro de 2026 o melhor desempenho mensal do ano, com alta de **6,4%** no faturamento em mesmas lojas na comparação com outubro de 2025, segundo o Radar Scanntech.",
+            "O crescimento foi impulsionado pelo reajuste de **15%** no Bolsa Família (em vigor desde 19 de outubro), pela proibição de apostas esportivas para beneficiários (desde 25 de setembro) e pela antecipação de compras devido ao calendário de pagamentos em 30 de outubro."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O estudo aponta que clientes aceitam pagar até três vezes mais por mercadorias que entregam maior praticidade, buscando compensar o cansaço cotidiano.",
-            "Na comparação de 2026 com 2025, frescos e proteínas animais subiram **5,5%**, arroz e feijão recuaram **1,9%**, ração para gatos cresceu **12,2%** e infantis caíram **11,7%**.",
-            "Produtos de limpeza especializados subiram **11,1%** em 2026 frente a 2025, enquanto os itens básicos de limpeza registraram retração de **1%** no mesmo intervalo."
+            "As unidades vendidas ficaram estáveis com alta de **0,1%**, embora o acumulado do ano ainda aponte queda de **0,6%** em volume de unidades. A inflação do setor desacelerou para **0,51%** em outubro, ante **0,91%** em setembro, acumulando **5,01%** em **12 meses**.",
+            "Todas as regiões registraram alta no faturamento, lideradas pelo Centro-Oeste (+**8,3%**), Sul (+**8,2%**), Norte (+**8%**) e Nordeste (+**7,1%**). O Sudeste teve o menor avanço (**4,9%**) e foi a única região com retração nas unidades vendidas (-**1%** em São Paulo e -**1,2%** nos demais estados)."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "As compras expressas ou ocasionais alcançaram **27%** do total, com avanço de **15%** sobre 2025, ao passo que abastecimento e reposição somam **55%**, caindo 1,9 ponto."
+            "Os supermercados com dez ou mais checkouts lideraram o faturamento (+**7,1%**), enquanto o atacarejo registrou a maior expansão em unidades vendidas (+**1,7%**) e alta de **6%** no faturamento. Formatos menores de supermercados registraram queda de volume.",
+            "As promoções responderam por **26,8%** das vendas totais em outubro, alta de **1 ponto percentual** sobre o ano anterior, com duração média de 5,6 dias. A venda incremental (uplift), contudo, recuou para **59,8%**, com queda mais acentuada no atacarejo."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "Pesquisadores do Cepea/Esalq-USP estimam que o fenômeno El Niño cause excesso de chuvas no Sul e estiagens no Centro-Norte até o início de 2027, podendo pressionar os preços da carne bovina e de hortaliças e favorecer as carnes de frango, suína e ovos."
           ]
         }
       ],
@@ -40,116 +45,34 @@
         "#supermercado",
         "#atacarejo",
         "#varejoalimentar"
-      ]
-    },
-    {
-      "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "O que a guerra no Oriente Médio e as mudanças climáticas têm a ver com o **preço do hambúrguer?**",
-      "subtitulo": "Conflitos geopolíticos — a guerra Rússia‑Ucrânia e a ofensiva EUA‑Israel‑Irã",
-      "imagem": "https://s2-g1.glbimg.com/Vnl7y_3XZQt_L35zGNb6zDU3eg4=/3936x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/9/u/C10okeTQegyhzoBrPagA/jean-claude-attipoe-etjiql0adwi-unsplash.jpg",
-      "fonte": "g1 Economia",
-      "data": "09/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/09/o-que-a-guerra-no-oriente-medio-e-as-mudancas-climaticas-tem-a-ver-com-o-preco-do-hamburguer.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "Conflitos geopolíticos — a guerra Rússia‑Ucrânia e a ofensiva EUA‑Israel‑Irã — elevaram os preços de energia e fertilizantes, encarecendo toda a cadeia produtiva do hambúrguer mundialmente.",
-            "Nos EUA, entre 2019 e 2024, o valor das ofertas do McDonald’s subiu **40%**, provocando queda de **10%** na frequência de consumo entre as populações de menor renda, segundo dados da própria empresa."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "Em Los Angeles, o combo do Burger King passou de **US$ 8,99** para quase **US$ 18,** levando consumidores como Andy a trocar as grandes redes por estabelecimentos independentes mais baratos.",
-            "O índice da Data Essentials indica que, nos EUA, o preço médio do hambúrguer aumentou **14%** desde 2023, enquanto o da carne bovina subiu mais de **30%** no mesmo período, reflexo da redução de rebanhos e secas.",
-            "Especialistas alertam que a combinação de guerra, alta de energia e intensificação do El Niño pode agravar a segurança alimentar na África e na Ásia no próximo ano."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Na Europa, 1 em cada 10 refeições fora de casa é hambúrguer; o aumento de preços obriga redes a ampliar opções de frango e vegetarianas e a limitar elevações nos itens ‘carro‑chefe’ para manter o tráfego de clientes.",
-            "O espanhol Madison Smash Burger, terceiro colocado no concurso europeu The Champions Burger em Paris, vê o preço do sanduíche básico (**€13**) cada vez mais difícil de manter devido ao aumento de custos de carne, pão e demais insumos."
-          ]
-        }
       ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#economia",
-        "#varejo",
-        "#mercado",
-        "#negocios"
-      ]
-    },
-    {
-      "tipo": "noticia",
-      "categoria": "Política",
-      "manchete": "Ajuste fiscal: o diagnóstico de organismos internacionais e o desafio **de Lula 4**",
-      "subtitulo": "",
-      "imagem": "https://s2-g1.glbimg.com/oKDZFDu55SS-K-qgjjEBHP7gpCA=/1280x0/filters:format(jpeg)/https://thumbor.globoi.com/unsafe/fit-in/1280x720/s03.video.glbimg.com/deo/vi/38/16/15161638",
-      "fonte": "g1 Política",
-      "data": "09/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/09/ajuste-fiscal-o-diagnostico-de-organismos-internacionais-e-o-desafio-de-lula-4.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "Em pronunciamento realizado no domingo (8), o presidente Luiz Inácio Lula da Silva afirmou estar preocupado com a trajetória da dívida pública, reafirmou seu compromisso com a responsabilidade fiscal e prometeu criar condições para a redução dos juros, sem anunciar medidas concretas.",
-            "Em novembro de 2022, durante a transição do governo Jair Bolsonaro, analistas já apontavam a necessidade de um ajuste fiscal efetivo para compensar os gastos previstos na PEC da Transição, que ampliou o espaço de despesas em cerca de **R$ 170 bilhões** por ano."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "Em julho de 2025, o FMI divulgou relatório apontando que a inflação ultrapassou a tolerância da meta em 2024 e recomendou medidas adicionais para colocar a dívida em trajetória descendente, facilitar juros mais baixos e abrir espaço para investimentos prioritários.",
-            "Em junho do ano passado, o Banco Mundial calculou que o Brasil precisaria de um ajuste fiscal de **3%** do PIB para assegurar a sustentabilidade e sugeriu cortes que incluem desvincular benefícios do salário-mínimo e reformar aposentadorias de militares."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "O Banco Interamericano de Desenvolvimento (BID) observou que o endividamento seguro para a América Latina e Caribe é de **46%** a **55%** do PIB, enquanto a dívida brasileira atual está em **83%** do PIB, conforme apontado em estudo de 2023.",
-            "Em 2023, o governo Lula aprovou um novo arcabouço fiscal que fixou limite de despesas com crescimento real de até **2,5%** ao ano e metas para as contas públicas, substituindo o teto anterior que corrigia despesas apenas pela inflação."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#politica",
-        "#economia",
-        "#brasil",
-        "#noticias"
-      ]
+      "feed": true
     },
     {
       "tipo": "mundo",
       "categoria": "Mundo",
-      "manchete": "Em Buenos Aires, Papa Leão XIV acolhe pessoas com deficiência: 'suas vidas não são um peso **para a sociedade'**",
-      "subtitulo": "O Papa Leão XIV esteve nesta segunda-feira (9) em um centro de atendimento a pessoas com deficiência em Buenos Aires",
-      "imagem": "https://s2-g1.glbimg.com/g3iReCKro-mlhCV6gDZBJiuZSRc=/3113x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/l/G/l8aB25Qw2DJBCYomUf5w/2026-11-09t130121z-1680931630-rc2dkoa7zrt8-rtrmadp-3-pope-latam-argentina-1-.jpg",
-      "fonte": "g1 Mundo",
+      "manchete": "França acusa grupo ligado ao Irã por ataque a geladeiras de supermercados **e anuncia sanções**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/YuR-5gONCPxw-sjH9hvG56YaS4Q=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/0/v/UoBJ2PSHiiEEjybhwWAA/2026-10-12t162110z-1-lynxmpem9b1eh-rtroptp-4-france-cyberattack.jpg",
+      "fonte": "g1 Economia",
       "data": "09/11/2026",
-      "link": "https://g1.globo.com/mundo/noticia/2026/11/09/em-buenos-aires-papa-leao-xiv-acolhe-pessoas-com-deficiencia-suas-vidas-nao-sao-um-peso-para-a-sociedade.ghtml",
+      "link": "https://g1.globo.com/tecnologia/2026/franca-ataque-geladeiras.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O Papa Leão XIV esteve nesta segunda-feira (9) em um centro de atendimento a pessoas com deficiência em Buenos Aires, na Argentina, durante sua visita pela América do Sul.",
-            "Durante discurso no Cottolengo Don Orione, em Claypole, zona sul da capital argentina, o pontífice destacou a inclusão e afirmou que a vida dessas pessoas não é um peso para a sociedade.",
-            "A visita ocorre em meio a divergências entre o líder católico e o presidente argentino Javier Milei, especialmente em temas como justiça social e combate à pobreza."
+            "A Procuradoria de Paris atribuiu formalmente ao Irã uma campanha de ataques cibernéticos a sistemas de refrigeração de supermercados na Europa, revelada na segunda-feira (11), elevando a crise diplomática.",
+            "Na segunda-feira (9), a investigação apontou o envolvimento do grupo Shahid Kaveh, com base no uso do idioma farsi, endereços IP iranianos e na metodologia dos suspeitos.",
+            "A Justiça francesa abriu investigação e emitiu mandados de prisão internacionais contra o líder e dois vice-líderes do Shahid Kaveh por invasão a geladeiras de supermercados."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Esta é a primeira viagem de um Papa à Argentina desde 1987, quando o país recebeu João Paulo II, e a primeira do atual pontífice à América do Sul desde maio de 2025.",
-            "A agenda desta segunda-feira (9) inclui ainda uma missa campal no bairro de Palermo, com previsão de atrair pelo menos **1,5 milhão** de fiéis na Avenida do Libertador.",
-            "A viagem papal pela América Latina tem duração total de 12 dias e será encerrada no dia 17 de novembro, quando o líder deixará o Peru."
+            "O ministro das Relações Exteriores da França, Jean-Noël Barrot, convocou o embaixador iraniano e sinalizou que o país pode articular novas sanções da União Europeia contra Teerã.",
+            "Os invasores alteraram remotamente sistemas de lojas e centros de distribuição na França, Alemanha, Bélgica, Holanda e Luxemburgo, sem cobrar resgate ou roubar dados.",
+            "Os freezers atingidos chegaram a registrar até 50°C, o que provocou incêndios em equipamentos, perda de alimentos, descarte de mercadorias e paralisação temporária de operações."
           ]
         }
       ],
@@ -159,7 +82,80 @@
         "#economiaglobal",
         "#noticias",
         "#internacional"
-      ]
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Confúcio pede mais crédito para pequenos produtores **da região amazônica**",
+      "subtitulo": "O senador Confúcio Moura (MDB-RO) defendeu, em pronunciamento no Plenário na segunda-feira (9)",
+      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/09/confucio-pede-mais-credito-para-pequenos-produtores-da-regiao-amazonica/20261109_01114cm.jpg",
+      "fonte": "Agência Senado",
+      "data": "09/11/2026",
+      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/09/confucio-pede-mais-credito-para-pequenos-produtores-da-regiao-amazonica",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O senador Confúcio Moura (MDB-RO) defendeu, em pronunciamento no Plenário na segunda-feira (9), a ampliação do crédito para agricultores familiares, pequenos produtores e autônomos da Amazônia.",
+            "O parlamentar criticou a concentração de recursos do Fundo Constitucional de Financiamento do Norte (FNO) em grandes empresas e cobrou mudanças na atuação do Banco da Amazônia.",
+            "Confúcio defendeu o fortalecimento do microcrédito produtivo solidário por meio de cooperativas e agências de desenvolvimento para atender quem está fora do sistema bancário tradicional."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O senador também pediu a recuperação da Sudam, a revisão de incentivos fiscais em Áreas de Livre Comércio como Guajará-Mirim (RO) e agilidade do Ibama na licença para a ponte binacional com a Bolívia."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Governo aumenta imposto para pneus importados; tarifa vai de **16% para 30%**",
+      "subtitulo": "O governo federal elevou de 16% para 30% a alíquota do imposto de importação sobre pneus de passeio",
+      "imagem": "https://s2-g1.glbimg.com/OHZKGgsyl9NLKyPWLIgmzPNUXS0=/2000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/g/1/WfoUV8SfOiti8jhRsKJQ/continental.jpeg",
+      "fonte": "g1 Economia",
+      "data": "09/11/2026",
+      "link": "https://g1.globo.com/carros/noticia/2026/11/09/governo-eleva-tarifa-de-importacao-de-pneus-de-carros.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O governo federal elevou de **16%** para **30%** a alíquota do imposto de importação sobre pneus de passeio, conforme resolução da Camex divulgada na segunda-feira (9) no Diário Oficial da União.",
+            "A medida atende a um pleito da Anip, que representa empresas nacionais, sob a alegação de concorrência desleal frente aos produtos estrangeiros vindos majoritariamente da Ásia.",
+            "A nova taxação tem vigência de **12 meses** a contar da terça-feira e aproxima o Brasil de patamares adotados nos Estados Unidos (**78%**), na União Europeia (**45%**) e no México (**35%**)."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A fatia dos fabricantes locais no mercado interno despencou de **66%** em 2019 para **30%** em setembro deste ano, segundo a associação, num setor com 19 plantas industriais e **35 mil** empregos diretos.",
+            "O governo também extinguiu o mecanismo de licenciamento automático voltado a importadores como forma de barrar fraudes nas entradas dos itens no país.",
+            "A ABIDIP, que representa importadores e distribuidores, criticou a alta tarifária por entender que ela encarece o transporte, pressiona a inflação e prejudica famílias de menor renda."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
     }
   ]
 }
