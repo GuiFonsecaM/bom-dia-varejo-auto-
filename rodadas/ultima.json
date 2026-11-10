@@ -3,39 +3,34 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Fim das bets e Bolsa Família: varejo alimentar tem melhor resultado do **ano em outubro**",
-      "subtitulo": "O varejo alimentar brasileiro alcançou em outubro de 2026 o melhor desempenho mensal do ano",
-      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/homem-supermercado-envato.webp",
-      "fonte": "Mercado & Consumo",
-      "data": "09/11/2026",
-      "link": "https://mercadoeconsumo.com.br/09/11/2026/noticias-varejo/fim-das-bets-e-bolsa-familia-varejo-alimentar-tem-melhor-resultado-do-ano-em-outubro/",
+      "manchete": "11.11: como evitar problemas nas compras em prévia **da Black Friday**",
+      "subtitulo": "O 11 de novembro, conhecido como 11.11, consolidou-se como uma expressiva prévia de vendas e descontos da Black Friday",
+      "imagem": "https://s2-g1.glbimg.com/P42pJ66SocyDgOpEoN4i5JRmhIA=/5001x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/r/S/AtPgx1QdqZXvrDTCOQ0w/2024-10-16t072839z-2068468096-rc2bo9aemwqp-rtrmadp-3-britain-inflation.jpg",
+      "fonte": "g1 Economia",
+      "data": "10/11/2026",
+      "link": "https://g1.globo.com/guia/guia-de-compras/1111-como-evitar-problemas-nas-compras-em-previa-da-black-friday-1.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O varejo alimentar brasileiro alcançou em outubro de 2026 o melhor desempenho mensal do ano, com alta de **6,4%** no faturamento em mesmas lojas na comparação com outubro de 2025, segundo o Radar Scanntech.",
-            "O crescimento foi impulsionado pelo reajuste de **15%** no Bolsa Família (em vigor desde 19 de outubro), pela proibição de apostas esportivas para beneficiários (desde 25 de setembro) e pela antecipação de compras devido ao calendário de pagamentos em 30 de outubro."
+            "O 11 de novembro, conhecido como 11.11, consolidou-se como uma expressiva prévia de vendas e descontos da Black Friday, movimentando cerca de **R$ 1 trilhão** globalmente no ano passado, segundo o Alibaba.",
+            "A data teve origem na China como o Dia dos Solteiros e ganhou projeção mundial com as liquidações promovidas pela dona do AliExpress desde a década passada.",
+            "Especialistas recomendam o uso de ferramentas de busca como BondFaro, Buscapé, Google Shopping, JáCotei e Zoom para comparar preços e verificar o histórico de valores antes da aquisição."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "As unidades vendidas ficaram estáveis com alta de **0,1%**, embora o acumulado do ano ainda aponte queda de **0,6%** em volume de unidades. A inflação do setor desacelerou para **0,51%** em outubro, ante **0,91%** em setembro, acumulando **5,01%** em **12 meses**.",
-            "Todas as regiões registraram alta no faturamento, lideradas pelo Centro-Oeste (+**8,3%**), Sul (+**8,2%**), Norte (+**8%**) e Nordeste (+**7,1%**). O Sudeste teve o menor avanço (**4,9%**) e foi a única região com retração nas unidades vendidas (-**1%** em São Paulo e -**1,2%** nos demais estados)."
+            "O Procon orienta analisar condições de pagamento, juros e prazos de quitação, além de checar a confiabilidade dos sites verificando o prefixo https:// e o ícone de cadeado.",
+            "O Serasa Experian sugere o uso de cartões virtuais temporários para evitar clonagens, e, em transações por Pix, recomenda conferir se o destinatário é realmente a loja.",
+            "Estudos do Reclame Aqui indicam que **63%** dos brasileiros não identificam golpes com inteligência artificial, enquanto **46,5%** temem informações falsas de IA e **35,5%** exigem avaliações reais."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Os supermercados com dez ou mais checkouts lideraram o faturamento (+**7,1%**), enquanto o atacarejo registrou a maior expansão em unidades vendidas (+**1,7%**) e alta de **6%** no faturamento. Formatos menores de supermercados registraram queda de volume.",
-            "As promoções responderam por **26,8%** das vendas totais em outubro, alta de **1 ponto percentual** sobre o ano anterior, com duração média de 5,6 dias. A venda incremental (uplift), contudo, recuou para **59,8%**, com queda mais acentuada no atacarejo."
-          ]
-        },
-        {
-          "titulo": "O que vem agora",
-          "topicos": [
-            "Pesquisadores do Cepea/Esalq-USP estimam que o fenômeno El Niño cause excesso de chuvas no Sul e estiagens no Centro-Norte até o início de 2027, podendo pressionar os preços da carne bovina e de hortaliças e favorecer as carnes de frango, suína e ovos."
+            "Golpistas podem utilizar deepfakes com rostos ou vozes de famosos para enganar consumidores nas redes sociais, tornando essencial verificar ofertas diretamente nos sites oficiais das marcas."
           ]
         }
       ],
@@ -49,65 +44,77 @@
       "feed": true
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "França acusa grupo ligado ao Irã por ataque a geladeiras de supermercados **e anuncia sanções**",
-      "subtitulo": "",
-      "imagem": "https://s2-g1.glbimg.com/YuR-5gONCPxw-sjH9hvG56YaS4Q=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/0/v/UoBJ2PSHiiEEjybhwWAA/2026-10-12t162110z-1-lynxmpem9b1eh-rtroptp-4-france-cyberattack.jpg",
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Ata do Copom: Banco Central diz que piora nas expectativas de inflação exige juros mais altos **por tempo maior**",
+      "subtitulo": "O Banco Central divulgou na ata do Copom, de 10 de maio",
+      "imagem": "https://s2-g1.glbimg.com/si5A7cz6FPxv89_Xz4NwjP0OAJg=/1270x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/V/Q/nq2avhR7mPwE2BJ28BVg/foto-marcello-casal-agencia-brasil.jpg",
       "fonte": "g1 Economia",
-      "data": "09/11/2026",
-      "link": "https://g1.globo.com/tecnologia/2026/franca-ataque-geladeiras.ghtml",
+      "data": "10/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/10/ata-do-copom-banco-central-diz-que-piora-nas-expectativas-de-inflacao-exige-juros-mais-altos-e-por-tempo-maior.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A Procuradoria de Paris atribuiu formalmente ao Irã uma campanha de ataques cibernéticos a sistemas de refrigeração de supermercados na Europa, revelada na segunda-feira (11), elevando a crise diplomática.",
-            "Na segunda-feira (9), a investigação apontou o envolvimento do grupo Shahid Kaveh, com base no uso do idioma farsi, endereços IP iranianos e na metodologia dos suspeitos.",
-            "A Justiça francesa abriu investigação e emitiu mandados de prisão internacionais contra o líder e dois vice-líderes do Shahid Kaveh por invasão a geladeiras de supermercados."
+            "O Banco Central divulgou na ata do Copom, de 10 de maio, que as expectativas de inflação subiram e ficaram acima da meta em todos os horizontes, levando à manutenção da Selic em **13,75%** ao ano, interrompendo o ciclo de cortes que já durava cinco encontros.",
+            "O Comitê concluiu que, com expectativas desancoradas, será necessária uma política monetária mais restritiva, ou seja, juros mais altos e por período mais longo, para reconduzir as expectativas à meta de inflação."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O ministro das Relações Exteriores da França, Jean-Noël Barrot, convocou o embaixador iraniano e sinalizou que o país pode articular novas sanções da União Europeia contra Teerã.",
-            "Os invasores alteraram remotamente sistemas de lojas e centros de distribuição na França, Alemanha, Bélgica, Holanda e Luxemburgo, sem cobrar resgate ou roubar dados.",
-            "Os freezers atingidos chegaram a registrar até 50°C, o que provocou incêndios em equipamentos, perda de alimentos, descarte de mercadorias e paralisação temporária de operações."
+            "A meta de inflação para 2025 foi fixada em **3%**, com tolerância entre **1,5%** e **4,5%**; o Copom está projetando até o segundo trimestre de 2028 como horizonte relevante para suas decisões.",
+            "Analistas elevaram suas projeções de inflação, reduziram as expectativas de crescimento e passaram a prever juros mais elevados; o dólar e os juros futuros também subiram após a confirmação da reeleição de Lula."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O BC ressaltou que a política fiscal influencia a taxa de juros a curto prazo via demanda agregada e a longo prazo via percepção de risco da dívida, indicando que déficits e aumento de gastos podem pressionar a Selic.",
+            "O mercado demonstra ceticismo quanto a um ajuste fiscal rápido e profundo, devido aos compromissos do governo com programas sociais, aumento acima da inflação do salário mínimo e manutenção de gastos em saúde e educação."
           ]
         }
       ],
       "hashtags": [
         "#BomDiaVarejo",
-        "#mundo",
-        "#economiaglobal",
-        "#noticias",
-        "#internacional"
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
       ],
       "feed": false
     },
     {
       "tipo": "noticia",
       "categoria": "Política",
-      "manchete": "Confúcio pede mais crédito para pequenos produtores **da região amazônica**",
-      "subtitulo": "O senador Confúcio Moura (MDB-RO) defendeu, em pronunciamento no Plenário na segunda-feira (9)",
-      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/09/confucio-pede-mais-credito-para-pequenos-produtores-da-regiao-amazonica/20261109_01114cm.jpg",
-      "fonte": "Agência Senado",
-      "data": "09/11/2026",
-      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/09/confucio-pede-mais-credito-para-pequenos-produtores-da-regiao-amazonica",
+      "manchete": "'Split payment': **98%** das operações entre empresas devem estar cobertas a partir de outubro de 2027, estima confederação",
+      "subtitulo": "A presidente da Confederação Nacional das Instituições Financeiras (Fin), Cristiane Coelho",
+      "imagem": "",
+      "fonte": "g1 Política",
+      "data": "10/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/10/split-payment-98percent-das-operacoes-devem-estar-cobertas-ate-outubro-de-2027-estima-confederacao-dos-bancos.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O senador Confúcio Moura (MDB-RO) defendeu, em pronunciamento no Plenário na segunda-feira (9), a ampliação do crédito para agricultores familiares, pequenos produtores e autônomos da Amazônia.",
-            "O parlamentar criticou a concentração de recursos do Fundo Constitucional de Financiamento do Norte (FNO) em grandes empresas e cobrou mudanças na atuação do Banco da Amazônia.",
-            "Confúcio defendeu o fortalecimento do microcrédito produtivo solidário por meio de cooperativas e agências de desenvolvimento para atender quem está fora do sistema bancário tradicional."
+            "A presidente da Confederação Nacional das Instituições Financeiras (Fin), Cristiane Coelho, estimou em 10 de setembro que **98%** das transações B2B tenham o 'split payment' a partir de outubro de 2027.",
+            "O 'split payment' é um sistema da Receita Federal para pagar tributos sobre o consumo em tempo real entre empresas, reduzindo a sonegação fiscal e permitindo ressarcimento rápido de créditos tributários."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O senador também pediu a recuperação da Sudam, a revisão de incentivos fiscais em Áreas de Livre Comércio como Guajará-Mirim (RO) e agilidade do Ibama na licença para a ponte binacional com a Bolívia."
+            "TEFs, TEDs e PIX estático passam por testes entre março e maio de 2027, enquanto boletos, PIX dinâmico e automático testam entre junho e setembro, com lançamento total em outubro.",
+            "A Receita Federal informou que o 'split payment' se tornará obrigatório só a partir de 2028, dependendo da adesão gradual de mais de 200 instituições financeiras e da prontidão dos meios de pagamento."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A CBS federal começa em 2027 com alíquota estimada de **11,3%** no modelo IVA, e o Fisco prevê transição com emissão de notas fiscais e Darf mensal caso o 'split payment' não seja obrigatório no início do ano.",
+            "O governo acertou pagar **R$ 0,39** por transação aos bancos pelo 'split payment', gerando remuneração anual entre **R$ 507 milhões** e **R$ 585 milhões** para um potencial de **1,3 bilhão** a **1,5 bilhão** de operações anuais."
           ]
         }
       ],
@@ -121,39 +128,43 @@
       "feed": false
     },
     {
-      "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "Governo aumenta imposto para pneus importados; tarifa vai de **16% para 30%**",
-      "subtitulo": "O governo federal elevou de 16% para 30% a alíquota do imposto de importação sobre pneus de passeio",
-      "imagem": "https://s2-g1.glbimg.com/OHZKGgsyl9NLKyPWLIgmzPNUXS0=/2000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/g/1/WfoUV8SfOiti8jhRsKJQ/continental.jpeg",
-      "fonte": "g1 Economia",
-      "data": "09/11/2026",
-      "link": "https://g1.globo.com/carros/noticia/2026/11/09/governo-eleva-tarifa-de-importacao-de-pneus-de-carros.ghtml",
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Papa faz referência ao conflito diplomático Argentina-Brasil, **incitando Milei a superar tensões com Lula**",
+      "subtitulo": "Durante sua viagem à Argentina ao lado do presidente Javier Milei",
+      "imagem": "https://s2-g1.glbimg.com/v8AHLaigLOxud1G58nfasQ9eheQ=/5630x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/Y/b/SL8Vw3RSSyn20lIbAU7w/2026-11-08t225123z-153297533-rc2yjoam6mf2-rtrmadp-3-pope-latam-argentina.jpg",
+      "fonte": "g1 Mundo",
+      "data": "10/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/10/papa-faz-referencia-ao-conflito-diplomatico-argentina-brasil-incitando-milei-a-superar-tensoes-com-lula.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O governo federal elevou de **16%** para **30%** a alíquota do imposto de importação sobre pneus de passeio, conforme resolução da Camex divulgada na segunda-feira (9) no Diário Oficial da União.",
-            "A medida atende a um pleito da Anip, que representa empresas nacionais, sob a alegação de concorrência desleal frente aos produtos estrangeiros vindos majoritariamente da Ásia.",
-            "A nova taxação tem vigência de **12 meses** a contar da terça-feira e aproxima o Brasil de patamares adotados nos Estados Unidos (**78%**), na União Europeia (**45%**) e no México (**35%**)."
+            "Durante sua viagem à Argentina ao lado do presidente Javier Milei, o Papa Leão XIV defendeu o diálogo e a busca por acordos para superar graves tensões na América do Sul, em referência indireta ao conflito diplomático entre Argentina e Brasil e entre Milei e Lula.",
+            "Num discurso de 25 minutos, o pontífice afirmou que a Argentina precisa preservar a disposição para negociar e ressaltou que divergências ideológicas entre governos não justificam romper décadas de cooperação e laços comunitários regionais."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "A fatia dos fabricantes locais no mercado interno despencou de **66%** em 2019 para **30%** em setembro deste ano, segundo a associação, num setor com 19 plantas industriais e **35 mil** empregos diretos.",
-            "O governo também extinguiu o mecanismo de licenciamento automático voltado a importadores como forma de barrar fraudes nas entradas dos itens no país.",
-            "A ABIDIP, que representa importadores e distribuidores, criticou a alta tarifária por entender que ela encarece o transporte, pressiona a inflação e prejudica famílias de menor renda."
+            "A crise diplomática bilateral escalou em 26 de julho, quando o embaixador brasileiro Júlio Bitelli foi chamado a Brasília após Milei insultar Lula chamando-o de ladrão, corrupto e presidiário durante evento em São Paulo.",
+            "Em 4 de agosto, após Milei repetir os ataques, o chanceler brasileiro Mauro Vieira reduziu o nível das relações diplomáticas, retirando o embaixador e deixando a embaixada argentina e a brasileira sob o comando de encarregados de negócios."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Segundo Mauro Vieira, o Brasil aguardava um sinal argentino para abrandar o conflito, mas, passado 15 dias das eleições brasileiras que confirmaram a reeleição de Lula, Javier Milei ainda não cumprimentou seu homólogo pela vitória."
           ]
         }
       ],
       "hashtags": [
         "#BomDiaVarejo",
-        "#economia",
-        "#varejo",
-        "#mercado",
-        "#negocios"
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
       ],
       "feed": false
     }
