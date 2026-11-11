@@ -1,3 +1,154 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Brasil nunca produziu tanta carne bovina, mas brasileiro come cada vez menos; **entenda o paradoxo**",
+      "subtitulo": "Em 2025, o Brasil produziu um volume recorde de 11,1 milhões de toneladas de carne bovina",
+      "imagem": "https://s2-g1.glbimg.com/VPGfBeHjS62AYd4Md5TLvb5G8UM=/1200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/u/b/fTd8NBRQqCjd8qa5QkEA/261022-grafico-oferta-interna-de-carne-tende-a-variar-junto-com-a-producao.jpg",
+      "fonte": "g1 Economia",
+      "data": "11/11/2026",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/11/brasil-nunca-produziu-tanta-carne-bovina-mas-brasileiro-come-cada-vez-menos-entenda-o-paradoxo.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Em 2025, o Brasil produziu um volume recorde de **11,1 milhões** de toneladas de carne bovina, superando os Estados Unidos e tornando-se o maior produtor e exportador mundial, impulsionado por investimentos em genética e tecnologia na pecuária.",
+            "Apesar da produção recorde, a oferta de carne bovina para os brasileiros encolheu **0,5%** em 2025, enquanto as exportações saltaram quase **20%**, fazendo a fatia destinada ao mercado interno cair de **70%** historicamente para **61%** no ano."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O consumo interno per capita despencou de um recorde de 43 kg por habitante ao ano em 2006 para uma estimativa de 32 kg em 2025, com especialistas apontando que o produto está se tornando um item de luxo para algumas classes.",
+            "O poder de compra do trabalhador caiu: um salário mínimo comprava quase 62 kg de acém há **19 anos**, mas hoje consegue adquirir apenas 39 kg, pressionado pela inflação, juros altos e perda de renda das classes C, D e E."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A alta competitividade do produto brasileiro, que custa cerca de **25%** menos que a média dos principais concorrentes globais, atraiu mercados externos e elevou embarques para China, União Europeia, Vietnã, México e Indonésia em 2025.",
+            "Frigoríficos priorizam o exterior devido à rentabilidade, já que a tonelada de carne vendida no Brasil rende cerca de **R$ 30 mil**, contra **R$ 37 mil** na exportação, embora analistas destaquem que o mercado externo traz riscos de volatilidade e bloqueios sanitários."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Reforma tributária: sem benefícios aprovados pelo Congresso, imposto do governo cairia de **11,3%** para 8,5% em 2027, estima Receita",
+      "subtitulo": "O secretário da Receita Federal, Robinson Barreirinhas",
+      "imagem": "",
+      "fonte": "g1 Política",
+      "data": "11/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/11/reforma-tributaria-sem-beneficios-aprovados-pelo-congresso-imposto-do-governo-cairia-de-113percent-para-85percent-estima-receita-federal.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O secretário da Receita Federal, Robinson Barreirinhas, informou nesta quarta-feira (11) que a alíquota estimada da CBS federal cairia de **11,3%** para **8,5%** em 2027 caso o Congresso não tivesse aprovado benefícios setoriais.",
+            "As exceções e regimes favorecidos aprovados pelo Legislativo obrigam os demais setores da economia e todos os consumidores a arcar com uma alíquota padrão mais elevada para preservar a carga tributária."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A alíquota inicial da CBS de **11,3%** para o próximo ano foi calculada pelo Tribunal de Contas da União (TCU) com base em metodologia da Receita Federal e considera a arrecadação dos tributos extintos.",
+            "Caberá ao Senado Federal definir e fixar o valor final da alíquota da CBS, que será cobrada a partir de 2027, com prazo limite até o dia 15 de dezembro."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Espanha: primeira greve geral em **14 anos** pressiona governo por moradia e habitação",
+      "subtitulo": "Milhões de trabalhadores participam nesta quarta-feira (11) da primeira greve geral em 14 anos na Espanha",
+      "imagem": "https://s2-g1.glbimg.com/XNRvtBrYTCbotYpGUUEzAQsIS-o=/8131x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/N/j/uZHxBGQgGryOBV6myaPg/ap26315267782087.jpg",
+      "fonte": "g1 Mundo",
+      "data": "11/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/11/espanha-greve-geral.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Milhões de trabalhadores participam nesta quarta-feira (11) da primeira greve geral em **14 anos** na Espanha, quarta maior economia da zona do euro, para exigir soluções para a crise de habitação.",
+            "A paralisação afeta o transporte público e desacelera fábricas em cidades como Madri e Barcelona, além de fechar escolas e universidades ou reduzir seus funcionamentos.",
+            "Sindicatos UGT e CCOO apontam adesão de **90%** no setor automotivo e portuário, **85%** na indústria da carne, **82%** na coleta de resíduos e **75%** no setor de energia."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O aluguel médio espanhol dobrou nos últimos **10 anos**, gerando revolta após o despejo televisionado de uma mulher de **87 anos** chamada Maricarmen em Madri.",
+            "Manifestantes exigem moradia acessível, fim de apartamentos turísticos, combate à especulação imobiliária, renovação automática de contratos e novo acordo salarial.",
+            "O primeiro-ministro Pedro Sánchez convocou eleições para 5 de outubro, enquanto o governo tenta votar novamente no Parlamento dois decretos de habitação rejeitados."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Dólar opera em baixa e Ibovespa avança, **com investidores atentos às contas públicas**",
+      "subtitulo": "Nesta quarta-feira (11), por volta das 13h35, o dólar registrou queda de 0,45% e era cotado a R$ 5,5608",
+      "imagem": "https://s2-g1.glbimg.com/WWL1wnf2CLz_6TKD3nEVNgRPZas=/3500x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/R/L/9pGXOhQjWMbLFeAbXt6w/2025-01-22t173936z-1-lynxnpel0l0qj-rtroptp-4-fluxo-cambial-semanal.jpg",
+      "fonte": "g1 Economia",
+      "data": "11/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/11/dolar-ibovespa.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Nesta quarta-feira (11), por volta das 13h35, o dólar registrou queda de **0,45%** e era cotado a **R$ 5,5608,** enquanto o Ibovespa avançava **0,59%**, alcançando 172.342 pontos.",
+            "O governo negocia com o Senado um pacote de ajuste fiscal com impacto estimado em até **R$ 80 bilhões** para 2027, com proposta prevista para ser apresentada nesta semana por senadores aliados.",
+            "A Petrobras divulgou lucro líquido de **R$ 39,75 bilhões** no terceiro trimestre, alta de **21,5%** sobre o mesmo período anterior, embora suas ações operassem em baixa durante a manhã."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A Anfavea informou que a indústria automobilística encerrou outubro com alta de **1,8%** nos emplacamentos e de **2,7%** na produção, na comparação com igual mês de 2025.",
+            "Gabriel Galípolo, presidente do BC, alertou na terça-feira (10) que a falta de confiança nas contas públicas e o risco de desvalorização do real podem manter os juros de longo prazo elevados."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    }
+  ]
 }
