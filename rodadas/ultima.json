@@ -1,3 +1,167 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Pesquisa mostra que **66%** dos consumidores pretendem antecipar compras de Natal na Black Friday",
+      "subtitulo": "",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/black_friday_dm_divulgacao.webp",
+      "fonte": "Mercado & Consumo",
+      "data": "13/11/2026",
+      "link": "https://mercadoeconsumo.com.br/13/11/2026/black-friday/pesquisa-mostra-que-66-dos-consumidores-pretendem-antecipar-compras-de-natal-na-black-friday/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Uma pesquisa realizada pela plataforma de serviços financeiros DM revelou que **66,1%** dos consumidores pretendem usar a Black Friday de novembro para antecipar as compras de Natal no Brasil.",
+            "Entre os entrevistados que planejam a antecipação, **33,8%** pretendem adiantar tudo ou a maior parte dos presentes, enquanto **32,3%** vão adquirir apenas alguns itens.",
+            "O estudo aponta que **18,7%** não querem antecipar as compras natalinas e **15,2%** planejam adquirir produtos sem relação com as festas de fim de ano na data."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Os eletrônicos lideram a intenção geral de compra com **29,9%** das menções, seguidos por eletrodomésticos e móveis, citados por **27,6%** dos consumidores.",
+            "Um grupo de **55,4%** dos potenciais compradores pretende gastar mais de **R$ 1 mil**, sendo que **33,3%** esperam desembolsar mais de **R$ 2 mil** no período.",
+            "O desconto é o fator decisivo para **66,2%** das pessoas, mas há receios: **31,6%** temem falsas promoções e **16,4%** preocupam-se com o risco de fraudes e golpes."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A pesquisa online ocorreu em outubro de 2026 com 2.600 consumidores da base da DM, abrangendo todas as regiões do país para avaliar o comportamento de consumo."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Dólar recua com mercado atento à aprovação do pacote fiscal no Senado e aos dados do **varejo; Ibovespa avança**",
+      "subtitulo": "O Senado aprovou na quinta-feira o texto-base do pacote fiscal por 45 votos a 31",
+      "imagem": "https://s2-g1.glbimg.com/WWL1wnf2CLz_6TKD3nEVNgRPZas=/3500x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/R/L/9pGXOhQjWMbLFeAbXt6w/2025-01-22t173936z-1-lynxnpel0l0qj-rtroptp-4-fluxo-cambial-semanal.jpg",
+      "fonte": "g1 Economia",
+      "data": "13/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/13/dolar-ibovespa.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O Senado aprovou na quinta-feira o texto-base do pacote fiscal por 45 votos a 31, com expectativa de melhorar as contas públicas em até **R$ 60 bilhões** em 2027.",
+            "Do impacto previsto de **R$ 60 bilhões** em 2027, **R$ 50 bilhões** vão para metas fiscais e **R$ 10 bilhões** para novas despesas, como o Pé-de-Meia Universitário.",
+            "O pacote prevê limites mais rígidos para gastos públicos, bloqueio de despesas obrigatórias, redução de até **20%** em benefícios fiscais e mudanças na saúde."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Ainda restam quatro pontos para análise no Senado antes de o projeto seguir para a Câmara dos Deputados, enquanto investidores monitoram o impacto nas contas.",
+            "As vendas do comércio varejista brasileiro cresceram **0,2%** em setembro frente a agosto, superando a projeção de queda de **0,2%** feita pelos economistas.",
+            "Na comparação anual, o varejo brasileiro subiu **1,7%** em setembro, impulsionado por altas em informática e comunicação, combustíveis e vestuário."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Presidente do BC diz que debate sobre juro está maior que 'disputa de torcida organizada e comentário de postagem **em rede social'**",
+      "subtitulo": "Em evento do banco Barclays, o presidente do Banco Central, Gabriel Galípolo",
+      "imagem": "https://s2-g1.glbimg.com/BlQem-QRHFj0OsOISFaRAOvXuRs=/4200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/N/F/k8KZo1SSSVfm3AsG1SBw/fta20230509164.jpg",
+      "fonte": "g1 Política",
+      "data": "13/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/13/presidente-do-bc-critica-debate-sobre-juros-parece-disputa-de-torcida-organizada-e-postagem-em-rede-social.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Em evento do banco Barclays, o presidente do Banco Central, Gabriel Galípolo, criticou a qualidade do debate público sobre a taxa de juros, comparando-o a brigas de torcida organizada e comentários em redes sociais.",
+            "A Selic está em **13,75%** ao ano após o Copom interromper o ciclo de cortes na semana retrasada; em termos reais, descontada a inflação prevista para os próximos **12 meses**, a taxa chega a **9,49%** ao ano, o maior patamar mundial."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Galípolo explicou que o Copom, que se reúne a cada 45 dias, fixa apenas os juros de curto prazo, enquanto os juros de mercado futuro, que influenciam empréstimos e a emissão de títulos públicos, são determinados pelas expectativas dos agentes econômicos, não pelo BC.",
+            "Todos os diretores atuais do Banco Central, responsáveis pela decisão da Selic, foram indicados pelo presidente Luiz Inácio Lula da Silva, e foram eles que decidiram interromper o corte da taxa na semana passada."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O BC opera sob um regime de metas: se as projeções de inflação estiverem dentro da meta de **3%** (faixa de **1,5%** a **4,5%** desde o início de 2025), pode reduzir a taxa; caso contrário, mantém ou eleva a Selic, considerando a inflação esperada para os próximos anos."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "Analistas alertam que os déficits fiscais recorrentes pressionam os juros de mercado e o endividamento público, exigindo um ajuste fiscal mais robusto, embora o mercado veja dificuldades devido aos compromissos sociais, ao aumento do salário mínimo acima da inflação e à manutenção de gastos em saúde e educação."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Ucrânia faz grande ataque de drones contra a Rússia, **que segue atacando energia ucraniana**",
+      "subtitulo": "A defesa aérea russa interceptou e destruiu 1.198 drones ucranianos em quase 20 regiões, incluindo Moscou",
+      "imagem": "https://s2-g1.glbimg.com/-iLlrplb2LQjNHdP1ZNqUxXPkoU=/4996x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/T/X/nhnYqfSK2G8BbAF0R0Wg/2026-11-13t050636z-1933880309-rc2qmoada9wy-rtrmadp-3-ukraine-crisis-attack-kyiv.jpg",
+      "fonte": "g1 Mundo",
+      "data": "13/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/13/ucrania-faz-grande-ataque-de-drones-contra-a-russia-que-segue-atacando-energia-ucraniana.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A defesa aérea russa interceptou e destruiu 1.198 drones ucranianos em quase 20 regiões, incluindo Moscou, conforme o Ministério da Defesa e autoridades locais.",
+            "Os ataques ucranianos deixaram quatro mortos em uma zona industrial em Volgogrado, quatro em Samara e um na região de Briansk, além de dois feridos em Volgogrado.",
+            "A ofensiva ocorreu logo após emissários dos EUA visitarem Vladimir Putin em Moscou e antes de uma reunião com Volodymyr Zelensky em Dublin para discutir a paz."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Bombardeios russos atingiram várias regiões da Ucrânia, danificaram um hospital em Kiev com 30 evacuados e ferido, e causaram mortes em Odessa e Zaporizhzhia.",
+            "Delegações de Rússia e Ucrânia realizaram negociações em Abu Dhabi, intermediadas pelos EUA, mas as conversas terminaram sem um acordo definitivo sobre o conflito."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    }
+  ]
 }
