@@ -347,7 +347,8 @@
   "g1.globo.com/mundo/noticia/2026/11/14/apagao-aereo-nos-eua-especialista-aponta-vulnerabilidade-no-sistema.ghtml",
   "g1.globo.com/tecnologia/noticia/2026/11/14/controle-de-trafego-aereo-dos-eua-ainda-opera-com-disquetes-veja-como-eles-funcionam.ghtml",
   "bbc.com/portuguese/articles/cmx2xnpeked2o",
-  "g1.globo.com/sp/sao-paulo/noticia/2026/11/14/brasileiros-retidos-por-mais-de-24-horas-em-aeroporto-de-punta-cana-conseguem-voo-de-volta-para-sp.ghtml"
+  "g1.globo.com/sp/sao-paulo/noticia/2026/11/14/brasileiros-retidos-por-mais-de-24-horas-em-aeroporto-de-punta-cana-conseguem-voo-de-volta-para-sp.ghtml",
+  "g1.globo.com/politica/noticia/2026/11/14/ministro-diz-que-e-muito-provavel-que-lula-e-trump-se-encontrem-durante-g20-nos-eua-em-dezembro.ghtml"
  ],
  "postados": [
   {
@@ -611,6 +612,13 @@
    "titulo": "Por que o México arrecada tão poucos impostos (e como financia seus crescentes benefícios sociais)",
    "em": "2026-11-14 18:40",
    "feed": false
+  },
+  {
+   "chave": "g1.globo.com/politica/noticia/2026/11/14/ministro-diz-que-e-muito-provavel-que-lula-e-trump-se-encontrem-durante-g20-nos-eua-em-dezembro.ghtml",
+   "categoria": "Política",
+   "titulo": "Ministro diz que é 'muito provável' que Lula e Trump se encontrem durante G20 nos EUA em dezembro",
+   "em": "2026-11-14 19:00",
+   "feed": true
   }
  ]
 }

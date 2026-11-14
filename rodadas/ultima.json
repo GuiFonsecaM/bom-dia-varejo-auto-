@@ -2,47 +2,6 @@
   "posts": [
     {
       "tipo": "noticia",
-      "categoria": "Varejo",
-      "manchete": "99Pay lança aulas online gratuitas de finanças para **motoristas e entregadores**",
-      "subtitulo": "",
-      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2025/09/cursoonline-envato.webp",
-      "fonte": "Mercado & Consumo",
-      "data": "14/11/2026",
-      "link": "https://mercadoeconsumo.com.br/14/11/2026/economia/99pay-lanca-aulas-online-gratuitas-de-financas-para-motoristas-e-entregadores/",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "A 99Pay lançou aulas online e gratuitas de educação financeira voltadas especificamente para motoristas e entregadores parceiros que utilizam carros, motos ou bicicletas no trabalho.",
-            "O projeto foi desenvolvido em parceria com a plataforma Me Poupe! e aborda temas como organização de renda variável, custos operacionais, planejamento financeiro e gestão do veículo."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "O material didático é composto por nanoaulas curtas, cards de reforço, planilhas de acompanhamento e acesso a cursos adicionais da biblioteca educacional da Me Poupe! para estudos mais aprofundados.",
-            "A 99 possui mais de **85 milhões** de usuários no Brasil, atua em mais de 4.400 cidades e conta com uma base superior a **2,5 milhões** de motoristas e motociclistas parceiros, que cresceu mais de **50%** em dois anos."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "No início do ano, a fintech concluiu a captação de **R$ 700 milhões** por meio da emissão de um FIDC estruturado pelo Bradesco BBI, com o objetivo de acelerar a expansão da carteira de crédito da 99Pay."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#varejo",
-        "#supermercado",
-        "#atacarejo",
-        "#varejoalimentar"
-      ],
-      "feed": true
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Política",
       "manchete": "Ministro diz que é 'muito provável' que Lula e Trump se encontrem durante G20 nos **EUA em dezembro**",
       "subtitulo": "O ministro do Desenvolvimento, Indústria e Comércio, Márcio Elias Rosa",
@@ -82,55 +41,7 @@
         "#brasil",
         "#noticias"
       ],
-      "feed": false
-    },
-    {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "Por que o México arrecada tão poucos impostos (e como financia seus **crescentes benefícios sociais)**",
-      "subtitulo": "No México, o imposto predial (IPTU) representa apenas 0,2 % do PIB, bem abaixo da média latino‑americana de 0,8 %",
-      "imagem": "https://ichef.bbci.co.uk/news/1200/branded_portuguese/e566/live/fb7c3080-e058-11f1-9e26-b3b65586122f.jpg",
-      "fonte": "BBC News Brasil",
-      "data": "14/11/2026",
-      "link": "https://www.bbc.com/portuguese/articles/cmn8077z3xl6o?at_medium=RSS&at_campaign=rss",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "No México, o imposto predial (IPTU) representa apenas **0,2 %** do PIB, bem abaixo da média latino‑americana de **0,8 %**; o valor venal dos imóveis costuma ser 30‑**40 %** do preço de mercado, reduzindo a base de cálculo.",
-            "O IVA nacional é de **16 %**, dois pontos percentuais menor que a média da região; cerca de 70 municípios fronteiriços pagam metade dessa alíquota para preservar competitividade com EUA e Guatemala, e água, insumos agropecuários, alguns remédios e alimentos têm alíquota de **0 %**."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "Em 2025, a arrecadação total de tributos no México deve alcançar **15 %** do PIB, o menor patamar entre os países da OCDE (média **34 %**); na América Latina a média é **21 %**, com Paraguai e Peru apresentando percentuais semelhantes.",
-            "Grandes empresas geram **3,9 %** do PIB em tributos, valor próximo à média da OCDE (**3,8 %**); porém o imposto de renda das pessoas físicas corresponde a apenas **3,7 %** do PIB, contra **8,2 %** nos países da OCDE, refletindo a grande quantidade de pequenas empresas que pagam pouco ou nada."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Mais da metade da economia mexicana é informal; apenas **40 %** dos trabalhadores recebem por meios eletrônicos, comparado a **60 %** na América Latina, dificultando a cobrança de impostos sobre renda e salários.",
-            "A presidente Claudia Sheinbaum propôs criar um sistema nacional integrado de informações sobre imóveis para ampliar a base de contribuintes, mas a oposição rotulou a medida como “predialazo disfarçado”; ela mantém a promessa de não elevar nem criar novos tributos, herdada de AMLO (2018‑2024)."
-          ]
-        },
-        {
-          "titulo": "O que vem agora",
-          "topicos": [
-            "Apesar da baixa carga tributária, o governo tem expandido benefícios sociais e aposentadorias universais, sustentando a popularidade de Sheinbaum, mas especialistas alertam que a combinação de informalidade, evasão, isenções e baixa confiança no Estado pode tornar a arrecadação insuficiente no futuro."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#mundo",
-        "#economiaglobal",
-        "#noticias",
-        "#internacional"
-      ],
-      "feed": false
+      "feed": true
     }
   ]
 }
