@@ -236,7 +236,39 @@
   "mercadoeconsumo.com.br/13/11/2026/tecnologia/anthropic-alega-falha-de-autenticacao-apos-claude-e-outras-ferramentas-sairem-do-ar",
   "mercadoeconsumo.com.br/13/11/2026/economia/ex-tesoureiro-caixa-condenado-desvio-apostas-bets",
   "mercadoeconsumo.com.br/13/11/2026/mc-capital/lucro-da-mbrf-cresce-1235-e-atinge-r-210-milhoes-no-3o-trimestre",
-  "mercadoeconsumo.com.br/13/11/2026/noticias/dino-mantem-fim-da-6x1-para-16-de-dezembro-mas-flexibiliza-folgas"
+  "mercadoeconsumo.com.br/13/11/2026/noticias/dino-mantem-fim-da-6x1-para-16-de-dezembro-mas-flexibiliza-folgas",
+  "g1.globo.com/economia/agronegocios/noticia/2026/11/13/quem-sao-os-produtores-inadimplentes-do-banco-do-brasil-especialistas-explicam-a-crise-no-agro.ghtml",
+  "infomoney.com.br/mercados/casas-bahia-e-gpa-fazem-acordo-e-encerrar-disputam-por-associacao-de-2009-entenda",
+  "mercadoeconsumo.com.br/13/11/2026/foodservice/heineken-traz-cerveja-italiana-birra-moretti-ao-brasil",
+  "poder360.com.br/poder-economia/inadimplencia-atinge-7555-milhoes-de-consumidores-em-outubro",
+  "moneytimes.com.br/casas-bahia-bhia3-e-gpa-pcar3-selam-paz-apos-disputa-milionaria",
+  "mercadoeconsumo.com.br/13/11/2026/ecommerce/shopee-supera-black-friday-de-2025-e-bate-recorde-de-vendas-no-11-11",
+  "mercadoeconsumo.com.br/13/11/2026/noticias-varejo/live-mc-as-licoes-da-coreia-do-sul-para-o-varejo-brasileiro",
+  "www12.senado.leg.br/noticias/materias/2026/11/13/cae-ministro-da-fazenda-debate-aliquota-da-cbs-na-terca-feira",
+  "g1.globo.com/politica/noticia/2026/11/13/pgr-indica-que-mantera-pedido-de-r-324-milhoes-extras-para-bancar-penduricalhos.ghtml",
+  "poder360.com.br/poder-economia/bolsa-sobe-066-e-dolar-segue-em-r-565-com-ajuste-fiscal-em-vista",
+  "g1.globo.com/tecnologia/noticia/2026/11/13/chat-gpt-wallet.ghtml",
+  "bbc.com/portuguese/articles/cq62pdgrer0po",
+  "agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-chega-filipinas-brasil-quer-ser-parceiro-de-dialogo-da-asean",
+  "g1.globo.com/politica/noticia/2026/11/13/pf-cumpre-mandado-de-busca-e-apreensao-em-operacao-sobre-suposto-desvio-de-emendas-parlamentares.ghtml",
+  "g1.globo.com/politica/noticia/2026/11/13/meta-bate-recorde-e-recebe-meio-bilhao-de-reais-nas-eleicoes-pl-gasta-quase-o-dobro-do-pt-com-a-empresa.ghtml",
+  "poder360.com.br/poder-internacional/secretario-dos-eua-diz-que-tecnicos-investigam-falha-que-afetou-voos",
+  "g1.globo.com/mundo/ao-vivo/paralisacao-de-voos-nos-eua.ghtml",
+  "g1.globo.com/mundo/ao-vivo/spacex-faz-novo-teste-da-starship-e-tenta-manobra-inedita.ghtml",
+  "poder360.com.br/poder-internacional/suspensao-nos-eua-atinge-voos-mostra-flightaware",
+  "g1.globo.com/mundo/noticia/2026/11/13/kenya-esta-dentro-de-aviao-durante-paralizacao-nos-eua.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/spacex-lanca-foguete-starship-para-teste-de-manobra-inedita.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-voos-nos-eua-veja-fotos-de-aroportos-durante-paralisacao.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-voos-nos-eua-secretario-de-seguranca-descarta-ataque-e-fala-em-problema-de-telecomunicacao.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/falha-de-internet-afeta-sites-do-servico-de-meteorologia-dos-estados-unidos.ghtml",
+  "infomoney.com.br/economia/subvencao-de-r140-ao-diesel-importado-nao-sera-renovada-diz-ministerio",
+  "g1.globo.com/mundo/noticia/2026/11/13/passageiros-video-aviao-suspensao-voos-eua.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/video-piloto-comunica-passageiros-paralisacao-voos-eua.ghtml",
+  "moneytimes.com.br/ibovespa-fecha-em-alta-com-o-ajuste-fiscal-e-recuperacao-do-petroleo-davs",
+  "poder360.com.br/poder-internacional/eua-suspendem-voos-em-todo-o-pais-por-falha-no-controle-de-trafego",
+  "moneytimes.com.br/dolar-13-11-2026",
+  "g1.globo.com/tecnologia/noticia/2026/11/13/faxes-celulares-e-bluetooth-queda-da-microsoft.ghtml",
+  "g1.globo.com/tecnologia/noticia/2026/11/13/outlook-e-ia-da-microsoft-seguem-instaveis-nesta-sexta-feira.ghtml"
  ],
  "postados": [
   {
@@ -401,6 +433,34 @@
    "categoria": "Mundo",
    "titulo": "Ucrânia faz grande ataque de drones contra a Rússia, que segue atacando energia ucraniana",
    "em": "2026-11-13 15:43",
+   "feed": false
+  },
+  {
+   "chave": "infomoney.com.br/mercados/casas-bahia-e-gpa-fazem-acordo-e-encerrar-disputam-por-associacao-de-2009-entenda",
+   "categoria": "Varejo",
+   "titulo": "Casas Bahia e GPA fazem acordo e encerram disputa por associação de 2009; entenda",
+   "em": "2026-11-13 21:27",
+   "feed": true
+  },
+  {
+   "chave": "g1.globo.com/economia/agronegocios/noticia/2026/11/13/quem-sao-os-produtores-inadimplentes-do-banco-do-brasil-especialistas-explicam-a-crise-no-agro.ghtml",
+   "categoria": "Economia",
+   "titulo": "Quem são os produtores inadimplentes do Banco do Brasil? Especialistas explicam a crise no agro",
+   "em": "2026-11-13 21:27",
+   "feed": false
+  },
+  {
+   "chave": "poder360.com.br/poder-economia/inadimplencia-atinge-7555-milhoes-de-consumidores-em-outubro",
+   "categoria": "Política",
+   "titulo": "Inadimplência atinge 75,55 milhões de consumidores em outubro",
+   "em": "2026-11-13 21:27",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/tecnologia/noticia/2026/11/13/chat-gpt-wallet.ghtml",
+   "categoria": "Mundo",
+   "titulo": "OpenAI lança carteira digital que permite ao ChatGPT fazer compras e pagamentos pelo usuário",
+   "em": "2026-11-13 21:27",
    "feed": false
   }
  ]
