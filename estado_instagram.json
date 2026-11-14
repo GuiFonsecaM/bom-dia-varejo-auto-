@@ -268,7 +268,37 @@
   "poder360.com.br/poder-internacional/eua-suspendem-voos-em-todo-o-pais-por-falha-no-controle-de-trafego",
   "moneytimes.com.br/dolar-13-11-2026",
   "g1.globo.com/tecnologia/noticia/2026/11/13/faxes-celulares-e-bluetooth-queda-da-microsoft.ghtml",
-  "g1.globo.com/tecnologia/noticia/2026/11/13/outlook-e-ia-da-microsoft-seguem-instaveis-nesta-sexta-feira.ghtml"
+  "g1.globo.com/tecnologia/noticia/2026/11/13/outlook-e-ia-da-microsoft-seguem-instaveis-nesta-sexta-feira.ghtml",
+  "g1.globo.com/economia/noticia/2026/11/14/mercado-financeiro-preve-juros-de-dois-digitos-ate-2030-ao-longo-dos-dois-mandatos-de-lula.ghtml",
+  "g1.globo.com/economia/agronegocios/noticia/2026/11/14/pecuaria-de-elite-como-uma-vaca-pode-render-fortunas-com-genetica-e-clonagem.ghtml",
+  "g1.globo.com/politica/noticia/2026/11/14/apos-eleicao-de-lula-bancada-do-agro-prioriza-acesso-ao-credito-para-produtores.ghtml",
+  "g1.globo.com/economia/agronegocios/noticia/2026/11/14/desperdicio-de-alimentos.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/traicoes-que-abalaram-o-mundo-alem-do-escandalo-da-nvidia-relembre-historias-de-bill-clinton-a-dom-pedro-i.ghtml",
+  "infomoney.com.br/minhas-financas/sites-falsos-vozes-clonadas-e-avaliacoes-fabricadas-os-golpes-da-black-friday",
+  "g1.globo.com/g1-explica/noticia/2026/11/14/cartao-cheque-especial-ou-emprestimo-qual-tem-os-juros-mais-altos.ghtml",
+  "g1.globo.com/politica/noticia/2026/11/14/violencia-contra-a-mulher-apostas.ghtml",
+  "infomoney.com.br/onde-investir/dividendos-da-petrobras-ipca-e-ipo-da-anthropic-veja-os-destaques-da-semana",
+  "poder360.com.br/poder-china/exportacoes-da-china-avancam-com-forca-do-comercio-ligado-a-ia",
+  "g1.globo.com/politica/noticia/2026/11/14/fundo-amazonia-completa-18-anos-com-r-56-bilhoes-em-doacoes-veja-onde-o-dinheiro-e-investido.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/estados-unidos-ferramenta-inteligencia-artificial-controle-aereo-paralisacao-aeroportos.ghtml",
+  "infomoney.com.br/economia/alem-das-tarifas-o-que-o-brasil-precisa-fazer-para-proteger-a-industria-do-aco",
+  "bbc.com/portuguese/articles/c54gnly4kzdpo",
+  "poder360.com.br/poder-justica/stj-suspende-processos-sobre-extincao-antecipada-do-perse",
+  "g1.globo.com/mundo/noticia/2026/11/14/estreito-de-ormuz-navio-fogo.ghtml",
+  "poder360.com.br/poder-congresso/vitimas-de-violencia-patrimonial-terao-2a-via-gratuita-de-documentos",
+  "poder360.com.br/poder-economia/numero-de-familias-da-classe-c-sem-dinheiro-guardado-cai-de-61-para-29",
+  "g1.globo.com/mundo/noticia/2026/11/14/eua-retomam-voos-apos-falha-no-controle-de-trafego-aereo-provocar-caos-nos-aeroportos.ghtml",
+  "poder360.com.br/poder-governo/lula-visita-imagem-de-nossa-senhora-aparecida-em-catedral-nas-filipinas",
+  "poder360.com.br/poder-educacao/so-157-das-cidades-brasileiras-tem-plano-para-proteger-criancas",
+  "g1.globo.com/mundo/noticia/2026/11/14/mae-de-menino-brasileiro-que-teve-dedo-mutilado-em-escola-diz-que-familia-teve-que-mudar-de-cidade-e-espera-justica-para-deixar-portugal-traumas-para-a-vida-toda.ghtml",
+  "infomoney.com.br/minhas-financas/imoveis-intencao-de-compra-cai-a-35-e-descontos-atingem-67-diz-fipezap",
+  "g1.globo.com/tecnologia/noticia/2026/11/14/cronologia-crise-nvidia.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/fbi-desmantela-rede-de-hackers-da-coreia-do-norte-objetivo-do-golpe-era-financiar-armas-ilicitas-no-pais.ghtml",
+  "g1.globo.com/empreendedorismo/pegn/noticia/2026/11/14/ex-manicure-comecou-vendendo-caldinhos-na-rua-e-hoje-fatura-r-40-mil-por-mes.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/o-efeito-cascata-da-suspensao-de-voos-nos-eua-trens-sobrecarregados-brasil-impactado-e-horas-para-normalizar-fluxo.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/caos-aereo-10-perguntas-e-respostas-sobre-a-paralisacao-dos-aeroportos-nos-estados-unidos.ghtml",
+  "g1.globo.com/trabalho-e-carreira/noticia/2026/11/14/quais-sao-os-proximos-feriados-de-2026.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-voos-secretario-diz-que-houve-inconsistencias-entre-radar-e-torre-e-que-sistema-de-trafego-aereo-e-velho.ghtml"
  ],
  "postados": [
   {
@@ -461,6 +491,34 @@
    "categoria": "Mundo",
    "titulo": "OpenAI lança carteira digital que permite ao ChatGPT fazer compras e pagamentos pelo usuário",
    "em": "2026-11-13 21:27",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/economia/agronegocios/noticia/2026/11/14/pecuaria-de-elite-como-uma-vaca-pode-render-fortunas-com-genetica-e-clonagem.ghtml",
+   "categoria": "Varejo",
+   "titulo": "Pecuária de elite: como uma vaca pode valer R$ 54 milhões e render fortunas com genética e clonagem",
+   "em": "2026-11-14 09:00",
+   "feed": true
+  },
+  {
+   "chave": "g1.globo.com/economia/noticia/2026/11/14/mercado-financeiro-preve-juros-de-dois-digitos-ate-2030-ao-longo-dos-dois-mandatos-de-lula.ghtml",
+   "categoria": "Política",
+   "titulo": "Mercado financeiro prevê juros de dois dígitos até 2030, ao longo dos dois mandatos de Lula",
+   "em": "2026-11-14 09:00",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/economia/agronegocios/noticia/2026/11/14/desperdicio-de-alimentos.ghtml",
+   "categoria": "Economia",
+   "titulo": "Um bilhão de refeições no lixo todo dia; como evitar desperdício de alimentos em casa?",
+   "em": "2026-11-14 09:00",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/mundo/noticia/2026/11/14/traicoes-que-abalaram-o-mundo-alem-do-escandalo-da-nvidia-relembre-historias-de-bill-clinton-a-dom-pedro-i.ghtml",
+   "categoria": "Mundo",
+   "titulo": "Traições que abalaram o mundo: além do escândalo da Nvidia, relembre histórias de Bill Clinton a Dom Pedro I",
+   "em": "2026-11-14 09:00",
    "feed": false
   }
  ]

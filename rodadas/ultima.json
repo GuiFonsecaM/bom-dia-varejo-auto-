@@ -3,27 +3,28 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Casas Bahia e GPA fazem acordo e encerram disputa por associação **de 2009; entenda**",
+      "manchete": "Pecuária de elite: como uma vaca pode valer **R$ 54 milhões** e render fortunas com genética e clonagem",
       "subtitulo": "",
-      "imagem": "https://www.infomoney.com.br/wp-content/uploads/2019/06/loja-da-casas-bahia-2.jpg",
-      "fonte": "InfoMoney",
-      "data": "13/11/2026",
-      "link": "https://www.infomoney.com.br/mercados/casas-bahia-e-gpa-fazem-acordo-e-encerrar-disputam-por-associacao-de-2009-entenda/",
+      "imagem": "https://s2-g1.glbimg.com/sbDNqJ508W3duKYf20Aab14BVdE=/4240x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/m/Z/AhNWqiQbGYoOBM5kO6qQ/donna-no-pasto.jpg",
+      "fonte": "g1 Economia",
+      "data": "14/11/2026",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/14/pecuaria-de-elite-como-uma-vaca-pode-render-fortunas-com-genetica-e-clonagem.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "Os grupos varejistas Casas Bahia e GPA firmaram um acordo nesta sexta-feira (13) em São Paulo para encerrar disputas judiciais decorrentes de uma aliança frustrada formada em 2009.",
-            "Pelo acordo, o GPA abre mão de receber cerca de **R$ 700 milhões** da Casas Bahia, montante que tinha baixa perspectiva de monetização devido à recuperação judicial da rede.",
-            "A Casas Bahia assumiu a responsabilidade pelo pagamento de débitos tributários estimados em aproximadamente **R$ 424 milhões**."
+            "A vaca Donna FIV CIAV, avaliada em **R$ 54 milhões**, é considerada a mais cara do mundo e vive atualmente na Fazenda Mata Velha, em Minas Gerais, após nascer no Paraná em 2015.",
+            "A valorização recorde ocorreu em novembro de 2025, no leilão Cataratas Collection, quando as empresas Nelore Huff e Traia Nelore arremataram **25%** da animal por **R$ 13,5 milhões**.",
+            "A propriedade é dividida entre cinco sócios: Agro Mata Velha, Nelore Huff (do cantor Murilo Huff), Traia Nelore, Casa Branca Agropastoril e Agropecuária LMC."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "A gestão da Casas Bahia classificou o acerto como um passo importante para otimizar seus passivos e fortalecer sua estrutura financeira atual.",
-            "Para o GPA, a decisão do conselho de administração visou limitar a exposição da empresa a contingências ligadas à antiga associação comercial."
+            "O lucro com a vaca de elite vem da exploração comercial de sua genética, incluindo a venda de óvulos (pacotes com cerca de **100 unidades** por **R$ 3 milhões**), prenhezes e filhotes.",
+            "Donna passa por aspiração folicular a cada 30 dias, gerando cerca de 100 oócitos e aproximadamente 12 prenhezes por procedimento, maximizando a multiplicação genética.",
+            "A pecuária de elite utiliza biotecnologias como fertilização in vitro (FIV) e clonagem, técnicas lideradas no Brasil por pesquisadores como Rodolfo Rumpf, cujo laboratório já entregou mais de 700 clones bovinos."
           ]
         }
       ],
@@ -38,71 +39,28 @@
     },
     {
       "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "Quem são os produtores inadimplentes do Banco do Brasil? Especialistas explicam a **crise no agro**",
-      "subtitulo": "",
-      "imagem": "https://s2-g1.glbimg.com/8I5wdhzzgoRSaytU03WdSTn0c2g=/1200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/A/nnxIBfTfOLzPlQnGfOMw/261113-grafico-inadimplencia-do-agro-por-linha-de-credito-no-banco-do-brasil.jpg",
-      "fonte": "g1 Economia",
-      "data": "13/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/13/quem-sao-os-produtores-inadimplentes-do-banco-do-brasil-especialistas-explicam-a-crise-no-agro.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "Especialistas em crédito rural apontam que o aumento da inadimplência no agronegócio foi puxado principalmente por médios e grandes produtores do Centro‑Oeste, conforme o Banco do Brasil divulgou nos resultados do terceiro trimestre.",
-            "A presidente do BB, Tarciana Medeiros, disse na quinta‑feira (12) que parte desses produtores deu um “calote intencional”, recusando pagar ou renegociar dívidas mesmo após condições facilitadas oferecidas pelo governo e pelo banco."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "Em entrevista na sexta‑feira (13), Medeiros esclareceu que a fala se referia aos produtores contatados para renegociar via MP 1.376, muitos dos quais optaram por não aderir, gerando necessidade de provisões maiores para perdas.",
-            "O BB mantém vínculo com mais de **2,5 milhões** de produtores rurais; **566 mil** têm crédito ativo e cerca de **31 mil** (aproximadamente **5,5 %**) estão inadimplentes com parcelas em atraso."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Indicadores de crédito mostraram deterioração: pontualidade caiu de **83 %** (julho) para **66 %** (outubro 2026); operações com mais de 90 dias de atraso subiram de **4,84 %** (set/2025) para **6,92 %** (set/2026); atrasos acima de 30 dias passaram de **7,06 %** para **10,10 %** nos mesmos períodos.",
-            "Nas linhas de crédito, a taxa de inadimplência do Pronamp (médios produtores) aumentou de **2,48 %** (set/2025) para **4,49 %** (set/2026), enquanto o Pronaf (agricultura familiar) subiu de **1,82 %** para **2,95 %** no mesmo intervalo."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#economia",
-        "#varejo",
-        "#mercado",
-        "#negocios"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Política",
-      "manchete": "Inadimplência atinge **75,55 milhões de consumidores em outubro**",
-      "subtitulo": "O Brasil alcançou 75,55 milhões de consumidores inadimplentes em outubro de 2026",
-      "imagem": "https://static.poder360.com.br/uploads/2026/11/inadimplencia-levantamento-13-nov-2026-2.png",
-      "fonte": "Poder360",
-      "data": "13/11/2026",
-      "link": "https://www.poder360.com.br/poder-economia/inadimplencia-atinge-7555-milhoes-de-consumidores-em-outubro/",
+      "manchete": "Mercado financeiro prevê juros de dois dígitos até 2030, **ao longo dos dois mandatos de Lula**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/VuzTn6Yij6ZJYxsTuxUxcNSdN0Q=/3840x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/D/Q/ZCK9dMTVqgKZh8QCpQ5w/globo-canal-4-20261026-2000-frame-128002.jpeg",
+      "fonte": "g1 Política",
+      "data": "14/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/14/mercado-financeiro-preve-juros-de-dois-digitos-ate-2030-ao-longo-dos-dois-mandatos-de-lula.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O Brasil alcançou **75,55 milhões** de consumidores inadimplentes em outubro de 2026, de acordo com levantamento da CNDL e do SPC Brasil divulgado em 13 de novembro de 2026.",
-            "O total de negativados corresponde a **44,94%** da população adulta do país, registrando alta de **0,82%** frente a setembro e de **7,24%** em relação a outubro de 2025.",
-            "Dívidas de até **R$ 500** concentram **28,21%** dos devedores, enquanto débitos de até **R$ 1.000** abrangem **40,20%** do total de consumidores com contas em atraso."
+            "Economistas de mais de 100 instituições financeiras consultados pelo Banco Central preveem que a taxa Selic permanecerá em dois dígitos, acima de **10%** ao ano, até 2030.",
+            "Se a projeção se confirmar, o presidente Lula passará integralmente o seu terceiro e o seu quarto mandatos com taxas de juros de dois dígitos ao ano.",
+            "Atualmente, a taxa básica de juros está fixada em **13,75%** ao ano, enquanto a inflação prevista para os próximos **12 meses** resulta em um juro real de **9,49%** ao ano, o maior patamar global."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O maior avanço ocorreu entre devedores com tempo de inadimplência de 4 a **5 anos**, que saltou **32,89%** em relação ao período anterior.",
-            "A faixa etária de 30 a **39 anos** concentra **18,03 milhões** de inadimplentes, representando **23,30%** do total e **53,19%** da população nessa idade, com **51,40%** de mulheres e **48,60%** de homens.",
-            "A região Norte registrou a maior alta anual no número de inadimplentes (**8,63%**) e de dívidas (**17,02%**), além de deter o maior percentual de população adulta negativada (**49,23%**)."
+            "O endividamento público brasileiro alcançou **82,9%** do PIB segundo o critério do Banco Central e **95,2%** do PIB de acordo com os cálculos do FMI, superando a média dos emergentes.",
+            "Analistas apontam que a manutenção de juros altos reflete déficits fiscais contínuos, flexibilização de metas e o crescimento estrutural das despesas obrigatórias do governo."
           ]
         }
       ],
@@ -116,36 +74,89 @@
       "feed": false
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "OpenAI lança carteira digital que permite ao ChatGPT fazer compras e **pagamentos pelo usuário**",
-      "subtitulo": "A OpenAI lançou uma carteira digital desenvolvida em parceria com American Express",
-      "imagem": "https://s2-g1.glbimg.com/4m5dMdrtgyG8RioQ52cXPssgUAk=/1422x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/K/0/LCb5BITWqaVFx9Sx8TtQ/b4a4c8a0-b9ea-11f1-b45b-3ba4d819332d.jpg",
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Um bilhão de refeições no lixo todo dia; como evitar desperdício de **alimentos em casa?**",
+      "subtitulo": "A ONU estima que 60% do desperdício de alimentos ocorre nas residências",
+      "imagem": "https://s2-g1.glbimg.com/eRufZ9jt3DXcExNN5N6-TGwjA04=/5000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/M/S/fYZ0UbRAqGDQFbS74GSQ/reuters-edgar-su.jpg",
       "fonte": "g1 Economia",
-      "data": "13/11/2026",
-      "link": "https://g1.globo.com/tecnologia/noticia/2026/11/13/chat-gpt-wallet.ghtml",
+      "data": "14/11/2026",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/14/desperdicio-de-alimentos.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A OpenAI lançou uma carteira digital desenvolvida em parceria com American Express, Mastercard e Visa para permitir que o ChatGPT realize compras e pagamentos.",
-            "Nesta fase inicial nos Estados Unidos, o serviço está disponível apenas para assinantes do ChatGPT Pro maiores de **18 anos** e com cartões elegíveis emitidos no país.",
-            "O sistema opera por meio do dots, um agente de inteligência artificial que executa tarefas e efetua pagamentos sem expor os dados reais do cartão do usuário."
+            "A ONU estima que **60%** do desperdício de alimentos ocorre nas residências; o Programa das Nações Unidas para o Meio Ambiente (PNUMA) aponta mais de **1 bilhão** de toneladas desperdiçadas por ano (relatório 2024) enquanto **645 milhões** de pessoas enfrentam a fome.",
+            "Até o momento, apenas 30 países inseriram a perda ou desperdício de alimentos em seus planos nacionais de ação climática; Clementine O'Connor, coordenadora do PNUMA, espera que a atual atenção política amplie essa inclusão."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Cada transação exige autorização do titular acompanhada de verificação de segurança, como reconhecimento facial ou leitura de impressão digital.",
-            "A rede de pagamentos gera um token temporário com número, código de segurança e validade próprios para concluir a compra sem expor informações originais.",
-            "A OpenAI planeja permitir no futuro que a IA realize compras inteiras de forma autônoma, mediante regras prévias de limites de gastos e categorias permitidas."
+            "No Brasil, pesquisa de 2023 no Rio de Janeiro, com 102 domicílios (86 participantes ativos), revelou que resíduos alimentares correspondem a **62%** da massa total de resíduos domésticos, resultando em 77 kg de alimentos desperdiçados por pessoa ao ano.",
+            "A mesma pesquisa indica que as residências são responsáveis por **60%** do desperdício de alimentos, seguidas pelos serviços de alimentação (restaurantes e refeitórios escolares) com **28%** e o varejo com **12%**."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "O ChatGPT é utilizado semanalmente por cerca de **1,2 bilhão** de pessoas, e a nova ferramenta busca converter pesquisas de produtos em transações concluídas."
+            "Reduzir à metade o desperdício global de alimentos até 2030 está entre as metas dos ODS; a decomposição em aterros produz metano, gás 84 vezes mais potente que o CO₂ em um período de **20 anos**, agravando as mudanças climáticas.",
+            "A criadora de conteúdo turca Ceren Özkan afirma que, desde 2019, adota um estilo de vida “desperdício zero”, comprando apenas a quantidade necessária, apesar de desafios como mudança de casa, doenças ou viagens."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "O PNUMA ressalta que, ao contrário da narrativa anterior, o desperdício de alimentos nas residências apresenta níveis semelhantes em países de alta e baixa renda, confirmando que se trata de um problema global."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Traições que abalaram o mundo: além do escândalo da Nvidia, relembre histórias de Bill Clinton a **Dom Pedro I**",
+      "subtitulo": "A gigante de tecnologia Nvidia perdeu US$ 1,081 trilhão, o equivalente a cerca de R$ 6,1 trilhões",
+      "imagem": "https://s2-g1.glbimg.com/xP9-Zm7xPLwWOWcAEgxUR-dgTjk=/5670x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/U/k/LRZNAERUS7zjnFPnIJyw/2024-08-22t014430z-1799508769-hp1ek8m04u33j-rtrmadp-3-usa-election-democrats.jpg",
+      "fonte": "g1 Mundo",
+      "data": "14/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/14/traicoes-que-abalaram-o-mundo-alem-do-escandalo-da-nvidia-relembre-historias-de-bill-clinton-a-dom-pedro-i.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A gigante de tecnologia Nvidia perdeu **US$ 1,081 trilhão**, o equivalente a cerca de **R$ 6,1 trilhões**, em valor de mercado em menos de duas semanas após oito pregões, em queda motivada por suspeitas de espionagem chinesa e pela renúncia do CEO Jensen Huang.",
+            "Em 1998, veio a público o relacionamento extraconjugal entre o então presidente dos EUA, Bill Clinton, e a ex-estagiária Monica Lewinsky, iniciado em novembro de 1995, quando Clinton tinha **49 anos** e Lewinsky, 22."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Após Clinton negar o caso sob juramento e publicamente em janeiro de 1998, um vestido azul-marinho com manchas de sêmen comprovou a relação por DNA, levando o presidente a admitir o ato e pedir desculpas em pronunciamento.",
+            "A Câmara dos Representantes aprovou dois artigos de impeachment contra Bill Clinton em dezembro de 1998 por perjúrio e obstrução da Justiça, mas o Senado não reuniu votos para condená-lo em fevereiro de 1999, permitindo que ele concluísse seu mandato em janeiro de 2001."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Na Rússia de 1999, um vídeo íntimo gravado por câmera escondida envolvendo o procurador-geral Yury Skuratov gerou uma crise política, com Vladimir Putin, então chefe do FSB, afirmando a autenticidade das imagens antes de Skuratov ser afastado em abril de 1999 e destituído em abril de 2000."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "No Brasil, Dom Pedro I manteve um relacionamento público com Domitila de Castro, a Marquesa de Santos, enquanto era casado com a imperatriz Leopoldina; após o fim da relação em 1829 e o desgaste político, o imperador abdicou do trono em 1831 e deixou o país para seu herdeiro de **5 anos**, Pedro II.",
+            "Em 1762, na Rússia, Catarina II, a Grande, uniu-se ao seu amante, o militar Grigori Orlov, para derrubar o próprio marido, o imperador Pedro III, aproveitando-se da insatisfação da nobreza e do Exército com as decisões políticas e assumindo o trono russo."
           ]
         }
       ],
