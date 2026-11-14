@@ -199,14 +199,58 @@ def carrega_imagem(ref):
         return None
 
 
+def saliencia(img):
+    """Mapa de saliência (spectral residual + contraste de cor), 0..1, em baixa resolução.
+    Aponta onde está o assunto da foto (animal, pessoa, produto) para o recorte não cortá-lo."""
+    import numpy as np
+    pequeno = img.convert("RGB").copy()
+    pequeno.thumbnail((128, 128))
+    rgb = np.asarray(pequeno, dtype=np.float32) / 255.0
+    cinza = rgb.mean(axis=2)
+    f = np.fft.fft2(cinza)
+    amp = np.log(np.abs(f) + 1e-6)
+    k = np.ones((3, 3), np.float32) / 9
+    pad = np.pad(amp, 1, mode="edge")
+    media = sum(pad[i:i + amp.shape[0], j:j + amp.shape[1]] * k[i, j] for i in range(3) for j in range(3))
+    sr = np.abs(np.fft.ifft2(np.exp(amp - media + 1j * np.angle(f)))) ** 2
+    lab = rgb - rgb.reshape(-1, 3).mean(axis=0)  # distância da cor média da foto
+    cor = np.sqrt((lab ** 2).sum(axis=2))
+    def norm01(m):
+        m = np.asarray(Image.fromarray((m / (m.max() + 1e-9) * 255).astype("uint8")).filter(ImageFilter.GaussianBlur(4)), np.float32)
+        return m / (m.max() + 1e-9)
+    mapa = 0.55 * norm01(sr) + 0.45 * norm01(cor)
+    h, w = mapa.shape
+    yy, xx = np.mgrid[0:h, 0:w]
+    centro = np.exp(-(((xx - w / 2) / (0.6 * w)) ** 2 + ((yy - h / 2) / (0.6 * h)) ** 2))
+    return mapa * (0.65 + 0.35 * centro)
+
+
 def cobre(img, w, h, foco_y=0.45):
-    """Recorta/escala para preencher w×h (object-fit: cover)."""
+    """Escala para preencher w×h (object-fit: cover) e escolhe o recorte que mantém o assunto da foto."""
     iw, ih = img.size
     esc = max(w / iw, h / ih)
     nw, nh = int(iw * esc + 0.5), int(ih * esc + 0.5)
     img = img.resize((nw, nh), Image.LANCZOS)
     x = (nw - w) // 2
     y = int(max(0, min(nh - h, (nh - h) * foco_y)))
+    try:
+        import numpy as np
+        if nw - w > 4 or nh - h > 4:
+            m = saliencia(img)
+            mh, mw = m.shape
+            if nw - w > 4:  # recorte horizontal: janela com mais saliência
+                jw = max(1, round(mw * w / nw))
+                col = np.convolve(m.sum(axis=0), np.ones(jw), mode="valid")
+                x = int(round(int(col.argmax()) * nw / mw))
+                x = max(0, min(nw - w, x))
+            if nh - h > 4:  # recorte vertical (foto em pé): idem, levemente puxado para cima
+                jh = max(1, round(mh * h / nh))
+                lin = np.convolve(m.sum(axis=1), np.ones(jh), mode="valid")
+                lin = lin * np.linspace(1.08, 0.92, len(lin))
+                y = int(round(int(lin.argmax()) * nh / mh))
+                y = max(0, min(nh - h, y))
+    except Exception as e:
+        print(f"  ! recorte inteligente indisponível ({e}); usando o centro", file=sys.stderr)
     return img.crop((x, y, x + w, y + h))
 
 
@@ -252,9 +296,18 @@ def gradiente_vertical(w, h, paradas):
 def feed_capa(post):
     W, H = FEED_W, FEED_H
     foto = carrega_imagem(post.get("imagem"))
-    base = cobre(foto, W, H) if foto else fundo_sem_foto(W, H, post.get("categoria", ""))
-    preto = Image.new("RGB", (W, H), PRETO)
-    base = Image.composite(preto, base, gradiente_vertical(W, H, [(0, 120), (0.16, 0), (0.34, 0), (0.56, 232), (0.68, 250), (1, 255)]))
+    if foto:
+        # a foto ocupa só a parte de cima (onde fica visível); embaixo, fundo preto para a manchete.
+        # Assim a foto inteira aparece, sem a metade de baixo escondida no degradê.
+        H_FOTO = 880
+        base = Image.new("RGB", (W, H), PRETO)
+        base.paste(cobre(foto, W, H_FOTO), (0, 0))
+        base = Image.composite(Image.new("RGB", (W, H), PRETO), base,
+                               gradiente_vertical(W, H, [(0, 120), (0.15, 0), (0.42, 0), (0.60, 235), (0.66, 255), (1, 255)]))
+    else:
+        base = fundo_sem_foto(W, H, post.get("categoria", ""))
+        base = Image.composite(Image.new("RGB", (W, H), PRETO), base,
+                               gradiente_vertical(W, H, [(0, 120), (0.16, 0), (0.34, 0), (0.56, 232), (0.68, 250), (1, 255)]))
     d = ImageDraw.Draw(base)
 
     # marca no topo, centralizada
