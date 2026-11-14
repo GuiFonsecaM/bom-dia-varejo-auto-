@@ -3,28 +3,38 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Pecuária de elite: como uma vaca pode valer **R$ 54 milhões** e render fortunas com genética e clonagem",
-      "subtitulo": "",
-      "imagem": "https://s2-g1.glbimg.com/sbDNqJ508W3duKYf20Aab14BVdE=/4240x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/m/Z/AhNWqiQbGYoOBM5kO6qQ/donna-no-pasto.jpg",
-      "fonte": "g1 Economia",
+      "manchete": "Motorola tem novo presidente global; **confira outras movimentações**",
+      "subtitulo": "A Motorola nomeou Amar Babu como novo presidente global, com início oficial em 1 de janeiro de 2027",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/Motorola-divulgMotorola-Copy.webp",
+      "fonte": "Mercado & Consumo",
       "data": "14/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/14/pecuaria-de-elite-como-uma-vaca-pode-render-fortunas-com-genetica-e-clonagem.ghtml",
+      "link": "https://mercadoeconsumo.com.br/14/11/2026/gestao/motorola-tem-novo-presidente-global-confira-outras-movimentacoes/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A vaca Donna FIV CIAV, avaliada em **R$ 54 milhões**, é considerada a mais cara do mundo e vive atualmente na Fazenda Mata Velha, em Minas Gerais, após nascer no Paraná em 2015.",
-            "A valorização recorde ocorreu em novembro de 2025, no leilão Cataratas Collection, quando as empresas Nelore Huff e Traia Nelore arremataram **25%** da animal por **R$ 13,5 milhões**.",
-            "A propriedade é dividida entre cinco sócios: Agro Mata Velha, Nelore Huff (do cantor Murilo Huff), Traia Nelore, Casa Branca Agropastoril e Agropecuária LMC."
+            "A Motorola nomeou Amar Babu como novo presidente global, com início oficial em 1 de janeiro de 2027; ele é atualmente vice‑presidente sênior da Lenovo e presidente da região Ásia‑Pacífico, onde atua desde 2007, e tem passagens pela Intel, HCL e Citibank."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O lucro com a vaca de elite vem da exploração comercial de sua genética, incluindo a venda de óvulos (pacotes com cerca de **100 unidades** por **R$ 3 milhões**), prenhezes e filhotes.",
-            "Donna passa por aspiração folicular a cada 30 dias, gerando cerca de 100 oócitos e aproximadamente 12 prenhezes por procedimento, maximizando a multiplicação genética.",
-            "A pecuária de elite utiliza biotecnologias como fertilização in vitro (FIV) e clonagem, técnicas lideradas no Brasil por pesquisadores como Rodolfo Rumpf, cujo laboratório já entregou mais de 700 clones bovinos."
+            "O Salc Group, controlador da Hinode, anunciou João Del Cura como novo CEO; ele foi vice‑presidente de Operações da Hinode por cinco anos, trabalhou dez anos na Unilever e foi diretor de Operações da L’Occitane Brasil, possui graduação em engenharia química e MBA em marketing pela Unicamp e mais de duas décadas de experiência."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A Roche Diagnóstica Brasil trouxe Renato Arruda para a direção de Marketing, Medical e Acesso; ele tem mais de **25 anos** no setor de saúde, foi sócio‑consultor na Mantik, ocupou cargos executivos na Novartis Brasil, mais de cinco anos na Medtronic (diretor de Contas Estratégicas…",
+            "A Emana, marca do Grupo Piracanjuba, designou Rodrigo Hilbert, criador da marca e apresentador, como diretor de Marca, permitindo-lhe acompanhar de perto a evolução da empresa que ajudou a fundar."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "A Zurich Seguros nomeou Raphael Fagaraz como CFO no Brasil, consolidando **14 anos** na companhia (ingressou em 2012) e experiência em planejamento financeiro, valuation, M&A e tesouraria; liderou a tesouraria da América Latina em 2021 e retornou ao Brasil em março de 2026.",
+            "A Gupy anunciou Bianca Franzini como nova CHRO; sua trajetória inclui cargos nas Pernambucanas, Ambev e consultorias estratégicas, além de atuação recente na startup Frubana, que opera em quatro países."
           ]
         }
       ],
@@ -39,76 +49,40 @@
     },
     {
       "tipo": "noticia",
-      "categoria": "Política",
-      "manchete": "Mercado financeiro prevê juros de dois dígitos até 2030, **ao longo dos dois mandatos de Lula**",
-      "subtitulo": "",
-      "imagem": "https://s2-g1.glbimg.com/VuzTn6Yij6ZJYxsTuxUxcNSdN0Q=/3840x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/D/Q/ZCK9dMTVqgKZh8QCpQ5w/globo-canal-4-20261026-2000-frame-128002.jpeg",
-      "fonte": "g1 Política",
-      "data": "14/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/14/mercado-financeiro-preve-juros-de-dois-digitos-ate-2030-ao-longo-dos-dois-mandatos-de-lula.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "Economistas de mais de 100 instituições financeiras consultados pelo Banco Central preveem que a taxa Selic permanecerá em dois dígitos, acima de **10%** ao ano, até 2030.",
-            "Se a projeção se confirmar, o presidente Lula passará integralmente o seu terceiro e o seu quarto mandatos com taxas de juros de dois dígitos ao ano.",
-            "Atualmente, a taxa básica de juros está fixada em **13,75%** ao ano, enquanto a inflação prevista para os próximos **12 meses** resulta em um juro real de **9,49%** ao ano, o maior patamar global."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "O endividamento público brasileiro alcançou **82,9%** do PIB segundo o critério do Banco Central e **95,2%** do PIB de acordo com os cálculos do FMI, superando a média dos emergentes.",
-            "Analistas apontam que a manutenção de juros altos reflete déficits fiscais contínuos, flexibilização de metas e o crescimento estrutural das despesas obrigatórias do governo."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#politica",
-        "#economia",
-        "#brasil",
-        "#noticias"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Economia",
-      "manchete": "Um bilhão de refeições no lixo todo dia; como evitar desperdício de **alimentos em casa?**",
-      "subtitulo": "A ONU estima que 60% do desperdício de alimentos ocorre nas residências",
-      "imagem": "https://s2-g1.glbimg.com/eRufZ9jt3DXcExNN5N6-TGwjA04=/5000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/M/S/fYZ0UbRAqGDQFbS74GSQ/reuters-edgar-su.jpg",
-      "fonte": "g1 Economia",
+      "manchete": "Dívidas rurais: renegociação avança em meio à crise de crédito e à pressão sobre o **Banco do Brasil**",
+      "subtitulo": "O Congresso Nacional aprovou o texto da MPV 1.376/26",
+      "imagem": "https://www.moneytimes.com.br/uploads/2026/07/dividas-rurais.jpg",
+      "fonte": "Money Times",
       "data": "14/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/14/desperdicio-de-alimentos.ghtml",
+      "link": "https://www.moneytimes.com.br/dividas-rurais-renegociacao-avanca-em-meio-a-crise-de-credito-e-a-pressao-sobre-o-banco-do-brasil-pads/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A ONU estima que **60%** do desperdício de alimentos ocorre nas residências; o Programa das Nações Unidas para o Meio Ambiente (PNUMA) aponta mais de **1 bilhão** de toneladas desperdiçadas por ano (relatório 2024) enquanto **645 milhões** de pessoas enfrentam a fome.",
-            "Até o momento, apenas 30 países inseriram a perda ou desperdício de alimentos em seus planos nacionais de ação climática; Clementine O'Connor, coordenadora do PNUMA, espera que a atual atenção política amplie essa inclusão."
+            "O Congresso Nacional aprovou o texto da MPV 1.376/26, que trata da renegociação de dívidas rurais e aguarda a sanção presidencial para virar lei, em meio à preocupação com o endividamento e a uma safra estimada em **367 milhões** de toneladas.",
+            "As regras valem para produtores e cooperativas afetados por duas ou mais quebras de safra por eventos climáticos extremos ou queda de preços de comercialização, com exigência mínima de **30%** de redução na renda bruta, ou **25%** para regiões da Sudam, Sudene e Sudeco."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "No Brasil, pesquisa de 2023 no Rio de Janeiro, com 102 domicílios (86 participantes ativos), revelou que resíduos alimentares correspondem a **62%** da massa total de resíduos domésticos, resultando em 77 kg de alimentos desperdiçados por pessoa ao ano.",
-            "A mesma pesquisa indica que as residências são responsáveis por **60%** do desperdício de alimentos, seguidas pelos serviços de alimentação (restaurantes e refeitórios escolares) com **28%** e o varejo com **12%**."
+            "O prazo para adesão ao benefício é de até 120 dias após a regulamentação da futura lei, permitindo prorrogar vencimentos para além do final de 2026, com limites financeiros e juros variando de acordo com o porte do produtor e a gravidade das perdas.",
+            "Para perdas gerais, os limites e taxas anuais são: Pronaf até **R$ 400 mil** com juros de **6%**; Pronamp até **R$ 2 milhões** com juros de **9%**; e médios/grandes produtores até **R$ 4 milhões** com juros de **12%**."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Reduzir à metade o desperdício global de alimentos até 2030 está entre as metas dos ODS; a decomposição em aterros produz metano, gás 84 vezes mais potente que o CO₂ em um período de **20 anos**, agravando as mudanças climáticas.",
-            "A criadora de conteúdo turca Ceren Özkan afirma que, desde 2019, adota um estilo de vida “desperdício zero”, comprando apenas a quantidade necessária, apesar de desafios como mudança de casa, doenças ou viagens."
+            "Para perdas mais severas e comprovadas, os limites e taxas são: Pronaf até **R$ 500 mil** com juros de **5%**; Pronamp até **R$ 2,5 milhões** com juros de **8%**; e médios/grandes produtores até **R$ 8 milhões** com juros de **11%**.",
+            "O estoque total das dívidas está estimado pelo governo entre **R$ 100 bilhões** e **R$ 120 bilhões**, com subsídios vindos de crédito rural obrigatório, LCAs, poupança rural, orçamento da União e fundos constitucionais FNO, FNE e FCO."
           ]
         },
         {
           "titulo": "O que vem agora",
           "topicos": [
-            "O PNUMA ressalta que, ao contrário da narrativa anterior, o desperdício de alimentos nas residências apresenta níveis semelhantes em países de alta e baixa renda, confirmando que se trata de um problema global."
+            "O Banco do Brasil registrou queda de **66,5%** no lucro do terceiro trimestre de 2026 comparado ao ano anterior, impactado por **R$ 21 bilhões** em provisões para perdas no agronegócio, o que pressionou suas ações na B3."
           ]
         }
       ],
@@ -122,41 +96,77 @@
       "feed": false
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "Traições que abalaram o mundo: além do escândalo da Nvidia, relembre histórias de Bill Clinton a **Dom Pedro I**",
-      "subtitulo": "A gigante de tecnologia Nvidia perdeu US$ 1,081 trilhão, o equivalente a cerca de R$ 6,1 trilhões",
-      "imagem": "https://s2-g1.glbimg.com/xP9-Zm7xPLwWOWcAEgxUR-dgTjk=/5670x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/U/k/LRZNAERUS7zjnFPnIJyw/2024-08-22t014430z-1799508769-hp1ek8m04u33j-rtrmadp-3-usa-election-democrats.jpg",
-      "fonte": "g1 Mundo",
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Lula se encontra com presidente das Filipinas e fala em integrar minerais críticos do Brasil com indústria **local de semicondutores**",
+      "subtitulo": "O presidente Luiz Inácio Lula da Silva se encontrou neste sábado (14) com o presidente das Filipinas",
+      "imagem": "https://s2-g1.glbimg.com/ztmuAYutqvFaKkW94AFEPaVem5I=/2048x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/Z/A/GjD23IT86Bv4kn8xL25Q/55649135842-76af97ee3a-k.jpg",
+      "fonte": "g1 Política",
       "data": "14/11/2026",
-      "link": "https://g1.globo.com/mundo/noticia/2026/11/14/traicoes-que-abalaram-o-mundo-alem-do-escandalo-da-nvidia-relembre-historias-de-bill-clinton-a-dom-pedro-i.ghtml",
+      "link": "https://g1.globo.com/politica/noticia/2026/11/14/lula-se-encontra-com-presidente-das-filipinas-e-fala-em-integrar-minerais-criticos-do-brasil-com-industria-local-de-semicondutores.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A gigante de tecnologia Nvidia perdeu **US$ 1,081 trilhão**, o equivalente a cerca de **R$ 6,1 trilhões**, em valor de mercado em menos de duas semanas após oito pregões, em queda motivada por suspeitas de espionagem chinesa e pela renúncia do CEO Jensen Huang.",
-            "Em 1998, veio a público o relacionamento extraconjugal entre o então presidente dos EUA, Bill Clinton, e a ex-estagiária Monica Lewinsky, iniciado em novembro de 1995, quando Clinton tinha **49 anos** e Lewinsky, 22."
+            "O presidente Luiz Inácio Lula da Silva se encontrou neste sábado (14) com o presidente das Filipinas, Ferdinand Marcos Jr, em Manila, na primeira visita de um chefe de Estado brasileiro ao país asiático.",
+            "A viagem marca as celebrações de **80 anos** de relações diplomáticas entre o Brasil e as Filipinas, com foco na integração econômica e tecnológica.",
+            "Lula afirmou que os dois países pretendem unir cadeias produtivas de minerais críticos e semicondutores, aproximando universidades, centros de pesquisa e empresas."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Após Clinton negar o caso sob juramento e publicamente em janeiro de 1998, um vestido azul-marinho com manchas de sêmen comprovou a relação por DNA, levando o presidente a admitir o ato e pedir desculpas em pronunciamento.",
-            "A Câmara dos Representantes aprovou dois artigos de impeachment contra Bill Clinton em dezembro de 1998 por perjúrio e obstrução da Justiça, mas o Senado não reuniu votos para condená-lo em fevereiro de 1999, permitindo que ele concluísse seu mandato em janeiro de 2001."
+            "O Brasil possui a segunda maior reserva global de terras raras, enquanto as Filipinas contam com um parque industrial dedicado à produção de chips e componentes eletrônicos.",
+            "Minerais como lítio, níquel, cobalto, cobre e terras raras são fundamentais para criar baterias, energia limpa e insumos para semicondutores usados em celulares e carros.",
+            "As Filipinas compram **25%** de toda a carne suína exportada pelo Brasil, sendo o maior mercado externo do produto, e respondem por quase metade do consumo local da carne brasileira."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Na Rússia de 1999, um vídeo íntimo gravado por câmera escondida envolvendo o procurador-geral Yury Skuratov gerou uma crise política, com Vladimir Putin, então chefe do FSB, afirmando a autenticidade das imagens antes de Skuratov ser afastado em abril de 1999 e destituído em abril de 2000."
+            "A comitiva brasileira trata no país asiático sobre a preocupação de evitar que restrições a importações de carne suína se estendam pelo ano de 2027."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "França se prepara para novo dia de mobilização nacional com mais de 300 protestos e **70 mil policiais**",
+      "subtitulo": "A França realiza neste sábado (14) o quinto fim de semana seguido de protestos contra o custo de vida",
+      "imagem": "https://s2-g1.glbimg.com/q5rKtgwsW97ZeyNimQBCswt1rIs=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/M/x/0BHmCRTPeGqKcuCz9wrg/2026-11-10t133508z-1139466383-rc23joatxibi-rtrmadp-3-france-protest.jpg",
+      "fonte": "g1 Mundo",
+      "data": "14/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/14/franca-se-prepara-para-novo-dia-de-mobilizacao-nacional-com-mais-de-300-protestos-e-70-mil-policiais.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A França realiza neste sábado (14) o quinto fim de semana seguido de protestos contra o custo de vida, reunindo mais de 300 atos previstos em todo o país e uma mobilização que se expandiu para pautas políticas, salariais e educacionais.",
+            "O governo mobilizou cerca de **70 mil** policiais para a operação de segurança, mesmo efetivo dos três sábados anteriores desde a intensificação iniciada em 24 de outubro, com estimativa de **30 mil** a **60 mil** participantes em Paris."
           ]
         },
         {
-          "titulo": "O que vem agora",
+          "titulo": "Mais detalhes",
           "topicos": [
-            "No Brasil, Dom Pedro I manteve um relacionamento público com Domitila de Castro, a Marquesa de Santos, enquanto era casado com a imperatriz Leopoldina; após o fim da relação em 1829 e o desgaste político, o imperador abdicou do trono em 1831 e deixou o país para seu herdeiro de **5 anos**, Pedro II.",
-            "Em 1762, na Rússia, Catarina II, a Grande, uniu-se ao seu amante, o militar Grigori Orlov, para derrubar o próprio marido, o imperador Pedro III, aproveitando-se da insatisfação da nobreza e do Exército com as decisões políticas e assumindo o trono russo."
+            "Em Paris, a marcha programada para este sábado tem saída prevista da Praça da República às 13h (hora local), passando pela Bastilha até a Praça da Nação, com trajeto planejado para permitir a saída segura de famílias.",
+            "O movimento unificado reúne sindicatos, associações, estudantes, organizações de direitos humanos e a coordenação nacional dos coletes amarelos, que registrava 338 manifestações programadas na sexta-feira (13)."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A tensão social continua com uma nova jornada de greves e protestos convocada para a próxima terça-feira (17) pela CGT, após o governo rejeitar o reajuste do índice salarial dos servidores públicos e a adesão da CFDT do setor público."
           ]
         }
       ],

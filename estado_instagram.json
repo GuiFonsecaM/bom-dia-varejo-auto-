@@ -298,7 +298,36 @@
   "g1.globo.com/mundo/noticia/2026/11/14/o-efeito-cascata-da-suspensao-de-voos-nos-eua-trens-sobrecarregados-brasil-impactado-e-horas-para-normalizar-fluxo.ghtml",
   "g1.globo.com/mundo/noticia/2026/11/14/caos-aereo-10-perguntas-e-respostas-sobre-a-paralisacao-dos-aeroportos-nos-estados-unidos.ghtml",
   "g1.globo.com/trabalho-e-carreira/noticia/2026/11/14/quais-sao-os-proximos-feriados-de-2026.ghtml",
-  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-voos-secretario-diz-que-houve-inconsistencias-entre-radar-e-torre-e-que-sistema-de-trafego-aereo-e-velho.ghtml"
+  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-voos-secretario-diz-que-houve-inconsistencias-entre-radar-e-torre-e-que-sistema-de-trafego-aereo-e-velho.ghtml",
+  "moneytimes.com.br/dividas-rurais-renegociacao-avanca-em-meio-a-crise-de-credito-e-a-pressao-sobre-o-banco-do-brasil-pads",
+  "moneytimes.com.br/sem-sinal-fiscal-crivel-pessimismo-com-selic-e-pib-deve-seguir-punindo-acoes-ciclicas-pads",
+  "g1.globo.com/empreendedorismo/noticia/2026/11/14/dividas-do-mei-serao-perdoadas-automaticamente.ghtml",
+  "g1.globo.com/politica/noticia/2026/11/14/lula-se-encontra-com-presidente-das-filipinas-e-fala-em-integrar-minerais-criticos-do-brasil-com-industria-local-de-semicondutores.ghtml",
+  "mercadoeconsumo.com.br/14/11/2026/gestao/motorola-tem-novo-presidente-global-confira-outras-movimentacoes",
+  "poder360.com.br/poder-internacional/jensen-huang-da-nvidia-e-convocado-por-senado-dos-eua",
+  "g1.globo.com/politica/noticia/2026/11/14/nas-filipinas-ministro-diz-estar-otimista-com-negociacoes-e-que-restricao-a-carne-suina-do-brasil-e-medida-de-60-dias.ghtml",
+  "mercadoeconsumo.com.br/14/11/2026/noticias-varejo/vestcasa-libera-adesao-gratuita-ao-clube-para-chegar-a-4-milhoes-de-associados",
+  "g1.globo.com/mundo/noticia/2026/11/14/franca-se-prepara-para-novo-dia-de-mobilizacao-nacional-com-mais-de-300-protestos-e-70-mil-policiais.ghtml",
+  "bbc.com/portuguese/articles/c8g46qzzn3gvo",
+  "poder360.com.br/poder-sustentavel/el-nino-pode-causar-perdas-de-us-11-trilhoes-em-5-anos",
+  "poder360.com.br/poder-justica/mp-do-paraguai-acusa-santiago-pena-de-associacao-criminosa",
+  "g1.globo.com/mundo/noticia/2026/11/14/caos-aereo-eua-atrasos-cancelamentos-voos.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/em-retorno-a-cidade-onde-foi-bispo-papa-leao-xiv-comanda-rito-de-coroacao-da-virgem-imaculada-no-peru.ghtml",
+  "poder360.com.br/poder-brasil/aeroportos-de-guarulhos-e-galeao-tem-13-voos-cancelados-apos-falha-nos-eua",
+  "moneytimes.com.br/magazine-luiza-mglu3-lidera-ganhos-com-alta-de-mais-de-39-enquanto-csn-csna3-e-a-pior-acao-da-semana-veja-o-que-rolou-no-ibovespa-davs",
+  "poder360.com.br/poder-justica/cnj-exige-contexto-de-morte-em-acao-policial-nas-certidoes-de-obito",
+  "poder360.com.br/poder-economia/mercado-espera-mais-medidas-fiscais-mas-aliados-de-lula-resistem",
+  "poder360.com.br/poder-internacional/cop31-na-turquia-supera-a-cop30-do-brasil-em-lideres-presentes",
+  "moneytimes.com.br/mais-de-um-ano-depois-preco-do-bitcoin-segue-40-abaixo-da-maxima-historica-enquanto-black-friday-da-empiricus-abre-acesso-a-tres-ias-para-o-mercado-cripto-lbrdgm106",
+  "bbc.com/portuguese/articles/cr1ewpp21dp8o",
+  "g1.globo.com/tecnologia/noticia/2026/11/14/italia-multa-meta.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/eua-propoem-que-ucrania-ceda-territorio-a-russia-em-troca-de-entrada-na-otan-diz-zelensky.ghtml",
+  "moneytimes.com.br/de-calote-a-briga-milionaria-na-justica-veja-o-que-movimentou-os-fundos-imobiliarios-fiis-na-semana-igdl",
+  "poder360.com.br/poder-justica/agu-segue-zanin-e-e-contra-nova-votacao-no-rio",
+  "bbc.com/portuguese/articles/cqly4nnregnjo",
+  "g1.globo.com/mundo/noticia/2026/11/14/papa-leao-xiv-volta-a-cidade-onde-viveu-por-quase-10-anos-e-reune-500-mil-pessoas-em-missa-no-peru.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/14/video-cruzeiro-colide-com-petroleiro-eua.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-decolagens-e-retirada-diz-faa.ghtml"
  ],
  "postados": [
   {
@@ -519,6 +548,34 @@
    "categoria": "Mundo",
    "titulo": "Traições que abalaram o mundo: além do escândalo da Nvidia, relembre histórias de Bill Clinton a Dom Pedro I",
    "em": "2026-11-14 09:00",
+   "feed": false
+  },
+  {
+   "chave": "mercadoeconsumo.com.br/14/11/2026/gestao/motorola-tem-novo-presidente-global-confira-outras-movimentacoes",
+   "categoria": "Varejo",
+   "titulo": "Motorola tem novo presidente global; confira outras movimentações",
+   "em": "2026-11-14 13:00",
+   "feed": true
+  },
+  {
+   "chave": "moneytimes.com.br/dividas-rurais-renegociacao-avanca-em-meio-a-crise-de-credito-e-a-pressao-sobre-o-banco-do-brasil-pads",
+   "categoria": "Economia",
+   "titulo": "Dívidas rurais: renegociação avança em meio à crise de crédito e à pressão sobre o Banco do Brasil",
+   "em": "2026-11-14 13:00",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/politica/noticia/2026/11/14/lula-se-encontra-com-presidente-das-filipinas-e-fala-em-integrar-minerais-criticos-do-brasil-com-industria-local-de-semicondutores.ghtml",
+   "categoria": "Política",
+   "titulo": "Lula se encontra com presidente das Filipinas e fala em integrar minerais críticos do Brasil com indústria local de semicondutores",
+   "em": "2026-11-14 13:00",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/mundo/noticia/2026/11/14/franca-se-prepara-para-novo-dia-de-mobilizacao-nacional-com-mais-de-300-protestos-e-70-mil-policiais.ghtml",
+   "categoria": "Mundo",
+   "titulo": "França se prepara para novo dia de mobilização nacional com mais de 300 protestos e 70 mil policiais",
+   "em": "2026-11-14 13:00",
    "feed": false
   }
  ]
