@@ -327,7 +327,27 @@
   "bbc.com/portuguese/articles/cqly4nnregnjo",
   "g1.globo.com/mundo/noticia/2026/11/14/papa-leao-xiv-volta-a-cidade-onde-viveu-por-quase-10-anos-e-reune-500-mil-pessoas-em-missa-no-peru.ghtml",
   "g1.globo.com/mundo/noticia/2026/11/14/video-cruzeiro-colide-com-petroleiro-eua.ghtml",
-  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-decolagens-e-retirada-diz-faa.ghtml"
+  "g1.globo.com/mundo/noticia/2026/11/13/suspensao-de-decolagens-e-retirada-diz-faa.ghtml",
+  "bbc.com/portuguese/articles/cmn8077z3xl6o",
+  "poder360.com.br/poder-congresso/ala-do-pt-defende-ajuste-fiscal-com-mais-impostos",
+  "mercadoeconsumo.com.br/14/11/2026/economia/99pay-lanca-aulas-online-gratuitas-de-financas-para-motoristas-e-entregadores",
+  "poder360.com.br/poder-eleicoes-2026/lula-e-outros-34-alvos-da-lava-jato-foram-eleitos-em-2026",
+  "g1.globo.com/mundo/noticia/2026/11/14/protestos-levam-mais-de-100-mil-pessoas-as-ruas-na-franca-equipe-de-tv-e-agredida-em-lyon.ghtml",
+  "g1.globo.com/pop-arte/noticia/2026/11/14/bandas-de-rock-fazem-show-improvisado-durante-paralizacao-de-voos-nos-estados-unidos.ghtml",
+  "poder360.com.br/poder-midia/italia-multa-meta-em-805-mi-de-euros-por-acesso-indevido-a-dados",
+  "poder360.com.br/poder-justica/fux-pede-destaque-para-julgamento-de-transicao-da-6-x-1",
+  "poder360.com.br/poder-governo/vitoria-no-brasil-serve-de-licao-contra-extrema-direita-diz-lula",
+  "bbc.com/portuguese/articles/c65ynevx7g5jo",
+  "g1.globo.com/politica/politico/noticia/2026/11/14/fux-suspende-julgamento-sobre-escala-5x2-e-leva-caso-para-plenario-fisico-do-stf.ghtml",
+  "poder360.com.br/poder-sportsmkt/corinthians-busca-acordo-com-o-mp-para-evitar-intervencao-judicial",
+  "poder360.com.br/poder-tech/microsoft-diz-que-servicos-foram-restabelecidos-apos-pane",
+  "poder360.com.br/poder-internacional/governo-trump-atribui-apagao-aereo-a-troca-de-cabos-nao-a-hacker",
+  "bbc.com/portuguese/articles/ckd71ne91y79o",
+  "bbc.com/portuguese/articles/c57429m97421o",
+  "g1.globo.com/mundo/noticia/2026/11/14/apagao-aereo-nos-eua-especialista-aponta-vulnerabilidade-no-sistema.ghtml",
+  "g1.globo.com/tecnologia/noticia/2026/11/14/controle-de-trafego-aereo-dos-eua-ainda-opera-com-disquetes-veja-como-eles-funcionam.ghtml",
+  "bbc.com/portuguese/articles/cmx2xnpeked2o",
+  "g1.globo.com/sp/sao-paulo/noticia/2026/11/14/brasileiros-retidos-por-mais-de-24-horas-em-aeroporto-de-punta-cana-conseguem-voo-de-volta-para-sp.ghtml"
  ],
  "postados": [
   {
@@ -576,6 +596,20 @@
    "categoria": "Mundo",
    "titulo": "França se prepara para novo dia de mobilização nacional com mais de 300 protestos e 70 mil policiais",
    "em": "2026-11-14 13:00",
+   "feed": false
+  },
+  {
+   "chave": "mercadoeconsumo.com.br/14/11/2026/economia/99pay-lanca-aulas-online-gratuitas-de-financas-para-motoristas-e-entregadores",
+   "categoria": "Varejo",
+   "titulo": "99Pay lança aulas online gratuitas de finanças para motoristas e entregadores",
+   "em": "2026-11-14 18:40",
+   "feed": true
+  },
+  {
+   "chave": "bbc.com/portuguese/articles/cmn8077z3xl6o",
+   "categoria": "Mundo",
+   "titulo": "Por que o México arrecada tão poucos impostos (e como financia seus crescentes benefícios sociais)",
+   "em": "2026-11-14 18:40",
    "feed": false
   }
  ]
