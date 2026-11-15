@@ -3,28 +3,28 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Hidratação nos chifres, 'damas de companhia' e dieta especial: o g1 acompanhou a rotina da vaca mais **cara do mundo**",
-      "subtitulo": "A vaca Donna FIV CIAV, considerada a mais cara do mundo e avaliada em R$ 54 milhões",
-      "imagem": "https://s2-g1.glbimg.com/QQlMmQSZL_wzBS9YlimnZgFGFHU=/4240x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/C/V/1QugYqTmK4BBGKF5HXyg/donna-toma-banho.jpg",
-      "fonte": "g1 Economia",
+      "manchete": "“Mais sangue e suor do que genialidade”: Marcus Teles fala sobre o **crescimento da Leitura**",
+      "subtitulo": "A Livraria Leitura prevê fechar o ano de 2026 com cerca de 144 lojas físicas",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/marcus_teles_ceo_livraria_leitura_divulgacao.webp",
+      "fonte": "Mercado & Consumo",
       "data": "15/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/15/o-g1-acompanhou-a-rotina-da-vaca-mais-cara-do-mundo.ghtml",
+      "link": "https://mercadoeconsumo.com.br/15/11/2026/entrevistas/mais-sangue-e-suor-do-que-genialidade-marcus-teles-fala-sobre-o-crescimento-da-leitura/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A vaca Donna FIV CIAV, considerada a mais cara do mundo e avaliada em **R$ 54 milhões**, pertence a cinco proprietários e possui três clones.",
-            "O animal nasceu no Paraná e atualmente é mantido na fazenda Mata Velha, localizada no município de Uberaba, em Minas Gerais.",
-            "A rotina diária de Donna inclui segurança 24 horas, dois banhos diários, aplicação de hidratação nos chifres e uma dieta equilibrada."
+            "A Livraria Leitura prevê fechar o ano de 2026 com cerca de **144 lojas** físicas, partindo de 132 ou **133 unidades** no início do ano.",
+            "Para 2027, a rede projeta a abertura de oito a dez novas unidades e planeja manter um ritmo de crescimento anual entre **10%** e **12%**.",
+            "As lojas físicas respondem por quase **80%** das vendas totais da rede, enquanto os livros representam **63%** do volume de negócios."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Os cuidados exclusivos decorrem do elevado valor genético da vaca, que integra o segmento da pecuária de elite no Brasil.",
-            "O setor foca em animais com traços valorizados por criadores, a exemplo de alta fertilidade e rapidez no ganho de peso.",
-            "Diferente do gado tradicional, os animais de elite não são destinados ao abate para carne ou à produção de leite comercializado em supermercados."
+            "A operação digital integra de 110 a **120 lojas** físicas conectadas aos seus próprios estoques, operando também via Mercado Livre, Shopee, Amazon e TikTok.",
+            "O modelo de gerente-sócio está presente em cerca de **70%** das unidades, permitindo que gerentes com melhores resultados se tornem sócios de novas filiais com participações nos lucros.",
+            "A empresa adota uma política de crescimento com capital próprio e endividamento zero, além de fechar unidades deficitárias após dois anos de prejuízo."
           ]
         }
       ],
@@ -38,83 +38,35 @@
       "feed": true
     },
     {
-      "tipo": "noticia",
-      "categoria": "Política",
-      "manchete": "'Cashback' da reforma tributária: cerca de **70 milhões** de pessoas começam a receber o benefício em janeiro; veja o que é preciso fazer",
-      "subtitulo": "O governo federal inicia em janeiro de 2027 a operacionalização do cashback da reforma tributária",
-      "imagem": "https://raw.githubusercontent.com/GuiFonsecaM/bom-dia-varejo-site/main/img/2026/11/9c0b852faf70.webp",
-      "fonte": "g1 Política",
-      "data": "15/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/15/cashback-da-reforma-tributaria-cerca-de-70-milhoes-de-pessoas-comecam-a-receber-o-beneficio-em-janeiro-veja-o-que-e-preciso-fazer.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "O governo federal inicia em janeiro de 2027 a operacionalização do cashback da reforma tributária, com o objetivo de reduzir as desigualdades de renda no país. A medida prevê a devolução de parte da Contribuição Sobre Bens e Serviços (CBS), imposto federal com alíquota estimada em **11,3%**.",
-            "Cerca de **70 milhões** de pessoas, divididas em **27,7 milhões** de famílias cadastradas, têm direito ao benefício. O programa deve injetar **R$ 10 bilhões** na economia em 2027."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "As faturas de energia elétrica, água, gás canalizado, esgoto e telefone terão dedução automática de **100%** da CBS logo em janeiro de 2027. Nas demais compras de produtos, exceto os do imposto seletivo, a população carente terá devolução de **20%** do imposto pago.",
-            "O público-alvo são famílias de baixa renda inscritas no Cadastro Único (CadÚnico) com renda per capita inferior a meio salário-mínimo, atualmente de **R$ 820,50,** limite que será reajustado em janeiro."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Para ter direito, é obrigatório ter CPF regular, manter os dados atualizados no CadÚnico com endereço correto e solicitar a nota fiscal com CPF em todas as compras a partir de 1º de janeiro. A inclusão no programa é automática, sem necessidade de cadastro prévio em agências ou portais.",
-            "A devolução do imposto sobre as compras será feita inicialmente de forma trimestral, com a primeira parcela paga até 25 de abril de 2027, somando janeiro, fevereiro e março. Posteriormente, sem data definida, os repasses passarão a ser mensais."
-          ]
-        },
-        {
-          "titulo": "O que vem agora",
-          "topicos": [
-            "O pagamento poderá ocorrer via Poupança Social na Caixa Econômica Federal ou por Pix usando o CPF como chave. Caso o cidadão não possua nenhuma das opções, uma Poupança Social será aberta automaticamente pela Caixa."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#politica",
-        "#economia",
-        "#brasil",
-        "#noticias"
-      ],
-      "feed": false
-    },
-    {
       "tipo": "mundo",
       "categoria": "Mundo",
-      "manchete": "Hackers invadem subsidiária dos Correios da França e expõem dados de **22 milhões**",
-      "subtitulo": "A Maileva, subsidiária do grupo postal francês La Poste",
-      "imagem": "https://s2-g1.glbimg.com/ZNdh30O885V0s-s77qnouJtrP7w=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/r/F/4fo9a1SPqypWWS2U2eAQ/imagem-001.png",
+      "manchete": "Milei afirma que disputará reeleição na Argentina em 2027: **'Sim, estou buscando a reeleição'**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/EwORcrN0iRHueDeYQaJ4cUODGGI=/1503x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/z/C/RF6fcATZ6nzanW7hZXUg/milei-reeleicao.png",
       "fonte": "g1 Mundo",
       "data": "15/11/2026",
-      "link": "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/15/hackers-invadem-subsidiaria-dos-correios-da-franca-e-expoem-dados-de-22-milhoes.ghtml",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/15/milei-reeleicao-presidencia-argentina-eleicoes-2027.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A Maileva, subsidiária do grupo postal francês La Poste, confirmou no sábado (14) ter sofrido um ataque cibernético em setembro, resultando no vazamento de dados de cerca de **22 milhões** de pessoas.",
-            "O volume de informações expostas atinge cerca de um terço da população da França e transforma o caso em um dos maiores vazamentos de dados registrados no país europeu."
+            "O presidente da Argentina, Javier Milei, confirmou no sábado (14) que disputará a reeleição à Presidência do país nas eleições de 2027, em evento no Museu da Casa Rosada, em Buenos Aires.",
+            "Milei assumiu o cargo em dezembro de 2023, após vencer as eleições com o \"Plano Motosserra\", e, caso vença em 2027, poderá governar até dezembro de 2031 com um segundo mandato.",
+            "O presidente estabeleceu a meta de ampliar as relações comerciais para negociar com **90%** do planeta até 2031, citando mais de 500 mercados abertos e acordos com Estados Unidos, Singapura e Europa."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "As informações vazadas englobam nomes, sobrenomes e endereços postais de destinatários de correspondências enviadas por empresas clientes da plataforma, mas a companhia garantiu que dados bancários e financeiros não foram comprometidos.",
-            "A plataforma Maileva é especializada no envio de holerites, faturas e notificações, integra o braço digital Docaposte, possui mais de **70 mil** usuários e processou **180 milhões** de documentos em 2024."
+            "Milei prometeu continuar reduzindo impostos, o que pode representar uma devolução de **US$ 500 bilhões** aos argentinos, e destacou pilares como desregulamentação, abertura econômica e capital humano.",
+            "A inflação anual caiu de **211,4%** em 2023 para **31,5%** em 2025, mas voltou a subir com **2,2%** em outubro, enquanto a pobreza atingiu **32,3%** no primeiro semestre de 2026 e o desemprego chegou a **7,9%** no segundo trimestre."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "O incidente foi comunicado à Comissão Nacional de Informática e Liberdades (CNIL) e motivou uma denúncia formal, dando início a uma investigação judicial sobre a invasão.",
-            "O caso atingiu clientes de empresas de habitação social, laboratórios de análises clínicas e hospitais, como cartas de cobrança do Hospital Foch acessadas por meio da empresa Kiwee.care com valores, datas e números de faturas."
+            "No âmbito legislativo, o partido A Liberdade Avança ampliou sua bancada após as eleições de outubro de 2025, embora ainda precise negociar acordos para aprovar reformas como a da Lei das Geleiras, aprovada em abril."
           ]
         }
       ],
@@ -130,33 +82,28 @@
     {
       "tipo": "noticia",
       "categoria": "Economia",
-      "manchete": "Juros altos devem manter FIDCs atrativos e adiar busca por mais risco, **diz Solis**",
-      "subtitulo": "",
-      "imagem": "https://www.infomoney.com.br/wp-content/uploads/2021/12/Ricardo-Binelli-socio-diretor-da-Solis-Investimentos-gestora-de-referencia-em-FIDCs-no-Brasil-e1784032641531.png",
-      "fonte": "InfoMoney",
+      "manchete": "Incerteza fiscal leva gestoras a elevar caixa e a rever apostas **em ativos brasileiros**",
+      "subtitulo": "A reeleição de Luiz Inácio Lula da Silva e as incertezas fiscais levaram gestoras de recursos a reduzir riscos",
+      "imagem": "https://www.moneytimes.com.br/uploads/2026/08/bolsa-brasil-acoes-mercado.jpg",
+      "fonte": "Money Times",
       "data": "15/11/2026",
-      "link": "https://www.infomoney.com.br/onde-investir/juros-altos-devem-manter-fidcs-atrativos-e-adiar-busca-por-mais-risco-diz-solis/",
+      "link": "https://www.moneytimes.com.br/incerteza-fiscal-leva-gestoras-a-elevar-caixa-e-a-rever-apostas-em-ativos-brasileiros-lmrs/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A taxa de juros elevada no Brasil deve continuar atraindo investidores para os Fundos de Investimento em Direitos Creditórios (FIDCs) e postergar a migração de recursos para ativos de maior risco, conforme avaliação de Ricardo Binelli, sócio-diretor da Solis Investimentos.",
-            "A gestora definiu seu planejamento estratégico entre o primeiro e o segundo turno, sem prever mudanças drásticas na carteira para o ano de 2027 e considerando projeções como as do Boletim Focus para juros altos."
+            "A reeleição de Luiz Inácio Lula da Silva e as incertezas fiscais levaram gestoras de recursos a reduzir riscos, elevar o caixa e buscar proteção em dólares e ações defensivas no Brasil.",
+            "Na Asset1, a carteira de ações está totalmente em caixa, enquanto a Fator encerrou posições aplicadas em juros curtos e vendidas em inflação implícita logo após o primeiro turno.",
+            "A Nero Capital aumentou a liquidez e reduziu posições em empresas domésticas cíclicas e endividadas, ampliando a exposição a setores favorecidos pelo real fraco e energia elétrica."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O cenário de continuidade fiscal e orçamentos engessados mantém o capital aplicado na renda fixa, distanciando investidores da Bolsa de Valores e de fundos multimercados, segundo a análise da gestora.",
-            "Com custos financeiros elevados, a Solis realiza revisões trimestrais em sua carteira e monitora rigorosamente os indicadores para avaliar a capacidade das empresas de honrar seus compromissos financeiros."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Para mitigar riscos, a gestora participa da criação de operações desde o início com parceiros especializados, buscando barrar empresas menos rigorosas e negociar melhores remunerações para cotas seniores e mezaninos.",
-            "A estratégia de investimentos exclui crédito pessoal sem garantia, agronegócio e empréstimos de longo prazo sem garantia para pequenas e médias empresas, focando em cinco frentes específicas."
+            "Na Cardinal Partners, o caixa atingiu um terço dos fundos de ações, recorde da casa, priorizando seguradoras, empresas com caixa líquido elevado e proteção contra a inflação.",
+            "Três gestoras multiprodutos anônimas, que administram juntas cerca de **R$ 120 bilhões**, também adotaram alocação mais conservadora, com reduções de exposição e proteção cambial.",
+            "Na Mantaro Capital, a exposição líquida do fundo Mantaro LB caiu de **75%** para **70%**, e no Equity Hedge recuou de **24%** em setembro para **14%** em outubro."
           ]
         }
       ],
@@ -166,6 +113,48 @@
         "#varejo",
         "#mercado",
         "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Trabalhador com câncer tem direitos no INSS e **pode sacar FGTS**",
+      "subtitulo": "Trabalhadores diagnosticados com câncer, ou que tenham dependentes com a doença",
+      "imagem": "https://static.poder360.com.br/uploads/2026/10/cancer-laco-simbolo.jpg",
+      "fonte": "Poder360",
+      "data": "15/11/2026",
+      "link": "https://www.poder360.com.br/poder-saude/trabalhador-com-cancer-tem-direitos-no-inss-e-pode-sacar-fgts/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Trabalhadores diagnosticados com câncer, ou que tenham dependentes com a doença, podem realizar o saque do FGTS pelo aplicativo da Caixa ou em agências, exigindo laudos, exames e formulário médico avaliado pela Perícia Médica Federal.",
+            "O auxílio por incapacidade temporária exige afastamento superior a 15 dias consecutivos, dispensa a carência de 12 contribuições mensais do INSS para casos de neoplasia maligna, mas exige manter a qualidade de segurado."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Para empregados com carteira assinada, a empresa paga os primeiros 15 dias de afastamento e o INSS assume a partir do 16º dia, com possibilidade de prorrogação caso persista a incapacidade profissional.",
+            "A aposentadoria por incapacidade permanente é concedida quando há limitações definitivas para qualquer atividade, dispensando as 12 contribuições mínimas e pagando **60%** da média de salários desde julho de 1994, com regras específicas para doenças do trabalho."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O BPC garante 1 salário mínimo por mês a pacientes sem cobertura previdenciária que comprovem impedimento de longo prazo com duração mínima de **2 anos**, renda familiar por pessoa de até 1/4 do salário mínimo e inscrição no CadÚnico.",
+            "A isenção do Imposto de Renda é concedida sobre aposentadorias, pensões, previdência privada e proventos de militares reformados, não se aplicando a salários da ativa, sendo permitida a restituição retroativa de até **5 anos**."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
       ],
       "feed": false
     }

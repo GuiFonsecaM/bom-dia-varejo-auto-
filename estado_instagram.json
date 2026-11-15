@@ -378,7 +378,30 @@
   "g1.globo.com/mundo/noticia/2026/11/15/avioes-colidem-no-aeroporto-de-miami-nos-eua.ghtml",
   "bbc.com/portuguese/articles/cqd09mr2e3eko",
   "infomoney.com.br/consumo/goldie-copo-raro-da-starbucks-vira-destaque-de-nova-colecao-de-natal-entenda",
-  "bbc.com/portuguese/articles/cm2kl0qy9x97o"
+  "bbc.com/portuguese/articles/cm2kl0qy9x97o",
+  "g1.globo.com/mundo/noticia/2026/11/15/milei-reeleicao-presidencia-argentina-eleicoes-2027.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/15/ira-ataca-bahrein.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/15/conflitos-oriente-medio-israel-hamas-ira-bahrein-jordania-iemen.ghtml",
+  "mercadoeconsumo.com.br/15/11/2026/entrevistas/mais-sangue-e-suor-do-que-genialidade-marcus-teles-fala-sobre-o-crescimento-da-leitura",
+  "g1.globo.com/mundo/noticia/2026/11/15/pequim-proibe-posse-de-drones-e-autoriza-policia-a-apreender-aparelhos.ghtml",
+  "moneytimes.com.br/incerteza-fiscal-leva-gestoras-a-elevar-caixa-e-a-rever-apostas-em-ativos-brasileiros-lmrs",
+  "poder360.com.br/poder-saude/trabalhador-com-cancer-tem-direitos-no-inss-e-pode-sacar-fgts",
+  "moneytimes.com.br/previa-do-pib-e-ata-do-fed-sao-destaques-da-semana-veja-o-calendario-de-indicadores-jcav",
+  "poder360.com.br/poder-justica/machado-de-xango-simbolo-de-orixa-da-justica-sera-inaugurado-no-stf",
+  "poder360.com.br/poder-sustentavel/paises-nao-estao-preparados-para-aquecimento-acima-de-15c-diz-onu",
+  "poder360.com.br/poder-educacao/enem-2026-tem-provas-de-matematica-e-ciencias-da-natureza-neste-domingo",
+  "poder360.com.br/poder-empreendedor/malharia-no-amapa-mira-contrato-com-petrobras-apos-petroleo",
+  "bbc.com/portuguese/articles/cqx2ey1zxjymo",
+  "poder360.com.br/poder-sustentavel/apos-reuniao-com-lula-canada-anuncia-us-400-mi-a-fundo-de-florestas",
+  "g1.globo.com/trabalho-e-carreira/noticia/2026/11/15/15-de-novembro-e-feriado-de-que-por-que-historiadores-acreditam-que-a-monarquia-sofreu-um-golpe.ghtml",
+  "poder360.com.br/poder-economia/15-milhoes-de-trabalhadores-correm-para-negociar-fim-da-6-x-1",
+  "poder360.com.br/poder-justica/cnj-aprova-politica-para-reduzir-acoes-previdenciarias",
+  "poder360.com.br/poder-economia/bets-tem-receita-bruta-de-r-6402-bilhoes-em-18-meses",
+  "g1.globo.com/mundo/noticia/2026/11/15/nvidia-megaspeed-alice-huang-espionagem-china-estados-unidos.ghtml",
+  "g1.globo.com/saude/noticia/2026/11/15/descobriram-um-tratamento-para-a-demencia-do-meu-filho-de-5-anos-mas-ele-custa-mais-de-r-20-milhoes.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/15/coreia-do-sul-investiga-1o-colocado-em-prova-apos-confissao-de-fraude-com-ia.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/15/encontro-trump-putin-xi-jinping-china-russia-eua.ghtml",
+  "g1.globo.com/sp/sao-paulo/noticia/2026/11/15/advogado-brasileiro-que-atuou-na-defesa-de-ex-general-venezuelano-e-encontrado-morto-na-espanha.ghtml"
  ],
  "postados": [
   {
@@ -676,6 +699,34 @@
    "categoria": "Economia",
    "titulo": "Juros altos devem manter FIDCs atrativos e adiar busca por mais risco, diz Solis",
    "em": "2026-11-15 09:00",
+   "feed": false
+  },
+  {
+   "chave": "mercadoeconsumo.com.br/15/11/2026/entrevistas/mais-sangue-e-suor-do-que-genialidade-marcus-teles-fala-sobre-o-crescimento-da-leitura",
+   "categoria": "Varejo",
+   "titulo": "“Mais sangue e suor do que genialidade”: Marcus Teles fala sobre o crescimento da Leitura",
+   "em": "2026-11-15 13:00",
+   "feed": true
+  },
+  {
+   "chave": "g1.globo.com/mundo/noticia/2026/11/15/milei-reeleicao-presidencia-argentina-eleicoes-2027.ghtml",
+   "categoria": "Mundo",
+   "titulo": "Milei afirma que disputará reeleição na Argentina em 2027: 'Sim, estou buscando a reeleição'",
+   "em": "2026-11-15 13:00",
+   "feed": false
+  },
+  {
+   "chave": "moneytimes.com.br/incerteza-fiscal-leva-gestoras-a-elevar-caixa-e-a-rever-apostas-em-ativos-brasileiros-lmrs",
+   "categoria": "Economia",
+   "titulo": "Incerteza fiscal leva gestoras a elevar caixa e a rever apostas em ativos brasileiros",
+   "em": "2026-11-15 13:00",
+   "feed": false
+  },
+  {
+   "chave": "poder360.com.br/poder-saude/trabalhador-com-cancer-tem-direitos-no-inss-e-pode-sacar-fgts",
+   "categoria": "Política",
+   "titulo": "Trabalhador com câncer tem direitos no INSS e pode sacar FGTS",
+   "em": "2026-11-15 13:00",
    "feed": false
   }
  ]
