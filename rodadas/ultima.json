@@ -1,3 +1,173 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Hidratação nos chifres, 'damas de companhia' e dieta especial: o g1 acompanhou a rotina da vaca mais **cara do mundo**",
+      "subtitulo": "A vaca Donna FIV CIAV, considerada a mais cara do mundo e avaliada em R$ 54 milhões",
+      "imagem": "https://s2-g1.glbimg.com/QQlMmQSZL_wzBS9YlimnZgFGFHU=/4240x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/C/V/1QugYqTmK4BBGKF5HXyg/donna-toma-banho.jpg",
+      "fonte": "g1 Economia",
+      "data": "15/11/2026",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/15/o-g1-acompanhou-a-rotina-da-vaca-mais-cara-do-mundo.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A vaca Donna FIV CIAV, considerada a mais cara do mundo e avaliada em **R$ 54 milhões**, pertence a cinco proprietários e possui três clones.",
+            "O animal nasceu no Paraná e atualmente é mantido na fazenda Mata Velha, localizada no município de Uberaba, em Minas Gerais.",
+            "A rotina diária de Donna inclui segurança 24 horas, dois banhos diários, aplicação de hidratação nos chifres e uma dieta equilibrada."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Os cuidados exclusivos decorrem do elevado valor genético da vaca, que integra o segmento da pecuária de elite no Brasil.",
+            "O setor foca em animais com traços valorizados por criadores, a exemplo de alta fertilidade e rapidez no ganho de peso.",
+            "Diferente do gado tradicional, os animais de elite não são destinados ao abate para carne ou à produção de leite comercializado em supermercados."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "'Cashback' da reforma tributária: cerca de **70 milhões** de pessoas começam a receber o benefício em janeiro; veja o que é preciso fazer",
+      "subtitulo": "O governo federal inicia em janeiro de 2027 a operacionalização do cashback da reforma tributária",
+      "imagem": "https://raw.githubusercontent.com/GuiFonsecaM/bom-dia-varejo-site/main/img/2026/11/9c0b852faf70.webp",
+      "fonte": "g1 Política",
+      "data": "15/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/15/cashback-da-reforma-tributaria-cerca-de-70-milhoes-de-pessoas-comecam-a-receber-o-beneficio-em-janeiro-veja-o-que-e-preciso-fazer.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O governo federal inicia em janeiro de 2027 a operacionalização do cashback da reforma tributária, com o objetivo de reduzir as desigualdades de renda no país. A medida prevê a devolução de parte da Contribuição Sobre Bens e Serviços (CBS), imposto federal com alíquota estimada em **11,3%**.",
+            "Cerca de **70 milhões** de pessoas, divididas em **27,7 milhões** de famílias cadastradas, têm direito ao benefício. O programa deve injetar **R$ 10 bilhões** na economia em 2027."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "As faturas de energia elétrica, água, gás canalizado, esgoto e telefone terão dedução automática de **100%** da CBS logo em janeiro de 2027. Nas demais compras de produtos, exceto os do imposto seletivo, a população carente terá devolução de **20%** do imposto pago.",
+            "O público-alvo são famílias de baixa renda inscritas no Cadastro Único (CadÚnico) com renda per capita inferior a meio salário-mínimo, atualmente de **R$ 820,50,** limite que será reajustado em janeiro."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Para ter direito, é obrigatório ter CPF regular, manter os dados atualizados no CadÚnico com endereço correto e solicitar a nota fiscal com CPF em todas as compras a partir de 1º de janeiro. A inclusão no programa é automática, sem necessidade de cadastro prévio em agências ou portais.",
+            "A devolução do imposto sobre as compras será feita inicialmente de forma trimestral, com a primeira parcela paga até 25 de abril de 2027, somando janeiro, fevereiro e março. Posteriormente, sem data definida, os repasses passarão a ser mensais."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "O pagamento poderá ocorrer via Poupança Social na Caixa Econômica Federal ou por Pix usando o CPF como chave. Caso o cidadão não possua nenhuma das opções, uma Poupança Social será aberta automaticamente pela Caixa."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Hackers invadem subsidiária dos Correios da França e expõem dados de **22 milhões**",
+      "subtitulo": "A Maileva, subsidiária do grupo postal francês La Poste",
+      "imagem": "https://s2-g1.glbimg.com/ZNdh30O885V0s-s77qnouJtrP7w=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/r/F/4fo9a1SPqypWWS2U2eAQ/imagem-001.png",
+      "fonte": "g1 Mundo",
+      "data": "15/11/2026",
+      "link": "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/15/hackers-invadem-subsidiaria-dos-correios-da-franca-e-expoem-dados-de-22-milhoes.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A Maileva, subsidiária do grupo postal francês La Poste, confirmou no sábado (14) ter sofrido um ataque cibernético em setembro, resultando no vazamento de dados de cerca de **22 milhões** de pessoas.",
+            "O volume de informações expostas atinge cerca de um terço da população da França e transforma o caso em um dos maiores vazamentos de dados registrados no país europeu."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "As informações vazadas englobam nomes, sobrenomes e endereços postais de destinatários de correspondências enviadas por empresas clientes da plataforma, mas a companhia garantiu que dados bancários e financeiros não foram comprometidos.",
+            "A plataforma Maileva é especializada no envio de holerites, faturas e notificações, integra o braço digital Docaposte, possui mais de **70 mil** usuários e processou **180 milhões** de documentos em 2024."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O incidente foi comunicado à Comissão Nacional de Informática e Liberdades (CNIL) e motivou uma denúncia formal, dando início a uma investigação judicial sobre a invasão.",
+            "O caso atingiu clientes de empresas de habitação social, laboratórios de análises clínicas e hospitais, como cartas de cobrança do Hospital Foch acessadas por meio da empresa Kiwee.care com valores, datas e números de faturas."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Juros altos devem manter FIDCs atrativos e adiar busca por mais risco, **diz Solis**",
+      "subtitulo": "",
+      "imagem": "https://www.infomoney.com.br/wp-content/uploads/2021/12/Ricardo-Binelli-socio-diretor-da-Solis-Investimentos-gestora-de-referencia-em-FIDCs-no-Brasil-e1784032641531.png",
+      "fonte": "InfoMoney",
+      "data": "15/11/2026",
+      "link": "https://www.infomoney.com.br/onde-investir/juros-altos-devem-manter-fidcs-atrativos-e-adiar-busca-por-mais-risco-diz-solis/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A taxa de juros elevada no Brasil deve continuar atraindo investidores para os Fundos de Investimento em Direitos Creditórios (FIDCs) e postergar a migração de recursos para ativos de maior risco, conforme avaliação de Ricardo Binelli, sócio-diretor da Solis Investimentos.",
+            "A gestora definiu seu planejamento estratégico entre o primeiro e o segundo turno, sem prever mudanças drásticas na carteira para o ano de 2027 e considerando projeções como as do Boletim Focus para juros altos."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O cenário de continuidade fiscal e orçamentos engessados mantém o capital aplicado na renda fixa, distanciando investidores da Bolsa de Valores e de fundos multimercados, segundo a análise da gestora.",
+            "Com custos financeiros elevados, a Solis realiza revisões trimestrais em sua carteira e monitora rigorosamente os indicadores para avaliar a capacidade das empresas de honrar seus compromissos financeiros."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Para mitigar riscos, a gestora participa da criação de operações desde o início com parceiros especializados, buscando barrar empresas menos rigorosas e negociar melhores remunerações para cotas seniores e mezaninos.",
+            "A estratégia de investimentos exclui crédito pessoal sem garantia, agronegócio e empréstimos de longo prazo sem garantia para pequenas e médias empresas, focando em cinco frentes específicas."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    }
+  ]
 }
