@@ -1,3 +1,173 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Endividamento das famílias pressiona resultados do Carrefour, **Assaí e GPA no 3º trimestre**",
+      "subtitulo": "O endividamento das famílias brasileiras impactou o orçamento e o varejo alimentar",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/08/compras-supermercado-envato.webp",
+      "fonte": "Mercado & Consumo",
+      "data": "16/11/2026",
+      "link": "https://mercadoeconsumo.com.br/16/11/2026/mc-capital/endividamento-das-familias-pressiona-resultados-do-carrefour-assai-e-gpa-no-3o-trimestre/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O endividamento das famílias brasileiras impactou o orçamento e o varejo alimentar, com **20,3 milhões** de pessoas em situação de risco em junho, o que representa uma alta de **75%** em cinco anos conforme o Banco Central.",
+            "No terceiro trimestre de 2026, as redes Carrefour, Assaí e GPA divulgaram balanços afetados pela cautela dos consumidores, com crescimento de vendas em mesmas lojas abaixo ou em linha com a inflação de alimentos de **4,2%**."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O Carrefour obteve vendas totais de **R$ 5,14 bilhões** no trimestre, alta de **9,4%**. As vendas em mesmas lojas no Brasil cresceram **1,4%**, impulsionadas pelo Atacadão (alta de **2%**) e pelo Sam's Club (alta de **3,6%**).",
+            "O Brasil respondeu por cerca de **23%** das vendas globais do Carrefour no período e se manteve entre os três principais mercados da empresa, ao lado de França e Espanha, acelerando frente à alta de **0,4%** acumulada nos nove primeiros meses."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O Assaí registrou lucro líquido recorrente de **R$ 248 milhões** (avanço de **55,2%**) e ampliou o fluxo de clientes em **2,1%**, superando **40 milhões** de visitas mensais. A receita bruta somou **R$ 21,3 bilhões**, com alta de **2,7%** e margem bruta de **17,2%**.",
+            "O GPA registrou prejuízo líquido de **R$ 220 milhões** nas operações continuadas no trimestre, com queda de **9,6%** na receita líquida (**R$ 4,1 bilhões**) e recuo de **1,4%** nas vendas mesmas lojas."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "Apesar do prejuízo, o GPA elevou o Ebitda ajustado em **16,9%** (para **R$ 482 milhões**) e acumulou **R$ 365 milhões** em cortes de despesas em 2026, alcançando **88%** da meta anual por meio de redução de pessoal, eficiência e renegociações."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "França vai pedir sanções contra o Irã em resposta ao ataque **cibernético contra supermercados**",
+      "subtitulo": "O governo francês deve apresentar nesta segunda-feira (16), em Bruxelas",
+      "imagem": "https://s2-g1.glbimg.com/YuR-5gONCPxw-sjH9hvG56YaS4Q=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/0/v/UoBJ2PSHiiEEjybhwWAA/2026-10-12t162110z-1-lynxmpem9b1eh-rtroptp-4-france-cyberattack.jpg",
+      "fonte": "g1 Mundo",
+      "data": "16/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/16/franca-vai-pedir-sancoes-contra-o-ira-em-resposta-ao-ataque-cibernetico-contra-supermercados.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O governo francês deve apresentar nesta segunda-feira (16), em Bruxelas, evidências de que a Guarda Revolucionária Iraniana foi responsável por um ataque cibernético contra redes de supermercados na França.",
+            "O chanceler Jean-Noël Barrot informou que a França solicitará a aplicação de novas sanções da União Europeia contra Teerã, com o objetivo de obter, em até um mês, uma lista de indivíduos e entidades punidos."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Em outubro, a ação criminosa de hackers elevou a temperatura de refrigeradores para 50 graus Celsius durante a noite, provocando incêndios e perda de alimentos em centenas de estabelecimentos comerciais franceses.",
+            "O ataque cibernético de grande escala, investigado pela Procuradoria de Paris, atingiu sistemas de refrigeração conectados de várias grandes redes de supermercados que podiam ser acessados remotamente pela internet."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Na semana passada, a França apresentou acusações formais e convocou o embaixador iraniano; além disso, a Justiça francesa emitiu mandados de prisão internacionais contra o líder de uma unidade cibernética da Guarda Revolucionária e dois subordinados."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Produção industrial e vendas no varejo da **China frustram expectativas**",
+      "subtitulo": "A economia da China registrou novos sinais de desaceleração em outubro de 2026",
+      "imagem": "https://static.poder360.com.br/uploads/2026/08/bandeir-china.jpg",
+      "fonte": "Poder360",
+      "data": "16/11/2026",
+      "link": "https://www.poder360.com.br/poder-china/producao-industrial-e-vendas-no-varejo-da-china-frustram-expectativas/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A economia da China registrou novos sinais de desaceleração em outubro de 2026, com resultados na produção industrial e no varejo abaixo das expectativas do mercado, segundo dados divulgados em 16 de novembro de 2026 pelo Escritório Nacional de Estatísticas.",
+            "A produção industrial chinesa cresceu **4,8%** em outubro em relação ao ano anterior, desacelerando frente aos **5,5%** de setembro e ficando abaixo da expectativa de **5,3%**."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "As vendas no varejo avançaram **0,4%** em outubro na comparação anual, desacelerando em relação ao **1,1%** registrado em setembro e alcançando metade dos **0,8%** projetados pelo mercado.",
+            "O consumo continuou limitado por causa da fragilidade no mercado de trabalho e da prolongada crise no setor imobiliário, que reduziu o patrimônio dos proprietários de imóveis.",
+            "O investimento imobiliário acumulado entre janeiro e outubro despencou **21,6%** na comparação com o mesmo período do ano anterior, refletindo a continuidade da crise no setor."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O investimento em ativos fixos caiu **8,1%** nos dez primeiros meses do ano, superando a retração de **7,2%** registrada nos primeiros nove meses e ficando pior do que a previsão de **7%**.",
+            "A taxa de desemprego urbano apurada na China recuou para **5,1%** em outubro, mostrando leve melhora em relação ao índice de **5,2%** observado no mês de setembro."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Bolsa Família 2026: pagamentos de novembro começam nesta **segunda; veja calendário**",
+      "subtitulo": "A Caixa Econômica Federal iniciou nesta segunda-feira (16/11) os pagamentos de novembro de 2026 do Bolsa Família",
+      "imagem": "https://s2-g1.glbimg.com/tADsf5NpPVjAtsw-NDLpjYkK3W8=/5760x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/X/p/m9WC1JRNGCSTELVKKrBA/fta20240801129.jpg",
+      "fonte": "g1 Economia",
+      "data": "16/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/16/bolsa-familia-2026-pagamentos-de-novembro-comecam-nesta-segunda-veja-calendario.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A Caixa Econômica Federal iniciou nesta segunda-feira (16/11) os pagamentos de novembro de 2026 do Bolsa Família, começando pelos beneficiários com NIS final 1.",
+            "Este é o segundo mês com valores reajustados pelo governo, após aumento anunciado em 17 de setembro que elevou o piso de **R$ 600** para **R$ 691.**",
+            "Para novembro de 2026, os repasses ocorrem de forma concentrada: dia 16/11 para NIS final 1, dia 17/11 para NIS final 2, e dia 18/11 para finais de 3 a 0."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A antecipação e concentração dos pagamentos nos últimos meses de 2026 foram adotadas pelo governo federal para reduzir os impactos do super El Niño.",
+            "Para ter direito ao Bolsa Família, a renda mensal familiar por pessoa deve ser de até **R$ 218,** além de cumprir exigências de saúde e educação.",
+            "O programa agora paga **R$ 164** por integrante (Benefício de Renda de Cidadania) e adicionais de **R$ 173** para crianças até **6 anos** e **R$ 58** para gestantes e jovens de 7 a **17 anos**."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    }
+  ]
 }
