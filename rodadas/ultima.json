@@ -3,32 +3,33 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Se não ganhar eficiência, etanol de cana pode virar subproduto do açúcar, **diz CFO da Jalles (JALL3)**",
-      "subtitulo": "O avanço do etanol de milho pressiona as usinas tradicionais de cana-de-açúcar a buscarem maior eficiência operacional",
-      "imagem": "https://www.moneytimes.com.br/uploads/2026/11/jalles-etanol-cana-jalles-jall3-acucar.jpg",
-      "fonte": "Money Times",
+      "manchete": "Análise: Assaí, GPA e Grupo Mateus priorizam rentabilidade e caixa diante **de vendas fracas**",
+      "subtitulo": "No terceiro trimestre de 2026, as principais empresas do varejo alimentar listadas na Bolsa (Assaí",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/fachadas_varejo_alimentar_chatgpt.webp",
+      "fonte": "Mercado & Consumo",
       "data": "16/11/2026",
-      "link": "https://www.moneytimes.com.br/se-nao-ganhar-eficiencia-etanol-cana-pode-virar-subproduto-acucar-diz-cfo-jalles-jall3-pads/",
+      "link": "https://mercadoeconsumo.com.br/16/11/2026/mc-capital/analise-assai-gpa-e-grupo-mateus-priorizam-rentabilidade-e-caixa-diante-de-vendas-fracas/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O avanço do etanol de milho pressiona as usinas tradicionais de cana-de-açúcar a buscarem maior eficiência operacional, conforme alertou Rodrigo Penna, diretor financeiro e de relações com investidores da Jalles (JALL3), durante o AgroForum 2026, promovido pelo BTG Pactual.",
-            "Segundo Penna, caso a indústria de cana não consiga cortar custos e elevar a competitividade, o produto corre o risco de se transformar em um mero subproduto da fabricação de açúcar."
+            "No terceiro trimestre de 2026, as principais empresas do varejo alimentar listadas na Bolsa (Assaí, GPA e Grupo Mateus) registraram vendas fracas e priorizaram a rentabilidade e o caixa em vez de novas aberturas.",
+            "O Assaí (ASAI3) obteve receita bruta de **R$ 21,3 bilhões**, alta de **2,7%**, com lucro recorrente de **R$ 248 milhões** e margem bruta de **17,2%**, impulsionado por precificação e maturação de lojas."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Atualmente, o custo de produção de uma usina eficiente de etanol de cana supera em **15%** a **20%** o custo do etanol de milho sob condições normais de mercado.",
-            "A Jalles possui um projeto pronto para fabricar etanol de milho em uma de suas unidades no Centro-Oeste com o objetivo de gerar sinergias, mas a iniciativa aguarda um momento econômico mais favorável devido à taxa de juros atual de **13,75%**."
+            "O GPA (PCAR3) reportou receita bruta de **R$ 6,5 bilhões** (queda de **6,5%**) e prejuízo continuado de **R$ 220 milhões**, mas expandiu a margem bruta para **30,7%** com cortes de despesas e fim do canal Aliados.",
+            "O Grupo Mateus (GMAT3) entregou receita líquida de **R$ 10,7 bilhões** (estável no ano) e lucro de **R$ 322 milhões**, com queda no SSS de **4,7%** e margem bruta de **22,6%**, afetado por ajustes regionais e paralisação de canal."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Empresas do setor também apostam no desenvolvimento de novos mercados e tecnologias, como a expansão da mistura obrigatória na gasolina, motores dual fuel, colhedoras movidas a etanol, combustível sustentável de aviação (SAF) e o biobunker para transporte marítimo."
+            "Diante de juros entre **14%** e **15%**, as três companhias reduziram investimentos em expansão: o Assaí pausou aberturas para desalavancar, o GPA fechou unidades de baixo desempenho e o Mateus priorizou formatos de maior retorno.",
+            "As ações do Assaí acumulam valorização de **30%** em 2026, enquanto GPA e Grupo Mateus registram desempenhos negativos de -**37%** e -**15%**, respectivamente, refletindo os desafios do endividamento familiar de **82%**."
           ]
         }
       ],
@@ -43,70 +44,29 @@
     },
     {
       "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "Mercado eleva estimativa de inflação para **5%** em 2027 e prevê corte menor nos juros",
-      "subtitulo": "O Banco Central divulgou na terça-feira (16) o Boletim Focus",
-      "imagem": "https://s2-g1.glbimg.com/BpShIN_jyVrwCt8LeqZgnwIwdcU=/1250x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/V/b/A8IGA6SdAAIsLKWtdgOg/imagem-destaque-g1-dinheiro.png",
-      "fonte": "g1 Economia",
-      "data": "16/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/16/mercado-eleva-estimativa-de-inflacao-para-5percent-em-2027-e-preve-corte-menor-nos-juros.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "O Banco Central divulgou na terça-feira (16) o Boletim Focus, elaborado com base em pesquisa da última semana com mais de 100 instituições financeiras do mercado.",
-            "Para 2026, a projeção de inflação caiu para **5,11%**, enquanto para 2027 subiu para **5%**. As previsões para 2028 e 2029 permaneceram em **4%**.",
-            "A estimativa de crescimento do PIB para este ano caiu de **1,75%** para **1,72%**. Para 2027, a projeção de expansão da economia recuou de **1,15%** para **1,02%**."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "A taxa Selic ao fim de 2026 foi mantida em **13,75%** ao ano. Para o fechamento de 2027, a projeção subiu de **12,5%** para **12,75%** ao ano.",
-            "A previsão para a taxa de câmbio ao término deste ano passou de **R$ 5,35** para **R$ 5,40** por dólar. Para o fim de 2027, a estimativa avançou de **R$ 5,40** para **R$ 5,45** por dólar."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#economia",
-        "#varejo",
-        "#mercado",
-        "#negocios"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Política",
-      "manchete": "Depois do ajuste fiscal, equipe econômica vai propor medidas para reduzir o crescimento **das despesas obrigatórias**",
-      "subtitulo": "",
-      "imagem": "",
-      "fonte": "g1 Política",
+      "manchete": "Dia da Consciência Negra: **participantes de sessão especial apontam desafios**",
+      "subtitulo": "O Senado realizou em 16/11/2026 uma sessão especial para celebrar o Dia Nacional de Zumbi e da Consciência Negra",
+      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/16/dia-da-consciencia-negra-participantes-de-sessao-especial-apontam-desafios/20261116_00499e.jpg",
+      "fonte": "Agência Senado",
       "data": "16/11/2026",
-      "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/11/16/depois-do-ajuste-fiscal-equipe-economica-vai-propor-medidas-para-reduzir-o-crescimento-das-despesas-obrigatorias.ghtml",
+      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/16/dia-da-consciencia-negra-participantes-de-sessao-especial-apontam-desafios",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A equipe econômica do governo do presidente Luiz Inácio Lula da Silva planeja propor novas medidas para desacelerar o crescimento das despesas obrigatórias após o ajuste fiscal, visando melhorar a economia, conter o dólar e prevenir uma recessão no quarto mandato.",
-            "O ajuste fiscal em análise no Congresso estabelece que o limite de crescimento das despesas caia de **2,5%** para **2%**, conforme as regras atuais do arcabouço fiscal, caso haja risco de descumprimento da meta fiscal."
+            "O Senado realizou em 16/11/2026 uma sessão especial para celebrar o Dia Nacional de Zumbi e da Consciência Negra, data oficializada em 20 de novembro pela Lei 14.759 de 2023.",
+            "A 11ª Pesquisa Nacional de Violência contra a Mulher de 2025 revelou que **29%** das mulheres negras já sofreram violência doméstica, ante **24%** das brancas.",
+            "O levantamento do DataSenado mostrou que **33%** das mulheres negras vítimas de violência não têm carteira assinada e **43%** das que não trabalham são donas de casa."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Indicadores econômicos recentes apontam desaquecimento, com a prévia do PIB do Banco Central, o IBC-br, registrando queda de **0,9%** no terceiro trimestre em relação ao segundo, pressionada por juros elevados, incertezas fiscais e alta do câmbio.",
-            "O governo articula a votação do ajuste fiscal na Câmara dos Deputados na mesma semana, após tentar evitar derrotas no Senado que pudessem enfraquecer o projeto."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "A oposição apresentou um destaque para barrar a limitação do uso de créditos tributários por empresas, medida governamental projetada para arrecadar entre **R$ 12,8 bilhões** e **R$ 18 bilhões**.",
-            "Para preservar a regra sobre créditos tributários, o governo precisa assegurar ao menos 41 votos, tendo contabilizado 45 no texto-base, embora o tema enfrente resistência de alas do Centrão que apoiaram a pauta."
+            "A Lei 15.142 de 2025 reservou **30%** das vagas em concursos públicos federais para pessoas pretas, pardas, indígenas e quilombolas.",
+            "A Política de Igualdade Racial está presente em 27 estados e mais de 520 municípios, segundo o Ministério da Igualdade Social, que busca alcançar todos os 5.569 municípios brasileiros.",
+            "A sessão especial abriu a campanha 21 Dias de Ativismo, que segue até 10 de dezembro de 2026 com eventos, debates e iluminações na fachada do Congresso Nacional."
           ]
         }
       ],
@@ -120,30 +80,78 @@
       "feed": false
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "Terceiro porta-aviões dos EUA chega ao Oriente Médio em meio a **aumento de tensões**",
-      "subtitulo": "O porta-aviões americano USS Theodore Roosevelt chegou ao Oriente Médio no domingo (15)",
-      "imagem": "https://s2-g1.glbimg.com/EXNQSpuxLCaB3oBcjEkFAiPpe9M=/3984x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/G/A/S2e1tVSr6HBm8RJYomBA/2026-11-07t081645z-1924332331-rc25ioa57nej-rtrmadp-3-iran-crisis-usa-vessel.jpg",
-      "fonte": "g1 Mundo",
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Bets tiraram **R$ 40,4 bilhões** do orçamento das famílias até julho de 2026, diz Comsefaz",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/bHpm-hiZLVuYkUFsYZ13XHrdhVY=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/q/E/1nRx4kSH6aFRaDVmGFAg/golpe-idosos-frame-8169.png",
+      "fonte": "g1 Economia",
       "data": "16/11/2026",
-      "link": "https://g1.globo.com/mundo/noticia/2026/11/16/terceiro-porta-avioes-dos-eua-chega-ao-oriente-medio-em-meio-a-aumento-de-tensoes.ghtml",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/16/bets-orcamento-das-familias-2026.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O porta-aviões americano USS Theodore Roosevelt chegou ao Oriente Médio no domingo (15), elevando para três o total de navios de guerra desse tipo enviados por Washington à região.",
-            "A chegada da embarcação de propulsão nuclear ocorre no contexto de intensificação dos combates e do aumento das tensões no Oriente Médio.",
-            "O navio tem capacidade para abrigar mais de 5.000 tripulantes e opera com mais de 60 aeronaves, incluindo caças bimotores e supersônicos F-18."
+            "As apostas esportivas online, conhecidas como bets, retiraram uma quantia líquida estimada em **R$ 40,4 bilhões** do orçamento das famílias até julho de 2026, de acordo com levantamento do Comsefaz divulgado em seu 4º Boletim Fiscal.",
+            "O cálculo foi realizado pelo Comsefaz em parceria com o Centro Internacional Celso Furtado e apoio do Gefin, comparando o dinheiro enviado às plataformas e o valor recebido de volta com base em dados do Banco Central."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "No mesmo dia da chegada do porta-aviões, o Irã reivindicou um ataque com seis drones contra um sistema de radar americano localizado em uma base no Bahrein.",
-            "As Forças Armadas do Bahrein informaram que os sistemas de defesa antiaérea interceptaram e derrubaram os drones iranianos, impedindo que atingissem os alvos.",
-            "A guerra na região teve início em 28 de fevereiro, após ataques conjuntos dos Estados Unidos e de Israel que resultaram na morte do aiatolá Ali Khamenei."
+            "O estudo apontou uma saída líquida adicional média de **R$ 4,85 bilhões** por mês associada às bets, considerando o período entre outubro de 2024 e julho de 2026.",
+            "A proibição de apostas para beneficiários do Bolsa Família, estabelecida em outubro de 2025, gerou um efeito mensurável no volume de recursos movimentados, indicando forte participação de famílias de menor renda."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O comprometimento da renda das famílias com dívidas atingiu o recorde histórico de **28,9%** em junho, registrando um acréscimo de **1,7 ponto percentual** em **12 meses** devido ao pagamento de juros e amortizações.",
+            "Somente o pagamento de juros consumiu **10,9%** da renda familiar em junho, em comparação aos **9,85%** do ano anterior, impulsionado pela manutenção da taxa Selic em patamar elevado durante 2025 e o início de 2026."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "O endividamento total das famílias encerrou o mês de junho em **49,75%**, ficando muito próximo do recorde de **49,9%** que havia sido registrado em janeiro de 2026."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Clientes relatam problemas no acesso aos serviços de grandes bancos dos EUA: **o que se sabe**",
+      "subtitulo": "Clientes de grandes bancos dos Estados Unidos, como Bank of America, JPMorgan Chase e Wells Fargo",
+      "imagem": "https://ichef.bbci.co.uk/news/1200/branded_portuguese/b01a/live/1ad9de10-e1fc-11f1-99e0-71f24e1be0b5.jpg",
+      "fonte": "BBC News Brasil",
+      "data": "16/11/2026",
+      "link": "https://www.bbc.com/portuguese/articles/c6y0xnk5xjzno?at_medium=RSS&at_campaign=rss",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Clientes de grandes bancos dos Estados Unidos, como Bank of America, JPMorgan Chase e Wells Fargo, relataram dificuldades no acesso aos serviços nesta segunda-feira (16/11).",
+            "Cerca de **4,5 mil** pessoas registraram falhas nos serviços de internet banking do Chase por meio do site de monitoramento Downdetector.",
+            "Um porta-voz do Chase Bank classificou a falha como um problema técnico e afirmou que transações estão demorando mais, embora o acesso às contas continue disponível."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "No Texas, um cliente do Chase relatou à CBS News que não conseguiu depositar um cheque em uma agência em Dallas porque o sistema estava fora do ar.",
+            "A plataforma de pagamentos digitais Zelle também apresentou instabilidade para alguns usuários, com mensagens informando sobre falhas temporárias no serviço.",
+            "O US Bank informou que seus sistemas não foram diretamente afetados, mas clientes que transacionam via Zelle com outras instituições podem enfrentar atrasos."
           ]
         }
       ],
