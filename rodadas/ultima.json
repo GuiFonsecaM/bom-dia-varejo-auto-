@@ -3,39 +3,32 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Endividamento das famílias pressiona resultados do Carrefour, **Assaí e GPA no 3º trimestre**",
-      "subtitulo": "O endividamento das famílias brasileiras impactou o orçamento e o varejo alimentar",
-      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/08/compras-supermercado-envato.webp",
-      "fonte": "Mercado & Consumo",
+      "manchete": "Se não ganhar eficiência, etanol de cana pode virar subproduto do açúcar, **diz CFO da Jalles (JALL3)**",
+      "subtitulo": "O avanço do etanol de milho pressiona as usinas tradicionais de cana-de-açúcar a buscarem maior eficiência operacional",
+      "imagem": "https://www.moneytimes.com.br/uploads/2026/11/jalles-etanol-cana-jalles-jall3-acucar.jpg",
+      "fonte": "Money Times",
       "data": "16/11/2026",
-      "link": "https://mercadoeconsumo.com.br/16/11/2026/mc-capital/endividamento-das-familias-pressiona-resultados-do-carrefour-assai-e-gpa-no-3o-trimestre/",
+      "link": "https://www.moneytimes.com.br/se-nao-ganhar-eficiencia-etanol-cana-pode-virar-subproduto-acucar-diz-cfo-jalles-jall3-pads/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O endividamento das famílias brasileiras impactou o orçamento e o varejo alimentar, com **20,3 milhões** de pessoas em situação de risco em junho, o que representa uma alta de **75%** em cinco anos conforme o Banco Central.",
-            "No terceiro trimestre de 2026, as redes Carrefour, Assaí e GPA divulgaram balanços afetados pela cautela dos consumidores, com crescimento de vendas em mesmas lojas abaixo ou em linha com a inflação de alimentos de **4,2%**."
+            "O avanço do etanol de milho pressiona as usinas tradicionais de cana-de-açúcar a buscarem maior eficiência operacional, conforme alertou Rodrigo Penna, diretor financeiro e de relações com investidores da Jalles (JALL3), durante o AgroForum 2026, promovido pelo BTG Pactual.",
+            "Segundo Penna, caso a indústria de cana não consiga cortar custos e elevar a competitividade, o produto corre o risco de se transformar em um mero subproduto da fabricação de açúcar."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O Carrefour obteve vendas totais de **R$ 5,14 bilhões** no trimestre, alta de **9,4%**. As vendas em mesmas lojas no Brasil cresceram **1,4%**, impulsionadas pelo Atacadão (alta de **2%**) e pelo Sam's Club (alta de **3,6%**).",
-            "O Brasil respondeu por cerca de **23%** das vendas globais do Carrefour no período e se manteve entre os três principais mercados da empresa, ao lado de França e Espanha, acelerando frente à alta de **0,4%** acumulada nos nove primeiros meses."
+            "Atualmente, o custo de produção de uma usina eficiente de etanol de cana supera em **15%** a **20%** o custo do etanol de milho sob condições normais de mercado.",
+            "A Jalles possui um projeto pronto para fabricar etanol de milho em uma de suas unidades no Centro-Oeste com o objetivo de gerar sinergias, mas a iniciativa aguarda um momento econômico mais favorável devido à taxa de juros atual de **13,75%**."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "O Assaí registrou lucro líquido recorrente de **R$ 248 milhões** (avanço de **55,2%**) e ampliou o fluxo de clientes em **2,1%**, superando **40 milhões** de visitas mensais. A receita bruta somou **R$ 21,3 bilhões**, com alta de **2,7%** e margem bruta de **17,2%**.",
-            "O GPA registrou prejuízo líquido de **R$ 220 milhões** nas operações continuadas no trimestre, com queda de **9,6%** na receita líquida (**R$ 4,1 bilhões**) e recuo de **1,4%** nas vendas mesmas lojas."
-          ]
-        },
-        {
-          "titulo": "O que vem agora",
-          "topicos": [
-            "Apesar do prejuízo, o GPA elevou o Ebitda ajustado em **16,9%** (para **R$ 482 milhões**) e acumulou **R$ 365 milhões** em cortes de despesas em 2026, alcançando **88%** da meta anual por meio de redução de pessoal, eficiência e renegociações."
+            "Empresas do setor também apostam no desenvolvimento de novos mercados e tecnologias, como a expansão da mistura obrigatória na gasolina, motores dual fuel, colhedoras movidas a etanol, combustível sustentável de aviação (SAF) e o biobunker para transporte marítimo."
           ]
         }
       ],
@@ -49,77 +42,71 @@
       "feed": true
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "França vai pedir sanções contra o Irã em resposta ao ataque **cibernético contra supermercados**",
-      "subtitulo": "O governo francês deve apresentar nesta segunda-feira (16), em Bruxelas",
-      "imagem": "https://s2-g1.glbimg.com/YuR-5gONCPxw-sjH9hvG56YaS4Q=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/0/v/UoBJ2PSHiiEEjybhwWAA/2026-10-12t162110z-1-lynxmpem9b1eh-rtroptp-4-france-cyberattack.jpg",
-      "fonte": "g1 Mundo",
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Mercado eleva estimativa de inflação para **5%** em 2027 e prevê corte menor nos juros",
+      "subtitulo": "O Banco Central divulgou na terça-feira (16) o Boletim Focus",
+      "imagem": "https://s2-g1.glbimg.com/BpShIN_jyVrwCt8LeqZgnwIwdcU=/1250x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/V/b/A8IGA6SdAAIsLKWtdgOg/imagem-destaque-g1-dinheiro.png",
+      "fonte": "g1 Economia",
       "data": "16/11/2026",
-      "link": "https://g1.globo.com/mundo/noticia/2026/11/16/franca-vai-pedir-sancoes-contra-o-ira-em-resposta-ao-ataque-cibernetico-contra-supermercados.ghtml",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/16/mercado-eleva-estimativa-de-inflacao-para-5percent-em-2027-e-preve-corte-menor-nos-juros.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O governo francês deve apresentar nesta segunda-feira (16), em Bruxelas, evidências de que a Guarda Revolucionária Iraniana foi responsável por um ataque cibernético contra redes de supermercados na França.",
-            "O chanceler Jean-Noël Barrot informou que a França solicitará a aplicação de novas sanções da União Europeia contra Teerã, com o objetivo de obter, em até um mês, uma lista de indivíduos e entidades punidos."
+            "O Banco Central divulgou na terça-feira (16) o Boletim Focus, elaborado com base em pesquisa da última semana com mais de 100 instituições financeiras do mercado.",
+            "Para 2026, a projeção de inflação caiu para **5,11%**, enquanto para 2027 subiu para **5%**. As previsões para 2028 e 2029 permaneceram em **4%**.",
+            "A estimativa de crescimento do PIB para este ano caiu de **1,75%** para **1,72%**. Para 2027, a projeção de expansão da economia recuou de **1,15%** para **1,02%**."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Em outubro, a ação criminosa de hackers elevou a temperatura de refrigeradores para 50 graus Celsius durante a noite, provocando incêndios e perda de alimentos em centenas de estabelecimentos comerciais franceses.",
-            "O ataque cibernético de grande escala, investigado pela Procuradoria de Paris, atingiu sistemas de refrigeração conectados de várias grandes redes de supermercados que podiam ser acessados remotamente pela internet."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Na semana passada, a França apresentou acusações formais e convocou o embaixador iraniano; além disso, a Justiça francesa emitiu mandados de prisão internacionais contra o líder de uma unidade cibernética da Guarda Revolucionária e dois subordinados."
+            "A taxa Selic ao fim de 2026 foi mantida em **13,75%** ao ano. Para o fechamento de 2027, a projeção subiu de **12,5%** para **12,75%** ao ano.",
+            "A previsão para a taxa de câmbio ao término deste ano passou de **R$ 5,35** para **R$ 5,40** por dólar. Para o fim de 2027, a estimativa avançou de **R$ 5,40** para **R$ 5,45** por dólar."
           ]
         }
       ],
       "hashtags": [
         "#BomDiaVarejo",
-        "#mundo",
-        "#economiaglobal",
-        "#noticias",
-        "#internacional"
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
       ],
       "feed": false
     },
     {
       "tipo": "noticia",
       "categoria": "Política",
-      "manchete": "Produção industrial e vendas no varejo da **China frustram expectativas**",
-      "subtitulo": "A economia da China registrou novos sinais de desaceleração em outubro de 2026",
-      "imagem": "https://static.poder360.com.br/uploads/2026/08/bandeir-china.jpg",
-      "fonte": "Poder360",
+      "manchete": "Depois do ajuste fiscal, equipe econômica vai propor medidas para reduzir o crescimento **das despesas obrigatórias**",
+      "subtitulo": "",
+      "imagem": "",
+      "fonte": "g1 Política",
       "data": "16/11/2026",
-      "link": "https://www.poder360.com.br/poder-china/producao-industrial-e-vendas-no-varejo-da-china-frustram-expectativas/",
+      "link": "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/11/16/depois-do-ajuste-fiscal-equipe-economica-vai-propor-medidas-para-reduzir-o-crescimento-das-despesas-obrigatorias.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A economia da China registrou novos sinais de desaceleração em outubro de 2026, com resultados na produção industrial e no varejo abaixo das expectativas do mercado, segundo dados divulgados em 16 de novembro de 2026 pelo Escritório Nacional de Estatísticas.",
-            "A produção industrial chinesa cresceu **4,8%** em outubro em relação ao ano anterior, desacelerando frente aos **5,5%** de setembro e ficando abaixo da expectativa de **5,3%**."
+            "A equipe econômica do governo do presidente Luiz Inácio Lula da Silva planeja propor novas medidas para desacelerar o crescimento das despesas obrigatórias após o ajuste fiscal, visando melhorar a economia, conter o dólar e prevenir uma recessão no quarto mandato.",
+            "O ajuste fiscal em análise no Congresso estabelece que o limite de crescimento das despesas caia de **2,5%** para **2%**, conforme as regras atuais do arcabouço fiscal, caso haja risco de descumprimento da meta fiscal."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "As vendas no varejo avançaram **0,4%** em outubro na comparação anual, desacelerando em relação ao **1,1%** registrado em setembro e alcançando metade dos **0,8%** projetados pelo mercado.",
-            "O consumo continuou limitado por causa da fragilidade no mercado de trabalho e da prolongada crise no setor imobiliário, que reduziu o patrimônio dos proprietários de imóveis.",
-            "O investimento imobiliário acumulado entre janeiro e outubro despencou **21,6%** na comparação com o mesmo período do ano anterior, refletindo a continuidade da crise no setor."
+            "Indicadores econômicos recentes apontam desaquecimento, com a prévia do PIB do Banco Central, o IBC-br, registrando queda de **0,9%** no terceiro trimestre em relação ao segundo, pressionada por juros elevados, incertezas fiscais e alta do câmbio.",
+            "O governo articula a votação do ajuste fiscal na Câmara dos Deputados na mesma semana, após tentar evitar derrotas no Senado que pudessem enfraquecer o projeto."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "O investimento em ativos fixos caiu **8,1%** nos dez primeiros meses do ano, superando a retração de **7,2%** registrada nos primeiros nove meses e ficando pior do que a previsão de **7%**.",
-            "A taxa de desemprego urbano apurada na China recuou para **5,1%** em outubro, mostrando leve melhora em relação ao índice de **5,2%** observado no mês de setembro."
+            "A oposição apresentou um destaque para barrar a limitação do uso de créditos tributários por empresas, medida governamental projetada para arrecadar entre **R$ 12,8 bilhões** e **R$ 18 bilhões**.",
+            "Para preservar a regra sobre créditos tributários, o governo precisa assegurar ao menos 41 votos, tendo contabilizado 45 no texto-base, embora o tema enfrente resistência de alas do Centrão que apoiaram a pauta."
           ]
         }
       ],
@@ -133,39 +120,39 @@
       "feed": false
     },
     {
-      "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "Bolsa Família 2026: pagamentos de novembro começam nesta **segunda; veja calendário**",
-      "subtitulo": "A Caixa Econômica Federal iniciou nesta segunda-feira (16/11) os pagamentos de novembro de 2026 do Bolsa Família",
-      "imagem": "https://s2-g1.glbimg.com/tADsf5NpPVjAtsw-NDLpjYkK3W8=/5760x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/X/p/m9WC1JRNGCSTELVKKrBA/fta20240801129.jpg",
-      "fonte": "g1 Economia",
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Terceiro porta-aviões dos EUA chega ao Oriente Médio em meio a **aumento de tensões**",
+      "subtitulo": "O porta-aviões americano USS Theodore Roosevelt chegou ao Oriente Médio no domingo (15)",
+      "imagem": "https://s2-g1.glbimg.com/EXNQSpuxLCaB3oBcjEkFAiPpe9M=/3984x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/G/A/S2e1tVSr6HBm8RJYomBA/2026-11-07t081645z-1924332331-rc25ioa57nej-rtrmadp-3-iran-crisis-usa-vessel.jpg",
+      "fonte": "g1 Mundo",
       "data": "16/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/16/bolsa-familia-2026-pagamentos-de-novembro-comecam-nesta-segunda-veja-calendario.ghtml",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/16/terceiro-porta-avioes-dos-eua-chega-ao-oriente-medio-em-meio-a-aumento-de-tensoes.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "A Caixa Econômica Federal iniciou nesta segunda-feira (16/11) os pagamentos de novembro de 2026 do Bolsa Família, começando pelos beneficiários com NIS final 1.",
-            "Este é o segundo mês com valores reajustados pelo governo, após aumento anunciado em 17 de setembro que elevou o piso de **R$ 600** para **R$ 691.**",
-            "Para novembro de 2026, os repasses ocorrem de forma concentrada: dia 16/11 para NIS final 1, dia 17/11 para NIS final 2, e dia 18/11 para finais de 3 a 0."
+            "O porta-aviões americano USS Theodore Roosevelt chegou ao Oriente Médio no domingo (15), elevando para três o total de navios de guerra desse tipo enviados por Washington à região.",
+            "A chegada da embarcação de propulsão nuclear ocorre no contexto de intensificação dos combates e do aumento das tensões no Oriente Médio.",
+            "O navio tem capacidade para abrigar mais de 5.000 tripulantes e opera com mais de 60 aeronaves, incluindo caças bimotores e supersônicos F-18."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "A antecipação e concentração dos pagamentos nos últimos meses de 2026 foram adotadas pelo governo federal para reduzir os impactos do super El Niño.",
-            "Para ter direito ao Bolsa Família, a renda mensal familiar por pessoa deve ser de até **R$ 218,** além de cumprir exigências de saúde e educação.",
-            "O programa agora paga **R$ 164** por integrante (Benefício de Renda de Cidadania) e adicionais de **R$ 173** para crianças até **6 anos** e **R$ 58** para gestantes e jovens de 7 a **17 anos**."
+            "No mesmo dia da chegada do porta-aviões, o Irã reivindicou um ataque com seis drones contra um sistema de radar americano localizado em uma base no Bahrein.",
+            "As Forças Armadas do Bahrein informaram que os sistemas de defesa antiaérea interceptaram e derrubaram os drones iranianos, impedindo que atingissem os alvos.",
+            "A guerra na região teve início em 28 de fevereiro, após ataques conjuntos dos Estados Unidos e de Israel que resultaram na morte do aiatolá Ali Khamenei."
           ]
         }
       ],
       "hashtags": [
         "#BomDiaVarejo",
-        "#economia",
-        "#varejo",
-        "#mercado",
-        "#negocios"
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
       ],
       "feed": false
     }
