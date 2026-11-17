@@ -2,40 +2,108 @@
   "posts": [
     {
       "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "Até onde o dólar pode subir? Por que o real é a moeda que mais perdeu valor desde a **reeleição de Lula**",
-      "subtitulo": "O real perdeu 13,96% frente ao dólar desde 25/10, data do segundo turno das eleições",
-      "imagem": "",
-      "fonte": "g1 Economia",
+      "categoria": "Varejo",
+      "manchete": "Nestlé lança espelho com IA que analisa saúde para impulsionar **venda de suplementos**",
+      "subtitulo": "",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2021/10/unnamed.jpg",
+      "fonte": "Mercado & Consumo",
       "data": "17/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/17/ate-onde-o-dolar-pode-subir-por-que-o-real-e-a-moeda-que-mais-perdeu-valor-desde-a-reeleicao-de-lula.ghtml",
+      "link": "https://mercadoeconsumo.com.br/17/11/2026/tecnologia/nestle-lanca-espelho-com-ia-que-analisa-saude-para-impulsionar-venda-de-suplementos/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O real perdeu **13,96%** frente ao dólar desde 25/10, data do segundo turno das eleições, caindo de **R$4,97** para quase **14%** abaixo; foi a moeda que mais se desvalorizou entre as 20 mais usadas no comércio exterior.",
-            "Outras moedas também recuaram, porém em menor escala: dólar australiano -**4,25%**, dólar neozelandês -**3,54%**, coroa norueguesa -**3,47%**, rand sul-africano -**2,17%** e euro -**1,99%**."
+            "A Nestlé lançou o Espelho do Bem-Estar, um equipamento que realiza leitura facial em 30 segundos para avaliar indicadores de saúde e nutrição.",
+            "A novidade estreia em Fortaleza por meio de uma parceria com a rede Pague Menos, ao passo que uma versão para iPad passa a ser disponibilizada em farmácias de Salvador e São Paulo.",
+            "O objetivo da fabricante com a estratégia é duplicar as vendas de suplementos proteicos, vitaminas e minerais nos estabelecimentos participantes."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O Boletim Focus do Banco Central mostra que o mercado projeta o dólar a **R$5,40** no fim de 2026, mas a cotação já está cerca de **7%** acima desse patamar; há quatro semanas a projeção era **R$5,13.**",
-            "Desde o final de outubro, apenas yuan chinês (+**0,10%**), peso mexicano (+**1,12%**) e rúpia indiana (+**1,59%**) se valorizaram frente ao dólar; das 20 moedas analisadas, 17 perderam valor."
+            "Baseada em visão computacional e Inteligência Artificial, a tecnologia foi criada utilizando imagens faciais de mais de **60 mil** indivíduos com supervisão médica.",
+            "A ferramenta calcula dados como batimentos cardíacos, ritmo respiratório, estresse, humor, idade da pele e índices corporais, enviando os dados de forma sigilosa para o celular do cliente.",
+            "Estudantes de nutrição e profissionais de saúde auxiliam no atendimento presencial nas farmácias, e o suporte pode prosseguir de maneira digital com a assistente virtual Nina."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Na segunda‑feira, os principais índices caíram: Ibovespa -**1,83%** e Dow Jones -**1,41%**, refletindo saída de investidores para os EUA, onde se espera aumento de juros no próximo mês devido à inflação alta.",
-            "No Brasil, o PLP 299/2026 propõe ajuste fiscal com impacto estimado entre **R$43** bi e **R$54** bi, visando superavit primário em 2027; a votação no Senado começou em 12/11, mas analistas e setores da esquerda questionam a medida."
+            "O projeto é gratuito, tem caráter educativo e não substitui exames médicos, sendo que a expansão nacional para todas as regiões do Brasil está programada para o ano de 2027."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "No Senado, ministro da Fazenda defende novo tributo **sobre o consumo**",
+      "subtitulo": "Em audiência pública na Comissão de Assuntos Econômicos do Senado nesta terça-feira (17), o ministro da Fazenda",
+      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/17/no-senado-ministro-da-fazenda-defende-novo-tributo-sobre-o-consumo/20261117_00534sc.jpg",
+      "fonte": "Agência Senado",
+      "data": "17/11/2026",
+      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/17/no-senado-ministro-da-fazenda-defende-novo-tributo-sobre-o-consumo",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Em audiência pública na Comissão de Assuntos Econômicos do Senado nesta terça-feira (17), o ministro da Fazenda, Dario Durigan, defendeu a implementação do novo imposto CBS, criado pela reforma tributária.",
+            "A nova Contribuição sobre Bens e Serviços (CBS) substituirá os tributos PIS/Pasep e Cofins a partir de janeiro, com previsão de alíquota efetiva de **8,5%**, segundo Durigan.",
+            "O Senado tem até 15 de dezembro para definir a alíquota por resolução; caso não haja decisão, vigorará provisoriamente a taxa de **11,3%** proposta pelo TCU."
           ]
         },
         {
-          "titulo": "O que vem agora",
+          "titulo": "Mais detalhes",
           "topicos": [
-            "Analistas apontam que a volatilidade atual também vem da queda de ações de IA e semicondutores, com o setor de chips recuando **4,5%**, ampliando a aversão ao risco nos mercados globais."
+            "Setores específicos terão reduções na CBS, como restaurantes e hotéis (**40%**), cultura e arte (**60%**) e locação de imóveis (**70%**), o que eleva a alíquota-base dos demais setores.",
+            "O programa de cashback devolverá cerca de **R$ 10 bilhões** em impostos sobre o consumo em 2027 para famílias do CadÚnico com renda de até meio salário mínimo por pessoa, em até 25 dias."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Empresas usaram **R$ 200 bilhões** em créditos para pagar tributos até setembro; Senado debate restrição no ajuste fiscal",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/bkM9kueo1epMn10W1ijP9L6B5TQ=/1226x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/h/a/H3r8tcTjuMjAoALVu5OA/captura-de-tela-2022-07-17-as-17.29.49.png",
+      "fonte": "g1 Economia",
+      "data": "17/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/17/creditos-tributarios-empresas-ajuste-fiscal.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Empresas declararam o uso de **R$ 200,1 bilhões** em créditos tributários para quitar tributos federais entre janeiro e setembro de 2026, segundo levantamento da Receita Federal divulgado pelo g1.",
+            "O valor nominal registrado em 2026 é o maior para o período na série histórica iniciada em 2019, representando alta de **14,6%** sobre os **R$ 25,5 bilhões** a mais que o mesmo período de 2025.",
+            "Do total em 2026, **R$ 166,3 bilhões** vieram de créditos não judiciais e **R$ 33,8 bilhões** de ações judiciais para cobrir principal, multas e juros."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O Senado debate nesta terça-feira (17) uma proposta do governo no ajuste fiscal que autoriza o Executivo a limitar o uso de créditos de um tributo federal para pagar outro.",
+            "A restrição pode gerar um ganho fiscal estimado entre **R$ 12,8 bilhões** e **R$ 18,3 bilhões** em 2027, mas especialistas alertam que o efeito pode ser de antecipação de recursos e não receita nova.",
+            "Empresas exportadoras estão entre as mais expostas devido ao acúmulo de créditos de PIS, Cofins e IPI, e a mudança pode pressionar o capital de giro para fornecedores e funcionários."
           ]
         }
       ],
@@ -46,7 +114,48 @@
         "#mercado",
         "#negocios"
       ],
-      "feed": true
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Jensen Huang, ex-CEO da Nvidia, vai depor no Congresso dos EUA após caso com **suposta espiã chinesa**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/4_uRqi3hYkCkztaZEBdvCIrPNTk=/8055x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/r/y/AKyyQtSWWAwR15BRaQVQ/2026-11-17t133647z-729720750-rc2u8iabn4ek-rtrmadp-3-global-markets-1-.jpg",
+      "fonte": "g1 Mundo",
+      "data": "17/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/17/jensen-huang-ex-ceo-da-nvidia-comparecera-ao-congresso-norte-americano-apos-caso-com-suposta-espia-chinesa.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Jensen Huang, ex-diretor-executivo da Nvidia, aceitou prestar depoimento ao Congresso dos Estados Unidos sobre sua relação extraconjugal com Alice Huang, apontada pelos serviços de inteligência americanos como suposta espiã ligada à inteligência chinesa.",
+            "A audiência perante os parlamentares americanos foi agendada para o dia 1 de dezembro, data em que o executivo completará **63 anos**, conforme convocações emitidas após o escândalo que resultou na sua renúncia ao cargo na gigante de inteligência artificial."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O caso gerou uma crise que eliminou quase meio trilhão de dólares do valor de mercado da Nvidia, além de gerar preocupações sobre a segurança de dados estratégicos dos Estados Unidos e instabilidade no setor de tecnologia.",
+            "A requisição oficial foi apresentada na quinta-feira passada (12) pelo senador republicano Tim Scott à Comissão Bancária do Senado, que também pediu a presença do secretário do Comércio, Howard Lutnick."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Três comissões da Câmara dos Representantes também exigiram o depoimento de Huang a portas fechadas, sob o risco de intimação judicial, enquanto autoridades de Singapura proibiram o retorno de Alice Huang ao país em fevereiro e a Malásia investiga uma filial da Megaspeed."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
     }
   ]
 }
