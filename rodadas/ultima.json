@@ -2,89 +2,6 @@
   "posts": [
     {
       "tipo": "noticia",
-      "categoria": "Varejo",
-      "manchete": "Meta lança app de compra e venda de produtos usados no Brasil para **concorrer com Enjoei**",
-      "subtitulo": "A Meta lançou nesta terça-feira (17) o aplicativo gratuito Achados, voltado para a compra e venda de produtos usados",
-      "imagem": "https://s2-g1.glbimg.com/EkolXXxAvXM6Y1R9R3Y61n5GPAU=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/x/t/pK7itZTFCJIIt32aKI8A/fotojet-22-.jpg",
-      "fonte": "g1 Economia",
-      "data": "17/11/2026",
-      "link": "https://g1.globo.com/tecnologia/noticia/2026/11/17/meta-lanca-app-de-compra-e-venda-de-produtos-usados-no-brasil-para-concorrer-com-enjoei.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "A Meta lançou nesta terça-feira (17) o aplicativo gratuito Achados, voltado para a compra e venda de produtos usados, estreando primeiro no Brasil para concorrer com o Enjoei.",
-            "A plataforma agrupa itens anunciados no Facebook Marketplace, em grupos do Facebook e no Instagram, estando disponível por enquanto apenas para sistemas Android, sem previsão para iPhone ou versão web."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "As negociações, pagamentos e entregas são combinados diretamente entre compradores e vendedores pelo aplicativo ou via WhatsApp, pois o Achados não realiza transações financeiras e não cobra comissão.",
-            "Para segurança, a ferramenta permite verificar perfis, histórico, avaliações e outros anúncios do vendedor nas redes sociais, além de contar com sistemas automáticos e canais de denúncia contra golpes."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "O aplicativo exibe itens em destaque na busca, na aba \"Garimpo de hoje\" e aplica um selo especial em ofertas selecionadas após comparação de preços com anúncios semelhantes do Facebook Marketplace.",
-            "O lançamento acompanha a expansão do setor: dados da CNDL e do SPC Brasil apontam que **46%** dos consumidores online compraram produtos usados nos últimos doze meses, impulsionados pela economia."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#varejo",
-        "#supermercado",
-        "#atacarejo",
-        "#varejoalimentar"
-      ],
-      "feed": true
-    },
-    {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "UE adia reunião que poderia liberar exportações de frango e **mel do Brasil**",
-      "subtitulo": "A União Europeia adiou para o início de dezembro uma reunião inicialmente marcada para terça-feira (17)",
-      "imagem": "https://s2-g1.glbimg.com/2dqGC0z6HHGJtsoSduXQN1dMt8U=/1200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/W/x/xMJnsZQp6eBKWO01bOVQ/260731-grafico-exportacoes-do-brasil-para-a-uniao-europeia.jpg",
-      "fonte": "g1 Economia",
-      "data": "17/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/17/ue-adia-reuniao-que-poderia-liberar-exportacoes-de-frango-e-mel-do-brasil.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "A União Europeia adiou para o início de dezembro uma reunião inicialmente marcada para terça-feira (17), que definiria o retorno das exportações brasileiras de carne de frango e mel para o bloco, conforme informou a Associação Brasileira de Proteína Animal.",
-            "Em 3 de setembro, a União Europeia suspendeu as compras de produtos animais do Brasil sob a alegação de falhas no controle do uso de antimicrobianos na pecuária, substâncias proibidas pelo bloco para estimular o crescimento ou reservadas a humanos."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "A Associação Brasileira de Proteína Animal e o ministério manifestaram surpresa e preocupação com o adiamento, ressaltando que o Brasil cumpriu todas as exigências técnicas e que uma missão europeia aprovou os controles locais entre 24 de agosto e 4 de setembro.",
-            "Integrantes do bloco europeu teriam solicitado esclarecimentos extras sobre o sistema nacional de produção, enquanto os demais parceiros do Mercosul, como Argentina, Paraguai e Uruguai, continuam com autorização para exportar."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "As exportações brasileiras de mel para a União Europeia haviam dobrado no primeiro semestre deste ano, alcançando **US$ 6,3 milhões**, impulsionadas pelo redirecionamento da produção após a taxação aplicada por Donald Trump nos Estados Unidos."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#mundo",
-        "#economiaglobal",
-        "#noticias",
-        "#internacional"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Economia",
       "manchete": "Até onde o dólar pode subir? Por que o real é a moeda que mais perdeu valor desde a **reeleição de Lula**",
       "subtitulo": "O real perdeu 13,96% frente ao dólar desde 25/10, data do segundo turno das eleições",
@@ -129,44 +46,7 @@
         "#mercado",
         "#negocios"
       ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
-      "categoria": "Política",
-      "manchete": "CDR aprova ampliação de áreas de livre **comércio no Acre**",
-      "subtitulo": "A Comissão de Desenvolvimento Regional (CDR) aprovou, nesta terça-feira (17)",
-      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/17/cdr-aprova-ampliacao-de-areas-de-livre-comercio-no-acre/dsc_6161.jpg",
-      "fonte": "Agência Senado",
-      "data": "17/11/2026",
-      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/17/cdr-aprova-ampliacao-de-areas-de-livre-comercio-no-acre",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "A Comissão de Desenvolvimento Regional (CDR) aprovou, nesta terça-feira (17), um projeto que amplia as áreas de livre comércio para Assis Brasil, Mâncio Lima e Rodrigues Alves, no Acre.",
-            "A medida prevê operações de exportação e importação com regras tributárias especiais para incentivar o desenvolvimento regional, diminuir o custo de vida e reduzir preços de mercadorias.",
-            "O projeto, de autoria do senador Sérgio Petecão (PSD-AC), altera a Lei 8.857, de 1994, por meio do PL 4.232/2025."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "A proposta remove o limite de 20 km² para a extensão dessas áreas e retira a obrigatoriedade de que a demarcação seja contínua.",
-            "O Poder Executivo ficará responsável por estabelecer os limites territoriais, que abrangerão toda a superfície dessas áreas, contemplando locais de armazenamento de produtos.",
-            "O texto recebeu parecer favorável com emendas do senador Alan Rick (Republicanos-AC) e seguirá para votação em decisão terminativa na Comissão de Assuntos Econômicos (CAE), podendo ir depois para a Câmara."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#politica",
-        "#economia",
-        "#brasil",
-        "#noticias"
-      ],
-      "feed": false
+      "feed": true
     }
   ]
 }

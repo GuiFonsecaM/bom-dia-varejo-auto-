@@ -597,7 +597,8 @@
   "bbc.com/portuguese/articles/cklyw32d9n7vo",
   "g1.globo.com/mundo/noticia/2026/11/17/trump-diz-que-vai-pressionar-putin-e-xi-jinping-pelo-fim-da-guerra-na-ucrania.ghtml",
   "g1.globo.com/mundo/noticia/2026/11/16/pescadores-equatorianos-processam-governo-trump-apos-ataque-com-drone-afundar-barco.ghtml",
-  "g1.globo.com/mundo/noticia/2026/11/16/el-salvador-tropas-haiti-militares-desaparecidos.ghtml"
+  "g1.globo.com/mundo/noticia/2026/11/16/el-salvador-tropas-haiti-militares-desaparecidos.ghtml",
+  "g1.globo.com/economia/noticia/2026/11/17/ate-onde-o-dolar-pode-subir-por-que-o-real-e-a-moeda-que-mais-perdeu-valor-desde-a-reeleicao-de-lula.ghtml"
  ],
  "postados": [
   {
@@ -1085,6 +1086,13 @@
    "titulo": "CDR aprova ampliação de áreas de livre comércio no Acre",
    "em": "2026-11-17 13:00",
    "feed": false
+  },
+  {
+   "chave": "g1.globo.com/economia/noticia/2026/11/17/ate-onde-o-dolar-pode-subir-por-que-o-real-e-a-moeda-que-mais-perdeu-valor-desde-a-reeleicao-de-lula.ghtml",
+   "categoria": "Economia",
+   "titulo": "Até onde o dólar pode subir? Por que o real é a moeda que mais perdeu valor desde a reeleição de Lula",
+   "em": "2026-11-17 16:59",
+   "feed": true
   }
  ]
 }
