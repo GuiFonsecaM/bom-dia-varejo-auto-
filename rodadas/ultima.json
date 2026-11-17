@@ -1,3 +1,167 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Marcas próprias avançam em categorias básicas e crescem **36% nos supermercados**",
+      "subtitulo": "",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/marca-propria5-envato.webp",
+      "fonte": "Mercado & Consumo",
+      "data": "17/11/2026",
+      "link": "https://mercadoeconsumo.com.br/16/11/2026/supermercados/marcas-proprias-avancam-em-categorias-basicas-e-crescem-36-nos-supermercados/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Os produtos de marca própria vêm ganhando espaço nos supermercados brasileiros com o objetivo de oferecer alternativas de economia para orçamentos apertados. A participação dessas mercadorias no faturamento dos supermercados registrou alta de **28%** em setembro, em comparação com igual período de 2025.",
+            "No acumulado de janeiro a setembro, o crescimento na fatia de mercado das marcas próprias atingiu **36%**. A expansão, contudo, apresenta dinâmicas distintas dependendo da região do país e do segmento de produtos considerado."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "No Sudeste, os artigos de marca própria representam **5%** das vendas da cesta básica, enquanto no Nordeste essa fatia fica em apenas **0,8%**. A disparidade se sobressai em categorias essenciais como feijão e papel higiênico, refletindo os hábitos de consumo locais.",
+            "A menor participação das marcas próprias em itens básicos no Nordeste é influenciada pela forte presença de marcas regionais tradicionais de arroz, café, feijão e farinha. Naquela região, as marcas de supermercado encontram maior espaço em ovos, mercearia e produtos de limpeza."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "No Sudeste, a marca própria se destaca justamente nas mercadorias básicas, alcançando **17,6%** das vendas de feijão contra **2,8%** no Nordeste. No segmento de papel higiênico, a participação é de **17%** no Sudeste e de **3,3%** no Nordeste.",
+            "Quando analisados os produtos embalados em geral, a distância regional diminui. Nessa categoria mais ampla, as marcas próprias respondem por **3,8%** das vendas no Sudeste e por **3%** no Nordeste."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Brasileiros têm mais dificuldade para poupar que a média mundial, diz pesquisa; veja o que **pesa no bolso**",
+      "subtitulo": "Uma pesquisa da Allianz realizada em maio de 2026 revela que 40% dos brasileiros não conseguem poupar ou investir",
+      "imagem": "https://s2-g1.glbimg.com/StiP92Hf0HX66U802VJ6CKc94hs=/1600x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/6/n/iHfDgETQOTBUa5dzPk0A/edicao-imagens-g1-2026-11-13t102653.948.jpg",
+      "fonte": "g1 Economia",
+      "data": "17/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/17/brasileiros-tem-mais-dificuldade-para-poupar-que-a-media-mundial-diz-pesquisa-veja-o-que-pesa-no-bolso.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Uma pesquisa da Allianz realizada em maio de 2026 revela que **40%** dos brasileiros não conseguem poupar ou investir, índice superior à média global de **32%**, enquanto **8%** não têm renda própria.",
+            "O estudo Personal Worries aponta que **50%** dos brasileiros colocam as finanças entre as três maiores preocupações, atrás apenas da saúde, mencionada por **58%** dos entrevistados.",
+            "Entre as dificuldades financeiras, **18%** enfrentam muita necessidade básica não atendida e **28%** cobrem os gastos essenciais com dificuldade, impactados pelo alto custo de vida e dívidas."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A geração Baby Boomer tem mais dificuldade para guardar dinheiro, com **50%** sem conseguir poupar, enquanto entre os Millennials o índice é de **38%**, segundo o levantamento da Allianz.",
+            "Especialistas recomendam anotar despesas por um a dois meses e mudar o hábito de poupar o que sobra, passando a separar um valor logo que o salário entra na conta.",
+            "Endividados devem priorizar a quitação de débitos com juros altos, como rotativo do cartão e cheque especial que passam de **400%** ao ano, antes de formar uma reserva de emergência."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Por que a Europa pediu a seus cidadãos para fazerem **kits de emergência?**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/AQNlCheINtZ4GEdlNhftSjmr7Bs=/1200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/X/n/UVRC5kSAi3reptpormag/novo-projeto.jpg",
+      "fonte": "g1 Mundo",
+      "data": "17/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/17/por-que-a-europa-pediu-a-seus-cidadaos-para-fazerem-kits-de-emergencia.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A Comissão Europeia recomendou que os Estados-membros incentivem suas populações a criarem kits de emergência para garantir a autossuficiência durante interrupções de serviços essenciais, eventos climáticos, ataques cibernéticos e guerras.",
+            "A medida, discutida em fóruns em novembro e anunciada pela comissária Hadja Lahbib, prevê a inclusão da preparação para emergências nas escolas, embora as diretrizes não sejam obrigatórias para os países membros."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "No Reino Unido, o governo lançou no final de outubro a campanha \"Be Ready\", recomendando que cada família consiga sobreviver por pelo menos três dias com água, alimentos não perecíveis, medicamentos e outros itens.",
+            "A Alemanha adota uma postura mais cautelosa, orientando que as famílias mantenham reservas suficientes para 10 dias com água, alimentos e medicamentos para enfrentar crises prolongadas."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Após a campanha britânica, as vendas de água engarrafada subiram **67%**, álcool em gel teve alta de **83%**, carnes enlatadas cresceram **43%** e enlatados e conservas subiram **37%** nos dez dias seguintes.",
+            "O secretário de Defesa britânico afirmou que o país tem pouco mais de 1.000 dias para se preparar para um possível cenário de conflito com a Rússia até 2030, reforçando a resiliência nacional."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Big techs: Câmara deve votar nesta terça projeto que regulamenta **mercados digitais; entenda**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/7Ns8tFJ6AZScDzLfj-6-9CXXX9o=/1916x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/y/d/bwdCtwSfCBi8h2U0uLCA/fachada-cade.png",
+      "fonte": "g1 Política",
+      "data": "17/11/2026",
+      "link": "https://g1.globo.com/politica/noticia/2026/11/17/big-techs-camara-deve-votar-nesta-terca-projeto-que-regulamenta-mercados-digitais-entenda.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A Câmara dos Deputados deve analisar nesta terça-feira (17) um projeto do governo Lula que cria uma superintendência no Cade para regular os mercados digitais e disciplinar a atuação das grandes plataformas tecnológicas.",
+            "O projeto mira companhias com faturamento bruto anual global superior a **R$ 50 bilhões** ou faturamento anual no Brasil acima de **R$ 5 bilhões**, mirando gigantes como Amazon, Apple, Google, Meta e Microsoft."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A proposta foca exclusivamente em regras de concorrência e defesa do consumidor, sem incluir qualquer tipo de moderação ou regulamentação de conteúdo compartilhado nas redes sociais.",
+            "O Cade poderá exigir das plataformas a transferência de dados pelos usuários, troca gratuita de serviços entre fornecedores, proibição de venda casada e o fim do favorecimento de produtos próprios.",
+            "As empresas reguladas deverão manter um escritório no Brasil, sob risco de multa diária de **R$ 20 mil**, que pode ser aumentada em até 50 vezes caso a exigência não seja cumprida."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Um estudo da Secretaria de Política Econômica estima que o aumento da concorrência no setor pode gerar ganhos de **R$ 15,3 bilhões** a **R$ 50,6 bilhões** por ano, o equivalente a cerca de **0,1%** a **0,4%** do PIB."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    }
+  ]
 }
