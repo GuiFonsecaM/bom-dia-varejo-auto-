@@ -3,39 +3,34 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Tomate, arroz e carne encarecem cesta básica em todas as capitais; veja o valor **e quanto subiu**",
-      "subtitulo": "O custo da cesta básica subiu em todas as 27 capitais brasileiras em outubro de 2026",
-      "imagem": "https://s2-g1.glbimg.com/KJny1OaSeDfTPPDw3WLKBuV7gfE=/1280x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/d/v/ESC7XwTReZNNhmugXu7A/montagem-horizontal-1280x720px-3-.jpg",
-      "fonte": "g1 Economia",
+      "manchete": "Clima afeta produção e eleva preço do tomate **em diversas capitais**",
+      "subtitulo": "O preço do quilo do tomate disparou nos últimos meses em várias capitais brasileiras",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2021/10/unnamed.jpg",
+      "fonte": "Mercado & Consumo",
       "data": "18/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/18/tomate-arroz-e-carne-encarecem-cesta-basica-em-todas-as-capitais-veja-o-valor-e-quanto-subiu.ghtml",
+      "link": "https://mercadoeconsumo.com.br/18/11/2026/economia/clima-afeta-producao-e-eleva-preco-do-tomate-em-diversas-capitais/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O custo da cesta básica subiu em todas as 27 capitais brasileiras em outubro de 2026, impulsionado principalmente pelas altas do tomate, arroz e carne bovina de primeira, segundo relatório divulgado no dia 10 pelo Dieese e pela Conab.",
-            "São Paulo registrou o maior valor para a cesta básica, alcançando **R$ 951,37,** enquanto Aracaju apresentou o menor custo, de **R$ 618,61.** De setembro para outubro, as maiores altas ocorreram no Nordeste: Salvador (**6,79%**), Natal (**6,68%**) e Recife (**6,41%**)."
+            "O preço do quilo do tomate disparou nos últimos meses em várias capitais brasileiras, chegando a custar até duas vezes mais que no início do ano e pressionando a inflação dos alimentos.",
+            "Segundo levantamento da Conab e do Dieese nas 27 capitais, Florianópolis registrou a maior alta, de **181%**, seguida pelo Rio de Janeiro, com **174%**, e por Fortaleza, com **120%**.",
+            "A alta nos preços decorre de problemas climáticos que reduziram a colheita nos maiores estados produtores (Goiás, São Paulo e Minas Gerais), que respondem por **70%** da oferta nacional."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Com base na cesta de São Paulo, o Dieese calculou que o salário mínimo necessário para sustentar uma família de quatro pessoas em outubro seria de **R$ 7.992,47,** valor quase cinco vezes superior ao salário mínimo vigente de **R$ 1.621.**",
-            "O preço do tomate subiu em todas as capitais entre setembro e outubro, com variações de **0,68%** em Boa Vista a **58,32%** em Maceió. O encarecimento decorre de problemas climáticos no Sul, Sudeste e Cerrado Mineiro, que causaram excesso de chuvas, pragas, dias nublados e temperaturas baixas, atrasando a colheita."
+            "A Secretaria de Agricultura, Pecuária e Abastecimento de Goiás prevê uma safra de **1,3 milhão** de toneladas em 2024, o que representa uma queda de **18,5%** no estado.",
+            "Em São Paulo, a produção de tomate de mesa recuou **1,9%** e a do industrial caiu **15,5%**; em Minas Gerais, a redução esperada para o ano é de **3,7%**.",
+            "O Brasil produziu cerca de **4,7 milhões** de toneladas de tomate no ano passado, enquanto a projeção para 2026 é de **4,3 milhões** de toneladas, configurando um recuo médio de **8%**."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "O arroz agulhinha encareceu em 26 capitais no mesmo período, com altas expressivas em Palmas (**9,54%**), Campo Grande (**7,74%**) e Fortaleza (**7,18%**). A alta foi impulsionada pela valorização internacional e por exportações recordes no primeiro semestre de 2026, reduzindo a oferta interna.",
-            "A carne bovina de primeira ficou mais cara em 25 capitais de setembro para outubro, liderada por São Luís (**6,04%**) e Rio Branco (**3,54%**). A alta foi provocada pela menor oferta de bois para abate durante a entressafra e pela forte demanda externa pela carne brasileira."
-          ]
-        },
-        {
-          "titulo": "O que vem agora",
-          "topicos": [
-            "Por outro lado, o café em pó barateou em 20 capitais entre setembro e outubro, com quedas de até **6,92%** em Maceió. O recuo nos preços reflete a expectativa de safra recorde no Brasil e uma produção global **6%** maior projetada pelo USDA para a safra 2026/27."
+            "Como a primavera e o verão são os períodos de maior safra e a previsão meteorológica indica chuvas e calor intenso, os preços devem permanecer elevados a curto e médio prazo."
           ]
         }
       ],
@@ -49,30 +44,71 @@
       "feed": true
     },
     {
-      "tipo": "noticia",
-      "categoria": "Política",
-      "manchete": "Senado adia votação de destaques do projeto **de ajuste fiscal**",
-      "subtitulo": "O presidente do Senado, Davi Alcolumbre, adiou para quarta-feira (18), às 16h",
-      "imagem": "https://imagens.ebc.com.br/92SOTb7KB2yZ5fwAsK9SXWXuvJo=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/17/maioridade_12-11-26_0.jpg?itok=C7rNMz4F",
-      "fonte": "Agência Brasil Política",
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Boato de 'apagão mundial' e onda de ataques hackers: o que aconteceu no mundo **nas últimas semanas**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/1Lrr5KRwr85dHTz8o5GMZCw9CC8=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/X/8/ighTEAQ56v09DkC5HywQ/fotojet-24-.jpg",
+      "fonte": "g1 Economia",
       "data": "18/11/2026",
-      "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/senado-adia-votacao-de-destaques-do-projeto-de-ajuste-fiscal",
+      "link": "https://g1.globo.com/tecnologia/noticia/2026/11/18/boato-de-apagao-mundial-e-onda-de-ataques-hackers-o-que-aconteceu-no-mundo-nas-ultimas-semanas.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O presidente do Senado, Davi Alcolumbre, adiou para quarta-feira (18), às 16h, a votação dos destaques do projeto de lei de ajuste fiscal do governo.",
-            "O pedido de adiamento foi feito pelo relator Eduardo Braga para tentar construir um entendimento entre a base governista e a oposição.",
-            "O projeto visa reduzir despesas e ampliar a arrecadação, com economia estimada pelo Ministério do Planejamento entre **R$ 50 bilhões** e **R$ 60 bilhões** em 2027."
+            "Uma onda de ataques cibernéticos e boatos de apagão mundial dominaram o cenário internacional e redes sociais recentemente, afetando desde supermercados até grandes bancos globais.",
+            "No dia 12 de outubro, hackers elevaram a temperatura de refrigeradores em supermercados na França para 50 °C, causando incêndios e perdas de alimentos em centenas de lojas, além de atingir outros sete países europeus."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "A proposta altera o arcabouço fiscal para permitir novos bloqueios de gastos e reduz de **2,5%** para **2%** o limite de crescimento das despesas acima da inflação.",
-            "O texto prevê corte de benefícios fiscais, adiamento de repasses da Lei Kandir e prazo de 120 dias para o Congresso regulamentar tetos do funcionalismo.",
-            "Destaques contestados incluem a manutenção de créditos tributários para empresas, que podem gerar até **R$ 18,3 bilhões** em receitas adicionais em 2027."
+            "A corretora de criptomoedas Binance sofreu o roubo de **US$ 6,3 bilhões** (cerca de **R$ 34 bilhões**) em um ataque cibernético ocorrido em 29 de outubro e divulgado no dia 30, considerado o maior crime do setor.",
+            "O banco francês Crédit Mutuel Arkéa informou em 5 de novembro que foi alvo de um ataque hacker estimado em **100 milhões** de euros (aproximadamente **R$ 615 milhões**), sem relação com o caso da Binance."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Uma pane global da Microsoft entre os dias 12 e 13 de novembro gerou instabilidade no Outlook, Teams e Copilot, afetando empresas, governos e serviços de emergência em dezenas de países, embora a empresa tenha descartado invasão hacker.",
+            "Entre 16 e 17 de novembro, um ataque divulgado pelo pesquisador Scott Helme comprometeu cerca de 178 sites, incluindo BBC, IKEA e Air France, injetando código malicioso para roubar dados e criptomoedas e gerando cerca de **US$ 7 mil** (**R$ 40 mil**) aos invasores."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Sargento Reginauro critica projeto de ajuste **fiscal do governo**",
+      "subtitulo": "O senador Sargento Reginauro (PSDB-CE) criticou, em pronunciamento no Plenário na terça-feira (17/11/2026)",
+      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/18/sargento-reginauro-critica-projeto-de-ajuste-fiscal-do-governo/20261117_03746t.jpg",
+      "fonte": "Agência Senado",
+      "data": "18/11/2026",
+      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/18/sargento-reginauro-critica-projeto-de-ajuste-fiscal-do-governo",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O senador Sargento Reginauro (PSDB-CE) criticou, em pronunciamento no Plenário na terça-feira (17/11/2026), as medidas de ajuste fiscal propostas pelo governo federal.",
+            "Para o parlamentar, o projeto de ajuste pode prejudicar os recursos direcionados à saúde, à educação e a programas sociais, recaindo o custo sobre o cidadão brasileiro.",
+            "Reginauro defendeu a redução das despesas estatais e cobrou cortes de gastos do governo em vez de aumentos de ministérios, apontando isso como alternativa para equilibrar as contas."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O Projeto de Lei Complementar (PLP) 299/2026 viabiliza a ampliação do bloqueio de despesas e impõe limites para a expansão dos gastos públicos acima da inflação.",
+            "O texto-base da proposta foi aprovado na semana anterior, enquanto os destaques apresentados pela oposição têm previsão de análise separada nesta quarta-feira (18/11/2026)."
           ]
         }
       ],
@@ -88,32 +124,39 @@
     {
       "tipo": "noticia",
       "categoria": "Economia",
-      "manchete": "Crise do Master: um ano depois, clientes relatam perdas e desconfiança; veja o que **mudou no mercado**",
-      "subtitulo": "Há um ano, o Banco Central decretou a liquidação extrajudicial do Banco Master",
-      "imagem": "https://s2-g1.glbimg.com/Xb_aLgqbjf_zeHTeBTvlAlg9fXQ=/8192x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/d/B/wnIIKfSLCGyf1EQ189RA/age20251118011.jpg",
+      "manchete": "Dólar oscila, de olho em ajuste fiscal e ata do **Fed; Ibovespa cai**",
+      "subtitulo": "Na quarta‑feira (18), o dólar recuou e operou com volatilidade",
+      "imagem": "https://s2-g1.glbimg.com/70nucwHraiw6rw99mRTPQ3JPfsE=/5184x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/2/s/iveHFATICeDrK8diFnLw/pexels-john-guccione-wwwadvergroupcom-3564390.jpg",
       "fonte": "g1 Economia",
       "data": "18/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/18/crise-do-master-um-ano-depois-clientes-relatam-perdas-e-desconfianca-veja-o-que-mudou-no-mercado.ghtml",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/18/dolar-ibovespa.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "Há um ano, o Banco Central decretou a liquidação extrajudicial do Banco Master, dando início ao maior acionamento da história do Fundo Garantidor de Créditos, com estimativa inicial de **1,6 milhão** de credores e **R$ 41 bilhões** em garantias.",
-            "A Polícia Federal investiga a criação de documentos falsos para inflar o patrimônio do banco e a venda de **R$ 12,2 bilhões** em carteiras de crédito sem lastro ao BRB, além de suspeitas de corrupção, lavagem de dinheiro e crimes cibernéticos."
+            "Na quarta‑feira (18), o dólar recuou e operou com volatilidade, cotado a **R$ 5,7843** (alta de **0,03%**) após ter tocado **R$ 5,8290**; o Ibovespa registrou 169.322 pontos, queda de **0,29%** no mesmo horário.",
+            "Investidores aguardam a ata da última reunião do Fed, prevista para a tarde, que deve trazer a visão sobre a economia dos EUA e possíveis indícios sobre a trajetória dos juros, que permanecem entre **3,75%** e **4%** ao ano."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O FGC iniciou os pagamentos em 19 de janeiro de 2026 e já devolveu **R$ 28,8 bilhões** a pouco mais de **570 mil** credores do Banco Master, além de **R$ 11,2 bilhões** no Master de Investimento e **R$ 4,6 bilhões** no Banco Pleno.",
-            "O FGC garante até **R$ 250 mil** por CPF e por instituição financeira, com teto global de **R$ 1 milhão** a cada quatro anos. Valores acima disso vão para a lista de credores da liquidação, sem garantia de recuperação integral."
+            "No Brasil, o Senado adiou para 18/11 a votação do pacote de ajuste fiscal, originalmente prevista para 17/11; sete novas emendas foram apresentadas e serão analisadas pelo relator, senador Eduardo Braga (MDB‑AM).",
+            "O Ministério do Planejamento estima que o pacote pode impactar até **R$ 60** bi em 2027 – **R$ 50** bi para cumprir metas fiscais e **R$ 10** bi para novas despesas como o Pé‑de‑Meia Universitário – incluindo limites mais rígidos ao crescimento de gastos, bloqueio temporário de despesas obrigatórias…"
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Em setembro de 2025, entrou em vigor uma norma da Anbima que proíbe bancos e corretoras de usar a proteção do FGC como principal atrativo de vendas e exige transparência sobre emissores, riscos e condições de resgate."
+            "O ministro da Fazenda, Dario Durigan, afirmou que a proposta em análise é apenas o primeiro passo de um processo mais amplo, com compromisso de superávits nos próximos quatro anos e ajuste gradual como única via.",
+            "O presidente Lula sinalizou que realizará uma série de reuniões com integrantes do governo e lideranças do PT para debater a equipe econômica e medidas de controle da dívida pública, buscando reduzir a desconfiança dos investidores."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "A Nvidia divulgou lucro líquido de **US$ 65,3** bi (**R$ 377,8** bi) no terceiro trimestre, alta de **105%** em relação ao mesmo período do ano anterior, com receita de **US$ 115,8** bi, sendo o primeiro balanço após a saída de Jensen Huang da direção."
           ]
         }
       ],
@@ -123,48 +166,6 @@
         "#varejo",
         "#mercado",
         "#negocios"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "Os filhos que lutam na Justiça para apagar nomes de pais ausentes ou **abusivos dos documentos**",
-      "subtitulo": "A catarinense Isabella Pertsch, de 30 anos e residente na Alemanha",
-      "imagem": "https://ichef.bbci.co.uk/news/1200/branded_portuguese/dbad/live/f14c0fc0-9bd1-11f1-aed2-8d6da8d75094.jpg",
-      "fonte": "BBC News Brasil",
-      "data": "18/11/2026",
-      "link": "https://www.bbc.com/portuguese/articles/c79gpqyrdy2o?at_medium=RSS&at_campaign=rss",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "A catarinense Isabella Pertsch, de **30 anos** e residente na Alemanha, recorreu à Justiça para retirar o nome de seu pai biológico da certidão de nascimento e de outros documentos oficiais, buscando encerrar um histórico de abandono afetivo e financeiro.",
-            "O processo judicial movido por Isabella está atualmente na fase de produção de provas e depoimento de testemunhas. A defesa do pai informou que ele aguardará os desdobramentos do processo e o pronunciamento final da Justiça."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "Não existe uma lei específica no Brasil que preveja a alteração ou exclusão do nome de genitores, mas decisões judiciais recentes baseiam-se em situações de abandono afetivo, violência ou rompimento completo de vínculos familiares.",
-            "O Superior Tribunal de Justiça (STJ) registrou o primeiro precedente de exclusão de sobrenome paterno por abandono em decisão publicada em 9 de dezembro de 1997. Em 2025, um caso reconheceu pela primeira vez a possibilidade de extinção total do vínculo de paternidade."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "Os processos exigem a comprovação material e testemunhal de abandono ou abusos. As solicitações são analisadas caso a caso, e pedidos podem ser rejeitados por juízes que mantêm uma visão conservadora fundamentada em leis de registros públicos dos anos 1970.",
-            "Especialistas apontam que a remoção do nome não elimina o histórico familiar nos cartórios e que a maioria dos pedidos julgados com sucesso envolve a desconstituição de paternidade, reflexo de fatores culturais relacionados ao abandono parental."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#mundo",
-        "#economiaglobal",
-        "#noticias",
-        "#internacional"
       ],
       "feed": false
     }
