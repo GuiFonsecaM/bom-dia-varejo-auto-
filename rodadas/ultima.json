@@ -1,3 +1,172 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Tomate, arroz e carne encarecem cesta básica em todas as capitais; veja o valor **e quanto subiu**",
+      "subtitulo": "O custo da cesta básica subiu em todas as 27 capitais brasileiras em outubro de 2026",
+      "imagem": "https://s2-g1.glbimg.com/KJny1OaSeDfTPPDw3WLKBuV7gfE=/1280x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/d/v/ESC7XwTReZNNhmugXu7A/montagem-horizontal-1280x720px-3-.jpg",
+      "fonte": "g1 Economia",
+      "data": "18/11/2026",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/18/tomate-arroz-e-carne-encarecem-cesta-basica-em-todas-as-capitais-veja-o-valor-e-quanto-subiu.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O custo da cesta básica subiu em todas as 27 capitais brasileiras em outubro de 2026, impulsionado principalmente pelas altas do tomate, arroz e carne bovina de primeira, segundo relatório divulgado no dia 10 pelo Dieese e pela Conab.",
+            "São Paulo registrou o maior valor para a cesta básica, alcançando **R$ 951,37,** enquanto Aracaju apresentou o menor custo, de **R$ 618,61.** De setembro para outubro, as maiores altas ocorreram no Nordeste: Salvador (**6,79%**), Natal (**6,68%**) e Recife (**6,41%**)."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Com base na cesta de São Paulo, o Dieese calculou que o salário mínimo necessário para sustentar uma família de quatro pessoas em outubro seria de **R$ 7.992,47,** valor quase cinco vezes superior ao salário mínimo vigente de **R$ 1.621.**",
+            "O preço do tomate subiu em todas as capitais entre setembro e outubro, com variações de **0,68%** em Boa Vista a **58,32%** em Maceió. O encarecimento decorre de problemas climáticos no Sul, Sudeste e Cerrado Mineiro, que causaram excesso de chuvas, pragas, dias nublados e temperaturas baixas, atrasando a colheita."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O arroz agulhinha encareceu em 26 capitais no mesmo período, com altas expressivas em Palmas (**9,54%**), Campo Grande (**7,74%**) e Fortaleza (**7,18%**). A alta foi impulsionada pela valorização internacional e por exportações recordes no primeiro semestre de 2026, reduzindo a oferta interna.",
+            "A carne bovina de primeira ficou mais cara em 25 capitais de setembro para outubro, liderada por São Luís (**6,04%**) e Rio Branco (**3,54%**). A alta foi provocada pela menor oferta de bois para abate durante a entressafra e pela forte demanda externa pela carne brasileira."
+          ]
+        },
+        {
+          "titulo": "O que vem agora",
+          "topicos": [
+            "Por outro lado, o café em pó barateou em 20 capitais entre setembro e outubro, com quedas de até **6,92%** em Maceió. O recuo nos preços reflete a expectativa de safra recorde no Brasil e uma produção global **6%** maior projetada pelo USDA para a safra 2026/27."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Senado adia votação de destaques do projeto **de ajuste fiscal**",
+      "subtitulo": "O presidente do Senado, Davi Alcolumbre, adiou para quarta-feira (18), às 16h",
+      "imagem": "https://imagens.ebc.com.br/92SOTb7KB2yZ5fwAsK9SXWXuvJo=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/11/17/maioridade_12-11-26_0.jpg?itok=C7rNMz4F",
+      "fonte": "Agência Brasil Política",
+      "data": "18/11/2026",
+      "link": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/senado-adia-votacao-de-destaques-do-projeto-de-ajuste-fiscal",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O presidente do Senado, Davi Alcolumbre, adiou para quarta-feira (18), às 16h, a votação dos destaques do projeto de lei de ajuste fiscal do governo.",
+            "O pedido de adiamento foi feito pelo relator Eduardo Braga para tentar construir um entendimento entre a base governista e a oposição.",
+            "O projeto visa reduzir despesas e ampliar a arrecadação, com economia estimada pelo Ministério do Planejamento entre **R$ 50 bilhões** e **R$ 60 bilhões** em 2027."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A proposta altera o arcabouço fiscal para permitir novos bloqueios de gastos e reduz de **2,5%** para **2%** o limite de crescimento das despesas acima da inflação.",
+            "O texto prevê corte de benefícios fiscais, adiamento de repasses da Lei Kandir e prazo de 120 dias para o Congresso regulamentar tetos do funcionalismo.",
+            "Destaques contestados incluem a manutenção de créditos tributários para empresas, que podem gerar até **R$ 18,3 bilhões** em receitas adicionais em 2027."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Crise do Master: um ano depois, clientes relatam perdas e desconfiança; veja o que **mudou no mercado**",
+      "subtitulo": "Há um ano, o Banco Central decretou a liquidação extrajudicial do Banco Master",
+      "imagem": "https://s2-g1.glbimg.com/Xb_aLgqbjf_zeHTeBTvlAlg9fXQ=/8192x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/d/B/wnIIKfSLCGyf1EQ189RA/age20251118011.jpg",
+      "fonte": "g1 Economia",
+      "data": "18/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/18/crise-do-master-um-ano-depois-clientes-relatam-perdas-e-desconfianca-veja-o-que-mudou-no-mercado.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Há um ano, o Banco Central decretou a liquidação extrajudicial do Banco Master, dando início ao maior acionamento da história do Fundo Garantidor de Créditos, com estimativa inicial de **1,6 milhão** de credores e **R$ 41 bilhões** em garantias.",
+            "A Polícia Federal investiga a criação de documentos falsos para inflar o patrimônio do banco e a venda de **R$ 12,2 bilhões** em carteiras de crédito sem lastro ao BRB, além de suspeitas de corrupção, lavagem de dinheiro e crimes cibernéticos."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O FGC iniciou os pagamentos em 19 de janeiro de 2026 e já devolveu **R$ 28,8 bilhões** a pouco mais de **570 mil** credores do Banco Master, além de **R$ 11,2 bilhões** no Master de Investimento e **R$ 4,6 bilhões** no Banco Pleno.",
+            "O FGC garante até **R$ 250 mil** por CPF e por instituição financeira, com teto global de **R$ 1 milhão** a cada quatro anos. Valores acima disso vão para a lista de credores da liquidação, sem garantia de recuperação integral."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Em setembro de 2025, entrou em vigor uma norma da Anbima que proíbe bancos e corretoras de usar a proteção do FGC como principal atrativo de vendas e exige transparência sobre emissores, riscos e condições de resgate."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Os filhos que lutam na Justiça para apagar nomes de pais ausentes ou **abusivos dos documentos**",
+      "subtitulo": "A catarinense Isabella Pertsch, de 30 anos e residente na Alemanha",
+      "imagem": "https://ichef.bbci.co.uk/news/1200/branded_portuguese/dbad/live/f14c0fc0-9bd1-11f1-aed2-8d6da8d75094.jpg",
+      "fonte": "BBC News Brasil",
+      "data": "18/11/2026",
+      "link": "https://www.bbc.com/portuguese/articles/c79gpqyrdy2o?at_medium=RSS&at_campaign=rss",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A catarinense Isabella Pertsch, de **30 anos** e residente na Alemanha, recorreu à Justiça para retirar o nome de seu pai biológico da certidão de nascimento e de outros documentos oficiais, buscando encerrar um histórico de abandono afetivo e financeiro.",
+            "O processo judicial movido por Isabella está atualmente na fase de produção de provas e depoimento de testemunhas. A defesa do pai informou que ele aguardará os desdobramentos do processo e o pronunciamento final da Justiça."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Não existe uma lei específica no Brasil que preveja a alteração ou exclusão do nome de genitores, mas decisões judiciais recentes baseiam-se em situações de abandono afetivo, violência ou rompimento completo de vínculos familiares.",
+            "O Superior Tribunal de Justiça (STJ) registrou o primeiro precedente de exclusão de sobrenome paterno por abandono em decisão publicada em 9 de dezembro de 1997. Em 2025, um caso reconheceu pela primeira vez a possibilidade de extinção total do vínculo de paternidade."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "Os processos exigem a comprovação material e testemunhal de abandono ou abusos. As solicitações são analisadas caso a caso, e pedidos podem ser rejeitados por juízes que mantêm uma visão conservadora fundamentada em leis de registros públicos dos anos 1970.",
+            "Especialistas apontam que a remoção do nome não elimina o histórico familiar nos cartórios e que a maioria dos pedidos julgados com sucesso envolve a desconstituição de paternidade, reflexo de fatores culturais relacionados ao abandono parental."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    }
+  ]
 }
