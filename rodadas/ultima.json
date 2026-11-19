@@ -3,33 +3,33 @@
     {
       "tipo": "noticia",
       "categoria": "Varejo",
-      "manchete": "Varejo amplia canais de venda, **mas enfrenta desafio de preservar margens**",
-      "subtitulo": "",
-      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/11/quando-os-lideres-se-encontram-totvs-RJ_2026-.jpg",
-      "fonte": "Mercado & Consumo",
+      "manchete": "JBS (JBSS3): Itaú BBA vê recuperação dos resultados em 2027 e mantém ação como **favorita do setor**",
+      "subtitulo": "O Itaú BBA atualizou as projeções para a JBS (JBSS32) e reiterou a recomendação de compra",
+      "imagem": "https://www.moneytimes.com.br/uploads/2025/08/jbs-jbss3-3-1.jpg",
+      "fonte": "Money Times",
       "data": "19/11/2026",
-      "link": "https://mercadoeconsumo.com.br/19/11/2026/noticias-varejo/varejo-amplia-canais-de-venda-mas-enfrenta-desafio-de-preservar-margens/",
+      "link": "https://www.moneytimes.com.br/jbs-jbss3-itau-bba-ve-recuperacao-dos-resultados-em-2027-mantem-acao-como-favorita-do-setor-pads/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "Executivos e especialistas do varejo e da tecnologia debateram estratégias de crescimento para 2027 e desafios da Black Friday durante o evento Quando os Líderes se Encontram, realizado no Rio de Janeiro pela Gouvêa Consulting e Gouvêa Experience, com oferecimento da TOTVS.",
-            "O avanço do comércio eletrônico e de novos canais exige a integração das operações físicas e digitais, mas barreiras culturais, operacionais, fiscais e trabalhistas ainda geram disputas internas por vendas e comissões entre departamentos."
+            "O Itaú BBA atualizou as projeções para a JBS (JBSS32) e reiterou a recomendação de compra, mantendo a empresa como sua ação favorita no setor de proteínas.",
+            "Para os papéis negociados na Bolsa de Nova York (NYSE), o banco fixou um preço-alvo de **US$ 18** por ação ao final de 2027, o que indica um potencial de valorização de aproximadamente **50%**."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "No painel sobre o ano de 2027, especialistas destacaram que a integração de canais precisa eliminar atritos na jornada do consumidor e garantir a sustentabilidade econômica de franqueados e operações na ponta.",
-            "Durante a discussão sobre a Black Friday, executivos apontaram os riscos de campanhas focadas apenas em descontos e faturamento, especialmente no Brasil, onde a data coincide com o verão, o pagamento do 13º salário e as compras de Natal."
+            "Embora o resultado do terceiro trimestre de 2026 tenha decepcionado devido a pressões na carne bovina no Brasil, suínos nos EUA e operações na Austrália, o foco migra para a recuperação dos lucros a partir do quarto trimestre.",
+            "Para 2026, a projeção de Ebitda foi reduzida em **3,5%**, para **US$ 5,2 bilhões**, mas o banco elevou em **2%** a estimativa para 2027, alcançando **US$ 5,7 bilhões**."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Marcas como Reserva e Bagaggio relataram estratégias para priorizar a preservação das margens de lucro e a seleção criteriosa de produtos promocionados, evitando que promoções digitais canibalizem as vendas das lojas físicas.",
-            "O uso de inteligência artificial, dados de clientes e novas plataformas de venda foi apontado como fundamental, desde que a tecnologia esteja alinhada às decisões comerciais e à rentabilidade do negócio."
+            "A melhora em 2027 será impulsionada pela alta na rentabilidade da carne bovina nos EUA, com margem Ebitda prevista de **1%** (ante **0,2%**), apoiada por maior oferta de gado e importações do México.",
+            "A JBS negocia a 6,5 vezes o EV/Ebitda estimado para 2027 e apresenta rendimento de fluxo de caixa ao acionista de cerca de **8%**, sustentada por forte geração de caixa em dólar."
           ]
         }
       ],
@@ -44,76 +44,34 @@
     },
     {
       "tipo": "noticia",
-      "categoria": "Política",
-      "manchete": "Senado completa votação, **e ajuste fiscal segue para a Câmara**",
-      "subtitulo": "O Senado concluiu nesta quarta-feira (18) a votação do projeto de ajuste fiscal (PLP 299/2026) em turno suplementar",
-      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/18/senado-completa-votacao-e-ajuste-fiscal-segue-para-a-camara/20261118_05099w.jpg",
-      "fonte": "Agência Senado",
-      "data": "19/11/2026",
-      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/18/senado-completa-votacao-e-ajuste-fiscal-segue-para-a-camara",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "O Senado concluiu nesta quarta-feira (18) a votação do projeto de ajuste fiscal (PLP 299/2026) em turno suplementar, registrando 69 votos favoráveis e dois contrários. A proposta, apresentada pelo Executivo e relatada por Eduardo Braga, segue agora para análise na Câmara dos Deputados.",
-            "O texto projeta uma melhora de **R$ 45,1 bilhões** a **R$ 56,1 bilhões** no resultado primário de 2027. Além disso, prevê que o crescimento real das despesas federais seja limitado a **2%** nos anos com medidas de contenção fiscal, abaixo do teto de **2,5%** do arcabouço."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "O relator acatou três das 15 emendas apresentadas no turno suplementar. Uma delas reduziu de 120 para 60 dias o prazo para o Congresso regulamentar o teto salarial do serviço público, após a publicação da nova lei.",
-            "Outra mudança aprovada determina que, se o resultado primário do governo central do ano anterior for inferior a **0,5%** do PIB, o Executivo deverá apresentar as causas e as medidas de correção em audiência pública na Comissão Mixta de Orçamento."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "O projeto também abre espaço fiscal extraordinário de até **R$ 10,5 bilhões** em 2026 para custear a subvenção ao óleo diesel rodoviário, mitigando impactos do conflito no Oriente Médio sobre os combustíveis e a inflação.",
-            "O texto alterou os repasses da Lei Kandir de 1996: o piso anual foi fixado em **R$ 2 bilhões**, com a compensação remanescente programada para ser paga aos estados e municípios entre 2028 e 2030."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#politica",
-        "#economia",
-        "#brasil",
-        "#noticias"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Economia",
-      "manchete": "É #FAKE que MP do 'imposto do pecado' aumentará em **30%** carga tributária sobre carros em 2027",
-      "subtitulo": "É falso que a Medida Provisória n.º 1.399/2026 aumentará em 30% a carga tributária de todos os carros a partir de 2027",
-      "imagem": "https://s2-g1.glbimg.com/LpuVe7F-SmSLandbyttTOPkwC-4=/2000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/n/N/Z8WKs8TvCBmA8JHTghcg/abre-materia-fof-72-.png",
+      "manchete": "Anthropic estreia na bolsa nesta quinta; saiba quanto custa investir na criadora do **Claude pelo Brasil**",
+      "subtitulo": "A Anthropic, desenvolvedora do chatbot Claude, realizou sua estreia na Nasdaq nesta quinta‑feira (19/)",
+      "imagem": "https://s2-g1.glbimg.com/TOva-KdlafNLXVCDulJwQR--TAg=/3500x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/G/n/7BQJxFSR6juUrrAWybuA/2026-09-18t122428z-2035353265-rc2qrla2prcd-rtrmadp-3-ai-europe-risks.jpg",
       "fonte": "g1 Economia",
       "data": "19/11/2026",
-      "link": "https://g1.globo.com/fato-ou-fake/noticia/2026/11/19/e-fake-que-mp-do-imposto-do-pecado-aumentara-em-30percent-carga-tributaria-sobre-carros-em-2027.ghtml",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/19/anthropic-estreia-bolsa-como-investir-brasil.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "É falso que a Medida Provisória n.º 1.399/2026 aumentará em **30%** a carga tributária de todos os carros a partir de 2027, conforme desmentido pela Receita Federal após postagem viralizada no X em 5 de novembro.",
-            "O Imposto Seletivo (IS), conhecido como imposto do pecado, substitui o Imposto sobre Produtos Industrializados (IPI), que será zerado em fevereiro de 2027, e não representa uma taxa adicional somada à tributação atual."
+            "A Anthropic, desenvolvedora do chatbot Claude, realizou sua estreia na Nasdaq nesta quinta‑feira (19/), com ações precificadas em **US$ 83,** equivalentes a cerca de **R$ 482** por ação.",
+            "No Brasil, os papéis serão negociados como BDRs (Brazilian Depositary Receipts) sob o código ANTH34, com preço estimado de **R$ 60** por certificado, pois cada ação americana corresponde a oito BDRs locais."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "A alíquota máxima de **30%** do IS incidirá exclusivamente sobre o caso mais extremo: carros de passeio movidos a diesel com potência superior a 290 kW, como importados de luxo, e não sobre veículos populares ou eletrificados.",
-            "Carros populares flex terão alíquota estimada em **7,62%**, enquanto elétricos pagarão **5,20%**; veículos de pessoas com deficiência ou autismo e motoristas profissionais de aluguel, como táxis, terão alíquota zero."
+            "A negociação dos BDRs começa na B3 às 10h (horário de Brasília), enquanto a abertura da Nasdaq ocorre às 11h30, o que pode gerar volatilidade no preço do BDR até a formação do mercado americano.",
+            "Para adquirir os BDRs, o investidor deve ter conta em corretora ou banco que opere na B3, acessar o home broker, buscar o ticker ANTH34, definir quantidade e preço (a mercado ou limitado) e confirmar a ordem em reais."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "Caminhões com peso bruto igual ou superior a **3,5 mil** quilos (exceto picapes) e veículos operacionais das Forças Armadas e Segurança Pública terão não incidência do tributo.",
-            "A arrecadação do IS em 2027 servirá para reduzir a alíquota da CBS, mantendo a neutralidade da carga tributária total, e o governo enviará um projeto de lei até 31 de maio de 2027 para definir as alíquotas permanentes para 2028."
+            "A participação direta no IPO nos EUA está restrita a investidores profissionais com mais de **R$ 10 milhões** investidos; a reserva de ações na Fidelity encerrou‑se em 17/ e não garante alocação, dependendo da demanda e critérios da oferta.",
+            "Não há pré‑reserva de BDRs no Brasil; qualquer investidor de varejo pode comprar o certificado após a estreia, sem necessidade de conta no exterior, embora o preço siga a cotação das ações nos EUA e a variação do dólar."
           ]
         }
       ],
@@ -127,40 +85,71 @@
       "feed": false
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "A potente Coreia do Sul: M&C traz raio X do país e realiza live na **segunda-feira com especialistas**",
-      "subtitulo": "O portal Mercado&Consumo e a Gouvêa & Spheria Trade Missions realizam na próxima segunda-feira, 23 de novembro de 2026",
-      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/03/seul_coreia_envato.webp",
-      "fonte": "Mercado & Consumo",
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Ministro afirma que pacote fiscal dará segurança ao mercado, mas admite possíveis novas medidas **para cumprir metas**",
+      "subtitulo": "O Senado concluiu na quarta-feira (18) a votação do projeto de ajuste fiscal (PLP 299/2026)",
+      "imagem": "https://s2-g1.glbimg.com/BEaG6nF_HktsmgZI0bLYPzxu54E=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/e/G/ooU2YBTvmw1us4MRk6Bg/fabio-rodrigues-pozzebom-agencia-brasil.jpg",
+      "fonte": "g1 Economia",
       "data": "19/11/2026",
-      "link": "https://mercadoeconsumo.com.br/19/11/2026/noticias-varejo/a-potente-coreia-do-sul-mc-traz-raio-x-do-pais-e-realiza-live-na-segunda-feira-com-especialistas/",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/19/moreti-fiscal-mercado.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O portal Mercado&Consumo e a Gouvêa & Spheria Trade Missions realizam na próxima segunda-feira, 23 de novembro de 2026, das 18h às 19h, a live \"Made in Korea: razões da transformação em benchmark global\". O encontro discutirá o desenvolvimento da Coreia do Sul e lições para o varejo, consumo e serviços brasileiros."
+            "O Senado concluiu na quarta-feira (18) a votação do projeto de ajuste fiscal (PLP 299/2026), aprovado por 69 votos a favor e dois contrários, e a matéria seguiu para análise da Câmara dos Deputados.",
+            "O ministro do Planejamento e Orçamento, Bruno Moretti, afirmou nesta quinta-feira (19) em entrevista à GloboNews que o pacote gerará uma economia de cerca de **R$ 50 bilhões** em 2027."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O evento terá a participação de Marcos Gouvêa, Eduardo Komatsu e Suk Jung Kwon, com mediação de Aiana Freitas. A conversa debaterá a transformação do varejo, a integração de canais e a expansão internacional de setores como beleza com base nas experiências da Missão Coreia do Sul 2026.",
-            "A Coreia do Sul possui cerca de **51,7 milhões** de habitantes, registrou um PIB de **US$ 1,87 trilhão** em 2025 e renda per capita de **US$ 36,2 mil**. No mesmo ano, as exportações totais do país alcançaram **US$ 709,7 bilhões**, com alta anual de **3,8%**."
+            "A estimativa de impacto fiscal caiu dos **R$ 56 bilhões** iniciais previstos pelo relator, senador Eduardo Braga (MDB-AM), após negociações que elevaram o piso dos repasses da Lei Kandir para **R$ 2 bilhões** anuais.",
+            "O projeto reúne ações para cortar despesas, limitar benefícios tributários, ampliar o bloqueio de gastos e incluir emendas parlamentares impositivas no esforço fiscal para cumprir as metas."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "As exportações sul-coreanas de cosméticos somaram **US$ 11,4 bilhões** em 2025, um crescimento de **11,8%** sobre 2024, consolidando o país como o segundo maior exportador mundial do setor. Os produtos chegaram a 202 mercados em 2025, gerando um superávit comercial superior a **US$ 10 bilhões**.",
-            "Até setembro de 2026, as vendas externas de cosméticos da Coreia do Sul totalizaram **US$ 11,1 bilhões**, alta de **31,1%** frente aos nove primeiros meses de 2025. O desempenho reflete a força global da indústria conhecida como K-beauty."
+            "Moretti afirmou que o governo espera estabilizar a dívida pública em dois a três anos e não descartou adotar novas medidas no futuro, pretendendo alcançar superávit primário de **1,5%** do PIB ao fim de um eventual próximo mandato de Lula.",
+            "Durante a votação no Senado, foram rejeitados destaques da oposição que tentavam alterar o teto de crescimento das despesas, o limite de compensações previdenciárias e regras de créditos tributários."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Ataque com uso de IA leva Comissão Europeia a tirar **aplicativos do ar**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/BbSUdtTtcQwXfNex1gpVUbIqyqM=/5000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/v/X/NI53hBRPWa9ebAfAH2Cg/2025-12-23t160040z-1034825363-rc2viia1d9fs-rtrmadp-3-eu-environment-plastics.jpg",
+      "fonte": "g1 Economia",
+      "data": "19/11/2026",
+      "link": "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/19/comissao-europeia-ataque-hacker.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "A Comissão Europeia confirmou nesta quinta-feira (19) ter sido alvo de um ataque cibernético baseado em inteligência artificial, detectado inicialmente em 22 de outubro.",
+            "O porta-voz Thomas Regnier declarou que diversos aplicativos foram retirados do ar temporariamente como prevenção, sendo que a maioria já retornou ao funcionamento.",
+            "A investigação segue em andamento para avaliar a dimensão total do incidente, não havendo indícios até o momento de vazamento de dados afetando todos os funcionários."
           ]
         },
         {
-          "titulo": "O que vem agora",
+          "titulo": "Mais detalhes",
           "topicos": [
-            "Em janeiro de 2026, o comércio eletrônico sul-coreano movimentou **24,1 trilhões** de wons, registrando avanço de **8,6%** em relação a janeiro do ano anterior. As compras por dispositivos móveis representaram **78,2%** desse montante, evidenciando o peso dos smartphones na jornada de consumo."
+            "A autoridade afirmou desconhecer suspeitos ou pedidos de resgate, enquanto a apuração continua e novas medidas são adotadas conforme surgem informações.",
+            "O site Politico apontou que o ataque pode ter comprometido dados pessoais e durado dez dias de interrupção, afetando sistemas de recursos humanos e reembolso."
           ]
         }
       ],
