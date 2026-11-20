@@ -911,7 +911,36 @@
   "g1.globo.com/mundo/noticia/2026/11/20/protestos-jovens-europa.ghtml",
   "g1.globo.com/mundo/noticia/2026/11/20/tropas-europeias-de-11-paises-realizam-exercicio-militar-inedito-na-polonia-mirando-pos-guerra-na-ucrania.ghtml",
   "g1.globo.com/tecnologia/noticia/2026/11/20/estudantes-entram-com-processo-contra-empresa-de-tecnologia-por-erro-em-sistema-de-ia-que-confundiu-pacote-de-salgadinho-com-arma.ghtml",
-  "moneytimes.com.br/enquanto-muitos-investidores-esperam-a-data-dos-proximos-dividendos-este-sistema-busca-renda-media-diaria-de-ate-r-682-lbrdgm107"
+  "moneytimes.com.br/enquanto-muitos-investidores-esperam-a-data-dos-proximos-dividendos-este-sistema-busca-renda-media-diaria-de-ate-r-682-lbrdgm107",
+  "g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml",
+  "g1.globo.com/economia/agronegocios/noticia/2026/11/20/praga-mortal-que-ameaca-gado-avanca-nos-eua-e-moscas-estereis-viram-aposta-contra-parasita.ghtml",
+  "moneytimes.com.br/small-caps-safra-coloca-na-carteira-banco-que-pode-disparar-80-e-chegar-a-r-100-na-carteira-confira",
+  "mercadoeconsumo.com.br/20/11/2026/noticias/bershka-inaugura-loja-de-555-m%c2%b2-no-parkshopping-em-brasilia",
+  "mercadoeconsumo.com.br/20/11/2026/nrf-retails-big-show/nrf-2027-o-que-walmart-zara-levis-etsy-e-target-vao-levar-ao-palco-nesta-edicao",
+  "g1.globo.com/mundo/noticia/2026/11/20/trump-diz-que-outros-10-acordos-comerciais-serao-fechados-apos-viagem-a-asia-e-cupula-com-putin-e-xi-jinping.ghtml",
+  "g1.globo.com/tecnologia/noticia/2026/11/20/apos-falhas-que-afetaram-microsoft-e-suspenderam-voos-trump-demite-diretor-de-seguranca-cibernetica.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/20/mosca-da-bicheira-parasita-que-devora-animais-vivos-avanca-pelos-eua-e-alerta-pecuaristas.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/20/trump-diz-que-nao-permitira-que-empresas-construam-data-centers-fora-dos-eua.ghtml",
+  "moneytimes.com.br/nao-temos-esse-luxo-diz-diretora-do-fed-sobre-esperar-mais-para-combater-inflacao-pads",
+  "mercadoeconsumo.com.br/20/11/2026/noticias/jpmorgan-chase-visa-e-mastercard-confirmam-vazamento-de-dados-apos-ataque-cibernetico",
+  "poder360.com.br/poder-internacional/bc-do-paraguai-ignorou-alertas-sobre-quebra-do-ueno-bank",
+  "poder360.com.br/poder-justica/dino-vota-para-tornar-juscelino-filho-reu-por-desvio-de-emendas",
+  "poder360.com.br/poder-brasil/pm-de-minas-entra-no-mundo-de-gta-6-nas-redes-sociais",
+  "poder360.com.br/poder-internacional/custo-de-vida-e-guerras-mobilizam-jovens-em-diversos-paises-da-europa",
+  "poder360.com.br/poder-economia/governo-prepara-regras-para-limitar-beneficios-a-importados",
+  "poder360.com.br/poder-internacional/titulos-soberanos-da-argentina-caem-mais-de-us-002-em-nova-york",
+  "g1.globo.com/mundo/noticia/2026/11/20/trump-putin-guerra-na-ucrania.ghtml",
+  "poder360.com.br/poder-justica/bolsonaro-vai-a-hospital-depois-de-sentir-dores-abdominais",
+  "g1.globo.com/mundo/noticia/2026/11/20/onu-regras-robos-assassinos.ghtml",
+  "poder360.com.br/poder-brasil/dano-em-poste-de-fibra-optica-provoca-atrasos-em-voos-em-guarulhos",
+  "poder360.com.br/poder-internacional/governo-dos-eua-nomeia-nova-diretora-de-seguranca-cibernetica",
+  "g1.globo.com/mundo/noticia/2026/11/20/missil-russo-atinge-a-polonia-e-primeiro-ministro-fala-em-provocacao.ghtml",
+  "infomoney.com.br/consumo/gta-6-recorde-us379-bilhoes-lancamento",
+  "poder360.com.br/poder-justica/zanin-leva-julgamento-de-van-hattem-a-sessao-presencial-do-stf",
+  "g1.globo.com/mundo/noticia/2026/11/20/salvadorenhos-morte-haiti.ghtml",
+  "mercadoeconsumo.com.br/20/11/2026/noticias/com-a-ia-o-cliente-sabe-tudo-por-que-ainda-precisa-de-voce",
+  "mercadoeconsumo.com.br/20/11/2026/economia/andre-esteves-diz-em-depoimento-a-pf-que-master-era-um-banco-muito-pequeno-inexpressivo",
+  "mercadoeconsumo.com.br/20/11/2026/mc-capital/anthropic-estreia-em-wall-street-com-alta-de-17-e-se-torna-12a-empresa-mais-valiosa-do-mundo"
  ],
  "postados": [
   {
@@ -1650,6 +1679,34 @@
    "categoria": "Economia",
    "titulo": "Minerva (BEEF3) ganha fôlego com alta do dólar, e Natura (NATU3) fica na lanterna; veja o que rolou no Ibovespa",
    "em": "2026-11-20 13:00",
+   "feed": false
+  },
+  {
+   "chave": "moneytimes.com.br/small-caps-safra-coloca-na-carteira-banco-que-pode-disparar-80-e-chegar-a-r-100-na-carteira-confira",
+   "categoria": "Varejo",
+   "titulo": "Small caps: Safra coloca na carteira banco que pode disparar 80% e chegar a R$ 100; confira o portfólio",
+   "em": "2026-11-20 19:00",
+   "feed": true
+  },
+  {
+   "chave": "g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml",
+   "categoria": "Mundo",
+   "titulo": "Reino Unido e União Europeia firmam acordo e tentam reconstruir laços após Brexit",
+   "em": "2026-11-20 19:00",
+   "feed": false
+  },
+  {
+   "chave": "poder360.com.br/poder-internacional/bc-do-paraguai-ignorou-alertas-sobre-quebra-do-ueno-bank",
+   "categoria": "Política",
+   "titulo": "BC do Paraguai ignorou alertas sobre quebra do Ueno Bank",
+   "em": "2026-11-20 19:00",
+   "feed": false
+  },
+  {
+   "chave": "mercadoeconsumo.com.br/20/11/2026/economia/andre-esteves-diz-em-depoimento-a-pf-que-master-era-um-banco-muito-pequeno-inexpressivo",
+   "categoria": "Economia",
+   "titulo": "André Esteves diz em depoimento à PF que ‘Master era banco inexpressivo’",
+   "em": "2026-11-20 19:00",
    "feed": false
   }
  ]

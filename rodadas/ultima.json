@@ -1,3 +1,168 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "Small caps: Safra coloca na carteira banco que pode disparar **80%** e chegar a R$ 100; confira o portfólio",
+      "subtitulo": "O Banco Safra atualizou sua carteira recomendada de small caps para novembro e dezembro",
+      "imagem": "https://www.moneytimes.com.br/uploads/2025/03/small-caps-acoes.jpg",
+      "fonte": "Money Times",
+      "data": "20/11/2026",
+      "link": "https://www.moneytimes.com.br/small-caps-safra-coloca-na-carteira-banco-que-pode-disparar-80-e-chegar-a-r-100-na-carteira-confira/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O Banco Safra atualizou sua carteira recomendada de small caps para novembro e dezembro, realizando trocas estratégicas no portfólio.",
+            "Deixaram a seleção as empresas C&A, JSL, Cyrela e Banco Inter, enquanto Banco Mercantil, IRB, Metalúrgica Gerdau e Minerva foram incluídas.",
+            "O Banco Mercantil é o principal destaque da carteira, com preço-alvo estipulado em **R$ 100** e potencial de valorização de **81%**."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "A inclusão do Banco Mercantil baseia-se na expansão do crédito consignado do INSS, normalização da portabilidade e redução da inadimplência.",
+            "O IRB entrou na carteira negociando a múltiplos descontados, e a Metalúrgica Gerdau reflete a forte geração de caixa da Gerdau.",
+            "A Minerva foi adicionada pelo valuation atrativo e por servir como exposição à alta do dólar, que encerrou próximo de **R$ 5,90.**"
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A carteira do Safra registrou queda de **33%** entre outubro e novembro e acumula baixa de **16%** no ano, ficando abaixo do Índice Small Cap."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Reino Unido e União Europeia firmam acordo e tentam reconstruir **laços após Brexit**",
+      "subtitulo": "Reino Unido e União Europeia fecharam um acordo em Bruxelas, na sexta-feira, 20 de novembro de 2026",
+      "imagem": "https://s2-g1.glbimg.com/wZj3YJesadzoq4GLZ2gRA5ZnuiE=/4117x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/i/8/LOQsOdQ0yTGRnhSRJLBg/ap26324361853975.jpg",
+      "fonte": "g1 Mundo",
+      "data": "20/11/2026",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Reino Unido e União Europeia fecharam um acordo em Bruxelas, na sexta-feira, 20 de novembro de 2026, para reconstruir laços após o Brexit, com o objetivo de reduzir custos e gerar **17 bilhões** de libras (**US$ 22 bilhões**) anuais.",
+            "O pacto elimina controles de fronteira para produtos animais e vegetais, diminui impostos sobre carbono em exportações e permite que 100.000 jovens de cada lado vivam e trabalhem no outro por até três anos."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Os dois lados deram a si mesmos um prazo de seis meses para definir as taxas universitárias aplicadas a estudantes da UE no Reino Unido e vice-versa, tema que ainda está em desenvolvimento.",
+            "A cúpula ocorreu uma década após o voto britânico pela saída do bloco e seis anos após a dissolução ser finalizada, marcando apenas a segunda reunião de cúpula desde a separação."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O primeiro-ministro britânico, Andy Burnham, afirmou que o acordo pode adicionar **0,5%** à produção econômica do Reino Unido, além de ajudar a manter baixos os preços nos supermercados e facilitar exportações.",
+            "Críticos e defensores do Brexit apontaram o pacto como uma possível traição à independência britânica e um passo em direção à reintegração do Reino Unido à UE, que atualmente é composta por 27 nações."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "BC do Paraguai ignorou alertas sobre quebra **do Ueno Bank**",
+      "subtitulo": "O novo presidente do Banco Central do Paraguai, Jorge Schreiner",
+      "imagem": "https://static.poder360.com.br/uploads/2026/11/ueno-bank-fachada.jpg",
+      "fonte": "Poder360",
+      "data": "20/11/2026",
+      "link": "https://www.poder360.com.br/poder-internacional/bc-do-paraguai-ignorou-alertas-sobre-quebra-do-ueno-bank/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O novo presidente do Banco Central do Paraguai, Jorge Schreiner, declarou que a gestão anterior ignorou alertas técnicos sobre a crise financeira do Ueno Bank.",
+            "As perdas decorrentes da falência do banco digital, que contava com **2,9 milhões** de clientes em junho de 2026, podem alcançar **US$ 1 bilhão**.",
+            "O BCP interveio na instituição em 3 de novembro após constatar que o índice de solvência estava abaixo da metade do mínimo exigido, utilizando **US$ 700 milhões** do fundo garantidor para ressarcir correntistas."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O ex-presidente do BC, Carlos Carvallo, e o diretor jurídico Aldo Rodríguez foram presos, enquanto o ex-presidente do país, Santiago Peña, renunciou em 5 de novembro e sofreu impeachment no dia seguinte.",
+            "O escândalo motivou a renúncia do procurador-geral e levou Schreiner a solicitar uma auditoria da Controladoria e apoio do FMI para revisar a governança da autoridade monetária."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A autoridade monetária planeja reavaliar instrumentos de controle de dinheiro em circulação, manter a meta de inflação em **3,5%** e atuar no câmbio para evitar oscilações excessivas no guarani."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "André Esteves diz em depoimento à PF que ‘Master **era banco inexpressivo’**",
+      "subtitulo": "",
+      "imagem": "https://mercadoeconsumo.com.br/wp-content/uploads/2026/01/Master.webp",
+      "fonte": "Mercado & Consumo",
+      "data": "20/11/2026",
+      "link": "https://mercadoeconsumo.com.br/20/11/2026/economia/andre-esteves-diz-em-depoimento-a-pf-que-master-era-um-banco-muito-pequeno-inexpressivo/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "André Esteves, chairman do BTG Pactual, prestou depoimento à Polícia Federal em 21 de outubro como testemunha na Operação Compliance Zero, que investiga dois ex-servidores do Banco Central por suspeita de cooptação.",
+            "Esteves declarou à PF que o Banco Master era considerado inexpressivo no setor bancário e funcionava para o BTG muito mais como um cliente do que como um concorrente.",
+            "O depoimento de 16 minutos, conduzido pelo delegado Albert Pavie Ribeiro, investigou se ex-servidores sabiam previamente de irregularidades apontadas pelo BTG sobre o Master."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O banqueiro explicou que o BTG levou dúvidas e possíveis indícios de irregularidades ao BC, mas não realizou uma auditoria aprofundada ou due diligence por falta de tempo e visibilidade.",
+            "As negociações para a compra do Master foram consideradas inviáveis ao longo de dezembro de 2024, com novas tentativas sem sucesso entre janeiro e fevereiro de 2025.",
+            "A aquisição não avançou devido à falta de garantias do Fundo Garantidor de Créditos, já que nem o BTG nem o FGC conseguiam dimensionar os riscos e os ativos do Master."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    }
+  ]
 }
