@@ -888,7 +888,30 @@
   "infomoney.com.br/onde-investir/tributacao-de-titulos-isentos-como-o-imposto-pode-mexer-com-o-seu-bolso",
   "moneytimes.com.br/valorizacao-global-do-dolar-se-acentuou-apos-a-eleicao-nos-eua-diz-diretor-do-banco-pine-pads",
   "mercadoeconsumo.com.br/19/11/2026/economia/veja-como-sera-o-calculo-da-hora-extra-com-a-escala-de-trabalho-5x2",
-  "mercadoeconsumo.com.br/19/11/2026/noticias/brasileiros-aceitam-ia-para-comparar-precos-mas-so-7-dispensam-aprovacao-no-pagamento"
+  "mercadoeconsumo.com.br/19/11/2026/noticias/brasileiros-aceitam-ia-para-comparar-precos-mas-so-7-dispensam-aprovacao-no-pagamento",
+  "poder360.com.br/poder-sportsmkt/coca-cola-patrocina-1o-show-de-intervalo-da-libertadores",
+  "g1.globo.com/mundo/noticia/2026/11/20/predio-mais-alto-da-arabia-saudita-e-atingido-em-ataque-dos-houthis-a-sede-de-fundo-soberano-do-pais.ghtml",
+  "g1.globo.com/politica/noticia/2026/11/20/moraes-diz-que-fuga-de-flavio-para-os-eua-e-tentativa-de-obstruir-investigacao-e-vota-para-manter-restricoes-a-senador.ghtml",
+  "moneytimes.com.br/minerva-beef3-ganha-folego-com-alta-do-dolar-e-natura-natu3-fica-na-lanterna-veja-o-que-rolou-no-ibovespa-davs",
+  "poder360.com.br/poder-congresso/previdencia-e-bolsa-familia-terao-credito-de-r-149-bi-apos-aval-do-congresso",
+  "g1.globo.com/mundo/noticia/2026/11/20/como-mulher-foi-dopada-e-oferecida-a-desconhecidos-pelo-marido-durante-13-anos.ghtml",
+  "poder360.com.br/poder-internacional/reino-unido-e-uniao-europeia-anunciam-acordo-10-anos-apos-brexit",
+  "g1.globo.com/mundo/noticia/2026/11/20/impasse-sobre-guerra-e-gastos-militares-ameaca-paralisar-governo-dos-eua.ghtml",
+  "moneytimes.com.br/dividendos-a-vista-porto-seguro-pssa3-confirma-pagamento-de-r-567-milhoes-veja-valor-por-acao-igdl",
+  "g1.globo.com/politica/noticia/2026/11/19/lula-exonera-wellington-dias-ministro-do-desenvolvimento-social.ghtml",
+  "agenciabrasil.ebc.com.br/politica/noticia/2026-11/prevendo-judicializacao-lula-cobra-atencao-aplicacao-da-escala-5x2",
+  "bbc.com/portuguese/articles/c8vg2d3nkqe3o",
+  "poder360.com.br/poder-congresso/marcelo-castro-defende-fim-da-reeleicao-para-cargos-executivos",
+  "poder360.com.br/poder-congresso/projeto-cria-fundo-para-agricultura-familiar-pago-por-exportadores",
+  "poder360.com.br/poder-energia/anp-sinaliza-mudancas-no-gas-release-para-atenuar-cerco-a-petrobras",
+  "g1.globo.com/politica/noticia/2026/11/20/dino-vota-para-tornar-van-hattem-reu-por-calunia-e-injuria-contra-delegado-da-policia-federal.ghtml",
+  "bbc.com/portuguese/articles/cqdr1xmyg3kzo",
+  "g1.globo.com/inovacao/noticia/2026/11/20/robos-assassinos-ja-sao-usados-em-guerras-mas-paises-nao-chegam-a-acordo-sobre-limites-na-onu.ghtml",
+  "bbc.com/portuguese/articles/c6pw4d0292plo",
+  "g1.globo.com/mundo/noticia/2026/11/20/protestos-jovens-europa.ghtml",
+  "g1.globo.com/mundo/noticia/2026/11/20/tropas-europeias-de-11-paises-realizam-exercicio-militar-inedito-na-polonia-mirando-pos-guerra-na-ucrania.ghtml",
+  "g1.globo.com/tecnologia/noticia/2026/11/20/estudantes-entram-com-processo-contra-empresa-de-tecnologia-por-erro-em-sistema-de-ia-que-confundiu-pacote-de-salgadinho-com-arma.ghtml",
+  "moneytimes.com.br/enquanto-muitos-investidores-esperam-a-data-dos-proximos-dividendos-este-sistema-busca-renda-media-diaria-de-ate-r-682-lbrdgm107"
  ],
  "postados": [
   {
@@ -1606,6 +1629,27 @@
    "categoria": "Mundo",
    "titulo": "'Não podíamos pagar uma casa para nossa família, então decidimos comprar uma junto com desconhecidos'",
    "em": "2026-11-20 09:00",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/mundo/noticia/2026/11/20/predio-mais-alto-da-arabia-saudita-e-atingido-em-ataque-dos-houthis-a-sede-de-fundo-soberano-do-pais.ghtml",
+   "categoria": "Mundo",
+   "titulo": "Prédio mais alto da Arábia Saudita é atingido em ataque dos houthis à sede de fundo soberano do país",
+   "em": "2026-11-20 13:00",
+   "feed": true
+  },
+  {
+   "chave": "g1.globo.com/politica/noticia/2026/11/20/moraes-diz-que-fuga-de-flavio-para-os-eua-e-tentativa-de-obstruir-investigacao-e-vota-para-manter-restricoes-a-senador.ghtml",
+   "categoria": "Política",
+   "titulo": "Moraes diz que fuga de Flávio para os EUA é tentativa de obstruir investigações e vota para manter restrições a senador",
+   "em": "2026-11-20 13:00",
+   "feed": false
+  },
+  {
+   "chave": "moneytimes.com.br/minerva-beef3-ganha-folego-com-alta-do-dolar-e-natura-natu3-fica-na-lanterna-veja-o-que-rolou-no-ibovespa-davs",
+   "categoria": "Economia",
+   "titulo": "Minerva (BEEF3) ganha fôlego com alta do dólar, e Natura (NATU3) fica na lanterna; veja o que rolou no Ibovespa",
+   "em": "2026-11-20 13:00",
    "feed": false
   }
  ]

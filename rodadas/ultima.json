@@ -1,112 +1,77 @@
 {
   "posts": [
     {
-      "tipo": "noticia",
-      "categoria": "Varejo",
-      "manchete": "72 vezes, mas com juros: **GPA (PCAR3) parcela dívida trabalhista milionária**",
-      "subtitulo": "",
-      "imagem": "https://www.moneytimes.com.br/uploads/2024/02/pao-de-acucar-1.jpg",
-      "fonte": "Money Times",
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "Prédio mais alto da Arábia Saudita é atingido em ataque dos houthis à sede de fundo **soberano do país**",
+      "subtitulo": "O arranha-céu mais alto da Arábia Saudita, sede do fundo soberano PIF",
+      "imagem": "https://s2-g1.glbimg.com/5Oo_ujjRR20wrkh6rMPCFWpUoz4=/1280x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/4/O/1vG8S2QD2w4J96CT7TLw/pit-tower.jpg",
+      "fonte": "g1 Mundo",
       "data": "20/11/2026",
-      "link": "https://www.moneytimes.com.br/72-vezes-mas-com-juros-gpa-pcar3-parcela-divida-trabalhista-milionaria/",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/20/predio-mais-alto-da-arabia-saudita-e-atingido-em-ataque-dos-houthis-a-sede-de-fundo-soberano-do-pais.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "O Órgão Especial do TRT-2 aprovou o parcelamento de uma dívida trabalhista do Grupo Pão de Açúcar (PCAR3) estimada em cerca de **R$ 140 milhões**.",
-            "O montante, que previa desembolsos até o final de 2027, agora poderá ser quitado em até 72 prestações mensais acrescidas de correção pela taxa Selic.",
-            "A empresa, atualmente em recuperação extrajudicial, avalia que o parcelamento otimiza a gestão de seu passivo trabalhista e amplia a previsibilidade financeira."
+            "O arranha-céu mais alto da Arábia Saudita, sede do fundo soberano PIF, foi atingido em um ataque nesta quinta-feira (19) realizado pelos houthis.",
+            "Segundo a Defesa Civil local, a ofensiva provocou danos materiais em múltiplos andares e construções vizinhas, mas não deixou feridos.",
+            "O impacto quebrou janelas de sete a oito andares da PIF Tower e danificou partes da fachada metálica, marcando o segundo ataque a um prédio emblemático de Riad em menos de duas semanas, após a estatal Aramco ser atingida em 8 de novembro."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O novo formato de pagamento também cria oportunidades para a realização de acordos individuais com potencial de diminuir as obrigações da companhia.",
-            "O GPA aguarda o aval para novos PEPTs nos TRTs da 10ª e da 15ª Regiões, locais em que existem liminares que suspendem os pagamentos.",
-            "A companhia informou que está revisando sua metodologia contábil de provisionamento para esses processos e para as demais ações trabalhistas."
+            "O grupo houthi afirmou ter atacado o centro financeiro de Riad ao amanhecer e à noite, além de mencionar alvos como o Aeroporto Internacional Rei Khalid, a base aérea de Khamis Mushait e a petroquímica SADAF.",
+            "Três fontes indicaram que o edifício foi atingido por um míssil, enquanto a coalizão liderada pela Arábia Saudita relatou ter lidado com uma ameaça de míssil direcionada à capital e que destroços caíram no local."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O Ministério das Relações Exteriores da Arábia Saudita declarou que o país se reserva o direito de adotar medidas para defender sua soberania, cidadãos e ativos nacionais."
           ]
         }
       ],
       "hashtags": [
         "#BomDiaVarejo",
-        "#varejo",
-        "#supermercado",
-        "#atacarejo",
-        "#varejoalimentar"
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
       ],
       "feed": true
     },
     {
       "tipo": "noticia",
-      "categoria": "Economia",
-      "manchete": "Um salário mínimo compra 23 kg de acém a menos do que em 2007; entenda o **preço da carne**",
-      "subtitulo": "Atualmente, um salário mínimo compra cerca de 39 kg de acém, enquanto em 2007 essa mesma renda adquiria quase 62 kg",
-      "imagem": "https://s2-g1.glbimg.com/WN2oVlH-l0KZKt0-xSJXEshyKk0=/4000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/N/8/ek5GknSNSds4uBZeNMVA/pexels-gabriel-zachi-2151036855-31617225.jpg",
-      "fonte": "g1 Economia",
-      "data": "20/11/2026",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/20/um-salario-minimo-compra-23-kg-de-acem-a-menos-do-que-em-2007-entenda-o-preco-da-carne.ghtml",
-      "materia": "",
-      "slides": [
-        {
-          "titulo": "O que aconteceu",
-          "topicos": [
-            "Atualmente, um salário mínimo compra cerca de 39 kg de acém, enquanto em 2007 essa mesma renda adquiria quase 62 kg, segundo dados da consultoria Agrifatto. O pior momento ocorreu em 2021, no auge da pandemia de Covid-19, com o equivalente a 33,8 kg, havendo uma recuperação parcial para 45 kg em 2024 antes de nova queda."
-          ]
-        },
-        {
-          "titulo": "Mais detalhes",
-          "topicos": [
-            "Em 2025, o Brasil produziu um volume recorde de **11,1 milhões** de toneladas de carne bovina, alta de **7,2%** em relação ao ano anterior, tornando-se o maior produtor mundial. A parcela da produção destinada ao exterior subiu de cerca de **70%** historicamente para **61%** em 2025.",
-            "As exportações brasileiras de carne bovina avançaram quase **20%** em 2025 (ou **20,4%** segundo o Ministério da Agricultura), impulsionadas por alta demanda internacional e menor oferta de concorrentes como EUA, Austrália e Argentina."
-          ]
-        },
-        {
-          "titulo": "Contexto",
-          "topicos": [
-            "A menor oferta interna fez o consumo brasileiro cair de 43 kg por habitante ao ano em 2006 para cerca de 32 kg em 2025, conforme o Rabobank. Com a inflação e juros, a carne bovina passa a se tornar um item de luxo para algumas classes, com consumidores das classes C, D e E migrando para frango e carne suína."
-          ]
-        }
-      ],
-      "hashtags": [
-        "#BomDiaVarejo",
-        "#economia",
-        "#varejo",
-        "#mercado",
-        "#negocios"
-      ],
-      "feed": false
-    },
-    {
-      "tipo": "noticia",
       "categoria": "Política",
-      "manchete": "Comissões propõem **R$ 85,9 bilhões** em emendas ao Orçamento de 2027",
-      "subtitulo": "Dezesseis comissões do Senado e do Congresso aprovaram, em 17 e 18 de dezembro",
-      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/19/comissoes-propoem-r-85-9-bilhoes-em-emendas-ao-orcamento-de-2027/fachada_senado_20190429_00947jp.jpg",
-      "fonte": "Agência Senado",
+      "manchete": "Moraes diz que fuga de Flávio para os EUA é tentativa de obstruir investigações e vota para manter **restrições a senador**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/ztTMEhauikgRziRur0sJvmoMMNA=/6000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/P/w/OAz8r3RBWAoAuuUK0dvw/2026-10-28t133344z-931556810-rc2dcoanfocy-rtrmadp-3-brazil-usa.jpg",
+      "fonte": "g1 Política",
       "data": "20/11/2026",
-      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/19/comissoes-propoem-r-85-9-bilhoes-em-emendas-ao-orcamento-de-2027",
+      "link": "https://g1.globo.com/politica/noticia/2026/11/20/moraes-diz-que-fuga-de-flavio-para-os-eua-e-tentativa-de-obstruir-investigacao-e-vota-para-manter-restricoes-a-senador.ghtml",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "Dezesseis comissões do Senado e do Congresso aprovaram, em 17 e 18 de dezembro, 96 emendas de apropriação ao Orçamento de 2027 que somam **R$ 85,9 bilhões** para áreas como saúde, educação, segurança e infraestrutura.",
-            "Os colegiados também aprovaram sete emendas de remanejamento no valor de **R$ 696 milhões**, além de alterações nas prioridades, metas e textos do projeto orçamentário.",
-            "As propostas seguem para análise da Comissão Mista de Orçamento (CMO), com previsão de votação pelo Congresso Nacional em 17 de dezembro."
+            "O ministro Alexandre de Moraes, do STF, afirmou que a fuga do senador Flávio Bolsonaro (PL‑RJ) para os Estados Unidos pode obstruir as investigações de suposta lavagem de dinheiro.",
+            "Moraes votou pela manutenção das medidas cautelares impostas ao parlamentar, que incluem a entrega dos passaportes e a proibição de contato com outros investigados, como o advogado Willer Tomaz."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "O projeto da Lei Orçamentária Anual (PLOA) para 2027 tramita como PLN 24/2026 sob a relatoria do senador Eduardo Braga, enquanto a Lei de Diretrizes Orçamentárias (PLDO) tramita como PLN 2/2026 com relatoria de Eduardo Gomes.",
-            "Cada comissão pôde apresentar até seis emendas de apropriação e duas de remanejamento ao PLOA, além de até três emendas ao Anexo de Prioridades e Metas do PLDO."
+            "A Primeira Turma do STF iniciou, na sexta‑feira, 20 de novembro, o julgamento do recurso da defesa de Flávio contra essas medidas; os votos deverão ser registrados no sistema eletrônico até 30 de novembro.",
+            "Moraes ressaltou que Flávio descumpriu a ordem judicial de entregar os documentos de viagem e estava proibido de deixar o país, configurando violação do dever de permanência.",
+            "O ministro concluiu que o agravo regimental não trouxe argumentos capazes de desfazer as medidas, mantendo‑as como essenciais à efetividade do processo investigativo."
           ]
         },
         {
           "titulo": "Contexto",
           "topicos": [
-            "O orçamento reserva **R$ 44,8 bilhões** para emendas individuais e de bancada estadual de execução obrigatória, enquanto as emendas de comissão ainda dependerão de definições no relatório preliminar do PLOA."
+            "A Procuradoria‑Geral da República considerou as restrições proporcionais e adequadas, afirmando que Flávio recebeu notificação, transgrediu e fugiu mesmo sem ordem de prisão, reforçando a necessidade de mantê‑las."
           ]
         }
       ],
@@ -120,39 +85,39 @@
       "feed": false
     },
     {
-      "tipo": "mundo",
-      "categoria": "Mundo",
-      "manchete": "'Não podíamos pagar uma casa para nossa família, **então decidimos comprar uma junto com desconhecidos'**",
-      "subtitulo": "",
-      "imagem": "https://s2-g1.glbimg.com/PbDn-sWzHFNhfUnMq6x6rYC6n5Y=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/9/O/g2rhikRcuwqUjdepAxVA/fotojet-9-.png",
-      "fonte": "g1 Mundo",
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Minerva (BEEF3) ganha fôlego com alta do dólar, e Natura (NATU3) fica na lanterna; veja o que **rolou no Ibovespa**",
+      "subtitulo": "O Ibovespa acumulou perdas de 2,89% na semana e encerrou a última sessão aos 166.376,43 pontos, uma queda de 0,69%",
+      "imagem": "https://www.moneytimes.com.br/uploads/2026/10/montagem-com-um-fundo-de-grafico-de-acoes-e-a-bandeira-do-brasil-dentro-de-uma-lupa.-gestores-acoes-fundos-imagem-do-fundo--reuters-amanda-perobelli.png",
+      "fonte": "Money Times",
       "data": "20/11/2026",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/20/nao-podiamos-pagar-uma-casa-para-nossa-familia-entao-decidimos-comprar-uma-junto-com-desconhecidos.ghtml",
+      "link": "https://www.moneytimes.com.br/minerva-beef3-ganha-folego-com-alta-do-dolar-e-natura-natu3-fica-na-lanterna-veja-o-que-rolou-no-ibovespa-davs/",
       "materia": "",
       "slides": [
         {
           "titulo": "O que aconteceu",
           "topicos": [
-            "Em Vancouver, no Canadá, os casais Elizabeth e Tom Wilcox e Ashley Pullman com seu marido compraram juntos uma casa unifamiliar de seis quartos e um jardim em 2023, após dois anos de busca.",
-            "A aquisição conjunta ocorreu porque o orçamento inicial dos Wilcox, de CAN$ **1 milhão** (cerca de **US$ 700 mil** ou **R$ 4 milhões**), só permitia a compra de um pequeno apartamento.",
-            "O imóvel custou CAN$ **1,85 milhão** (cerca de **US$ 1,3 milhão** ou **R$ 7,5 milhões**). As famílias dividiram igualmente a entrada de CAN$ **250 mil** (**US$ 175 mil**, **R$ 1 milhão**)."
+            "O Ibovespa acumulou perdas de **2,89%** na semana e encerrou a última sessão aos 166.376,43 pontos, uma queda de **0,69%**, perdendo a marca dos **167 mil** pontos em meio à aversão ao risco.",
+            "O dólar à vista subiu forte e ultrapassou **R$ 5,90,** encerrando o pregão de sexta-feira (19) a **R$ 5,9350,** com alta acumulada de **4,95%** ante o real na semana.",
+            "O mercado reagiu à pressão fiscal após o Senado adiar a análise de destaques de projeto e investidores temerem a desidratação do pacote de ajuste fiscal aprovado em 18 de novembro."
           ]
         },
         {
           "titulo": "Mais detalhes",
           "topicos": [
-            "Os coproprietários pagam em partes iguais as parcelas mensais da hipoteca, que somam CAN$ **3,9 mil** (cerca de **US$ 2,7 mil** ou **R$ 15,8 mil**), além das contas e reparos.",
-            "A prática de comprar imóveis com desconhecidos tem ganhado interesse em cidades como Toronto devido aos altos custos de moradia, segundo especialistas do setor.",
-            "As famílias mantêm contratos legais que estabelecem regras para o caso de venda e mudança, exigindo prazos de aviso prévio e garantindo boa convivência."
+            "O Índice de Atividade Econômica do Banco Central (IBC-Br), divulgado em 16 de setembro, recuou **0,2%** em setembro, ficando abaixo das expectativas e apontando desaceleração da economia.",
+            "A Minerva (BEEF3) liderou as altas do Ibovespa com ganho de **9,38%** (**R$ 3,73**), impulsionada por programas de recompra de ações e pela valorização do dólar por ser exportadora.",
+            "A Natura (NATU3) ficou na lanterna do Ibovespa entre 16 e 19 de novembro, registrando a maior queda acumulada, de **12,67%**, cotada a **R$ 4,48.**"
           ]
         }
       ],
       "hashtags": [
         "#BomDiaVarejo",
-        "#mundo",
-        "#economiaglobal",
-        "#noticias",
-        "#internacional"
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
       ],
       "feed": false
     }
