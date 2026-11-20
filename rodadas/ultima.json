@@ -1,3 +1,160 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "tipo": "noticia",
+      "categoria": "Varejo",
+      "manchete": "72 vezes, mas com juros: **GPA (PCAR3) parcela dívida trabalhista milionária**",
+      "subtitulo": "",
+      "imagem": "https://www.moneytimes.com.br/uploads/2024/02/pao-de-acucar-1.jpg",
+      "fonte": "Money Times",
+      "data": "20/11/2026",
+      "link": "https://www.moneytimes.com.br/72-vezes-mas-com-juros-gpa-pcar3-parcela-divida-trabalhista-milionaria/",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "O Órgão Especial do TRT-2 aprovou o parcelamento de uma dívida trabalhista do Grupo Pão de Açúcar (PCAR3) estimada em cerca de **R$ 140 milhões**.",
+            "O montante, que previa desembolsos até o final de 2027, agora poderá ser quitado em até 72 prestações mensais acrescidas de correção pela taxa Selic.",
+            "A empresa, atualmente em recuperação extrajudicial, avalia que o parcelamento otimiza a gestão de seu passivo trabalhista e amplia a previsibilidade financeira."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O novo formato de pagamento também cria oportunidades para a realização de acordos individuais com potencial de diminuir as obrigações da companhia.",
+            "O GPA aguarda o aval para novos PEPTs nos TRTs da 10ª e da 15ª Regiões, locais em que existem liminares que suspendem os pagamentos.",
+            "A companhia informou que está revisando sua metodologia contábil de provisionamento para esses processos e para as demais ações trabalhistas."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#varejo",
+        "#supermercado",
+        "#atacarejo",
+        "#varejoalimentar"
+      ],
+      "feed": true
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Economia",
+      "manchete": "Um salário mínimo compra 23 kg de acém a menos do que em 2007; entenda o **preço da carne**",
+      "subtitulo": "Atualmente, um salário mínimo compra cerca de 39 kg de acém, enquanto em 2007 essa mesma renda adquiria quase 62 kg",
+      "imagem": "https://s2-g1.glbimg.com/WN2oVlH-l0KZKt0-xSJXEshyKk0=/4000x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/N/8/ek5GknSNSds4uBZeNMVA/pexels-gabriel-zachi-2151036855-31617225.jpg",
+      "fonte": "g1 Economia",
+      "data": "20/11/2026",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/20/um-salario-minimo-compra-23-kg-de-acem-a-menos-do-que-em-2007-entenda-o-preco-da-carne.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Atualmente, um salário mínimo compra cerca de 39 kg de acém, enquanto em 2007 essa mesma renda adquiria quase 62 kg, segundo dados da consultoria Agrifatto. O pior momento ocorreu em 2021, no auge da pandemia de Covid-19, com o equivalente a 33,8 kg, havendo uma recuperação parcial para 45 kg em 2024 antes de nova queda."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Em 2025, o Brasil produziu um volume recorde de **11,1 milhões** de toneladas de carne bovina, alta de **7,2%** em relação ao ano anterior, tornando-se o maior produtor mundial. A parcela da produção destinada ao exterior subiu de cerca de **70%** historicamente para **61%** em 2025.",
+            "As exportações brasileiras de carne bovina avançaram quase **20%** em 2025 (ou **20,4%** segundo o Ministério da Agricultura), impulsionadas por alta demanda internacional e menor oferta de concorrentes como EUA, Austrália e Argentina."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "A menor oferta interna fez o consumo brasileiro cair de 43 kg por habitante ao ano em 2006 para cerca de 32 kg em 2025, conforme o Rabobank. Com a inflação e juros, a carne bovina passa a se tornar um item de luxo para algumas classes, com consumidores das classes C, D e E migrando para frango e carne suína."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#economia",
+        "#varejo",
+        "#mercado",
+        "#negocios"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "noticia",
+      "categoria": "Política",
+      "manchete": "Comissões propõem **R$ 85,9 bilhões** em emendas ao Orçamento de 2027",
+      "subtitulo": "Dezesseis comissões do Senado e do Congresso aprovaram, em 17 e 18 de dezembro",
+      "imagem": "https://www12.senado.leg.br/noticias/materias/2026/11/19/comissoes-propoem-r-85-9-bilhoes-em-emendas-ao-orcamento-de-2027/fachada_senado_20190429_00947jp.jpg",
+      "fonte": "Agência Senado",
+      "data": "20/11/2026",
+      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/19/comissoes-propoem-r-85-9-bilhoes-em-emendas-ao-orcamento-de-2027",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Dezesseis comissões do Senado e do Congresso aprovaram, em 17 e 18 de dezembro, 96 emendas de apropriação ao Orçamento de 2027 que somam **R$ 85,9 bilhões** para áreas como saúde, educação, segurança e infraestrutura.",
+            "Os colegiados também aprovaram sete emendas de remanejamento no valor de **R$ 696 milhões**, além de alterações nas prioridades, metas e textos do projeto orçamentário.",
+            "As propostas seguem para análise da Comissão Mista de Orçamento (CMO), com previsão de votação pelo Congresso Nacional em 17 de dezembro."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "O projeto da Lei Orçamentária Anual (PLOA) para 2027 tramita como PLN 24/2026 sob a relatoria do senador Eduardo Braga, enquanto a Lei de Diretrizes Orçamentárias (PLDO) tramita como PLN 2/2026 com relatoria de Eduardo Gomes.",
+            "Cada comissão pôde apresentar até seis emendas de apropriação e duas de remanejamento ao PLOA, além de até três emendas ao Anexo de Prioridades e Metas do PLDO."
+          ]
+        },
+        {
+          "titulo": "Contexto",
+          "topicos": [
+            "O orçamento reserva **R$ 44,8 bilhões** para emendas individuais e de bancada estadual de execução obrigatória, enquanto as emendas de comissão ainda dependerão de definições no relatório preliminar do PLOA."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#politica",
+        "#economia",
+        "#brasil",
+        "#noticias"
+      ],
+      "feed": false
+    },
+    {
+      "tipo": "mundo",
+      "categoria": "Mundo",
+      "manchete": "'Não podíamos pagar uma casa para nossa família, **então decidimos comprar uma junto com desconhecidos'**",
+      "subtitulo": "",
+      "imagem": "https://s2-g1.glbimg.com/PbDn-sWzHFNhfUnMq6x6rYC6n5Y=/1920x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/9/O/g2rhikRcuwqUjdepAxVA/fotojet-9-.png",
+      "fonte": "g1 Mundo",
+      "data": "20/11/2026",
+      "link": "https://g1.globo.com/economia/noticia/2026/11/20/nao-podiamos-pagar-uma-casa-para-nossa-familia-entao-decidimos-comprar-uma-junto-com-desconhecidos.ghtml",
+      "materia": "",
+      "slides": [
+        {
+          "titulo": "O que aconteceu",
+          "topicos": [
+            "Em Vancouver, no Canadá, os casais Elizabeth e Tom Wilcox e Ashley Pullman com seu marido compraram juntos uma casa unifamiliar de seis quartos e um jardim em 2023, após dois anos de busca.",
+            "A aquisição conjunta ocorreu porque o orçamento inicial dos Wilcox, de CAN$ **1 milhão** (cerca de **US$ 700 mil** ou **R$ 4 milhões**), só permitia a compra de um pequeno apartamento.",
+            "O imóvel custou CAN$ **1,85 milhão** (cerca de **US$ 1,3 milhão** ou **R$ 7,5 milhões**). As famílias dividiram igualmente a entrada de CAN$ **250 mil** (**US$ 175 mil**, **R$ 1 milhão**)."
+          ]
+        },
+        {
+          "titulo": "Mais detalhes",
+          "topicos": [
+            "Os coproprietários pagam em partes iguais as parcelas mensais da hipoteca, que somam CAN$ **3,9 mil** (cerca de **US$ 2,7 mil** ou **R$ 15,8 mil**), além das contas e reparos.",
+            "A prática de comprar imóveis com desconhecidos tem ganhado interesse em cidades como Toronto devido aos altos custos de moradia, segundo especialistas do setor.",
+            "As famílias mantêm contratos legais que estabelecem regras para o caso de venda e mudança, exigindo prazos de aviso prévio e garantindo boa convivência."
+          ]
+        }
+      ],
+      "hashtags": [
+        "#BomDiaVarejo",
+        "#mundo",
+        "#economiaglobal",
+        "#noticias",
+        "#internacional"
+      ],
+      "feed": false
+    }
+  ]
 }
