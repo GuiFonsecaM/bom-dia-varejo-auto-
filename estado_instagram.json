@@ -972,7 +972,32 @@
   "infomoney.com.br/mercados/black-friday-na-bolsa-as-10-acoes-com-maior-queda-do-multiplo-p-l",
   "g1.globo.com/trabalho-e-carreira/noticia/2026/11/21/fim-da-escala-6x1-veja-o-que-muda-nas-folgas-horas-extras-e-jornadas-apos-decreto-de-lula.ghtml",
   "g1.globo.com/politica/noticia/2026/11/21/a-um-mes-do-recesso-fachin-tenta-avancar-com-agenda-de-reformas-no-stf-mas-enfrenta-resistencias.ghtml",
-  "moneytimes.com.br/em-queda-livre-ibovespa-em-dolar-ewz-despenca-mais-de-3-e-a-culpa-nao-e-so-do-governo"
+  "moneytimes.com.br/em-queda-livre-ibovespa-em-dolar-ewz-despenca-mais-de-3-e-a-culpa-nao-e-so-do-governo",
+  "g1.globo.com/mundo/noticia/2026/11/21/drones-atingem-navio-de-carga-russo-no-golfo-da-finlandia-pais-reforca-seguranca.ghtml",
+  "g1.globo.com/meio-ambiente/noticia/2026/11/21/o-que-uma-antiga-cidade-subterranea-da-turquia-pode-nos-ensinar-sobre-como-escapar-do-calor-e-do-frio-extremos.ghtml",
+  "g1.globo.com/tecnologia/noticia/2026/11/21/uniao-europeia-propoe-taxar-big-techs-para-financiar-orcamento-ate-2034.ghtml",
+  "mercadoeconsumo.com.br/21/11/2026/gestao/mattel-tem-novo-diretor-geral-para-a-america-latina-confira-outras-mudancas",
+  "g1.globo.com/politica/noticia/2026/11/21/lula-diz-que-projeto-aprovado-no-senado-nao-e-reforma-fiscal-mas-ajuste-para-orcamento-de-2027-e-critica-faria-lima.ghtml",
+  "mercadoeconsumo.com.br/21/11/2026/noticias-varejo/skechers-abre-unidade-de-363-m%c2%b2-em-outlet-no-interior-paulista",
+  "mercadoeconsumo.com.br/21/11/2026/noticias-varejo/norte-lidera-participacao-de-bebidas-alcoolicas-nos-mercados-autonomos",
+  "moneytimes.com.br/tarcisio-mudanca-no-ibovespa-e-bb-rebaixado-o-que-bombou-na-semana-no-money-times",
+  "g1.globo.com/mundo/noticia/2026/11/21/mais-de-500-camelos-atravessam-deserto-na-china-em-migracao-anual-na-mongolia.ghtml",
+  "infomoney.com.br/mundo/russia-ataca-cidade-natal-de-zelensky-com-missil-mata-2-e-deixa-dezenas-de-feridos",
+  "g1.globo.com/mundo/noticia/2026/11/21/mexico-captura-narcotraficante-que-esta-entre-os-dez-mais-procurados-pelo-fbi.ghtml",
+  "poder360.com.br/poder-justica/stf-mantem-lei-do-rj-que-protege-dados-de-envolvidos-em-ocorrencias",
+  "g1.globo.com/mundo/noticia/2026/11/21/cupula-na-china-foi-muito-malsucedida-para-a-russia-diz-zelensky.ghtml",
+  "poder360.com.br/poder-governo/exercito-do-lula-perde-14-milhao-de-seguidores-desde-o-2o-turno",
+  "poder360.com.br/poder-economia/lula-precisa-de-ajuste-para-conter-divida-diz-ex-secretario-de-dilma",
+  "poder360.com.br/poder-congresso/projeto-aumenta-pena-por-crime-sexual-cometido-por-professores",
+  "poder360.com.br/poder-governo/ao-vivo-lula-faz-live-com-janones-neste-sabado",
+  "poder360.com.br/poder-saude/meta-global-de-queda-da-tuberculose-esta-5-anos-atrasada-diz-onu",
+  "poder360.com.br/poder-brasil/temporais-atingem-19-663-pessoas-e-7-145-casas-destelhadas-no-rs",
+  "poder360.com.br/poder-saude/atendimentos-de-saude-mental-a-criancas-superam-niveis-pre-pandemia",
+  "poder360.com.br/poder-tech/engajamento-de-flavio-no-instagram-cai-81-em-10-dias",
+  "bbc.com/portuguese/articles/ckedqlnqg3yvo",
+  "g1.globo.com/mundo/noticia/2026/11/21/fbi-investiga-invasao-a-banco-de-dados-nacional-de-informacoes-criminais-diz-tv.ghtml",
+  "bbc.com/portuguese/articles/c3grendp775qo",
+  "bbc.com/portuguese/articles/cwz0k3r4npexo"
  ],
  "postados": [
   {
@@ -1767,6 +1792,34 @@
    "categoria": "Política",
    "titulo": "Com menos acesso a pré-natal, mães pretas têm bebês com mais chance de nascerem prematuros e com baixo peso",
    "em": "2026-11-21 09:00",
+   "feed": false
+  },
+  {
+   "chave": "mercadoeconsumo.com.br/21/11/2026/gestao/mattel-tem-novo-diretor-geral-para-a-america-latina-confira-outras-mudancas",
+   "categoria": "Varejo",
+   "titulo": "Mattel tem novo diretor-geral para a América Latina; confira outras mudanças",
+   "em": "2026-11-21 13:00",
+   "feed": true
+  },
+  {
+   "chave": "g1.globo.com/mundo/noticia/2026/11/21/drones-atingem-navio-de-carga-russo-no-golfo-da-finlandia-pais-reforca-seguranca.ghtml",
+   "categoria": "Mundo",
+   "titulo": "Drones atingem cargueiro russo no Golfo da Finlândia; país reforça segurança e suspeita de material militar em navio",
+   "em": "2026-11-21 13:00",
+   "feed": false
+  },
+  {
+   "chave": "g1.globo.com/politica/noticia/2026/11/21/lula-diz-que-projeto-aprovado-no-senado-nao-e-reforma-fiscal-mas-ajuste-para-orcamento-de-2027-e-critica-faria-lima.ghtml",
+   "categoria": "Política",
+   "titulo": "Lula diz que projeto aprovado no Senado não é 'reforma fiscal', mas ajuste para Orçamento de 2027 e critica Faria Lima",
+   "em": "2026-11-21 13:00",
+   "feed": false
+  },
+  {
+   "chave": "moneytimes.com.br/tarcisio-mudanca-no-ibovespa-e-bb-rebaixado-o-que-bombou-na-semana-no-money-times",
+   "categoria": "Economia",
+   "titulo": "Tarcísio, mudança no Ibovespa e BB rebaixado: o que bombou na semana no Money Times",
+   "em": "2026-11-21 13:00",
    "feed": false
   }
  ]
